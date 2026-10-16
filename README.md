@@ -89,6 +89,9 @@ c:\Users\10431\Desktop\HOI4\
 ├── thumbnail.png                                       # 创意工坊封面图 (325KB)
 ├── README.md                                           # 全局技术与机制核心文档
 ├── README_TLB.md                                       # 铜梁巴川中学 (TLB) 隐藏路线专属独立解析文档
+├── commit.bat                                          # Windows 双击或命令行一键 Git 提交/推送批处理
+├── commit.ps1                                          # PowerShell 一键 Git 提交/推送脚本
+├── commit.py                                           # 跨平台一键提交核心脚本 (支持参数传入或交互式输入简介)
 │
 ├── .agents/skills/                                     # Agent 技能与工程专属开发规范
 │   ├── hoi4-fast-modifier/                             # 模组极速低幻觉增量修改技能 (含自动自检脚本)
@@ -899,6 +902,14 @@ flowchart TD
 4.  **测试验证规范**：
     *   每次修改后，检查 `Documents/Paradox Interactive/Hearts of Iron IV/logs/error.log`，确保零报错进入主菜单。
     *   启动新游戏进行内测，重点观测 1936 年合校危机、三方内战分裂、学区地缘 GUI、奥赛国家队招募以及冲破省界的全国战争触发！
+5.  **Git 版本管理与一键提交规范 (Git Up-to-Date & One-Click Commit)**：
+    *   **修改前必检**：任何改动开始前，必须先在终端执行 `git status` 与 `git pull`，确保当前分支无意外未提交代码，且基线与远程仓库保持严格同步，禁止在陈旧代码上做增量修改。
+    *   **一键提交归档**：代码验证与文档同步完成后，运行根目录脚本一键归档并推送（修改简介由操作者填写）：
+        ```powershell
+        .\commit.bat "修改内容简介..."
+        # 或交互式运行（由终端提示输入修改简介并选择是否推送到 GitHub）：
+        python commit.py
+        ```
 
 ---
 *本项目完全遵循 Paradox Interactive 最终用户许可协议进行学术性与趣味性架空创作。*

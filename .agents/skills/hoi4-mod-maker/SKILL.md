@@ -16,6 +16,13 @@ Before any other HOI4 command in a new agent session, run this skill's bundled b
 - It never deletes a directory without a verified matching `SKILL.md`. If the current copy cannot be inferred, it refuses automatic deletion instead of guessing.
 - After cleanup, continue using the same bundled binary. Never fall back to a backup, versioned-old, cached, or repository-copy skill.
 
+## Git Up-to-Date Evidence Gate (每次修改前确认 Git 最新版本门禁)
+
+Before investigating, scaffolding, reading context, or modifying any game files, the agent must verify that the Git repository is clean and synchronized with the latest upstream commit:
+1. **每次修改前必须确认 Git 为最新版本**：运行 `git status` 确认工作区无意外脏文件或未提交冲突。
+2. 若存在关联的远程仓库，运行 `git pull`（或 `git fetch && git status`）确保当前本地 HEAD 严格处于最新版本，绝对禁止在过时或分叉的提交基线上进行增量编辑。
+3. 在功能修改完成、引擎语法验证通过且文档同步后，使用工程根目录下的一键提交脚本（`commit.bat` 或 `python commit.py "<修改简介>"`) 记录本次修改简介并归档推送。
+
 ## Country TAG Evidence Gate
 
 This gate runs before scaffolding, parsing a workbook, choosing a prefix, or writing any content.
@@ -83,8 +90,9 @@ National focuses, decisions, events, and national spirits are template-owned sys
 
 Turn the user's mod idea into concrete HOI4 files, using the existing mod's style when a mod folder is present.
 
-1. Locate the target mod root.
+1. Locate the target mod root and verify Git is up-to-date.
    - Prefer the user's provided folder.
+   - **每次修改前确认 Git 为最新版本**：运行 `git status` 确保无冲突未提交修改；若有远端仓库运行 `git pull` 确保代码基线最新。
    - If no folder exists, create a minimal descriptor-only skeleton with `hoi4skill scaffold`; content writers create only the directories required by authorized systems.
    - Treat the folder containing `descriptor.mod` as the mod root.
 2. Resolve the country TAG, then build a modification knowledge base before editing.
@@ -131,6 +139,8 @@ Turn the user's mod idea into concrete HOI4 files, using the existing mod's styl
    - Run `hoi4skill analyze-error-log --input "<HOI4 user folder>\\logs\\error.log" --mod-root <mod-root> --output error_report.json`.
    - Treat new log entries as repair evidence. Do not claim the feature is in-game clean until the relevant `error.log` output has been checked.
 8. Report exactly what was created or changed, which gates were run, and any remaining in-game test steps.
+9. Commit and archive via one-click script:
+   - Run `.\commit.bat "<修改内容简介>"` 或交互式运行 `python commit.py`，将修改内容简介记入 Commit Message，并推送到 GitHub 仓库。
 
 ## Hard Output Rules
 

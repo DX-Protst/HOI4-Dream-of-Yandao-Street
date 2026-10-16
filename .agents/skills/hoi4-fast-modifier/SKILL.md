@@ -20,6 +20,7 @@ description: Quick, low-hallucination incremental updater and modifier for Heart
     *   **决议与 BOP 严禁套壳**：决议脚本直接以 `category = { ... }` 开头（禁止包裹 `decisions = { }`）；BOP 脚本直接以 `bop_id = { ... }` 开头（禁止包裹 `bop = { }`）。
     *   **省份作用域转移**：领土割让必须使用省份作用域：`STATE_ID = { add_core_of = TAG transfer_state_to = TAG }`。
 3.  **文档即代码 (Mandatory README Sync)**：代码一旦改写，必须**立即同步更新 [README.md](../../../README.md)** 中对应的章节（文件目录、机制设定、国策树拆解、避坑指南等），保持文档永久同步。
+4.  **Git 版本先决确认 (Git Version Up-to-Date Gate)**：**每次修改前必须确认本地 Git 处于最新版本**。修改前先运行 `git status` 与 `git pull`，确保本地工作区整洁且基线与远程最新提交一致，严禁在陈旧代码上做增量修改；修改验证通过后，运行一键提交脚本（`commit.bat` 或 `python commit.py`）填入修改简介完成归档。
 
 ---
 
@@ -42,16 +43,27 @@ description: Quick, low-hallucination incremental updater and modifier for Heart
 
 ---
 
-## 六步极速修改流水线 (The 6-Step Rapid Pipeline)
+## 七步极速修改流水线 (The 7-Step Rapid Pipeline)
 
 ```mermaid
 flowchart TD
-    A["1. 范围与意图锁定 (Scope Lock)"] --> B["2. 领域快速定位 (YDS Domain Mapping)"]
+    G["0. Git 最新基线确认 (git pull / status)"] --> A["1. 范围与意图锁定 (Scope Lock)"]
+    A --> B["2. 领域快速定位 (YDS Domain Mapping)"]
     B --> C["3. 查阅底层标准模式 (Reference Check)"]
     C --> D["4. 局部精准补丁 (Precision Patching)"]
     D --> E["5. 自动反幻觉自检 (verify_mod.py)"]
     E --> F["6. 强制同步 README.md (Documentation Sync)"]
+    F --> H["7. 一键提交与归档 (commit.bat)"]
 ```
+
+### 步骤 0：Git 最新版本确认 (Git Version Up-to-Date Gate)
+*   **每次修改前必须确认 Git 为最新版本**。
+*   在动工前运行：
+    ```powershell
+    git status
+    git pull
+    ```
+*   确保本地分支干净无未解决冲突，且与远程 `main`（或工作分支）完全对齐，严禁在过时基线上进行增量编辑。
 
 ### 步骤 1：范围与意图锁定 (Scope Lock)
 *   明确用户诉求的核心要素（例如：修改数值？新增一个国策？增加一个决议？调整省份工业？）。
@@ -90,6 +102,14 @@ python ".agents/skills/hoi4-fast-modifier/scripts/verify_mod.py" "c:\Users\10431
 2.  **机制与数值 (Section 3)**：若调整了变量数值、阈值或触发机制，在此更新数值与说明。
 3.  **国策树 (Section 4)**：若增减了国策节点，在此更新国策列表与前后置流程图。
 4.  **避坑指南 (Section 9)**：若排查出了新底层陷阱，在此追加编号记录。
+
+### 步骤 7：一键提交与归档 (Commit & Archive)
+功能与文档同步修改并校验无误后，运行项目根目录下的一键提交脚本完成版本归档与推送（修改简介由操作者填入）：
+```powershell
+.\commit.bat "修改简介..."
+# 或交互式运行（由终端提示输入修改简介并推送）：
+python commit.py
+```
 
 ---
 
