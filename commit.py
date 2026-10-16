@@ -2,6 +2,15 @@ import sys
 import subprocess
 import os
 
+# 确保在 Windows 控制台下正常输出 UTF-8 / 中文，避免 GBK 编码异常
+if hasattr(sys.stdout, "reconfigure"):
+    try:
+        sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+        sys.stderr.reconfigure(encoding="utf-8", errors="replace")
+        sys.stdin.reconfigure(encoding="utf-8", errors="replace")
+    except Exception:
+        pass
+
 def run_cmd(cmd, check=True, capture_output=False):
     """Run a shell command with proper encoding."""
     try:
@@ -57,7 +66,7 @@ def main():
         summary = " ".join(args).strip()
     else:
         try:
-            summary = input("\n👉 请输入本次修改的内容简介 (直接回车取消): ").strip()
+            summary = input("\n[输入] 请输入本次修改的内容简介 (直接回车取消): ").strip()
         except (KeyboardInterrupt, EOFError):
             print("\n已取消提交。")
             sys.exit(0)
@@ -74,7 +83,7 @@ def main():
     print(f"[2/3] 正在创建提交 (git commit)...")
     # 使用参数列表防止引号注入或特殊字符破坏
     subprocess.run(["git", "commit", "-m", summary], check=True, encoding="utf-8", errors="replace")
-    print(f"✓ 成功提交: \"{summary}\"")
+    print(f"[成功] 成功提交: \"{summary}\"")
 
     # 6. 处理远程推送 (git push)
     remote_res = run_cmd("git remote", check=False, capture_output=True)
@@ -90,7 +99,7 @@ def main():
         should_push = False
     else:
         try:
-            push_confirm = input("\n👉 是否推送到远程仓库 GitHub (git push)? [Y/n]: ").strip().lower()
+            push_confirm = input("\n[询问] 是否推送到远程仓库 GitHub (git push)? [Y/n]: ").strip().lower()
             should_push = (push_confirm == "" or push_confirm in ("y", "yes"))
         except (KeyboardInterrupt, EOFError):
             print("\n跳过推送。")
@@ -100,11 +109,11 @@ def main():
         print("\n[3/3] 正在推送到远程仓库...")
         push_res = run_cmd("git push", check=False)
         if push_res.returncode == 0:
-            print("\n✨ 全部完成！修改已成功提交并推送到 GitHub。")
+            print("\n[完成] 全部完成！修改已成功提交并推送到 GitHub。")
         else:
             print("\n[警告] 推送遇到问题，请检查网络或执行 git push 查看详细日志。")
     else:
-        print("\n✨ 本地提交已完成，暂未推送到远程仓库。后续可随时运行 git push 推送。")
+        print("\n[完成] 本地提交已完成，暂未推送到远程仓库。后续可随时运行 git push 推送。")
 
 if __name__ == "__main__":
     main()
