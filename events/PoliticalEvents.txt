@@ -1,0 +1,418 @@
+# Vanilla generic PoliticalEvents override to prevent invalid ideology civil wars and coups
+# All comments are strictly pure ASCII.
+
+add_namespace = political
+
+# Silence vanilla political.1
+country_event = {
+	id = political.1
+	title = political.1.t
+	desc = political.1.d
+	picture = GFX_report_event_generic_sign_treaty1
+
+	is_triggered_only = yes
+
+	trigger = {
+		always = no
+	}
+
+	option = {
+		name = political.1.a
+	}
+}
+
+# Silence vanilla political.4
+country_event = {
+	id = political.4
+	title = political.4.t
+	desc = political.4.d
+	picture = GFX_report_event_generic_sign_treaty1
+
+	is_triggered_only = yes
+
+	trigger = {
+		always = no
+	}
+
+	option = {
+		name = political.4.a
+	}
+}
+
+# Silence vanilla political.5
+country_event = {
+	id = political.5
+	title = political.5.t
+	desc = political.5.d
+	picture = GFX_report_event_generic_sign_treaty1
+
+	is_triggered_only = yes
+
+	trigger = {
+		always = no
+	}
+
+	option = {
+		name = political.5.a
+	}
+}
+
+# Silence vanilla political.7
+country_event = {
+	id = political.7
+	title = political.7.t
+	desc = political.7.d
+	picture = GFX_report_event_generic_sign_treaty1
+
+	is_triggered_only = yes
+
+	trigger = {
+		always = no
+	}
+
+	option = {
+		name = political.7.a
+	}
+}
+
+# Silence vanilla political.11
+country_event = {
+	id = political.11
+	title = political.11.t
+	desc = political.11.d
+	picture = GFX_report_event_generic_sign_treaty1
+
+	is_triggered_only = yes
+
+	trigger = {
+		always = no
+	}
+
+	option = {
+		name = political.11.a
+	}
+}
+
+# Silence vanilla political.12
+country_event = {
+	id = political.12
+	title = political.12.t
+	desc = political.12.d
+	picture = GFX_report_event_generic_sign_treaty1
+
+	is_triggered_only = yes
+
+	trigger = {
+		always = no
+	}
+
+	option = {
+		name = political.12.a
+	}
+}
+
+# Silence vanilla political.14
+country_event = {
+	id = political.14
+	title = political.14.t
+	desc = political.14.d
+	picture = GFX_report_event_generic_sign_treaty1
+
+	is_triggered_only = yes
+
+	trigger = {
+		always = no
+	}
+
+	option = {
+		name = political.14.a
+	}
+}
+
+# Silence vanilla political.15
+country_event = {
+	id = political.15
+	title = political.15.t
+	desc = political.15.d
+	picture = GFX_report_event_generic_sign_treaty1
+
+	is_triggered_only = yes
+
+	trigger = {
+		always = no
+	}
+
+	option = {
+		name = political.15.a
+	}
+}
+
+# Silence vanilla political.16
+country_event = {
+	id = political.16
+	title = political.16.t
+	desc = political.16.d
+	picture = GFX_report_event_generic_sign_treaty1
+
+	is_triggered_only = yes
+
+	trigger = {
+		always = no
+	}
+
+	option = {
+		name = political.16.a
+	}
+}
+
+# Silence vanilla political.18
+country_event = {
+	id = political.18
+	title = political.18.t
+	desc = political.18.d
+	picture = GFX_report_event_generic_sign_treaty1
+
+	is_triggered_only = yes
+
+	trigger = {
+		always = no
+	}
+
+	option = {
+		name = political.18.a
+	}
+}
+
+# Silence vanilla political.19
+country_event = {
+	id = political.19
+	title = political.19.t
+	desc = political.19.d
+	picture = GFX_report_event_generic_sign_treaty1
+
+	is_triggered_only = yes
+
+	trigger = {
+		always = no
+	}
+
+	option = {
+		name = political.19.a
+	}
+}
+
+# Silence vanilla political.20
+country_event = {
+	id = political.20
+	title = political.20.t
+	desc = political.20.d
+	picture = GFX_report_event_generic_sign_treaty1
+
+	is_triggered_only = yes
+
+	trigger = {
+		always = no
+	}
+
+	option = {
+		name = political.20.a
+	}
+}
+
+# Silence vanilla political.21
+country_event = {
+	id = political.21
+	title = political.21.t
+	desc = political.21.d
+	picture = GFX_report_event_generic_sign_treaty1
+
+	is_triggered_only = yes
+
+	trigger = {
+		always = no
+	}
+
+	option = {
+		name = political.21.a
+	}
+}
+
+# Silence vanilla political.22
+country_event = {
+	id = political.22
+	title = political.22.t
+	desc = political.22.d
+	picture = GFX_report_event_generic_sign_treaty1
+
+	is_triggered_only = yes
+
+	trigger = {
+		always = no
+	}
+
+	option = {
+		name = political.22.a
+	}
+}
+
+# Silence vanilla political.23
+country_event = {
+	id = political.23
+	title = political.23.t
+	desc = political.23.d
+	picture = GFX_report_event_generic_sign_treaty1
+
+	is_triggered_only = yes
+
+	trigger = {
+		always = no
+	}
+
+	option = {
+		name = political.23.a
+	}
+}
+
+# Silence vanilla political.24
+country_event = {
+	id = political.24
+	title = political.24.t
+	desc = political.24.d
+	picture = GFX_report_event_generic_sign_treaty1
+
+	is_triggered_only = yes
+
+	trigger = {
+		always = no
+	}
+
+	option = {
+		name = political.24.a
+	}
+}
+
+# Silence vanilla political.25
+country_event = {
+	id = political.25
+	title = political.25.t
+	desc = political.25.d
+	picture = GFX_report_event_generic_sign_treaty1
+
+	is_triggered_only = yes
+
+	trigger = {
+		always = no
+	}
+
+	option = {
+		name = political.25.a
+	}
+}
+
+# Silence vanilla political.26
+country_event = {
+	id = political.26
+	title = political.26.t
+	desc = political.26.d
+	picture = GFX_report_event_generic_sign_treaty1
+
+	is_triggered_only = yes
+
+	trigger = {
+		always = no
+	}
+
+	option = {
+		name = political.26.a
+	}
+}
+
+# Silence vanilla political.27
+country_event = {
+	id = political.27
+	title = political.27.t
+	desc = political.27.d
+	picture = GFX_report_event_generic_sign_treaty1
+
+	is_triggered_only = yes
+
+	trigger = {
+		always = no
+	}
+
+	option = {
+		name = political.27.a
+	}
+}
+
+# Silence vanilla political.28
+country_event = {
+	id = political.28
+	title = political.28.t
+	desc = political.28.d
+	picture = GFX_report_event_generic_sign_treaty1
+
+	is_triggered_only = yes
+
+	trigger = {
+		always = no
+	}
+
+	option = {
+		name = political.28.a
+	}
+}
+
+# Silence vanilla political.31
+country_event = {
+	id = political.31
+	title = political.31.t
+	desc = political.31.d
+	picture = GFX_report_event_generic_sign_treaty1
+
+	is_triggered_only = yes
+
+	trigger = {
+		always = no
+	}
+
+	option = {
+		name = political.31.a
+	}
+}
+
+# Silence vanilla political.32
+country_event = {
+	id = political.32
+	title = political.32.t
+	desc = political.32.d
+	picture = GFX_report_event_generic_sign_treaty1
+
+	is_triggered_only = yes
+
+	trigger = {
+		always = no
+	}
+
+	option = {
+		name = political.32.a
+	}
+}
+
+# Silence vanilla political.33
+country_event = {
+	id = political.33
+	title = political.33.t
+	desc = political.33.d
+	picture = GFX_report_event_generic_sign_treaty1
+
+	is_triggered_only = yes
+
+	trigger = {
+		always = no
+	}
+
+	option = {
+		name = political.33.a
+	}
+}

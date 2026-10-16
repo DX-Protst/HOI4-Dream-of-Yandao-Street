@@ -1,0 +1,18 @@
+spriteTypes = {
+	spriteType = {
+		name = GFX_portrait_TLB_tang_qimei
+		texturefile = "gfx/leaders/TLB/portrait_TLB_tang_qimei.png"
+	}
+	spriteType = {
+		name = GFX_portrait_TLB_hu_chaoqiang
+		texturefile = "gfx/leaders/TLB/portrait_TLB_hu_chaoqiang.png"
+	}
+	spriteType = {
+		name = GFX_portrait_TLB_class_6_council
+		texturefile = "gfx/leaders/TLB/portrait_TLB_class_6_council.png"
+	}
+	spriteType = {
+		name = GFX_portrait_TLB_zhang_hanyu
+		texturefile = "gfx/leaders/TLB/portrait_TLB_zhang_hanyu.png"
+	}
+}

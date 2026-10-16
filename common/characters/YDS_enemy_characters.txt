@@ -1,0 +1,92 @@
+characters = {
+	EBS_leader_chen_zhuanyuan = {
+		name = EBS_leader_chen_zhuanyuan
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_chi_dai_li"
+			}
+		}
+		country_leader = {
+			ideology = bureaucratic_despotism
+			id = -1
+		}
+	}
+
+	ECE_leader_zhang_laoshi = {
+		name = ECE_leader_zhang_laoshi
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_chi_gu_zhuotong"
+			}
+		}
+		country_leader = {
+			ideology = academic_laissez_faire
+			id = -1
+		}
+	}
+
+	HBE_leader_zhou_peng = {
+		name = HBE_leader_zhou_peng
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_chi_wang_jingwei"
+			}
+		}
+		country_leader = {
+			ideology = exam_vanguardism
+			id = -1
+		}
+	}
+
+	SHS_leader_wang_laoshi = {
+		name = SHS_leader_wang_laoshi
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_chi_song_zheyuan"
+			}
+		}
+		country_leader = {
+			ideology = exam_hell_fanaticism
+			id = -1
+		}
+	}
+
+	SNE_leader_chen_laoshi = {
+		name = SNE_leader_chen_laoshi
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_chi_chen_jitang"
+			}
+		}
+		country_leader = {
+			ideology = civic_liberalism
+			id = -1
+		}
+	}
+
+	SXI_leader_li_jun = {
+		name = SXI_leader_li_jun
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_chi_chiang_kai_shek"
+			}
+		}
+		country_leader = {
+			ideology = military_boarding_regime
+			id = -1
+		}
+	}
+
+	YNE_leader_li_wei = {
+		name = YNE_leader_li_wei
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_chi_long_yun"
+			}
+		}
+		country_leader = {
+			ideology = specialty_student_alliance
+			id = -1
+		}
+	}
+}

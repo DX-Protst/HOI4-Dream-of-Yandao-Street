@@ -1,0 +1,330 @@
+defined_text = {
+name = GetYDSMemberLai
+text = {
+	trigger = {
+		has_country_flag = YDS_team_member_lai
+	}
+	localization_key = YDS_LOC_MEMBER_LAI
+}
+text = {
+	trigger = {
+		always = yes
+	}
+	localization_key = YDS_LOC_MEMBER_EMPTY
+}
+}
+
+defined_text = {
+name = GetYDSMemberTuo
+text = {
+	trigger = {
+		has_country_flag = YDS_team_member_tuo
+	}
+	localization_key = YDS_LOC_MEMBER_TUO
+}
+text = {
+	trigger = {
+		always = yes
+	}
+	localization_key = YDS_LOC_MEMBER_EMPTY
+}
+}
+
+defined_text = {
+name = GetYDSMemberZhou
+text = {
+	trigger = {
+		has_country_flag = YDS_team_member_zhoujs
+	}
+	localization_key = YDS_LOC_MEMBER_ZHOU
+}
+text = {
+	trigger = {
+		always = yes
+	}
+	localization_key = YDS_LOC_MEMBER_EMPTY
+}
+}
+
+defined_text = {
+name = GetYDSMemberEluo
+text = {
+	trigger = {
+		has_country_flag = YDS_team_member_eluo
+	}
+	localization_key = YDS_LOC_MEMBER_ELUO
+}
+text = {
+	trigger = {
+		always = yes
+	}
+	localization_key = YDS_LOC_MEMBER_EMPTY
+}
+}
+
+defined_text = {
+name = GetYDSMemberDeng
+text = {
+	trigger = {
+		has_country_flag = YDS_team_member_deng
+	}
+	localization_key = YDS_LOC_MEMBER_DENG
+}
+text = {
+	trigger = {
+		always = yes
+	}
+	localization_key = YDS_LOC_MEMBER_EMPTY
+}
+}
+
+defined_text = {
+name = GetYDSExamBonusLai
+text = {
+	trigger = {
+		has_country_flag = YDS_team_member_lai
+	}
+	localization_key = YDS_LOC_EXAM_BONUS_LAI
+}
+text = {
+	trigger = {
+		always = yes
+	}
+	localization_key = YDS_LOC_MEMBER_EMPTY
+}
+}
+
+defined_text = {
+name = GetYDSExamBonusTuo
+text = {
+	trigger = {
+		has_country_flag = YDS_team_member_tuo
+	}
+	localization_key = YDS_LOC_EXAM_BONUS_TUO
+}
+text = {
+	trigger = {
+		always = yes
+	}
+	localization_key = YDS_LOC_MEMBER_EMPTY
+}
+}
+
+defined_text = {
+name = GetYDSExamBonusZhou
+text = {
+	trigger = {
+		has_country_flag = YDS_team_member_zhoujs
+	}
+	localization_key = YDS_LOC_EXAM_BONUS_ZHOU
+}
+text = {
+	trigger = {
+		always = yes
+	}
+	localization_key = YDS_LOC_MEMBER_EMPTY
+}
+}
+
+defined_text = {
+name = GetYDSExamBonusEluo
+text = {
+	trigger = {
+		has_country_flag = YDS_team_member_eluo
+	}
+	localization_key = YDS_LOC_EXAM_BONUS_ELUO
+}
+text = {
+	trigger = {
+		always = yes
+	}
+	localization_key = YDS_LOC_MEMBER_EMPTY
+}
+}
+
+defined_text = {
+name = GetYDSExamBonusDeng
+text = {
+	trigger = {
+		has_country_flag = YDS_team_member_deng
+	}
+	localization_key = YDS_LOC_EXAM_BONUS_DENG
+}
+text = {
+	trigger = {
+		always = yes
+	}
+	localization_key = YDS_LOC_MEMBER_EMPTY
+}
+}
+
+# Dynamic player status text
+defined_text = {
+	name = YDS_get_player_status_loc
+	text = {
+		trigger = { check_variable = { YDS_rank_YDS < 4 } }
+		localization_key = YDS_STATUS_PLAYER_TOP3
+	}
+	text = {
+		localization_key = YDS_STATUS_PLAYER_REPEATER
+	}
+}
+
+# Gold medal label: projected before finals, actual after finals
+defined_text = {
+	name = YDS_gold_label_loc
+	text = {
+		trigger = { has_country_flag = YDS_olympiad_finals_done }
+		localization_key = YDS_GOLD_LABEL_ACTUAL
+	}
+	text = {
+		localization_key = YDS_GOLD_LABEL_PROJECTED
+	}
+}
+
+# Warlord badges (Top 3 vs Repeater)
+defined_text = {
+	name = YDS_status_yds_badge
+	text = {
+		trigger = { check_variable = { YDS_rank_YDS < 4 } }
+		localization_key = YDS_BADGE_WINNER
+	}
+	text = { localization_key = YDS_BADGE_LOSER }
+}
+
+defined_text = {
+	name = YDS_status_ece_badge
+	text = {
+		trigger = { check_variable = { YDS_rank_ECE < 4 } }
+		localization_key = YDS_BADGE_WINNER
+	}
+	text = { localization_key = YDS_BADGE_LOSER }
+}
+
+defined_text = {
+	name = YDS_status_hbe_badge
+	text = {
+		trigger = { check_variable = { YDS_rank_HBE < 4 } }
+		localization_key = YDS_BADGE_WINNER
+	}
+	text = { localization_key = YDS_BADGE_LOSER }
+}
+
+defined_text = {
+	name = YDS_status_shs_badge
+	text = {
+		trigger = { check_variable = { YDS_rank_SHS < 4 } }
+		localization_key = YDS_BADGE_WINNER
+	}
+	text = { localization_key = YDS_BADGE_LOSER }
+}
+
+defined_text = {
+	name = YDS_status_ebs_badge
+	text = {
+		trigger = { check_variable = { YDS_rank_EBS < 4 } }
+		localization_key = YDS_BADGE_WINNER
+	}
+	text = { localization_key = YDS_BADGE_LOSER }
+}
+
+defined_text = {
+	name = YDS_status_sxi_badge
+	text = {
+		trigger = { check_variable = { YDS_rank_SXI < 4 } }
+		localization_key = YDS_BADGE_WINNER
+	}
+	text = { localization_key = YDS_BADGE_LOSER }
+}
+
+defined_text = {
+	name = YDS_status_sne_badge
+	text = {
+		trigger = { check_variable = { YDS_rank_SNE < 4 } }
+		localization_key = YDS_BADGE_WINNER
+	}
+	text = { localization_key = YDS_BADGE_LOSER }
+}
+
+defined_text = {
+	name = YDS_status_yne_badge
+	text = {
+		trigger = { check_variable = { YDS_rank_YNE < 4 } }
+		localization_key = YDS_BADGE_WINNER
+	}
+	text = { localization_key = YDS_BADGE_LOSER }
+}
+
+# Warlord status descriptions
+defined_text = {
+	name = YDS_status_yds_loc
+	text = {
+		trigger = { check_variable = { YDS_rank_YDS < 4 } }
+		localization_key = YDS_STATUS_WINNER_DESC
+	}
+	text = { localization_key = YDS_STATUS_LOSER_DESC }
+}
+
+defined_text = {
+	name = YDS_status_ece_loc
+	text = {
+		trigger = { check_variable = { YDS_rank_ECE < 4 } }
+		localization_key = YDS_STATUS_WINNER_DESC
+	}
+	text = { localization_key = YDS_STATUS_LOSER_DESC }
+}
+
+defined_text = {
+	name = YDS_status_hbe_loc
+	text = {
+		trigger = { check_variable = { YDS_rank_HBE < 4 } }
+		localization_key = YDS_STATUS_WINNER_DESC
+	}
+	text = { localization_key = YDS_STATUS_LOSER_DESC }
+}
+
+defined_text = {
+	name = YDS_status_shs_loc
+	text = {
+		trigger = { check_variable = { YDS_rank_SHS < 4 } }
+		localization_key = YDS_STATUS_WINNER_DESC
+	}
+	text = { localization_key = YDS_STATUS_LOSER_DESC }
+}
+
+defined_text = {
+	name = YDS_status_ebs_loc
+	text = {
+		trigger = { check_variable = { YDS_rank_EBS < 4 } }
+		localization_key = YDS_STATUS_WINNER_DESC
+	}
+	text = { localization_key = YDS_STATUS_LOSER_DESC }
+}
+
+defined_text = {
+	name = YDS_status_sxi_loc
+	text = {
+		trigger = { check_variable = { YDS_rank_SXI < 4 } }
+		localization_key = YDS_STATUS_WINNER_DESC
+	}
+	text = { localization_key = YDS_STATUS_LOSER_DESC }
+}
+
+defined_text = {
+	name = YDS_status_sne_loc
+	text = {
+		trigger = { check_variable = { YDS_rank_SNE < 4 } }
+		localization_key = YDS_STATUS_WINNER_DESC
+	}
+	text = { localization_key = YDS_STATUS_LOSER_DESC }
+}
+
+defined_text = {
+	name = YDS_status_yne_loc
+	text = {
+		trigger = { check_variable = { YDS_rank_YNE < 4 } }
+		localization_key = YDS_STATUS_WINNER_DESC
+	}
+	text = { localization_key = YDS_STATUS_LOSER_DESC }
+}
+

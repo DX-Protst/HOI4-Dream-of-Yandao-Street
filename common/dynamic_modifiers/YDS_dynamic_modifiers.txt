@@ -1,0 +1,60 @@
+# YDS political line dynamic modifiers (2 per line, driven by focus cumulative variables)
+# y=5 focuses add 1 each; y=6-9 focuses add_to_variable to accumulate values in real-time
+# UI display is paired with custom_effect_tooltip in completion_reward
+
+# -- Communism: Bureaucratic Iron Fist --
+# Bureau inspection team stationing (y=5 left)
+YDS_bureau_control_buff_1 = {
+	icon = GFX_idea_YDS_bureau_control_buff_1
+	enable = {
+		always = yes
+	}
+	industrial_capacity_factory = YDS_bureau_industry_factor
+}
+
+# Initial order after cleanup (y=5 right)
+YDS_bureau_control_buff_2 = {
+	icon = GFX_idea_YDS_bureau_control_buff_2
+	enable = {
+		always = yes
+	}
+	production_factory_max_efficiency_factor = YDS_bureau_eff_factor
+}
+
+# -- Democratic: Student Autonomy --
+# Reformist moderate governance (y=5 left)
+YDS_autonomy_buff_1 = {
+	icon = GFX_idea_YDS_autonomy_buff_1
+	enable = {
+		always = yes
+	}
+	industrial_capacity_factory = YDS_autonomy_industry_factor
+}
+
+# Administrative negotiation fruit (y=5 right)
+YDS_autonomy_buff_2 = {
+	icon = GFX_idea_YDS_autonomy_buff_2
+	enable = {
+		always = yes
+	}
+	consumer_goods_factor = YDS_autonomy_goods_factor
+}
+
+# -- Fascism: Alumni Revival --
+# Study guide monopoly funding (y=5 left)
+YDS_alumni_buff_1 = {
+	icon = GFX_idea_YDS_alumni_buff_1
+	enable = {
+		always = yes
+	}
+	industrial_capacity_factory = YDS_alumni_industry_factor
+}
+
+# Yandao street coup consolidation (y=5 right)
+YDS_alumni_buff_2 = {
+	icon = GFX_idea_YDS_alumni_buff_2
+	enable = {
+		always = yes
+	}
+	army_org_factor = YDS_alumni_org_factor
+}

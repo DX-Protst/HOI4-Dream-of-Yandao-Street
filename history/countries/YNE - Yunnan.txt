@@ -1,0 +1,29 @@
+capital = 325
+oob = "YNE_national_war"
+
+set_research_slots = 3
+
+set_politics = {
+	ruling_party = social_democrat
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	social_democrat = 70
+	authoritarian_democrat = 30
+}
+
+recruit_character = YNE_leader_li_wei
+
+add_ideas = YNE_highland_joint_exam
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1
+	tech_recon = 1
+	tech_engineers = 1
+	gw_artillery = 1
+}

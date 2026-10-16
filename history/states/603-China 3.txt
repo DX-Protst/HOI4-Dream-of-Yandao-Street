@@ -1,0 +1,27 @@
+state = {
+	id = 603
+	name = "STATE_603"
+	manpower = 7543200
+	resources = {
+		coal = 3
+	}
+	state_category = city
+	history = {
+		owner = YNE
+		controller = YNE
+		add_core_of = YNE
+		add_core_of = CHI
+		add_core_of = PRC
+		victory_points = { 4504 3 }
+		buildings = {
+			arms_factory = 1
+			industrial_complex = 1
+			infrastructure = 1
+		}
+	}
+	provinces = {
+		1474 1884 4504 4532 7521 7549 7577 8095 10616 10819
+	}
+	local_supplies = 3
+	buildings_max_level_factor = 1
+}

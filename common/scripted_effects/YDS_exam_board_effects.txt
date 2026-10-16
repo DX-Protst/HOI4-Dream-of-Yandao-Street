@@ -1,0 +1,563 @@
+# Scripted effects for National Exam Board and Olympiad 5-Track System
+# All comments are strictly in pure ASCII.
+
+# ==================== WEEKLY TRACK DELTA ENGINE ====================
+# Computes the exact per-week change of every track for the current country.
+# Shared by the weekly tick (apply) and the GUI (preview), so the delta shown
+# in the panel is always exactly the delta applied on the next weekly pulse.
+# All opponent pressure is deterministic and visible; no hidden AI drains.
+calc_exam_track_weekly_deltas = {
+	# 1. Math (Lai Sihan) vs ECE
+	set_variable = { YDS_delta_math = YDS_invest_math }
+	multiply_variable = { var = YDS_delta_math value = 0.6 }
+	if = {
+		limit = { has_stability > 0.6 }
+		add_to_variable = { YDS_delta_math = 0.3 }
+	}
+	if = {
+		limit = {
+			country_exists = ECE
+			NOT = { has_country_flag = YDS_counter_ece_cooldown }
+		}
+		subtract_from_variable = { YDS_delta_math = 0.3 }
+	}
+
+	# 2. Physics (Eluo Ningbei) vs HBE
+	set_variable = { YDS_delta_physics = YDS_invest_physics }
+	multiply_variable = { var = YDS_delta_physics value = 0.6 }
+	if = {
+		limit = { check_variable = { YDS_gpa_score > 80 } }
+		add_to_variable = { YDS_delta_physics = 0.4 }
+	}
+	if = {
+		limit = {
+			country_exists = HBE
+			NOT = { has_country_flag = YDS_counter_hbe_cooldown }
+		}
+		subtract_from_variable = { YDS_delta_physics = 0.35 }
+	}
+
+	# 3. Chemistry (Zhou Jingsong) vs ECE
+	set_variable = { YDS_delta_chem = YDS_invest_chem }
+	multiply_variable = { var = YDS_delta_chem value = 0.6 }
+	add_to_variable = { YDS_delta_chem = 0.2 }
+	if = {
+		limit = {
+			country_exists = ECE
+			NOT = { has_country_flag = YDS_counter_ece_cooldown }
+		}
+		subtract_from_variable = { YDS_delta_chem = 0.3 }
+	}
+
+	# 4. Biology (Deng Yunbo) vs SNE
+	set_variable = { YDS_delta_bio = YDS_invest_bio }
+	multiply_variable = { var = YDS_delta_bio value = 0.6 }
+	add_to_variable = { YDS_delta_bio = 0.2 }
+	if = {
+		limit = { country_exists = SNE }
+		subtract_from_variable = { YDS_delta_bio = 0.3 }
+	}
+
+	# 5. Informatics (Tuo Wen) vs EBS
+	set_variable = { YDS_delta_info = YDS_invest_info }
+	multiply_variable = { var = YDS_delta_info value = 0.6 }
+	if = {
+		limit = {
+			OR = {
+				AND = {
+					OR = {
+						has_government = paternal_autocrat
+						has_government = totalist
+						has_government = radical_socialist
+					}
+					check_variable = { YDS_gpa_score > 80 }
+				}
+				AND = {
+					has_government = national_populist
+					check_variable = { YDS_alumni_funds > 50 }
+				}
+				AND = {
+					OR = {
+						has_government = social_liberal
+						has_government = authoritarian_democrat
+						has_government = social_democrat
+					}
+					check_variable = { YDS_student_autonomy > 70 }
+				}
+			}
+		}
+		add_to_variable = { YDS_delta_info = 0.4 }
+	}
+	if = {
+		limit = { country_exists = EBS }
+		subtract_from_variable = { YDS_delta_info = 0.35 }
+	}
+}
+
+# Weekly pulse: apply previewed deltas, clamp, then refresh the leaderboard
+execute_exam_board_weekly_tick = {
+	calc_exam_track_weekly_deltas = yes
+	add_to_variable = { global.track_math_progress = YDS_delta_math }
+	add_to_variable = { global.track_physics_progress = YDS_delta_physics }
+	add_to_variable = { global.track_chem_progress = YDS_delta_chem }
+	add_to_variable = { global.track_bio_progress = YDS_delta_bio }
+	add_to_variable = { global.track_info_progress = YDS_delta_info }
+	clamp_exam_track_variables = yes
+	update_exam_leaderboard_scores = yes
+}
+
+clamp_exam_track_variables = {
+	# Math clamp
+	if = { limit = { check_variable = { global.track_math_progress > 100 } } set_variable = { global.track_math_progress = 100 } }
+	if = { limit = { check_variable = { global.track_math_progress < 0 } } set_variable = { global.track_math_progress = 0 } }
+	# Physics clamp
+	if = { limit = { check_variable = { global.track_physics_progress > 100 } } set_variable = { global.track_physics_progress = 100 } }
+	if = { limit = { check_variable = { global.track_physics_progress < 0 } } set_variable = { global.track_physics_progress = 0 } }
+	# Chem clamp
+	if = { limit = { check_variable = { global.track_chem_progress > 100 } } set_variable = { global.track_chem_progress = 100 } }
+	if = { limit = { check_variable = { global.track_chem_progress < 0 } } set_variable = { global.track_chem_progress = 0 } }
+	# Bio clamp
+	if = { limit = { check_variable = { global.track_bio_progress > 100 } } set_variable = { global.track_bio_progress = 100 } }
+	if = { limit = { check_variable = { global.track_bio_progress < 0 } } set_variable = { global.track_bio_progress = 0 } }
+	# Info clamp
+	if = { limit = { check_variable = { global.track_info_progress > 100 } } set_variable = { global.track_info_progress = 100 } }
+	if = { limit = { check_variable = { global.track_info_progress < 0 } } set_variable = { global.track_info_progress = 0 } }
+}
+
+calculate_olympiad_finals_results = {
+	# Reset gold medals counter
+	set_variable = { YDS_gold_medals_won = 0 }
+
+	# 1. Math Evaluation
+	if = {
+		limit = { check_variable = { global.track_math_progress > 69 } }
+		set_country_flag = YDS_lai_gold_won
+		add_ideas = YDS_olympiad_math_gold_spirit
+		add_to_variable = { YDS_gold_medals_won = 1 }
+		country_event = { id = yds_olympiad_event.310 days = 1 }
+	}
+	else = {
+		country_event = { id = yds_olympiad_event.311 days = 1 }
+	}
+
+	# 2. Physics Evaluation
+	if = {
+		limit = { check_variable = { global.track_physics_progress > 69 } }
+		set_country_flag = YDS_eluo_gold_won
+		add_ideas = YDS_olympiad_physics_gold_spirit
+		add_to_variable = { YDS_gold_medals_won = 1 }
+		country_event = { id = yds_olympiad_event.340 days = 2 }
+	}
+	else = {
+		country_event = { id = yds_olympiad_event.341 days = 2 }
+	}
+
+	# 3. Chemistry Evaluation
+	if = {
+		limit = {
+			check_variable = { YDS_cheat_risk > 25 }
+			check_variable = { global.track_chem_progress > 69 }
+		}
+		random_list = {
+			40 = {
+				set_country_flag = YDS_zhoujs_cheated_exposed
+				country_event = { id = yds_olympiad_event.332 days = 3 }
+			}
+			60 = {
+				set_country_flag = YDS_zhou_gold_won
+				add_ideas = YDS_olympiad_chem_gold_spirit
+				add_to_variable = { YDS_gold_medals_won = 1 }
+				country_event = { id = yds_olympiad_event.330 days = 3 }
+			}
+		}
+	}
+	else_if = {
+		limit = { check_variable = { global.track_chem_progress > 69 } }
+		set_country_flag = YDS_zhou_gold_won
+		add_ideas = YDS_olympiad_chem_gold_spirit
+		add_to_variable = { YDS_gold_medals_won = 1 }
+		country_event = { id = yds_olympiad_event.330 days = 3 }
+	}
+	else = {
+		country_event = { id = yds_olympiad_event.331 days = 3 }
+	}
+
+	# 4. Biology Evaluation
+	if = {
+		limit = { check_variable = { global.track_bio_progress > 69 } }
+		set_country_flag = YDS_deng_gold_won
+		add_ideas = YDS_olympiad_bio_gold_spirit
+		add_to_variable = { YDS_gold_medals_won = 1 }
+		country_event = { id = yds_olympiad_event.350 days = 4 }
+	}
+	else = {
+		country_event = { id = yds_olympiad_event.351 days = 4 }
+	}
+
+	# 5. Informatics Evaluation
+	if = {
+		limit = { check_variable = { global.track_info_progress > 69 } }
+		set_country_flag = YDS_tuo_gold_won
+		add_ideas = YDS_olympiad_info_gold_spirit
+		add_to_variable = { YDS_gold_medals_won = 1 }
+		country_event = { id = yds_olympiad_event.320 days = 5 }
+	}
+	else = {
+		country_event = { id = yds_olympiad_event.321 days = 5 }
+	}
+
+	# Finals overview event triggered after all track reports
+	if = {
+		limit = { check_variable = { YDS_gold_medals_won > 2 } }
+		country_event = { id = yds_olympiad_event.103 days = 6 }
+	}
+	else_if = {
+		limit = { check_variable = { YDS_gold_medals_won = 2 } }
+		country_event = { id = yds_olympiad_event.102 days = 6 }
+	}
+	else_if = {
+		limit = { check_variable = { YDS_gold_medals_won = 1 } }
+		country_event = { id = yds_olympiad_event.101 days = 6 }
+	}
+	else = {
+		country_event = { id = yds_olympiad_event.100 days = 6 }
+	}
+
+	# Immediately update leaderboard with finalized medals
+	update_exam_leaderboard_scores = yes
+}
+
+calculate_gaokao_reckoning_1938 = {
+	save_event_target_as = human_educational_player
+
+	# Step 1: Synchronously compute leaderboard scores and exact rankings
+	update_exam_leaderboard_scores = yes
+
+	# Step 2: Clear previous winner and loser flags across all educational warlords
+	every_country = {
+		limit = { is_educational_warlord = yes }
+		clr_country_flag = is_gaokao_top3_winner
+		clr_country_flag = is_gaokao_repeater_loser
+	}
+
+	# Step 3: Assign Top 3 Winners (Ranks 1..3) and Repeater Losers (Ranks 4+) strictly matching the leaderboard GUI
+	# YDS
+	if = {
+		limit = { country_exists = YDS }
+		if = {
+			limit = { check_variable = { YDS_rank_YDS < 4 } }
+			YDS = { set_country_flag = is_gaokao_top3_winner }
+		}
+		else = {
+			YDS = { set_country_flag = is_gaokao_repeater_loser }
+		}
+	}
+
+	# Civil war breakaway branches if player is YDC/YDF/YDD
+	every_country = {
+		limit = {
+			OR = { tag = YDC tag = YDF tag = YDD }
+		}
+		if = {
+			limit = { check_variable = { YDS_rank_YDS < 4 } }
+			set_country_flag = is_gaokao_top3_winner
+		}
+		else = {
+			set_country_flag = is_gaokao_repeater_loser
+		}
+	}
+
+	# ECE
+	if = {
+		limit = { country_exists = ECE }
+		if = {
+			limit = { check_variable = { YDS_rank_ECE < 4 } }
+			ECE = { set_country_flag = is_gaokao_top3_winner }
+		}
+		else = {
+			ECE = { set_country_flag = is_gaokao_repeater_loser }
+		}
+	}
+
+	# HBE
+	if = {
+		limit = { country_exists = HBE }
+		if = {
+			limit = { check_variable = { YDS_rank_HBE < 4 } }
+			HBE = { set_country_flag = is_gaokao_top3_winner }
+		}
+		else = {
+			HBE = { set_country_flag = is_gaokao_repeater_loser }
+		}
+	}
+
+	# SHS
+	if = {
+		limit = { country_exists = SHS }
+		if = {
+			limit = { check_variable = { YDS_rank_SHS < 4 } }
+			SHS = { set_country_flag = is_gaokao_top3_winner }
+		}
+		else = {
+			SHS = { set_country_flag = is_gaokao_repeater_loser }
+		}
+	}
+
+	# EBS
+	if = {
+		limit = { country_exists = EBS }
+		if = {
+			limit = { check_variable = { YDS_rank_EBS < 4 } }
+			EBS = { set_country_flag = is_gaokao_top3_winner }
+		}
+		else = {
+			EBS = { set_country_flag = is_gaokao_repeater_loser }
+		}
+	}
+
+	# SXI
+	if = {
+		limit = { country_exists = SXI }
+		if = {
+			limit = { check_variable = { YDS_rank_SXI < 4 } }
+			SXI = { set_country_flag = is_gaokao_top3_winner }
+		}
+		else = {
+			SXI = { set_country_flag = is_gaokao_repeater_loser }
+		}
+	}
+
+	# SNE
+	if = {
+		limit = { country_exists = SNE }
+		if = {
+			limit = { check_variable = { YDS_rank_SNE < 4 } }
+			SNE = { set_country_flag = is_gaokao_top3_winner }
+		}
+		else = {
+			SNE = { set_country_flag = is_gaokao_repeater_loser }
+		}
+	}
+
+	# YNE
+	if = {
+		limit = { country_exists = YNE }
+		if = {
+			limit = { check_variable = { YDS_rank_YNE < 4 } }
+			YNE = { set_country_flag = is_gaokao_top3_winner }
+		}
+		else = {
+			YNE = { set_country_flag = is_gaokao_repeater_loser }
+		}
+	}
+
+	# Step 4: Ensure any other warlords have loser flag as fallback
+	every_country = {
+		limit = {
+			is_educational_warlord = yes
+			NOT = { has_country_flag = is_gaokao_top3_winner }
+			NOT = { has_country_flag = is_gaokao_repeater_loser }
+		}
+		set_country_flag = is_gaokao_repeater_loser
+	}
+
+	# Step 5: Trigger Gaokao announcement event for human player
+	event_target:human_educational_player = { country_event = { id = yds_national_war.100 } }
+}
+
+update_exam_leaderboard_scores = {
+	# 0. Refresh weekly delta preview so the GUI always matches the next pulse
+	calc_exam_track_weekly_deltas = yes
+
+	# 1. Gold count used for scoring:
+	#    after finals -> real medals; before finals -> projected medals (tracks > 69)
+	if = {
+		limit = { has_country_flag = YDS_olympiad_finals_done }
+		set_variable = { YDS_gold_for_score = YDS_gold_medals_won }
+	}
+	else = {
+		set_variable = { YDS_gold_for_score = 0 }
+		if = { limit = { check_variable = { global.track_math_progress > 69 } } add_to_variable = { YDS_gold_for_score = 1 } }
+		if = { limit = { check_variable = { global.track_physics_progress > 69 } } add_to_variable = { YDS_gold_for_score = 1 } }
+		if = { limit = { check_variable = { global.track_chem_progress > 69 } } add_to_variable = { YDS_gold_for_score = 1 } }
+		if = { limit = { check_variable = { global.track_bio_progress > 69 } } add_to_variable = { YDS_gold_for_score = 1 } }
+		if = { limit = { check_variable = { global.track_info_progress > 69 } } add_to_variable = { YDS_gold_for_score = 1 } }
+	}
+
+	# 2. Update Player Score
+	set_variable = { temp_gold_score = YDS_gold_for_score }
+	multiply_variable = { var = temp_gold_score value = 15 }
+	set_variable = { YDS_exam_monopoly_score = temp_gold_score }
+	set_variable = { temp_prestige = YDS_academic_prestige }
+	divide_variable = { var = temp_prestige value = 2 }
+	add_to_variable = { YDS_exam_monopoly_score = temp_prestige }
+	set_variable = { temp_gpa = YDS_gpa_score }
+	divide_variable = { var = temp_gpa value = 5 }
+	add_to_variable = { YDS_exam_monopoly_score = temp_gpa }
+	set_variable = { YDS_score_YDS = YDS_exam_monopoly_score }
+
+	# 2. Update ECE Score
+	if = {
+		limit = { country_exists = ECE }
+		set_variable = { ECE.YDS_exam_monopoly_score = 45 }
+		set_variable = { temp_val = 70 }
+		subtract_from_variable = { temp_val = global.track_math_progress }
+		if = { limit = { check_variable = { temp_val < 0 } } set_variable = { temp_val = 0 } }
+		multiply_variable = { var = temp_val value = 0.2 }
+		add_to_variable = { ECE.YDS_exam_monopoly_score = temp_val }
+		set_variable = { temp_val = 70 }
+		subtract_from_variable = { temp_val = global.track_chem_progress }
+		if = { limit = { check_variable = { temp_val < 0 } } set_variable = { temp_val = 0 } }
+		multiply_variable = { var = temp_val value = 0.2 }
+		add_to_variable = { ECE.YDS_exam_monopoly_score = temp_val }
+		if = {
+			limit = { has_country_flag = YDS_counter_ece_cooldown }
+			subtract_from_variable = { ECE.YDS_exam_monopoly_score = 10 }
+		}
+		set_variable = { YDS_score_ECE = ECE.YDS_exam_monopoly_score }
+	}
+
+	# 3. Update HBE Score
+	if = {
+		limit = { country_exists = HBE }
+		set_variable = { HBE.YDS_exam_monopoly_score = 42 }
+		set_variable = { temp_val = 70 }
+		subtract_from_variable = { temp_val = global.track_physics_progress }
+		if = { limit = { check_variable = { temp_val < 0 } } set_variable = { temp_val = 0 } }
+		multiply_variable = { var = temp_val value = 0.35 }
+		add_to_variable = { HBE.YDS_exam_monopoly_score = temp_val }
+		if = {
+			limit = { has_country_flag = YDS_counter_hbe_cooldown }
+			subtract_from_variable = { HBE.YDS_exam_monopoly_score = 10 }
+		}
+		set_variable = { YDS_score_HBE = HBE.YDS_exam_monopoly_score }
+	}
+
+	# 4. Update SNE Score
+	if = {
+		limit = { country_exists = SNE }
+		set_variable = { SNE.YDS_exam_monopoly_score = 42 }
+		set_variable = { temp_val = 70 }
+		subtract_from_variable = { temp_val = global.track_bio_progress }
+		if = { limit = { check_variable = { temp_val < 0 } } set_variable = { temp_val = 0 } }
+		multiply_variable = { var = temp_val value = 0.35 }
+		add_to_variable = { SNE.YDS_exam_monopoly_score = temp_val }
+		set_variable = { YDS_score_SNE = SNE.YDS_exam_monopoly_score }
+	}
+
+	# 5. Update EBS Score
+	if = {
+		limit = { country_exists = EBS }
+		set_variable = { EBS.YDS_exam_monopoly_score = 42 }
+		set_variable = { temp_val = 70 }
+		subtract_from_variable = { temp_val = global.track_info_progress }
+		if = { limit = { check_variable = { temp_val < 0 } } set_variable = { temp_val = 0 } }
+		multiply_variable = { var = temp_val value = 0.33 }
+		add_to_variable = { EBS.YDS_exam_monopoly_score = temp_val }
+		set_variable = { YDS_score_EBS = EBS.YDS_exam_monopoly_score }
+	}
+
+	# 6. Update SHS Score
+	if = {
+		limit = { country_exists = SHS }
+		set_variable = { SHS.YDS_exam_monopoly_score = 63 }
+		set_variable = { YDS_score_SHS = SHS.YDS_exam_monopoly_score }
+	}
+
+	# 7. Update SXI Score
+	if = {
+		limit = { country_exists = SXI }
+		set_variable = { SXI.YDS_exam_monopoly_score = 52 }
+		set_variable = { YDS_score_SXI = SXI.YDS_exam_monopoly_score }
+	}
+
+	# 8. Update YNE Score
+	if = {
+		limit = { country_exists = YNE }
+		set_variable = { YNE.YDS_exam_monopoly_score = 48 }
+		set_variable = { YDS_score_YNE = YNE.YDS_exam_monopoly_score }
+	}
+
+	# Compute Ranks for all 8 warlords
+	# YDS Rank
+	set_variable = { YDS_rank_YDS = 1 }
+	if = { limit = { check_variable = { YDS_score_ECE > YDS_score_YDS } } add_to_variable = { YDS_rank_YDS = 1 } }
+	if = { limit = { check_variable = { YDS_score_HBE > YDS_score_YDS } } add_to_variable = { YDS_rank_YDS = 1 } }
+	if = { limit = { check_variable = { YDS_score_SHS > YDS_score_YDS } } add_to_variable = { YDS_rank_YDS = 1 } }
+	if = { limit = { check_variable = { YDS_score_EBS > YDS_score_YDS } } add_to_variable = { YDS_rank_YDS = 1 } }
+	if = { limit = { check_variable = { YDS_score_SXI > YDS_score_YDS } } add_to_variable = { YDS_rank_YDS = 1 } }
+	if = { limit = { check_variable = { YDS_score_SNE > YDS_score_YDS } } add_to_variable = { YDS_rank_YDS = 1 } }
+	if = { limit = { check_variable = { YDS_score_YNE > YDS_score_YDS } } add_to_variable = { YDS_rank_YDS = 1 } }
+
+	# ECE Rank
+	set_variable = { YDS_rank_ECE = 1 }
+	if = { limit = { check_variable = { YDS_score_YDS > YDS_score_ECE } } add_to_variable = { YDS_rank_ECE = 1 } }
+	if = { limit = { check_variable = { YDS_score_HBE > YDS_score_ECE } } add_to_variable = { YDS_rank_ECE = 1 } }
+	if = { limit = { check_variable = { YDS_score_SHS > YDS_score_ECE } } add_to_variable = { YDS_rank_ECE = 1 } }
+	if = { limit = { check_variable = { YDS_score_EBS > YDS_score_ECE } } add_to_variable = { YDS_rank_ECE = 1 } }
+	if = { limit = { check_variable = { YDS_score_SXI > YDS_score_ECE } } add_to_variable = { YDS_rank_ECE = 1 } }
+	if = { limit = { check_variable = { YDS_score_SNE > YDS_score_ECE } } add_to_variable = { YDS_rank_ECE = 1 } }
+	if = { limit = { check_variable = { YDS_score_YNE > YDS_score_ECE } } add_to_variable = { YDS_rank_ECE = 1 } }
+
+	# HBE Rank
+	set_variable = { YDS_rank_HBE = 1 }
+	if = { limit = { check_variable = { YDS_score_YDS > YDS_score_HBE } } add_to_variable = { YDS_rank_HBE = 1 } }
+	if = { limit = { check_variable = { YDS_score_ECE > YDS_score_HBE } } add_to_variable = { YDS_rank_HBE = 1 } }
+	if = { limit = { check_variable = { YDS_score_SHS > YDS_score_HBE } } add_to_variable = { YDS_rank_HBE = 1 } }
+	if = { limit = { check_variable = { YDS_score_EBS > YDS_score_HBE } } add_to_variable = { YDS_rank_HBE = 1 } }
+	if = { limit = { check_variable = { YDS_score_SXI > YDS_score_HBE } } add_to_variable = { YDS_rank_HBE = 1 } }
+	if = { limit = { check_variable = { YDS_score_SNE > YDS_score_HBE } } add_to_variable = { YDS_rank_HBE = 1 } }
+	if = { limit = { check_variable = { YDS_score_YNE > YDS_score_HBE } } add_to_variable = { YDS_rank_HBE = 1 } }
+
+	# SHS Rank
+	set_variable = { YDS_rank_SHS = 1 }
+	if = { limit = { check_variable = { YDS_score_YDS > YDS_score_SHS } } add_to_variable = { YDS_rank_SHS = 1 } }
+	if = { limit = { check_variable = { YDS_score_ECE > YDS_score_SHS } } add_to_variable = { YDS_rank_SHS = 1 } }
+	if = { limit = { check_variable = { YDS_score_HBE > YDS_score_SHS } } add_to_variable = { YDS_rank_SHS = 1 } }
+	if = { limit = { check_variable = { YDS_score_EBS > YDS_score_SHS } } add_to_variable = { YDS_rank_SHS = 1 } }
+	if = { limit = { check_variable = { YDS_score_SXI > YDS_score_SHS } } add_to_variable = { YDS_rank_SHS = 1 } }
+	if = { limit = { check_variable = { YDS_score_SNE > YDS_score_SHS } } add_to_variable = { YDS_rank_SHS = 1 } }
+	if = { limit = { check_variable = { YDS_score_YNE > YDS_score_SHS } } add_to_variable = { YDS_rank_SHS = 1 } }
+
+	# EBS Rank
+	set_variable = { YDS_rank_EBS = 1 }
+	if = { limit = { check_variable = { YDS_score_YDS > YDS_score_EBS } } add_to_variable = { YDS_rank_EBS = 1 } }
+	if = { limit = { check_variable = { YDS_score_ECE > YDS_score_EBS } } add_to_variable = { YDS_rank_EBS = 1 } }
+	if = { limit = { check_variable = { YDS_score_HBE > YDS_score_EBS } } add_to_variable = { YDS_rank_EBS = 1 } }
+	if = { limit = { check_variable = { YDS_score_SHS > YDS_score_EBS } } add_to_variable = { YDS_rank_EBS = 1 } }
+	if = { limit = { check_variable = { YDS_score_SXI > YDS_score_EBS } } add_to_variable = { YDS_rank_EBS = 1 } }
+	if = { limit = { check_variable = { YDS_score_SNE > YDS_score_EBS } } add_to_variable = { YDS_rank_EBS = 1 } }
+	if = { limit = { check_variable = { YDS_score_YNE > YDS_score_EBS } } add_to_variable = { YDS_rank_EBS = 1 } }
+
+	# SXI Rank
+	set_variable = { YDS_rank_SXI = 1 }
+	if = { limit = { check_variable = { YDS_score_YDS > YDS_score_SXI } } add_to_variable = { YDS_rank_SXI = 1 } }
+	if = { limit = { check_variable = { YDS_score_ECE > YDS_score_SXI } } add_to_variable = { YDS_rank_SXI = 1 } }
+	if = { limit = { check_variable = { YDS_score_HBE > YDS_score_SXI } } add_to_variable = { YDS_rank_SXI = 1 } }
+	if = { limit = { check_variable = { YDS_score_SHS > YDS_score_SXI } } add_to_variable = { YDS_rank_SXI = 1 } }
+	if = { limit = { check_variable = { YDS_score_EBS > YDS_score_SXI } } add_to_variable = { YDS_rank_SXI = 1 } }
+	if = { limit = { check_variable = { YDS_score_SNE > YDS_score_SXI } } add_to_variable = { YDS_rank_SXI = 1 } }
+	if = { limit = { check_variable = { YDS_score_YNE > YDS_score_SXI } } add_to_variable = { YDS_rank_SXI = 1 } }
+
+	# SNE Rank
+	set_variable = { YDS_rank_SNE = 1 }
+	if = { limit = { check_variable = { YDS_score_YDS > YDS_score_SNE } } add_to_variable = { YDS_rank_SNE = 1 } }
+	if = { limit = { check_variable = { YDS_score_ECE > YDS_score_SNE } } add_to_variable = { YDS_rank_SNE = 1 } }
+	if = { limit = { check_variable = { YDS_score_HBE > YDS_score_SNE } } add_to_variable = { YDS_rank_SNE = 1 } }
+	if = { limit = { check_variable = { YDS_score_SHS > YDS_score_SNE } } add_to_variable = { YDS_rank_SNE = 1 } }
+	if = { limit = { check_variable = { YDS_score_EBS > YDS_score_SNE } } add_to_variable = { YDS_rank_SNE = 1 } }
+	if = { limit = { check_variable = { YDS_score_SXI > YDS_score_SNE } } add_to_variable = { YDS_rank_SNE = 1 } }
+	if = { limit = { check_variable = { YDS_score_YNE > YDS_score_SNE } } add_to_variable = { YDS_rank_SNE = 1 } }
+
+	# YNE Rank
+	set_variable = { YDS_rank_YNE = 1 }
+	if = { limit = { check_variable = { YDS_score_YDS > YDS_score_YNE } } add_to_variable = { YDS_rank_YNE = 1 } }
+	if = { limit = { check_variable = { YDS_score_ECE > YDS_score_YNE } } add_to_variable = { YDS_rank_YNE = 1 } }
+	if = { limit = { check_variable = { YDS_score_HBE > YDS_score_YNE } } add_to_variable = { YDS_rank_YNE = 1 } }
+	if = { limit = { check_variable = { YDS_score_SHS > YDS_score_YNE } } add_to_variable = { YDS_rank_YNE = 1 } }
+	if = { limit = { check_variable = { YDS_score_EBS > YDS_score_YNE } } add_to_variable = { YDS_rank_YNE = 1 } }
+	if = { limit = { check_variable = { YDS_score_SXI > YDS_score_YNE } } add_to_variable = { YDS_rank_YNE = 1 } }
+	if = { limit = { check_variable = { YDS_score_SNE > YDS_score_YNE } } add_to_variable = { YDS_rank_YNE = 1 } }
+}
+
+

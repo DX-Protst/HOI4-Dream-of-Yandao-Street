@@ -1,0 +1,26 @@
+spriteTypes = {
+	spriteType = {
+		name = GFX_portrait_YDS_deng_shuang
+		texturefile = "gfx/leaders/YDS/portrait_YDS_deng_shuang.png"
+	}
+	spriteType = {
+		name = GFX_portrait_YDS_jiang_guangping
+		texturefile = "gfx/leaders/YDS/portrait_YDS_jiang_guangping.png"
+	}
+	spriteType = {
+		name = GFX_portrait_YDS_li_gang
+		texturefile = "gfx/leaders/YDS/portrait_YDS_li_gang.png"
+	}
+	spriteType = {
+		name = GFX_portrait_YDS_liu_yan
+		texturefile = "gfx/leaders/YDS/portrait_YDS_liu_yan.png"
+	}
+	spriteType = {
+		name = GFX_portrait_YDS_tang_siyi
+		texturefile = "gfx/leaders/YDS/portrait_YDS_tang_siyi.png"
+	}
+	spriteType = {
+		name = GFX_portrait_YDS_autonomous_council
+		texturefile = "gfx/leaders/YDS/portrait_spr_anarchist_commune.dds"
+	}
+}

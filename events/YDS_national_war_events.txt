@@ -1,0 +1,821 @@
+add_namespace = yds_national_war
+add_namespace = yds_national_war_coring
+
+# Event 1: Outbreak of Stage 1 War (Southwest Neighbors SXI, HBE, YNE)
+country_event = {
+	id = yds_national_war.1
+	title = yds_national_war.1.t
+	desc = yds_national_war.1.d
+	picture = GFX_report_event_chinese_soldiers
+
+	is_triggered_only = yes
+
+	option = {
+		name = yds_national_war.1.a
+		custom_effect_tooltip = yds_national_war_mob_stage1_tt
+
+		hidden_effect = {
+			# SXI (Shaanxi Examination Alliance - 6 states)
+			744 = { add_core_of = SXI transfer_state_to = SXI }
+			1032 = { add_core_of = SXI transfer_state_to = SXI }
+			1045 = { add_core_of = SXI transfer_state_to = SXI }
+			1046 = { add_core_of = SXI transfer_state_to = SXI }
+			283 = { add_core_of = SXI transfer_state_to = SXI }
+			622 = { add_core_of = SXI transfer_state_to = SXI }
+
+			# HBE (Hubei Chutian Group - 4 states)
+			1036 = { add_core_of = HBE transfer_state_to = HBE }
+			602 = { add_core_of = HBE transfer_state_to = HBE }
+			620 = { add_core_of = HBE transfer_state_to = HBE }
+			750 = { add_core_of = HBE transfer_state_to = HBE }
+
+			# YNE (Yunnan-Guizhou Exam Union - 4 states)
+			325 = { add_core_of = YNE transfer_state_to = YNE }
+			603 = { add_core_of = YNE transfer_state_to = YNE }
+			747 = { add_core_of = YNE transfer_state_to = YNE }
+			748 = { add_core_of = YNE transfer_state_to = YNE }
+
+		}
+
+		set_global_flag = yds_national_war_active
+		set_global_flag = yds_national_war_stage1_active
+		ai_chance = { factor = 100 }
+	}
+}
+
+# Event 10: Outbreak of Stage 2 War (Central Plains & Coastal Factions SHS, SNE, ECE)
+country_event = {
+	id = yds_national_war.10
+	title = yds_national_war.10.t
+	desc = yds_national_war.10.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = yds_national_war.10.a
+		custom_effect_tooltip = yds_national_war_mob_stage2_tt
+
+		hidden_effect = {
+			# SHS (Shanhe Four-Province Alliance - 6 states)
+			1038 = { add_core_of = SHS transfer_state_to = SHS }
+			597 = { add_core_of = SHS transfer_state_to = SHS }
+			607 = { add_core_of = SHS transfer_state_to = SHS }
+			614 = { add_core_of = SHS transfer_state_to = SHS }
+			615 = { add_core_of = SHS transfer_state_to = SHS }
+			743 = { add_core_of = SHS transfer_state_to = SHS }
+
+			# SNE (Huanan Examination Alliance - 6 states)
+			592 = { add_core_of = SNE transfer_state_to = SNE }
+			591 = { add_core_of = SNE transfer_state_to = SNE }
+			593 = { add_core_of = SNE transfer_state_to = SNE }
+			594 = { add_core_of = SNE transfer_state_to = SNE }
+			599 = { add_core_of = SNE transfer_state_to = SNE }
+			1033 = { add_core_of = SNE transfer_state_to = SNE }
+
+			# ECE (East China Educational Org - 9 states)
+			1035 = { add_core_of = ECE transfer_state_to = ECE }
+			1034 = { add_core_of = ECE transfer_state_to = ECE }
+			595 = { add_core_of = ECE transfer_state_to = ECE }
+			596 = { add_core_of = ECE transfer_state_to = ECE }
+			598 = { add_core_of = ECE transfer_state_to = ECE }
+			600 = { add_core_of = ECE transfer_state_to = ECE }
+			606 = { add_core_of = ECE transfer_state_to = ECE }
+			613 = { add_core_of = ECE transfer_state_to = ECE }
+			749 = { add_core_of = ECE transfer_state_to = ECE }
+
+		}
+
+		set_global_flag = yds_national_war_stage2_active
+		ai_chance = { factor = 100 }
+	}
+}
+
+# Event 2: Intervention of Education Bureau Taskforce (EBS)
+country_event = {
+	id = yds_national_war.2
+	title = yds_national_war.2.t
+	desc = yds_national_war.2.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = yds_national_war.2.a
+		custom_effect_tooltip = yds_national_war_mob_ebs_tt
+
+		hidden_effect = {
+			# EBS (Education Bureau Taskforce - 11 states)
+			608 = { add_core_of = EBS transfer_state_to = EBS }
+			1039 = { add_core_of = EBS transfer_state_to = EBS }
+			328 = { add_core_of = EBS transfer_state_to = EBS }
+			609 = { add_core_of = EBS transfer_state_to = EBS }
+			610 = { add_core_of = EBS transfer_state_to = EBS }
+			714 = { add_core_of = EBS transfer_state_to = EBS }
+			715 = { add_core_of = EBS transfer_state_to = EBS }
+			716 = { add_core_of = EBS transfer_state_to = EBS }
+			717 = { add_core_of = EBS transfer_state_to = EBS }
+			745 = { add_core_of = EBS transfer_state_to = EBS }
+			761 = { add_core_of = EBS transfer_state_to = EBS }
+
+		}
+
+		ai_chance = { factor = 100 }
+	}
+}
+
+# Event 3: Defeat of Shaanxi Exam Union (SXI)
+country_event = {
+	id = yds_national_war.3
+	title = yds_national_war.3.t
+	desc = yds_national_war.3.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = yds_national_war.3.a
+		set_global_flag = yds_sxi_defeated
+		add_political_power = 100
+		add_stability = 0.05
+		ai_chance = { base = 100 }
+	}
+}
+
+# Event 4: Defeat of Hubei Olympiad League (HBE)
+country_event = {
+	id = yds_national_war.4
+	title = yds_national_war.4.t
+	desc = yds_national_war.4.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = yds_national_war.4.a
+		set_global_flag = yds_hbe_defeated
+		add_political_power = 100
+		add_tech_bonus = {
+			name = HBE_academic_bonus
+			bonus = 0.15
+			uses = 2
+			category = industry
+		}
+		ai_chance = { base = 100 }
+	}
+}
+
+# Event 6: Defeat of Yunnan-Guizhou Union (YNE)
+country_event = {
+	id = yds_national_war.6
+	title = yds_national_war.6.t
+	desc = yds_national_war.6.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = yds_national_war.6.a
+		set_global_flag = yds_yne_defeated
+		add_political_power = 100
+		add_stability = 0.05
+		ai_chance = { base = 100 }
+	}
+}
+
+# Event 7: Defeat of Shanhe Four-Province Alliance (SHS)
+country_event = {
+	id = yds_national_war.7
+	title = yds_national_war.7.t
+	desc = yds_national_war.7.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = yds_national_war.7.a
+		set_global_flag = yds_shs_defeated
+		add_political_power = 100
+		add_war_support = 0.05
+		ai_chance = { base = 100 }
+	}
+}
+
+# Event 8: Defeat of Huanan Alliance (SNE)
+country_event = {
+	id = yds_national_war.8
+	title = yds_national_war.8.t
+	desc = yds_national_war.8.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = yds_national_war.8.a
+		set_global_flag = yds_sne_defeated
+		add_political_power = 100
+		add_manpower = 5000
+		ai_chance = { base = 100 }
+	}
+}
+
+# Event 9: Defeat of East China Org (ECE)
+country_event = {
+	id = yds_national_war.9
+	title = yds_national_war.9.t
+	desc = yds_national_war.9.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = yds_national_war.9.a
+		set_global_flag = yds_ece_defeated
+		add_political_power = 100
+		add_tech_bonus = {
+			name = ECE_academic_bonus
+			bonus = 0.15
+			uses = 2
+			category = industry
+		}
+		ai_chance = { base = 100 }
+	}
+}
+
+# Event 5: Triumph over National Exam Forces (Final Victory)
+country_event = {
+	id = yds_national_war.5
+	title = yds_national_war.5.t
+	desc = yds_national_war.5.d
+	picture = GFX_report_event_chinese_soldiers
+
+	is_triggered_only = yes
+
+	option = {
+		name = yds_national_war.5.a
+		set_global_flag = yds_ebs_defeated
+		add_stability = 0.10
+		add_war_support = 0.10
+		set_global_flag = yds_national_war_victory
+		ai_chance = { base = 100 }
+	}
+}
+
+# ==================== 180-DAY CORING SETTLEMENT EVENTS ====================
+
+# Coring Event 1: Shaanxi Integration
+country_event = {
+	id = yds_national_war_coring.1
+	title = yds_national_war_coring.1.t
+	desc = yds_national_war_coring.1.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = yds_national_war_coring.1.a
+		custom_effect_tooltip = yds_coring_sxi_tt
+		hidden_effect = {
+			744 = { add_core_of = YDS }
+			1032 = { add_core_of = YDS }
+			1045 = { add_core_of = YDS }
+			1046 = { add_core_of = YDS }
+			283 = { add_core_of = YDS }
+			622 = { add_core_of = YDS }
+		}
+		add_political_power = 50
+		army_experience = 25
+		ai_chance = { base = 100 }
+	}
+}
+
+# Coring Event 2: Hubei Integration
+country_event = {
+	id = yds_national_war_coring.2
+	title = yds_national_war_coring.2.t
+	desc = yds_national_war_coring.2.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = yds_national_war_coring.2.a
+		custom_effect_tooltip = yds_coring_hbe_tt
+		hidden_effect = {
+			1036 = { add_core_of = YDS }
+			602 = { add_core_of = YDS }
+			620 = { add_core_of = YDS }
+			750 = { add_core_of = YDS }
+		}
+		add_political_power = 50
+		add_to_variable = { YDS_gpa_score = 10 }
+		ai_chance = { base = 100 }
+	}
+}
+
+# Coring Event 3: Yunnan-Guizhou Integration
+country_event = {
+	id = yds_national_war_coring.3
+	title = yds_national_war_coring.3.t
+	desc = yds_national_war_coring.3.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = yds_national_war_coring.3.a
+		custom_effect_tooltip = yds_coring_yne_tt
+		hidden_effect = {
+			325 = { add_core_of = YDS }
+			603 = { add_core_of = YDS }
+			747 = { add_core_of = YDS }
+			748 = { add_core_of = YDS }
+		}
+		add_political_power = 50
+		add_stability = 0.05
+		ai_chance = { base = 100 }
+	}
+}
+
+# Coring Event 4: Shanhe Four-Province Integration
+country_event = {
+	id = yds_national_war_coring.4
+	title = yds_national_war_coring.4.t
+	desc = yds_national_war_coring.4.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = yds_national_war_coring.4.a
+		custom_effect_tooltip = yds_coring_shs_tt
+		hidden_effect = {
+			1038 = { add_core_of = YDS }
+			597 = { add_core_of = YDS }
+			607 = { add_core_of = YDS }
+			614 = { add_core_of = YDS }
+			615 = { add_core_of = YDS }
+			743 = { add_core_of = YDS }
+		}
+		add_manpower = 15000
+		add_war_support = 0.05
+		ai_chance = { base = 100 }
+	}
+}
+
+# Coring Event 5: Huanan Integration
+country_event = {
+	id = yds_national_war_coring.5
+	title = yds_national_war_coring.5.t
+	desc = yds_national_war_coring.5.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = yds_national_war_coring.5.a
+		custom_effect_tooltip = yds_coring_sne_tt
+		hidden_effect = {
+			592 = { add_core_of = YDS }
+			591 = { add_core_of = YDS }
+			593 = { add_core_of = YDS }
+			594 = { add_core_of = YDS }
+			599 = { add_core_of = YDS }
+			1033 = { add_core_of = YDS }
+		}
+		add_political_power = 50
+		add_stability = 0.05
+		ai_chance = { base = 100 }
+	}
+}
+
+# Coring Event 6: East China Integration
+country_event = {
+	id = yds_national_war_coring.6
+	title = yds_national_war_coring.6.t
+	desc = yds_national_war_coring.6.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = yds_national_war_coring.6.a
+		custom_effect_tooltip = yds_coring_ece_tt
+		hidden_effect = {
+			1035 = { add_core_of = YDS }
+			1034 = { add_core_of = YDS }
+			595 = { add_core_of = YDS }
+			596 = { add_core_of = YDS }
+			598 = { add_core_of = YDS }
+			600 = { add_core_of = YDS }
+			606 = { add_core_of = YDS }
+			613 = { add_core_of = YDS }
+			749 = { add_core_of = YDS }
+		}
+		add_political_power = 50
+		add_to_variable = { YDS_gpa_score = 15 }
+		ai_chance = { base = 100 }
+	}
+}
+
+# Coring Event 7: Education Bureau Headquarters Integration
+country_event = {
+	id = yds_national_war_coring.7
+	title = yds_national_war_coring.7.t
+	desc = yds_national_war_coring.7.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = yds_national_war_coring.7.a
+		custom_effect_tooltip = yds_coring_ebs_tt
+		hidden_effect = {
+			608 = { add_core_of = YDS }
+			1039 = { add_core_of = YDS }
+			328 = { add_core_of = YDS }
+			609 = { add_core_of = YDS }
+			610 = { add_core_of = YDS }
+			714 = { add_core_of = YDS }
+			715 = { add_core_of = YDS }
+			716 = { add_core_of = YDS }
+			717 = { add_core_of = YDS }
+			745 = { add_core_of = YDS }
+			761 = { add_core_of = YDS }
+		}
+		add_political_power = 100
+		add_stability = 0.10
+		add_war_support = 0.10
+		ai_chance = { base = 100 }
+	}
+}
+
+# ==================== 1938 GAOKAO RECKONING & COALITION WAR ====================
+
+# Event 100: National Gaokao Results Released
+country_event = {
+	id = yds_national_war.100
+	title = yds_national_war.100.t
+	desc = yds_national_war.100.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = yds_national_war.100.a
+		trigger = {
+			has_country_flag = is_gaokao_top3_winner
+		}
+		set_global_flag = yds_national_war_active
+		if = {
+			limit = { NOT = { has_idea = YDS_ivory_tower_hegemony } }
+			add_ideas = YDS_ivory_tower_hegemony
+		}
+		country_event = { id = yds_national_war.101 }
+		ai_chance = { base = 100 }
+	}
+
+	option = {
+		name = yds_national_war.100.b
+		trigger = {
+			NOT = { has_country_flag = is_gaokao_top3_winner }
+		}
+		set_global_flag = yds_national_war_active
+		set_country_flag = is_gaokao_repeater_loser
+		if = {
+			limit = { NOT = { has_idea = YDS_repeater_underdog_spirit } }
+			add_ideas = YDS_repeater_underdog_spirit
+		}
+		country_event = { id = yds_national_war.102 }
+		ai_chance = { base = 100 }
+	}
+}
+
+
+# Event 101: Outbreak of the Repeater Coalition Apocalypse
+country_event = {
+	id = yds_national_war.101
+	title = yds_national_war.101.t
+	desc = yds_national_war.101.d
+	picture = GFX_report_event_chinese_soldiers
+
+	is_triggered_only = yes
+
+	option = {
+		name = yds_national_war.101.a
+		hidden_effect = {
+			# Transfer states to all warlords
+			744 = { add_core_of = SXI transfer_state_to = SXI }
+			1032 = { add_core_of = SXI transfer_state_to = SXI }
+			1045 = { add_core_of = SXI transfer_state_to = SXI }
+			1046 = { add_core_of = SXI transfer_state_to = SXI }
+			283 = { add_core_of = SXI transfer_state_to = SXI }
+			622 = { add_core_of = SXI transfer_state_to = SXI }
+
+			1036 = { add_core_of = HBE transfer_state_to = HBE }
+			602 = { add_core_of = HBE transfer_state_to = HBE }
+			620 = { add_core_of = HBE transfer_state_to = HBE }
+			750 = { add_core_of = HBE transfer_state_to = HBE }
+
+			325 = { add_core_of = YNE transfer_state_to = YNE }
+			603 = { add_core_of = YNE transfer_state_to = YNE }
+			747 = { add_core_of = YNE transfer_state_to = YNE }
+			748 = { add_core_of = YNE transfer_state_to = YNE }
+
+			1038 = { add_core_of = SHS transfer_state_to = SHS }
+			597 = { add_core_of = SHS transfer_state_to = SHS }
+			607 = { add_core_of = SHS transfer_state_to = SHS }
+			614 = { add_core_of = SHS transfer_state_to = SHS }
+			615 = { add_core_of = SHS transfer_state_to = SHS }
+			743 = { add_core_of = SHS transfer_state_to = SHS }
+
+			592 = { add_core_of = SNE transfer_state_to = SNE }
+			591 = { add_core_of = SNE transfer_state_to = SNE }
+			593 = { add_core_of = SNE transfer_state_to = SNE }
+			594 = { add_core_of = SNE transfer_state_to = SNE }
+			599 = { add_core_of = SNE transfer_state_to = SNE }
+			1033 = { add_core_of = SNE transfer_state_to = SNE }
+
+			1035 = { add_core_of = ECE transfer_state_to = ECE }
+			1034 = { add_core_of = ECE transfer_state_to = ECE }
+			595 = { add_core_of = ECE transfer_state_to = ECE }
+			596 = { add_core_of = ECE transfer_state_to = ECE }
+			598 = { add_core_of = ECE transfer_state_to = ECE }
+			600 = { add_core_of = ECE transfer_state_to = ECE }
+			606 = { add_core_of = ECE transfer_state_to = ECE }
+			613 = { add_core_of = ECE transfer_state_to = ECE }
+			749 = { add_core_of = ECE transfer_state_to = ECE }
+
+			608 = { add_core_of = EBS transfer_state_to = EBS }
+			1039 = { add_core_of = EBS transfer_state_to = EBS }
+			328 = { add_core_of = EBS transfer_state_to = EBS }
+			609 = { add_core_of = EBS transfer_state_to = EBS }
+			610 = { add_core_of = EBS transfer_state_to = EBS }
+			714 = { add_core_of = EBS transfer_state_to = EBS }
+			715 = { add_core_of = EBS transfer_state_to = EBS }
+			716 = { add_core_of = EBS transfer_state_to = EBS }
+			717 = { add_core_of = EBS transfer_state_to = EBS }
+			745 = { add_core_of = EBS transfer_state_to = EBS }
+			761 = { add_core_of = EBS transfer_state_to = EBS }
+
+			# All Top 3 Winners receive Ivory Tower Hegemony (Strong buffs, isolated and cannot ally)
+			every_country = {
+				limit = {
+					has_country_flag = is_gaokao_top3_winner
+				}
+				leave_faction = yes
+				if = {
+					limit = { NOT = { has_idea = YDS_ivory_tower_hegemony } }
+					add_ideas = YDS_ivory_tower_hegemony
+				}
+			}
+
+			# Prepare all repeater losers: leave previous factions and gain Repeater Pact with faction permissions
+			every_country = {
+				limit = {
+					has_country_flag = is_gaokao_repeater_loser
+				}
+				leave_faction = yes
+				if = {
+					limit = { NOT = { has_idea = YDS_repeater_coalition_pact } }
+					add_ideas = YDS_repeater_coalition_pact
+				}
+			}
+
+			# Pick one repeater loser to establish the Repeater Coalition
+			random_country = {
+				limit = {
+					has_country_flag = is_gaokao_repeater_loser
+					exists = yes
+				}
+				create_faction = FACTION_REPEATER_COALITION
+				save_event_target_as = repeater_leader
+			}
+
+			# Add all other losers into the Repeater Coalition (Never call leave_faction on leader!)
+			every_country = {
+				limit = {
+					has_country_flag = is_gaokao_repeater_loser
+					NOT = { tag = event_target:repeater_leader }
+				}
+				save_event_target_as = current_coalition_member
+				event_target:repeater_leader = {
+					add_to_faction = event_target:current_coalition_member
+				}
+			}
+
+			# Coalition Leader declares war on each of the 3 isolated Winners
+			every_country = {
+				limit = { has_country_flag = is_gaokao_top3_winner }
+				save_event_target_as = current_target_winner
+				event_target:repeater_leader = {
+					if = {
+						limit = { NOT = { has_war_with = event_target:current_target_winner } }
+						declare_war_on = { target = event_target:current_target_winner type = annex_everything }
+					}
+				}
+			}
+
+			# ALL OTHER coalition members join the war against each of the 3 Winners
+			every_country = {
+				limit = {
+					has_country_flag = is_gaokao_repeater_loser
+					NOT = { tag = event_target:repeater_leader }
+				}
+				save_event_target_as = current_coalition_member
+				every_country = {
+					limit = { has_country_flag = is_gaokao_top3_winner }
+					save_event_target_as = current_target_winner
+					event_target:current_coalition_member = {
+						if = {
+							limit = { NOT = { has_war_with = event_target:current_target_winner } }
+							add_to_war = {
+								targeted_alliance = event_target:repeater_leader
+								enemy = event_target:current_target_winner
+							}
+						}
+						if = {
+							limit = { NOT = { has_war_with = event_target:current_target_winner } }
+							declare_war_on = { target = event_target:current_target_winner type = annex_everything }
+						}
+					}
+				}
+			}
+
+			if = {
+				limit = { NOT = { has_idea = YDS_national_war_effort } }
+				ROOT = { add_ideas = YDS_national_war_effort }
+			}
+			set_global_flag = yds_national_war_active
+		}
+
+
+		add_war_support = 0.20
+		ai_chance = { base = 100 }
+	}
+}
+
+# Event 102: Underdog YDS Fights the Elite Factions
+country_event = {
+	id = yds_national_war.102
+	title = yds_national_war.102.t
+	desc = yds_national_war.102.d
+	picture = GFX_report_event_chinese_soldiers
+
+	is_triggered_only = yes
+
+	option = {
+		name = yds_national_war.102.a
+		hidden_effect = {
+			# Transfer states to all warlords
+			744 = { add_core_of = SXI transfer_state_to = SXI }
+			1032 = { add_core_of = SXI transfer_state_to = SXI }
+			1045 = { add_core_of = SXI transfer_state_to = SXI }
+			1046 = { add_core_of = SXI transfer_state_to = SXI }
+			283 = { add_core_of = SXI transfer_state_to = SXI }
+			622 = { add_core_of = SXI transfer_state_to = SXI }
+
+			1036 = { add_core_of = HBE transfer_state_to = HBE }
+			602 = { add_core_of = HBE transfer_state_to = HBE }
+			620 = { add_core_of = HBE transfer_state_to = HBE }
+			750 = { add_core_of = HBE transfer_state_to = HBE }
+
+			325 = { add_core_of = YNE transfer_state_to = YNE }
+			603 = { add_core_of = YNE transfer_state_to = YNE }
+			747 = { add_core_of = YNE transfer_state_to = YNE }
+			748 = { add_core_of = YNE transfer_state_to = YNE }
+
+			1038 = { add_core_of = SHS transfer_state_to = SHS }
+			597 = { add_core_of = SHS transfer_state_to = SHS }
+			607 = { add_core_of = SHS transfer_state_to = SHS }
+			614 = { add_core_of = SHS transfer_state_to = SHS }
+			615 = { add_core_of = SHS transfer_state_to = SHS }
+			743 = { add_core_of = SHS transfer_state_to = SHS }
+
+			592 = { add_core_of = SNE transfer_state_to = SNE }
+			591 = { add_core_of = SNE transfer_state_to = SNE }
+			593 = { add_core_of = SNE transfer_state_to = SNE }
+			594 = { add_core_of = SNE transfer_state_to = SNE }
+			599 = { add_core_of = SNE transfer_state_to = SNE }
+			1033 = { add_core_of = SNE transfer_state_to = SNE }
+
+			1035 = { add_core_of = ECE transfer_state_to = ECE }
+			1034 = { add_core_of = ECE transfer_state_to = ECE }
+			595 = { add_core_of = ECE transfer_state_to = ECE }
+			596 = { add_core_of = ECE transfer_state_to = ECE }
+			598 = { add_core_of = ECE transfer_state_to = ECE }
+			600 = { add_core_of = ECE transfer_state_to = ECE }
+			606 = { add_core_of = ECE transfer_state_to = ECE }
+			613 = { add_core_of = ECE transfer_state_to = ECE }
+			749 = { add_core_of = ECE transfer_state_to = ECE }
+
+			608 = { add_core_of = EBS transfer_state_to = EBS }
+			1039 = { add_core_of = EBS transfer_state_to = EBS }
+			328 = { add_core_of = EBS transfer_state_to = EBS }
+			609 = { add_core_of = EBS transfer_state_to = EBS }
+			610 = { add_core_of = EBS transfer_state_to = EBS }
+			714 = { add_core_of = EBS transfer_state_to = EBS }
+			715 = { add_core_of = EBS transfer_state_to = EBS }
+			716 = { add_core_of = EBS transfer_state_to = EBS }
+			717 = { add_core_of = EBS transfer_state_to = EBS }
+			745 = { add_core_of = EBS transfer_state_to = EBS }
+			761 = { add_core_of = EBS transfer_state_to = EBS }
+
+			# All Top 3 Winners receive Ivory Tower Hegemony (Strong buffs, isolated and cannot ally)
+			every_country = {
+				limit = {
+					has_country_flag = is_gaokao_top3_winner
+				}
+				leave_faction = yes
+				if = {
+					limit = { NOT = { has_idea = YDS_ivory_tower_hegemony } }
+					add_ideas = YDS_ivory_tower_hegemony
+				}
+			}
+
+			# Prepare all repeater losers: leave previous factions and gain Repeater Pact with faction permissions
+			every_country = {
+				limit = {
+					has_country_flag = is_gaokao_repeater_loser
+				}
+				leave_faction = yes
+				if = {
+					limit = {
+						tag = ROOT
+						NOT = { has_idea = YDS_repeater_underdog_spirit }
+					}
+					add_ideas = YDS_repeater_underdog_spirit
+				}
+				if = {
+					limit = {
+						NOT = { tag = ROOT }
+						NOT = { has_idea = YDS_repeater_coalition_pact }
+					}
+					add_ideas = YDS_repeater_coalition_pact
+				}
+			}
+
+			# ROOT (Player) founds the Repeater Coalition as Leader
+			ROOT = {
+				create_faction = FACTION_REPEATER_COALITION
+			}
+
+			# Add all other losers into ROOT's coalition (Never call leave_faction on ROOT!)
+			every_country = {
+				limit = {
+					has_country_flag = is_gaokao_repeater_loser
+					NOT = { tag = ROOT }
+				}
+				save_event_target_as = current_coalition_member
+				ROOT = {
+					add_to_faction = event_target:current_coalition_member
+				}
+			}
+
+			# Repeater Coalition Leader (ROOT) declares war on each of the 3 isolated Winners
+			every_country = {
+				limit = { has_country_flag = is_gaokao_top3_winner }
+				save_event_target_as = current_target_winner
+				ROOT = {
+					if = {
+						limit = { NOT = { has_war_with = event_target:current_target_winner } }
+						declare_war_on = { target = event_target:current_target_winner type = annex_everything }
+					}
+				}
+			}
+
+			# ALL OTHER coalition members join the war against each of the 3 Winners
+			every_country = {
+				limit = {
+					has_country_flag = is_gaokao_repeater_loser
+					NOT = { tag = ROOT }
+				}
+				save_event_target_as = current_coalition_member
+				every_country = {
+					limit = { has_country_flag = is_gaokao_top3_winner }
+					save_event_target_as = current_target_winner
+					event_target:current_coalition_member = {
+						if = {
+							limit = { NOT = { has_war_with = event_target:current_target_winner } }
+							add_to_war = {
+								targeted_alliance = ROOT
+								enemy = event_target:current_target_winner
+							}
+						}
+						if = {
+							limit = { NOT = { has_war_with = event_target:current_target_winner } }
+							declare_war_on = { target = event_target:current_target_winner type = annex_everything }
+						}
+					}
+				}
+			}
+
+			if = {
+				limit = { NOT = { has_idea = YDS_national_war_effort } }
+				ROOT = { add_ideas = YDS_national_war_effort }
+			}
+			set_global_flag = yds_national_war_active
+		}
+
+
+
+		add_war_support = 0.25
+		ai_chance = { base = 100 }
+	}
+}
+
+

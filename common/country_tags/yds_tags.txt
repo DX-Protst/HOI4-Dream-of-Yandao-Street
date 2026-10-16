@@ -1,0 +1,16 @@
+YDS = "countries/Yandao.txt"
+YDC = "countries/YandaoComm.txt"
+YDF = "countries/YandaoFascist.txt"
+YDD = "countries/YandaoDemoc.txt"
+SXI = "countries/Shaanxi.txt"
+HBE = "countries/Hubei.txt"
+YNE = "countries/Yunnan.txt"
+EBS = "countries/EduBureau.txt"
+SHS = "countries/Shanhe.txt"
+SNE = "countries/Huanan.txt"
+ECE = "countries/Huadong.txt"
+ZBX = "countries/Zhoubian.txt"
+TLB = "countries/TLB.txt"
+
+
+

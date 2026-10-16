@@ -1,0 +1,29 @@
+state = {
+	impassable = yes
+	id = 1043
+	name = "STATE_1043"
+	manpower = 3500
+	resources = {
+		coal = 1
+	}
+	state_category = pastoral
+	history = {
+		owner = ZBX
+		add_core_of = ZBX
+		controller = ZBX
+		add_core_of = SHX
+		add_core_of = CHI
+		add_core_of = PRC
+		add_core_of = MEN
+		victory_points = { 12331 1 }
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 1
+		}
+	}
+	provinces = {
+		7048 12331
+	}
+	local_supplies = 0
+	buildings_max_level_factor = 1
+}

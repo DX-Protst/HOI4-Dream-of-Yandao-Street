@@ -1,0 +1,2 @@
+# Silenced French loc scripted triggers
+# All comments are strictly pure ASCII.

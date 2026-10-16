@@ -1,0 +1,2 @@
+# Empty override to silence vanilla automated Russian country localization spam
+# All comments are strictly pure ASCII.

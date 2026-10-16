@@ -1,0 +1,58 @@
+defined_text = {
+name = GetYDSMissionTargetName
+text = {
+	trigger = {
+		check_variable = {
+			YDS_mission_target = 1
+		}
+	}
+	localization_key = YDS_TARGET_CHENGWAI
+}
+text = {
+	trigger = {
+		check_variable = {
+			YDS_mission_target = 2
+		}
+	}
+	localization_key = YDS_TARGET_SHIWAI
+}
+text = {
+	trigger = {
+		check_variable = {
+			YDS_mission_target = 3
+		}
+	}
+	localization_key = YDS_TARGET_CSFZ
+}
+text = {
+	trigger = {
+		check_variable = {
+			YDS_mission_target = 4
+		}
+	}
+	localization_key = YDS_TARGET_NO7
+}
+text = {
+	trigger = {
+		check_variable = {
+			YDS_mission_target = 5
+		}
+	}
+	localization_key = YDS_TARGET_SHISHI
+}
+text = {
+	trigger = {
+		check_variable = {
+			YDS_mission_target = 6
+		}
+	}
+	localization_key = YDS_TARGET_SHUDE
+}
+text = {
+	trigger = {
+		always = yes
+	}
+	localization_key = YDS_TARGET_NONE
+}
+}
+

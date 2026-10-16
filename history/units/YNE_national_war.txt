@@ -1,0 +1,26 @@
+division_template = {
+	name = "Yunnan Guizhou Exam Division"
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+	support = {
+		recon = { x = 0 y = 0 }
+	}
+}
+units = {
+	division = { name = "1st Yunnan-Guizhou Division" location = 1172 division_template = "Yunnan Guizhou Exam Division" start_experience_factor = 0.3 start_equipment_factor = 1.0 }
+	division = { name = "2nd Yunnan-Guizhou Division" location = 1196 division_template = "Yunnan Guizhou Exam Division" start_experience_factor = 0.3 start_equipment_factor = 1.0 }
+	division = { name = "3rd Yunnan-Guizhou Division" location = 1319 division_template = "Yunnan Guizhou Exam Division" start_experience_factor = 0.3 start_equipment_factor = 1.0 }
+	division = { name = "4th Yunnan-Guizhou Division" location = 1383 division_template = "Yunnan Guizhou Exam Division" start_experience_factor = 0.3 start_equipment_factor = 1.0 }
+	division = { name = "5th Yunnan-Guizhou Division" location = 1172 division_template = "Yunnan Guizhou Exam Division" start_experience_factor = 0.3 start_equipment_factor = 1.0 }
+	division = { name = "6th Yunnan-Guizhou Division" location = 1196 division_template = "Yunnan Guizhou Exam Division" start_experience_factor = 0.3 start_equipment_factor = 1.0 }
+	division = { name = "7th Yunnan-Guizhou Division" location = 1319 division_template = "Yunnan Guizhou Exam Division" start_experience_factor = 0.3 start_equipment_factor = 1.0 }
+	division = { name = "8th Yunnan-Guizhou Division" location = 1383 division_template = "Yunnan Guizhou Exam Division" start_experience_factor = 0.3 start_equipment_factor = 1.0 }
+	division = { name = "9th Yunnan-Guizhou Division" location = 4501 division_template = "Yunnan Guizhou Exam Division" start_experience_factor = 0.3 start_equipment_factor = 1.0 }
+	division = { name = "10th Yunnan-Guizhou Division" location = 5072 division_template = "Yunnan Guizhou Exam Division" start_experience_factor = 0.3 start_equipment_factor = 1.0 }
+}

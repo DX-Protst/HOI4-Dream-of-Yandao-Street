@@ -1,0 +1,29 @@
+# Scripted triggers for Educational Warlords and Exam System
+# All comments are strictly in pure ASCII.
+
+is_educational_warlord = {
+	OR = {
+		tag = YDS
+		tag = YDC
+		tag = YDF
+		tag = YDD
+		original_tag = YDS
+		original_tag = YDC
+		original_tag = YDF
+		original_tag = YDD
+		tag = ECE
+		original_tag = ECE
+		tag = HBE
+		original_tag = HBE
+		tag = SHS
+		original_tag = SHS
+		tag = SXI
+		original_tag = SXI
+		tag = SNE
+		original_tag = SNE
+		tag = EBS
+		original_tag = EBS
+		tag = YNE
+		original_tag = YNE
+	}
+}

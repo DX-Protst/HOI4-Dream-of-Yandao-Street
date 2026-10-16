@@ -1,0 +1,23 @@
+state = {
+	id = 751
+	name = "STATE_751"
+	manpower = 300000
+	state_category = pastoral
+	history = {
+		owner = YDS
+		controller = YDS
+		add_core_of = YDS
+		add_core_of = CHI
+		add_core_of = PRC
+		victory_points = { 7294 1 }
+		victory_points = { 10841 3 }
+		buildings = {
+			infrastructure = 1
+		}
+	}
+	provinces = {
+		2067 7294 10726 10841
+	}
+	local_supplies = 1
+	buildings_max_level_factor = 1
+}

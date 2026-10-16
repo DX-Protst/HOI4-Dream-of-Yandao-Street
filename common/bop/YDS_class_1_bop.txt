@@ -1,0 +1,87 @@
+
+	YDS_class_1_bop = {
+		initial_value = 0
+		left_side = YDS_student_side
+		right_side = YDS_teacher_side
+		
+		decision_category = YDS_class_1_bop_decisions
+		
+		side = {
+			id = YDS_student_side
+			icon = GFX_ideology_social_liberal_group
+		}
+		
+		side = {
+			id = YDS_teacher_side
+			icon = GFX_ideology_authoritarian_democrat_group
+		}
+
+		range = {
+			id = YDS_student_takeover
+			min = -1.0
+			max = -0.99
+			on_activate = {
+				country_event = { id = yds_event.2001 }
+			}
+		}
+		
+		range = {
+			id = YDS_student_dominant
+			min = -0.99
+			max = -0.5
+			modifier = {
+				social_liberal_drift = 0.05
+				stability_factor = -0.1
+				recruitable_population_factor = 0.1
+				production_factory_max_efficiency_factor = -0.10
+			}
+		}
+		
+		range = {
+			id = YDS_student_leaning
+			min = -0.5
+			max = -0.1
+			modifier = {
+				social_liberal_drift = 0.02
+			}
+		}
+		
+		range = {
+			id = YDS_fragile_alliance
+			min = -0.1
+			max = 0.1
+		}
+		
+		range = {
+			id = YDS_teacher_leaning
+			min = 0.1
+			max = 0.5
+			modifier = {
+				stability_factor = 0.1
+				authoritarian_democrat_drift = 0.02
+			}
+		}
+		
+		range = {
+			id = YDS_teacher_dominant
+			min = 0.5
+			max = 0.99
+			modifier = {
+				stability_factor = 0.2
+				authoritarian_democrat_drift = 0.05
+				research_speed_factor = 0.1
+				consumer_goods_factor = 0.05
+			}
+		}
+		
+		range = {
+			id = YDS_teacher_takeover
+			min = 0.99
+			max = 1.0
+			on_activate = {
+				country_event = { id = yds_event.2002 }
+			}
+		}
+	}
+
+

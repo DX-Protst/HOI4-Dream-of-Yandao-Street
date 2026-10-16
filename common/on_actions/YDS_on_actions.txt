@@ -1,0 +1,96 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			# Initialize global track progress only once (flag-guarded so a track at 0 is never reset)
+			if = {
+				limit = {
+					NOT = { has_global_flag = YDS_exam_tracks_initialized }
+				}
+				set_variable = { global.track_math_progress = 20 }
+				set_variable = { global.track_physics_progress = 15 }
+				set_variable = { global.track_chem_progress = 15 }
+				set_variable = { global.track_bio_progress = 20 }
+				set_variable = { global.track_info_progress = 15 }
+			}
+			set_global_flag = YDS_exam_tracks_initialized
+
+			# Initialize coach energy and stats for all participating educational warlords
+			every_country = {
+				limit = {
+					is_educational_warlord = yes
+					NOT = { tag = YDS }
+				}
+				if = {
+					limit = { NOT = { check_variable = { YDS_coach_energy_total > 0 } } }
+					set_variable = { YDS_coach_energy_total = 8 }
+					set_variable = { YDS_coach_energy_used = 0 }
+					set_variable = { YDS_coach_energy_available = 8 }
+					set_variable = { YDS_invest_math = 0 }
+					set_variable = { YDS_invest_physics = 0 }
+					set_variable = { YDS_invest_chem = 0 }
+					set_variable = { YDS_invest_bio = 0 }
+					set_variable = { YDS_invest_info = 0 }
+					set_variable = { YDS_gold_medals_won = 0 }
+					set_variable = { YDS_academic_prestige = 10 }
+					set_variable = { YDS_gpa_score = 70 }
+				}
+			}
+			# For YDS player, keep coach energy at 0 until Olympiad focus is unlocked
+			if = {
+				limit = {
+					country_exists = YDS
+					YDS = {
+						NOT = { has_country_flag = YDS_olympiad_active }
+					}
+				}
+				YDS = {
+					set_variable = { YDS_coach_energy_total = 0 }
+					set_variable = { YDS_coach_energy_used = 0 }
+					set_variable = { YDS_coach_energy_available = 0 }
+				}
+			}
+
+			# Initialize nationwide exam leaderboard scores
+			if = {
+				limit = {
+					country_exists = YDS
+				}
+				YDS = {
+					update_exam_leaderboard_scores = yes
+				}
+			}
+		}
+	}
+	on_capitulation = {
+		effect = {
+			if = {
+				limit = { FROM = { tag = SXI } }
+				ROOT = { country_event = { id = yds_national_war.3 } }
+			}
+			if = {
+				limit = { FROM = { tag = HBE } }
+				ROOT = { country_event = { id = yds_national_war.4 } }
+			}
+			if = {
+				limit = { FROM = { tag = YNE } }
+				ROOT = { country_event = { id = yds_national_war.6 } }
+			}
+			if = {
+				limit = { FROM = { tag = SHS } }
+				ROOT = { country_event = { id = yds_national_war.7 } }
+			}
+			if = {
+				limit = { FROM = { tag = SNE } }
+				ROOT = { country_event = { id = yds_national_war.8 } }
+			}
+			if = {
+				limit = { FROM = { tag = ECE } }
+				ROOT = { country_event = { id = yds_national_war.9 } }
+			}
+			if = {
+				limit = { FROM = { tag = EBS } }
+				ROOT = { country_event = { id = yds_national_war.5 } }
+			}
+		}
+	}
+}

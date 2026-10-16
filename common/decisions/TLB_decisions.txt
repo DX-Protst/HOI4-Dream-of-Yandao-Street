@@ -1,0 +1,72 @@
+TLB_civil_war_category = {
+
+	# YDS offers truce to TLB
+	YDS_tlb_truce_offer = {
+		icon = generic_prepare_civil_war
+		available = {
+			tag = YDS
+			has_war_with = TLB
+			NOT = { has_country_flag = YDS_tlb_truce_pending }
+		}
+		cost = 25
+		days_remove = 5
+		days_re_enable = 20
+		visible = {
+			tag = YDS
+			has_war_with = TLB
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				controls_state = 1037
+			}
+			modifier = {
+				factor = 2
+				surrender_progress > 0.15
+			}
+		}
+		complete_effect = {
+			set_country_flag = YDS_tlb_truce_pending
+			TLB = {
+				country_event = { id = tlb_event.21 days = 1 }
+			}
+		}
+	}
+
+	# TLB demands truce and recognition of Chongqing
+	TLB_armistice_chongqing = {
+		icon = generic_prepare_civil_war
+		available = {
+			tag = TLB
+			has_war_with = YDS
+			controls_state = 1037
+			NOT = { has_country_flag = TLB_tlb_truce_pending }
+		}
+		cost = 25
+		days_remove = 5
+		days_re_enable = 20
+		visible = {
+			tag = TLB
+			has_war_with = YDS
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { controls_state = 1037 }
+			}
+			modifier = {
+				factor = 2
+				controls_state = 1037
+			}
+		}
+		complete_effect = {
+			set_country_flag = TLB_tlb_truce_pending
+			YDS = {
+				country_event = { id = tlb_event.23 days = 1 }
+			}
+		}
+	}
+
+}

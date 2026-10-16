@@ -1,0 +1,2755 @@
+focus_tree = {
+	id = YDS_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			OR = {
+				tag = YDS
+				tag = YDC
+				tag = YDF
+				tag = YDD
+			}
+		}
+	}
+	default = no
+	# ==================== PUBLIC CRISIS PATH ====================
+	# 1. Merger Aftermath
+	focus = {
+		id = YDS_merger_aftermath
+		x = 20
+		y = 0
+		cost = 5
+		icon = GFX_focus_YDS_merger_aftermath
+		continue_if_invalid = yes
+		cancel_if_invalid = yes
+		completion_reward = {
+			add_stability = -0.05
+			country_event = {
+				id = yds_event.99
+			}
+		}
+		available = {
+			NOT = {
+				has_country_flag = YDS_anarchy_active
+			}
+			always = yes
+		}
+		bypass = {
+			OR = {
+				tag = YDC
+				tag = YDF
+				tag = YDD
+			}
+		}
+	}
+	# 2. Bureau Pressure
+	focus = {
+		id = YDS_educational_crisis
+		x = 20
+		y = 1
+		cost = 5
+		icon = GFX_focus_YDS_educational_crisis
+		continue_if_invalid = yes
+		cancel_if_invalid = yes
+		prerequisite = {
+			focus = YDS_merger_aftermath
+		}
+		completion_reward = {
+			add_war_support = -0.05
+			add_stability = -0.05
+			country_event = {
+				id = yds_event.3
+			}
+		}
+		available = {
+			NOT = {
+				has_country_flag = YDS_anarchy_active
+			}
+			always = yes
+		}
+		bypass = {
+			OR = {
+				tag = YDC
+				tag = YDF
+				tag = YDD
+			}
+		}
+	}
+	# 3. Teachers Grievances
+	focus = {
+		id = YDS_teachers_grievances
+		x = 18
+		y = 2
+		cost = 5
+		icon = GFX_focus_YDS_teachers_grievances
+		continue_if_invalid = yes
+		cancel_if_invalid = yes
+		prerequisite = {
+			focus = YDS_educational_crisis
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = national_populist
+				popularity = 0.1
+			}
+			add_popularity = {
+				ideology = authoritarian_democrat
+				popularity = 0.1
+			}
+			add_popularity = {
+				ideology = social_conservative
+				popularity = 0.05
+			}
+			add_stability = -0.05
+			country_event = {
+				id = yds_event.4
+			}
+		}
+		available = {
+			NOT = {
+				has_country_flag = YDS_anarchy_active
+			}
+			always = yes
+		}
+		bypass = {
+			OR = {
+				tag = YDC
+				tag = YDF
+				tag = YDD
+			}
+		}
+	}
+	# 4. Students Unrest
+	focus = {
+		id = YDS_students_unrest
+		x = 22
+		y = 2
+		cost = 5
+		icon = GFX_focus_YDS_students_unrest
+		continue_if_invalid = yes
+		cancel_if_invalid = yes
+		prerequisite = {
+			focus = YDS_educational_crisis
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = social_liberal
+				popularity = 0.15
+			}
+			add_popularity = {
+				ideology = social_democrat
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = syndicalist
+				popularity = 0.05
+			}
+			add_stability = -0.05
+			country_event = {
+				id = yds_event.5
+			}
+		}
+		available = {
+			NOT = {
+				has_country_flag = YDS_anarchy_active
+			}
+			always = yes
+		}
+		bypass = {
+			OR = {
+				tag = YDC
+				tag = YDF
+				tag = YDD
+			}
+		}
+	}
+	# 5. Tipping Point
+	focus = {
+		id = YDS_the_tipping_point
+		x = 20
+		y = 3
+		cost = 5
+		icon = GFX_focus_YDS_the_tipping_point
+		continue_if_invalid = yes
+		cancel_if_invalid = yes
+		prerequisite = {
+			focus = YDS_teachers_grievances
+		}
+		prerequisite = {
+			focus = YDS_students_unrest
+		}
+		completion_reward = {
+			add_war_support = -0.1
+			add_stability = -0.1
+			country_event = {
+				id = yds_event.100
+			}
+		}
+		available = {
+			NOT = {
+				has_country_flag = YDS_anarchy_active
+			}
+			always = yes
+		}
+		bypass = {
+			OR = {
+				tag = YDC
+				tag = YDF
+				tag = YDD
+			}
+		}
+	}
+	# ==================== JIANG GUANGPING PATH (PATERNAL AUTOCRAT) ====================
+	# Iron Discipline
+	focus = {
+		id = YDS_iron_discipline
+		x = 12
+		y = 4
+		cost = 5
+		icon = GFX_focus_YDS_iron_discipline
+		continue_if_invalid = yes
+		cancel_if_invalid = yes
+		mutually_exclusive = {
+			focus = YDS_class_1_awakening
+			focus = YDS_alumni_network
+		}
+		prerequisite = {
+			focus = YDS_the_tipping_point
+		}
+		completion_reward = {
+			add_war_support = -0.05
+			add_stability = 0.1
+			set_politics = {
+				ruling_party = paternal_autocrat
+				elections_allowed = no
+			}
+			add_popularity = {
+				ideology = paternal_autocrat
+				popularity = 0.25
+			}
+			add_ideas = YDS_jiang_guangping_civil_war_buff
+			add_ideas = YDS_bureau_control_debuff
+			add_to_variable = {
+				YDS_bureau_intervention = 10
+			}
+			country_event = {
+				id = yds_event.6
+			}
+		}
+		available = {
+			NOT = {
+				has_country_flag = YDS_anarchy_active
+			}
+			always = yes
+		}
+		bypass = {
+			tag = YDC
+		}
+	}
+	# Expel Troublemakers
+	focus = {
+		id = YDS_expel_troublemakers
+		x = 11
+		y = 5
+		cost = 5
+		icon = GFX_focus_YDS_expel_troublemakers
+		continue_if_invalid = yes
+		cancel_if_invalid = yes
+		prerequisite = {
+			focus = YDS_iron_discipline
+		}
+		completion_reward = {
+			add_stability = -0.05
+			add_popularity = {
+				ideology = paternal_autocrat
+				popularity = 0.1
+			}
+			remove_ideas = YDS_merger_tension
+			add_ideas = YDS_military_buff_1
+			country_event = {
+				id = yds_event.7
+			}
+			add_dynamic_modifier = {
+				modifier = YDS_bureau_control_buff_1
+			}
+			add_to_variable = {
+				YDS_bureau_industry_factor = 0.05
+			}
+			custom_effect_tooltip = YDS_bureau_industry_factor_05_tt
+		
+		}
+		available = {
+			NOT = {
+				has_country_flag = YDS_anarchy_active
+			}
+			always = yes
+		}
+	}
+	# Bureau Inspectors
+	focus = {
+		id = YDS_bureau_inspectors
+		x = 13
+		y = 5
+		cost = 5
+		icon = GFX_focus_YDS_bureau_inspectors
+		continue_if_invalid = yes
+		cancel_if_invalid = yes
+		prerequisite = {
+			focus = YDS_iron_discipline
+		}
+		completion_reward = {
+			remove_ideas = YDS_educational_decline
+			add_ideas = YDS_bureau_supervision
+			add_ideas = YDS_military_buff_2
+			add_to_variable = {
+				YDS_bureau_intervention = 15
+			}
+			country_event = {
+				id = yds_event.8
+			}
+			add_dynamic_modifier = {
+				modifier = YDS_bureau_control_buff_2
+			}
+			add_to_variable = {
+				YDS_bureau_eff_factor = 0.03
+			}
+			custom_effect_tooltip = YDS_bureau_eff_factor_03_tt
+		
+		}
+		available = {
+			NOT = {
+				has_country_flag = YDS_anarchy_active
+			}
+			always = yes
+		}
+	}
+	# Equalized Education
+	focus = {
+		id = YDS_equalized_education
+		x = 12
+		y = 6
+		cost = 5
+		icon = GFX_focus_YDS_equalized_education
+		continue_if_invalid = yes
+		cancel_if_invalid = yes
+		prerequisite = {
+			focus = YDS_expel_troublemakers
+		}
+		prerequisite = {
+			focus = YDS_bureau_inspectors
+		}
+		completion_reward = {
+			remove_ideas = YDS_jiang_guangping_civil_war_buff
+			add_stability = 0.1
+			add_ideas = YDS_bureau_order			add_to_variable = {
+				YDS_bureau_intervention = 20
+			}
+			country_event = {
+				id = yds_event.9
+			}
+			add_to_variable = {
+				YDS_bureau_industry_factor = 0.05
+			}
+			custom_effect_tooltip = YDS_bureau_industry_factor_05_tt
+		
+		}
+		available = {
+			NOT = {
+				has_country_flag = YDS_anarchy_active
+			}
+			has_war = no
+		}
+	}
+	# ==================== CLASS 1 ALLIANCE (SOCIAL LIBERAL) ====================
+	# Class 1 Awakening
+	focus = {
+		id = YDS_class_1_awakening
+		x = 20
+		y = 4
+		cost = 5
+		icon = GFX_focus_YDS_class_1_awakening
+		continue_if_invalid = yes
+		cancel_if_invalid = yes
+		mutually_exclusive = {
+			focus = YDS_iron_discipline
+			focus = YDS_alumni_network
+		}
+		prerequisite = {
+			focus = YDS_the_tipping_point
+		}
+		completion_reward = {
+			add_war_support = -0.05
+			add_stability = 0.05
+			set_politics = {
+				ruling_party = social_liberal
+				elections_allowed = yes
+			}
+			add_popularity = {
+				ideology = social_liberal
+				popularity = 0.30
+			}
+			add_ideas = YDS_class_1_civil_war_buff
+			add_ideas = YDS_autonomy_struggle_debuff
+			set_country_flag = YDS_faction_struggle_active
+			set_power_balance = {
+				id = YDS_class_1_bop
+			}
+			country_event = {
+				id = yds_event.10
+			}
+		}
+		available = {
+			NOT = {
+				has_country_flag = YDS_anarchy_active
+			}
+			always = yes
+		}
+		bypass = {
+			tag = YDD
+		}
+	}
+	# Reformist Alliance
+	focus = {
+		id = YDS_reformist_alliance
+		x = 19
+		y = 5
+		cost = 5
+		icon = GFX_focus_YDS_reformist_alliance
+		continue_if_invalid = yes
+		cancel_if_invalid = yes
+		prerequisite = {
+			focus = YDS_class_1_awakening
+		}
+		completion_reward = {
+			add_stability = -0.05
+			add_popularity = {
+				ideology = social_liberal
+				popularity = 0.2
+			}
+			remove_ideas = YDS_merger_tension
+			add_ideas = YDS_military_buff_1
+			country_event = {
+				id = yds_event.11
+			}
+			add_dynamic_modifier = {
+				modifier = YDS_autonomy_buff_1
+			}
+			add_to_variable = {
+				YDS_autonomy_industry_factor = 0.05
+			}
+			custom_effect_tooltip = YDS_autonomy_industry_factor_05_tt
+		
+		}
+		available = {
+			NOT = {
+				has_country_flag = YDS_anarchy_active
+			}
+			always = yes
+		}
+	}
+	# Negotiate with Admin
+	focus = {
+		id = YDS_negotiate_with_admin
+		x = 21
+		y = 5
+		cost = 5
+		icon = GFX_focus_YDS_negotiate_with_admin
+		continue_if_invalid = yes
+		cancel_if_invalid = yes
+		prerequisite = {
+			focus = YDS_class_1_awakening
+		}
+		completion_reward = {
+			remove_ideas = YDS_educational_decline
+			add_ideas = YDS_military_buff_2
+			country_event = {
+				id = yds_event.12
+			}
+			add_dynamic_modifier = {
+				modifier = YDS_autonomy_buff_2
+			}
+			add_to_variable = {
+				YDS_autonomy_goods_factor = -0.03
+			}
+			custom_effect_tooltip = YDS_autonomy_goods_factor_03_tt
+		
+		}
+		available = {
+			NOT = {
+				has_country_flag = YDS_anarchy_active
+			}
+			always = yes
+		}
+	}
+	# Autonomous School
+	focus = {
+		id = YDS_autonomous_school
+		x = 20
+		y = 6
+		cost = 5
+		icon = GFX_focus_YDS_autonomous_school
+		continue_if_invalid = yes
+		cancel_if_invalid = yes
+		prerequisite = {
+			focus = YDS_reformist_alliance
+		}
+		prerequisite = {
+			focus = YDS_negotiate_with_admin
+		}
+		completion_reward = {
+			remove_ideas = YDS_class_1_civil_war_buff
+			add_stability = 0.1
+			add_ideas = YDS_academic_freedom			add_to_variable = {
+				YDS_student_autonomy = 20
+			}
+			country_event = {
+				id = yds_event.13
+			}
+			add_to_variable = {
+				YDS_autonomy_industry_factor = 0.05
+			}
+			custom_effect_tooltip = YDS_autonomy_industry_factor_05_tt
+		
+		}
+		available = {
+			NOT = {
+				has_country_flag = YDS_anarchy_active
+			}
+			has_war = no
+		}
+	}
+	# ==================== LI GANG PATH (NATIONAL POPULIST) ====================
+	# Alumni Network
+	focus = {
+		id = YDS_alumni_network
+		x = 28
+		y = 4
+		cost = 5
+		icon = GFX_focus_YDS_alumni_network
+		continue_if_invalid = yes
+		cancel_if_invalid = yes
+		mutually_exclusive = {
+			focus = YDS_iron_discipline
+			focus = YDS_class_1_awakening
+		}
+		prerequisite = {
+			focus = YDS_the_tipping_point
+		}
+		completion_reward = {
+			add_stability = -0.05
+			add_popularity = {
+				ideology = national_populist
+				popularity = 0.35
+			}
+			set_politics = {
+				ruling_party = national_populist
+				elections_allowed = no
+			}
+			add_ideas = YDS_li_gang_civil_war_buff
+			add_ideas = YDS_alumni_division_debuff
+			add_to_variable = {
+				YDS_alumni_funds = 15
+			}
+			country_event = {
+				id = yds_event.14
+			}
+		}
+		available = {
+			NOT = {
+				has_country_flag = YDS_anarchy_active
+			}
+			always = yes
+		}
+		bypass = {
+			tag = YDF
+		}
+	}
+	# Hoard Study Guides
+	focus = {
+		id = YDS_hoard_study_guides
+		x = 27
+		y = 5
+		cost = 5
+		icon = GFX_focus_YDS_hoard_study_guides
+		continue_if_invalid = yes
+		cancel_if_invalid = yes
+		prerequisite = {
+			focus = YDS_alumni_network
+		}
+		completion_reward = {
+			remove_ideas = YDS_merger_tension
+			add_ideas = YDS_elite_materials
+			add_ideas = YDS_military_buff_1
+			add_to_variable = {
+				YDS_alumni_funds = 10
+			}
+			country_event = {
+				id = yds_event.15
+			}
+			add_dynamic_modifier = {
+				modifier = YDS_alumni_buff_1
+			}
+			add_to_variable = {
+				YDS_alumni_industry_factor = 0.05
+			}
+			custom_effect_tooltip = YDS_alumni_industry_factor_05_tt
+		
+		}
+		available = {
+			NOT = {
+				has_country_flag = YDS_anarchy_active
+			}
+			always = yes
+		}
+	}
+	# School Coup
+	focus = {
+		id = YDS_yandao_street_coup
+		x = 29
+		y = 5
+		cost = 5
+		icon = GFX_focus_YDS_yandao_street_coup
+		continue_if_invalid = yes
+		cancel_if_invalid = yes
+		prerequisite = {
+			focus = YDS_alumni_network
+		}
+		completion_reward = {
+			remove_ideas = YDS_educational_decline
+			add_war_support = -0.05
+			add_stability = 0.1
+			add_ideas = YDS_military_buff_2
+			country_event = {
+				id = yds_event.16
+			}
+			add_dynamic_modifier = {
+				modifier = YDS_alumni_buff_2
+			}
+			add_to_variable = {
+				YDS_alumni_org_factor = 0.03
+			}
+			custom_effect_tooltip = YDS_alumni_org_factor_03_tt
+		
+		}
+		available = {
+			NOT = {
+				has_country_flag = YDS_anarchy_active
+			}
+			always = yes
+		}
+	}
+	# Restore Old Glory
+	focus = {
+		id = YDS_restore_old_glory
+		x = 28
+		y = 6
+		cost = 5
+		icon = GFX_focus_YDS_restore_old_glory
+		continue_if_invalid = yes
+		cancel_if_invalid = yes
+		prerequisite = {
+			focus = YDS_hoard_study_guides
+		}
+		prerequisite = {
+			focus = YDS_yandao_street_coup
+		}
+		completion_reward = {
+			remove_ideas = YDS_li_gang_civil_war_buff
+			add_ideas = YDS_old_glory_buff			add_stability = 0.1
+			add_to_variable = {
+				YDS_alumni_funds = 20
+			}
+			country_event = {
+				id = yds_event.17
+			}
+			add_to_variable = {
+				YDS_alumni_industry_factor = 0.05
+			}
+			custom_effect_tooltip = YDS_alumni_industry_factor_05_tt
+		
+		}
+		available = {
+			NOT = {
+				has_country_flag = YDS_anarchy_active
+			}
+			has_war = no
+		}
+	}
+	# ==================== JIANG GUANGPING PATH SUB-BRANCHES ====================
+	# A1: Bureaucratic Direct Rule
+	focus = {
+		id = YDS_bureaucractic_integration
+		x = 10
+		y = 7
+		cost = 5
+		icon = GFX_focus_YDS_bureaucractic_integration
+		continue_if_invalid = yes
+		cancel_if_invalid = yes
+		mutually_exclusive = {
+			focus = YDS_red_star_committee
+		}
+		prerequisite = {
+			focus = YDS_equalized_education
+		}
+		completion_reward = {
+			add_stability = 0.05
+			add_popularity = {
+				ideology = paternal_autocrat
+				popularity = 0.3
+			}
+			country_event = {
+				id = yds_event.18
+			}
+			if = {
+				limit = { NOT = { has_country_flag = TLB_crisis_started } }
+				set_country_flag = TLB_crisis_started
+				country_event = {
+					id = tlb_event.1
+					days = 3
+				}
+			}
+			subtract_from_variable = {
+				YDS_gpa_score = 5
+			}
+			subtract_from_variable = {
+				YDS_student_autonomy = 10
+			}
+			add_to_variable = {
+				YDS_bureau_intervention = 5
+			}
+			add_to_variable = {
+				YDS_bureau_industry_factor = 0.03
+			}
+			custom_effect_tooltip = YDS_bureau_industry_factor_03_tt
+		
+		}
+		available = {
+			NOT = {
+				has_country_flag = YDS_anarchy_active
+			}
+			always = yes
+		}
+	}
+	focus = {
+		id = YDS_standardized_syllabi
+		x = 9
+		y = 8
+		cost = 5
+		icon = GFX_focus_YDS_standardized_syllabi
+		continue_if_invalid = yes
+		cancel_if_invalid = yes
+		prerequisite = {
+			focus = YDS_bureaucractic_integration
+		}
+		completion_reward = {
+			add_stability = 0.05			country_event = {
+				id = yds_event.19
+			}
+			subtract_from_variable = {
+				YDS_gpa_score = 5
+			}
+			subtract_from_variable = {
+				YDS_student_autonomy = 10
+			}
+			add_to_variable = {
+				YDS_bureau_intervention = 5
+			}
+			add_to_variable = {
+				YDS_bureau_eff_factor = 0.03
+			}
+			custom_effect_tooltip = YDS_bureau_eff_factor_03_tt
+		
+		}
+		available = {
+			NOT = {
+				has_country_flag = YDS_anarchy_active
+			}
+			always = yes
+		}
+	}
+	focus = {
+		id = YDS_abolish_extra_curriculars
+		x = 11
+		y = 8
+		cost = 5
+		icon = GFX_focus_YDS_abolish_extra_curriculars
+		continue_if_invalid = yes
+		cancel_if_invalid = yes
+		prerequisite = {
+			focus = YDS_bureaucractic_integration
+		}
+		completion_reward = {
+			add_war_support = -0.05
+			add_stability = 0.05			country_event = {
+				id = yds_event.20
+			}
+			subtract_from_variable = {
+				YDS_gpa_score = 5
+			}
+			subtract_from_variable = {
+				YDS_student_autonomy = 10
+			}
+			add_to_variable = {
+				YDS_bureau_intervention = 5
+			}
+			add_to_variable = {
+				YDS_bureau_eff_factor = 0.03
+			}
+			custom_effect_tooltip = YDS_bureau_eff_factor_03_tt
+		
+		}
+		available = {
+			NOT = {
+				has_country_flag = YDS_anarchy_active
+			}
+			always = yes
+		}
+	}
+	focus = {
+		id = YDS_the_perfect_standard_school
+		x = 10
+		y = 9
+		cost = 5
+		icon = GFX_focus_YDS_the_perfect_standard_school
+		continue_if_invalid = yes
+		cancel_if_invalid = yes
+		prerequisite = {
+			focus = YDS_standardized_syllabi
+			focus = YDS_abolish_extra_curriculars
+		}
+		completion_reward = {
+			add_stability = 0.1			remove_ideas = YDS_bureau_control_debuff
+			country_event = {
+				id = yds_event.21
+			}
+			subtract_from_variable = {
+				YDS_gpa_score = 5
+			}
+			subtract_from_variable = {
+				YDS_student_autonomy = 10
+			}
+			add_to_variable = {
+				YDS_bureau_intervention = 5
+			}
+			add_to_variable = {
+				YDS_bureau_industry_factor = 0.04
+			}
+			custom_effect_tooltip = YDS_bureau_industry_factor_04_tt
+		
+		}
+		available = {
+			NOT = {
+				has_country_flag = YDS_anarchy_active
+			}
+			always = yes
+		}
+	}
+	# A2: Red Star Communitarianism
+	focus = {
+		id = YDS_red_star_committee
+		x = 14
+		y = 7
+		cost = 5
+		icon = GFX_focus_YDS_red_star_committee
+		continue_if_invalid = yes
+		cancel_if_invalid = yes
+		mutually_exclusive = {
+			focus = YDS_bureaucractic_integration
+		}
+		prerequisite = {
+			focus = YDS_equalized_education
+		}
+		completion_reward = {
+			set_politics = {
+				ruling_party = radical_socialist
+				elections_allowed = no
+			}
+			add_popularity = {
+				ideology = radical_socialist
+				popularity = 0.35
+			}
+			country_event = {
+				id = yds_event.22
+			}
+			if = {
+				limit = { NOT = { has_country_flag = TLB_crisis_started } }
+				set_country_flag = TLB_crisis_started
+				country_event = {
+					id = tlb_event.1
+					days = 3
+				}
+			}
+			subtract_from_variable = {
+				YDS_gpa_score = 5
+			}
+			subtract_from_variable = {
+				YDS_student_autonomy = 10
+			}
+			add_to_variable = {
+				YDS_bureau_intervention = 5
+			}
+			add_to_variable = {
+				YDS_bureau_industry_factor = 0.03
+			}
+			custom_effect_tooltip = YDS_bureau_industry_factor_03_tt
+		
+		}
+		available = {
+			NOT = {
+				has_country_flag = YDS_anarchy_active
+			}
+			always = yes
+		}
+	}
+	focus = {
+		id = YDS_criticize_academic_authorities
+		x = 13
+		y = 8
+		cost = 5
+		icon = GFX_focus_YDS_criticize_academic_authorities
+		continue_if_invalid = yes
+		cancel_if_invalid = yes
+		prerequisite = {
+			focus = YDS_red_star_committee
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = radical_socialist
+				popularity = 0.1
+			}			country_event = {
+				id = yds_event.23
+			}
+			subtract_from_variable = {
+				YDS_gpa_score = 5
+			}
+			subtract_from_variable = {
+				YDS_student_autonomy = 10
+			}
+			add_to_variable = {
+				YDS_bureau_intervention = 5
+			}
+			add_to_variable = {
+				YDS_bureau_eff_factor = 0.03
+			}
+			custom_effect_tooltip = YDS_bureau_eff_factor_03_tt
+		
+		}
+		available = {
+			NOT = {
+				has_country_flag = YDS_anarchy_active
+			}
+			always = yes
+		}
+	}
+	focus = {
+		id = YDS_labor_education
+		x = 15
+		y = 8
+		cost = 5
+		icon = GFX_focus_YDS_labor_education
+		continue_if_invalid = yes
+		cancel_if_invalid = yes
+		prerequisite = {
+			focus = YDS_red_star_committee
+		}
+		completion_reward = {
+			add_stability = -0.05			country_event = {
+				id = yds_event.24
+			}
+			subtract_from_variable = {
+				YDS_gpa_score = 5
+			}
+			subtract_from_variable = {
+				YDS_student_autonomy = 10
+			}
+			add_to_variable = {
+				YDS_bureau_intervention = 5
+			}
+			add_to_variable = {
+				YDS_bureau_eff_factor = 0.03
+			}
+			custom_effect_tooltip = YDS_bureau_eff_factor_03_tt
+		
+		}
+		available = {
+			NOT = {
+				has_country_flag = YDS_anarchy_active
+			}
+			always = yes
+		}
+	}
+	focus = {
+		id = YDS_communitarian_academy
+		x = 14
+		y = 9
+		cost = 5
+		icon = GFX_focus_YDS_communitarian_academy
+		continue_if_invalid = yes
+		cancel_if_invalid = yes
+		prerequisite = {
+			focus = YDS_criticize_academic_authorities
+			focus = YDS_labor_education
+		}
+		completion_reward = {
+			add_stability = 0.1
+			remove_ideas = YDS_bureau_control_debuff
+			add_popularity = {
+				ideology = radical_socialist
+				popularity = 0.15
+			}
+			country_event = {
+				id = yds_event.25
+			}
+			subtract_from_variable = {
+				YDS_gpa_score = 5
+			}
+			subtract_from_variable = {
+				YDS_student_autonomy = 10
+			}
+			add_to_variable = {
+				YDS_bureau_intervention = 5
+			}
+			add_to_variable = {
+				YDS_bureau_industry_factor = 0.04
+			}
+			custom_effect_tooltip = YDS_bureau_industry_factor_04_tt
+		
+		}
+		available = {
+			NOT = {
+				has_country_flag = YDS_anarchy_active
+			}
+			always = yes
+		}
+	}
+	# ==================== CLASS 1 ALLIANCE PATH SUB-BRANCHES ====================
+	# C1: Student Republic
+	focus = {
+		id = YDS_student_parliament
+		x = 18
+		y = 7
+		cost = 5
+		icon = GFX_focus_YDS_student_parliament
+		continue_if_invalid = yes
+		cancel_if_invalid = yes
+		mutually_exclusive = {
+			focus = YDS_pragmatic_deal
+		}
+		prerequisite = {
+			focus = YDS_autonomous_school
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = social_liberal
+				popularity = 0.3
+			}
+			add_popularity = {
+				ideology = social_democrat
+				popularity = 0.1
+			}
+			add_to_variable = {
+				YDS_student_influence = 15
+			}
+			country_event = {
+				id = yds_event.26
+			}
+			if = {
+				limit = { NOT = { has_country_flag = TLB_crisis_started } }
+				set_country_flag = TLB_crisis_started
+				country_event = {
+					id = tlb_event.1
+					days = 3
+				}
+			}
+			add_power_balance_value = {
+				id = YDS_class_1_bop
+				value = -0.15
+			}
+			add_to_variable = {
+				YDS_autonomy_industry_factor = 0.03
+			}
+			custom_effect_tooltip = YDS_autonomy_industry_factor_03_tt
+		
+		}
+		available = {
+			NOT = {
+				has_country_flag = YDS_anarchy_active
+			}
+			always = yes
+		}
+	}
+	focus = {
+		id = YDS_abolish_uniforms
+		x = 17
+		y = 8
+		cost = 5
+		icon = GFX_focus_YDS_abolish_uniforms
+		continue_if_invalid = yes
+		cancel_if_invalid = yes
+		prerequisite = {
+			focus = YDS_student_parliament
+		}
+		completion_reward = {
+			add_stability = 0.05
+			add_to_variable = {
+				YDS_student_influence = 10
+			}			country_event = {
+				id = yds_event.27
+			}
+			add_power_balance_value = {
+				id = YDS_class_1_bop
+				value = -0.15
+			}
+			subtract_from_variable = {
+				YDS_gpa_score = 5
+			}
+			add_to_variable = {
+				YDS_student_autonomy = 15
+			}
+			add_to_variable = {
+				YDS_autonomy_goods_factor = -0.02
+			}
+			custom_effect_tooltip = YDS_autonomy_goods_factor_02_tt
+		
+		}
+		available = {
+			NOT = {
+				has_country_flag = YDS_anarchy_active
+			}
+			always = yes
+		}
+	}
+	focus = {
+		id = YDS_free_speech_corners
+		x = 19
+		y = 8
+		cost = 5
+		icon = GFX_focus_YDS_free_speech_corners
+		continue_if_invalid = yes
+		cancel_if_invalid = yes
+		prerequisite = {
+			focus = YDS_student_parliament
+		}
+		completion_reward = {
+			add_stability = 0.05			country_event = {
+				id = yds_event.28
+			}
+			add_power_balance_value = {
+				id = YDS_class_1_bop
+				value = -0.15
+			}
+			subtract_from_variable = {
+				YDS_gpa_score = 5
+			}
+			add_to_variable = {
+				YDS_student_autonomy = 15
+			}
+			add_to_variable = {
+				YDS_autonomy_goods_factor = -0.02
+			}
+			custom_effect_tooltip = YDS_autonomy_goods_factor_02_tt
+		
+		}
+		available = {
+			NOT = {
+				has_country_flag = YDS_anarchy_active
+			}
+			always = yes
+		}
+	}
+	focus = {
+		id = YDS_republic_of_letters
+		x = 18
+		y = 9
+		cost = 5
+		icon = GFX_focus_YDS_republic_of_letters
+		continue_if_invalid = yes
+		cancel_if_invalid = yes
+		prerequisite = {
+			focus = YDS_abolish_uniforms
+			focus = YDS_free_speech_corners
+		}
+		completion_reward = {
+			add_stability = 0.1			remove_ideas = YDS_autonomy_struggle_debuff
+			country_event = {
+				id = yds_event.29
+			}
+			add_power_balance_value = {
+				id = YDS_class_1_bop
+				value = -0.3
+			}
+			subtract_from_variable = {
+				YDS_gpa_score = 5
+			}
+			add_to_variable = {
+				YDS_student_autonomy = 15
+			}
+			add_to_variable = {
+				YDS_autonomy_industry_factor = 0.04
+			}
+			custom_effect_tooltip = YDS_autonomy_industry_factor_04_tt
+		
+		}
+		available = {
+			NOT = {
+				has_country_flag = YDS_anarchy_active
+			}
+			always = yes
+		}
+	}
+	# C2: Pragmatic Experimental Base
+	focus = {
+		id = YDS_pragmatic_deal
+		x = 22
+		y = 7
+		cost = 5
+		icon = GFX_focus_YDS_pragmatic_deal
+		continue_if_invalid = yes
+		cancel_if_invalid = yes
+		mutually_exclusive = {
+			focus = YDS_student_parliament
+		}
+		prerequisite = {
+			focus = YDS_autonomous_school
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = authoritarian_democrat
+				popularity = 0.4
+			}
+			add_stability = 0.05
+			add_to_variable = {
+				YDS_teacher_influence = 15
+			}
+			country_event = {
+				id = yds_event.30
+			}
+			if = {
+				limit = { NOT = { has_country_flag = TLB_crisis_started } }
+				set_country_flag = TLB_crisis_started
+				country_event = {
+					id = tlb_event.1
+					days = 3
+				}
+			}
+			add_power_balance_value = {
+				id = YDS_class_1_bop
+				value = 0.15
+			}
+			add_to_variable = {
+				YDS_autonomy_industry_factor = 0.03
+			}
+			custom_effect_tooltip = YDS_autonomy_industry_factor_03_tt
+		}
+		available = {
+			NOT = {
+				has_country_flag = YDS_anarchy_active
+			}
+			always = yes
+		}
+	}
+	focus = {
+		id = YDS_credit_system
+		x = 21
+		y = 8
+		cost = 5
+		icon = GFX_focus_YDS_credit_system
+		continue_if_invalid = yes
+		cancel_if_invalid = yes
+		prerequisite = {
+			focus = YDS_pragmatic_deal
+		}
+		completion_reward = {
+			add_to_variable = {
+				YDS_teacher_influence = 10
+			}			country_event = {
+				id = yds_event.31
+			}
+			add_to_variable = {
+				YDS_gpa_score = 5
+			}
+			add_to_variable = {
+				YDS_student_autonomy = 5
+			}
+			add_power_balance_value = {
+				id = YDS_class_1_bop
+				value = 0.15
+			}
+			add_to_variable = {
+				YDS_autonomy_goods_factor = -0.02
+			}
+			custom_effect_tooltip = YDS_autonomy_goods_factor_02_tt
+		
+		}
+		available = {
+			NOT = {
+				has_country_flag = YDS_anarchy_active
+			}
+			always = yes
+		}
+	}
+	focus = {
+		id = YDS_balanced_curriculum
+		x = 23
+		y = 8
+		cost = 5
+		icon = GFX_focus_YDS_balanced_curriculum
+		continue_if_invalid = yes
+		cancel_if_invalid = yes
+		prerequisite = {
+			focus = YDS_pragmatic_deal
+		}
+		completion_reward = {
+			add_stability = 0.05			country_event = {
+				id = yds_event.32
+			}
+			add_to_variable = {
+				YDS_gpa_score = 5
+			}
+			add_to_variable = {
+				YDS_student_autonomy = 5
+			}
+			add_power_balance_value = {
+				id = YDS_class_1_bop
+				value = 0.15
+			}
+			add_to_variable = {
+				YDS_autonomy_goods_factor = -0.02
+			}
+			custom_effect_tooltip = YDS_autonomy_goods_factor_02_tt
+		
+		}
+		available = {
+			NOT = {
+				has_country_flag = YDS_anarchy_active
+			}
+			always = yes
+		}
+	}
+	focus = {
+		id = YDS_experimental_base
+		x = 22
+		y = 9
+		cost = 5
+		icon = GFX_focus_YDS_experimental_base
+		continue_if_invalid = yes
+		cancel_if_invalid = yes
+		prerequisite = {
+			focus = YDS_credit_system
+			focus = YDS_balanced_curriculum
+		}
+		completion_reward = {
+			add_stability = 0.1			remove_ideas = YDS_autonomy_struggle_debuff
+			country_event = {
+				id = yds_event.33
+			}
+			add_to_variable = {
+				YDS_gpa_score = 5
+			}
+			add_to_variable = {
+				YDS_student_autonomy = 5
+			}
+			add_power_balance_value = {
+				id = YDS_class_1_bop
+				value = 0.3
+			}
+			add_to_variable = {
+				YDS_autonomy_industry_factor = 0.04
+			}
+			custom_effect_tooltip = YDS_autonomy_industry_factor_04_tt
+		
+		}
+		available = {
+			NOT = {
+				has_country_flag = YDS_anarchy_active
+			}
+			always = yes
+		}
+	}
+	# ==================== LI GANG PATH SUB-BRANCHES ====================
+	# B1: GPA Meritocracy
+	focus = {
+		id = YDS_gpa_darwinism
+		x = 26
+		y = 7
+		cost = 5
+		icon = GFX_focus_YDS_gpa_darwinism
+		continue_if_invalid = yes
+		cancel_if_invalid = yes
+		mutually_exclusive = {
+			focus = YDS_alumni_alliance
+		}
+		prerequisite = {
+			focus = YDS_restore_old_glory
+		}
+		completion_reward = {
+			add_stability = -0.05
+			add_popularity = {
+				ideology = national_populist
+				popularity = 0.35
+			}
+			country_event = {
+				id = yds_event.34
+			}
+			if = {
+				limit = { NOT = { has_country_flag = TLB_crisis_started } }
+				set_country_flag = TLB_crisis_started
+				country_event = {
+					id = tlb_event.1
+					days = 3
+				}
+			}
+			add_to_variable = {
+				YDS_gpa_score = 15
+			}
+			subtract_from_variable = {
+				YDS_student_autonomy = 10
+			}
+			add_to_variable = {
+				YDS_alumni_industry_factor = 0.03
+			}
+			custom_effect_tooltip = YDS_alumni_industry_factor_03_tt
+		
+		}
+		available = {
+			NOT = {
+				has_country_flag = YDS_anarchy_active
+			}
+			always = yes
+		}
+	}
+	focus = {
+		id = YDS_class_stratification
+		x = 25
+		y = 8
+		cost = 5
+		icon = GFX_focus_YDS_class_stratification
+		continue_if_invalid = yes
+		cancel_if_invalid = yes
+		prerequisite = {
+			focus = YDS_gpa_darwinism
+		}
+		completion_reward = {
+			add_stability = -0.05			country_event = {
+				id = yds_event.35
+			}
+			add_to_variable = {
+				YDS_gpa_score = 15
+			}
+			subtract_from_variable = {
+				YDS_student_autonomy = 10
+			}
+			add_to_variable = {
+				YDS_alumni_org_factor = 0.03
+			}
+			custom_effect_tooltip = YDS_alumni_org_factor_03_tt
+		
+		}
+		available = {
+			NOT = {
+				has_country_flag = YDS_anarchy_active
+			}
+			always = yes
+		}
+	}
+	focus = {
+		id = YDS_militarized_study_rooms
+		x = 27
+		y = 8
+		cost = 5
+		icon = GFX_focus_YDS_militarized_study_rooms
+		continue_if_invalid = yes
+		cancel_if_invalid = yes
+		prerequisite = {
+			focus = YDS_gpa_darwinism
+		}
+		completion_reward = {
+			add_stability = 0.05			country_event = {
+				id = yds_event.36
+			}
+			add_to_variable = {
+				YDS_gpa_score = 15
+			}
+			subtract_from_variable = {
+				YDS_student_autonomy = 10
+			}
+			add_to_variable = {
+				YDS_alumni_org_factor = 0.03
+			}
+			custom_effect_tooltip = YDS_alumni_org_factor_03_tt
+		
+		}
+		available = {
+			NOT = {
+				has_country_flag = YDS_anarchy_active
+			}
+			always = yes
+		}
+	}
+	focus = {
+		id = YDS_technocratic_meritocracy
+		x = 26
+		y = 9
+		cost = 5
+		icon = GFX_focus_YDS_technocratic_meritocracy
+		continue_if_invalid = yes
+		cancel_if_invalid = yes
+		prerequisite = {
+			focus = YDS_class_stratification
+			focus = YDS_militarized_study_rooms
+		}
+		completion_reward = {
+			add_stability = 0.1			remove_ideas = YDS_alumni_division_debuff
+			country_event = {
+				id = yds_event.37
+			}
+			add_to_variable = {
+				YDS_gpa_score = 15
+			}
+			subtract_from_variable = {
+				YDS_student_autonomy = 10
+			}
+			add_to_variable = {
+				YDS_alumni_industry_factor = 0.04
+			}
+			custom_effect_tooltip = YDS_alumni_industry_factor_04_tt
+		
+		}
+		available = {
+			NOT = {
+				has_country_flag = YDS_anarchy_active
+			}
+			always = yes
+		}
+	}
+	# B2: Alumni Revanchist Crusade
+	focus = {
+		id = YDS_alumni_alliance
+		x = 30
+		y = 7
+		cost = 5
+		icon = GFX_focus_YDS_alumni_alliance
+		continue_if_invalid = yes
+		cancel_if_invalid = yes
+		mutually_exclusive = {
+			focus = YDS_gpa_darwinism
+		}
+		prerequisite = {
+			focus = YDS_restore_old_glory
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = market_liberal
+				popularity = 0.25
+			}
+			add_popularity = {
+				ideology = social_conservative
+				popularity = 0.15
+			}
+			country_event = {
+				id = yds_event.38
+			}
+			if = {
+				limit = { NOT = { has_country_flag = TLB_crisis_started } }
+				set_country_flag = TLB_crisis_started
+				country_event = {
+					id = tlb_event.1
+					days = 3
+				}
+			}
+			add_to_variable = {
+				YDS_alumni_funds = 20
+			}
+			subtract_from_variable = {
+				YDS_student_autonomy = 10
+			}
+			add_to_variable = {
+				YDS_alumni_industry_factor = 0.03
+			}
+			custom_effect_tooltip = YDS_alumni_industry_factor_03_tt
+		
+		}
+		available = {
+			NOT = {
+				has_country_flag = YDS_anarchy_active
+			}
+			always = yes
+		}
+	}
+	focus = {
+		id = YDS_school_security_force
+		x = 29
+		y = 8
+		cost = 5
+		icon = GFX_focus_YDS_school_security_force
+		continue_if_invalid = yes
+		cancel_if_invalid = yes
+		prerequisite = {
+			focus = YDS_alumni_alliance
+		}
+		completion_reward = {
+			country_event = {
+				id = yds_event.39
+			}
+			add_to_variable = {
+				YDS_alumni_funds = 20
+			}
+			subtract_from_variable = {
+				YDS_student_autonomy = 10
+			}
+			add_to_variable = {
+				YDS_alumni_org_factor = 0.03
+			}
+			custom_effect_tooltip = YDS_alumni_org_factor_03_tt
+		
+		}
+		available = {
+			NOT = {
+				has_country_flag = YDS_anarchy_active
+			}
+			always = yes
+		}
+	}
+	focus = {
+		id = YDS_regional_claims
+		x = 31
+		y = 8
+		cost = 5
+		icon = GFX_focus_YDS_regional_claims
+		continue_if_invalid = yes
+		cancel_if_invalid = yes
+		prerequisite = {
+			focus = YDS_alumni_alliance
+		}
+		completion_reward = {
+			country_event = {
+				id = yds_event.40
+			}
+			add_to_variable = {
+				YDS_alumni_funds = 20
+			}
+			subtract_from_variable = {
+				YDS_student_autonomy = 10
+			}
+			add_to_variable = {
+				YDS_alumni_org_factor = 0.03
+			}
+			custom_effect_tooltip = YDS_alumni_org_factor_03_tt
+		
+		}
+		available = {
+			NOT = {
+				has_country_flag = YDS_anarchy_active
+			}
+			always = yes
+		}
+	}
+	focus = {
+		id = YDS_great_yandao_empire
+		x = 30
+		y = 9
+		cost = 5
+		icon = GFX_focus_YDS_great_yandao_empire
+		continue_if_invalid = yes
+		cancel_if_invalid = yes
+		prerequisite = {
+			focus = YDS_school_security_force
+			focus = YDS_regional_claims
+		}
+		completion_reward = {
+			add_stability = 0.1
+			remove_ideas = YDS_alumni_division_debuff
+			add_popularity = {
+				ideology = national_populist
+				popularity = 0.15
+			}
+			country_event = {
+				id = yds_event.41
+			}
+			add_to_variable = {
+				YDS_alumni_funds = 20
+			}
+			subtract_from_variable = {
+				YDS_student_autonomy = 10
+			}
+			add_to_variable = {
+				YDS_alumni_industry_factor = 0.04
+			}
+			custom_effect_tooltip = YDS_alumni_industry_factor_04_tt
+		
+		}
+		available = {
+			NOT = {
+				has_country_flag = YDS_anarchy_active
+			}
+			always = yes
+		}
+	}
+	# ==================== GEOPOLITICS BRANCH ====================
+	focus = {
+		id = YDS_chengdu_school_district_geopolitics
+		x = 20
+		y = 10
+		cost = 5
+		icon = GFX_focus_YDS_chengdu_school_district_geopolitics
+		continue_if_invalid = yes
+		cancel_if_invalid = yes
+		prerequisite = {
+			focus = YDS_the_perfect_standard_school
+			focus = YDS_communitarian_academy
+			focus = YDS_republic_of_letters
+			focus = YDS_experimental_base
+			focus = YDS_technocratic_meritocracy
+			focus = YDS_great_yandao_empire
+		}
+		completion_reward = {
+			country_event = {
+				id = yds_event.49
+			}
+			custom_effect_tooltip = YDS_TT_GEOPOLITICS_UNLOCK
+		}
+		available = {
+			NOT = {
+				has_country_flag = YDS_anarchy_active
+			}
+			custom_trigger_tooltip = {
+				tooltip = YDS_TT_REQUIRE_TWO_VASSALS
+				OR = {
+					has_idea = YDS_regular_schools_united
+					AND = {
+						OR = {
+							has_country_flag = YDS_chengwai_phase_3
+							has_idea = YDS_chengwai_phase_3_buff
+							check_variable = { YDS_infiltration_chengwai > 99 }
+						}
+						OR = {
+							has_country_flag = YDS_shiwai_phase_3
+							has_idea = YDS_shiwai_phase_3_buff
+							check_variable = { YDS_infiltration_shiwai > 99 }
+						}
+					}
+					AND = {
+						OR = {
+							has_country_flag = YDS_chengwai_phase_3
+							has_idea = YDS_chengwai_phase_3_buff
+							check_variable = { YDS_infiltration_chengwai > 99 }
+						}
+						OR = {
+							has_country_flag = YDS_csfz_phase_3
+							has_idea = YDS_csfz_phase_3_buff
+							check_variable = { YDS_infiltration_csfz > 99 }
+						}
+					}
+					AND = {
+						OR = {
+							has_country_flag = YDS_shiwai_phase_3
+							has_idea = YDS_shiwai_phase_3_buff
+							check_variable = { YDS_infiltration_shiwai > 99 }
+						}
+						OR = {
+							has_country_flag = YDS_csfz_phase_3
+							has_idea = YDS_csfz_phase_3_buff
+							check_variable = { YDS_infiltration_csfz > 99 }
+						}
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = YDS_interact_with_no_7
+		x = 17
+		y = 11
+		cost = 5
+		icon = GFX_focus_YDS_interact_with_no_7
+		continue_if_invalid = yes
+		cancel_if_invalid = yes
+		prerequisite = {
+			focus = YDS_chengdu_school_district_geopolitics
+		}
+		completion_reward = {
+			country_event = {
+				id = yds_event.50
+			}
+			custom_effect_tooltip = YDS_TT_FOCUS_BUFF_NO7
+		}
+		available = {
+			NOT = {
+				has_country_flag = YDS_anarchy_active
+			}
+		}
+	}
+	focus = {
+		id = YDS_interact_with_shishi
+		x = 20
+		y = 11
+		cost = 5
+		icon = GFX_focus_YDS_interact_with_shishi
+		continue_if_invalid = yes
+		cancel_if_invalid = yes
+		prerequisite = {
+			focus = YDS_chengdu_school_district_geopolitics
+		}
+		completion_reward = {
+			country_event = {
+				id = yds_event.51
+			}
+			custom_effect_tooltip = YDS_TT_FOCUS_BUFF_SHISHI
+		}
+		available = {
+			NOT = {
+				has_country_flag = YDS_anarchy_active
+			}
+		}
+	}
+	focus = {
+		id = YDS_interact_with_shude
+		x = 23
+		y = 11
+		cost = 5
+		icon = GFX_focus_YDS_interact_with_shude
+		continue_if_invalid = yes
+		cancel_if_invalid = yes
+		prerequisite = {
+			focus = YDS_chengdu_school_district_geopolitics
+		}
+		completion_reward = {
+			country_event = {
+				id = yds_event.52
+			}
+			custom_effect_tooltip = YDS_TT_FOCUS_BUFF_SHUDE
+		}
+		available = {
+			NOT = {
+				has_country_flag = YDS_anarchy_active
+			}
+		}
+	}
+	focus = {
+		id = YDS_cooperate_no_7
+		x = 16
+		y = 12
+		cost = 5
+		icon = GFX_focus_YDS_cooperate_no_7
+		continue_if_invalid = yes
+		cancel_if_invalid = yes
+		mutually_exclusive = {
+			focus = YDS_subvert_no_7
+		}
+		prerequisite = {
+			focus = YDS_interact_with_no_7
+		}
+		completion_reward = {
+			add_stability = 0.05
+			country_event = {
+				id = yds_event.53
+			}
+			custom_effect_tooltip = YDS_TT_FOCUS_BUFF_NO7_ADV
+		}
+		available = {
+			NOT = {
+				has_country_flag = YDS_anarchy_active
+			}
+		}
+	}
+	focus = {
+		id = YDS_subvert_no_7
+		x = 18
+		y = 12
+		cost = 5
+		icon = GFX_focus_YDS_subvert_no_7
+		continue_if_invalid = yes
+		cancel_if_invalid = yes
+		mutually_exclusive = {
+			focus = YDS_cooperate_no_7
+		}
+		prerequisite = {
+			focus = YDS_interact_with_no_7
+		}
+		completion_reward = {
+			country_event = {
+				id = yds_event.54
+			}
+			custom_effect_tooltip = YDS_TT_FOCUS_BUFF_NO7_ADV
+		}
+		available = {
+			NOT = {
+				has_country_flag = YDS_anarchy_active
+			}
+		}
+	}
+	focus = {
+		id = YDS_neo_confucian_alliance
+		x = 20
+		y = 12
+		cost = 5
+		icon = GFX_focus_YDS_neo_confucian_alliance
+		continue_if_invalid = yes
+		cancel_if_invalid = yes
+		prerequisite = {
+			focus = YDS_interact_with_shishi
+		}
+		completion_reward = {
+			add_stability = 0.05
+			country_event = {
+				id = yds_event.55
+			}
+			custom_effect_tooltip = YDS_TT_FOCUS_BUFF_SHISHI_ADV
+		}
+		available = {
+			NOT = {
+				has_country_flag = YDS_anarchy_active
+			}
+		}
+	}
+	focus = {
+		id = YDS_discipline_pact
+		x = 22
+		y = 12
+		cost = 5
+		icon = GFX_focus_YDS_discipline_pact
+		continue_if_invalid = yes
+		cancel_if_invalid = yes
+		mutually_exclusive = {
+			focus = YDS_martial_competition
+		}
+		prerequisite = {
+			focus = YDS_interact_with_shude
+		}
+		completion_reward = {
+			add_stability = 0.05
+			country_event = {
+				id = yds_event.56
+			}
+			custom_effect_tooltip = YDS_TT_FOCUS_BUFF_SHUDE_ADV
+		}
+		available = {
+			NOT = {
+				has_country_flag = YDS_anarchy_active
+			}
+		}
+	}
+	focus = {
+		id = YDS_martial_competition
+		x = 24
+		y = 12
+		cost = 5
+		icon = GFX_focus_YDS_martial_competition
+		continue_if_invalid = yes
+		cancel_if_invalid = yes
+		mutually_exclusive = {
+			focus = YDS_discipline_pact
+		}
+		prerequisite = {
+			focus = YDS_interact_with_shude
+		}
+		completion_reward = {
+			country_event = {
+				id = yds_event.57
+			}
+			custom_effect_tooltip = YDS_TT_FOCUS_BUFF_SHUDE_ADV
+		}
+		available = {
+			NOT = {
+				has_country_flag = YDS_anarchy_active
+			}
+		}
+	}
+	focus = {
+		id = YDS_unify_chengdu_schools
+		x = 20
+		y = 13
+		cost = 5
+		icon = GFX_focus_YDS_unify_chengdu_schools
+		continue_if_invalid = yes
+		cancel_if_invalid = yes
+		prerequisite = {
+			focus = YDS_cooperate_no_7
+			focus = YDS_subvert_no_7
+		}
+		prerequisite = {
+			focus = YDS_neo_confucian_alliance
+		}
+		prerequisite = {
+			focus = YDS_discipline_pact
+			focus = YDS_martial_competition
+		}
+		completion_reward = {
+			capital_scope = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			add_stability = 0.1
+			country_event = {
+				id = yds_event.58
+			}
+			remove_decision = YDS_uc_spread_of_freedom
+			custom_effect_tooltip = YDS_TT_CRISIS_RESOLVED
+		}
+		available = {
+			NOT = {
+				has_country_flag = YDS_anarchy_active
+			}
+			custom_trigger_tooltip = {
+				tooltip = YDS_TT_REQUIRE_ALL_VASSALS
+				OR = {
+					AND = {
+						has_idea = YDS_regular_schools_united
+						has_idea = YDS_elite_schools_united
+					}
+					AND = {
+						OR = { has_country_flag = YDS_chengwai_phase_3 has_idea = YDS_chengwai_phase_3_buff check_variable = { YDS_infiltration_chengwai > 99 } }
+						OR = { has_country_flag = YDS_shiwai_phase_3 has_idea = YDS_shiwai_phase_3_buff check_variable = { YDS_infiltration_shiwai > 99 } }
+						OR = { has_country_flag = YDS_csfz_phase_3 has_idea = YDS_csfz_phase_3_buff check_variable = { YDS_infiltration_csfz > 99 } }
+						OR = { has_country_flag = YDS_no7_phase_3 has_idea = YDS_no7_phase_3_buff check_variable = { YDS_infiltration_no7 > 99 } }
+						OR = { has_country_flag = YDS_shishi_phase_3 has_idea = YDS_shishi_phase_3_buff check_variable = { YDS_infiltration_shishi > 99 } }
+						OR = { has_country_flag = YDS_shude_phase_3 has_idea = YDS_shude_phase_3_buff check_variable = { YDS_infiltration_shude > 99 } }
+					}
+				}
+			}
+		}
+	}
+	# ==================== OLYMPIAD BRANCH ====================
+	focus = {
+		id = YDS_olympiad_initiative
+		x = 33
+		y = 6
+		cost = 5
+		icon = GFX_focus_YDS_olympiad_initiative
+		continue_if_invalid = yes
+		cancel_if_invalid = yes
+		completion_reward = {
+			set_country_flag = YDS_olympiad_active
+			set_variable = { YDS_coach_energy_total = 8 }
+			set_variable = { YDS_coach_energy_used = 0 }
+			set_variable = { YDS_coach_energy_available = 8 }
+			country_event = {
+				id = yds_olympiad_event.1
+			}
+		}
+		available = {
+			NOT = {
+				has_country_flag = YDS_anarchy_active
+			}
+			custom_trigger_tooltip = {
+				tooltip = YDS_TT_OLYMPIAD_FORBIDDEN_EQUALIZED
+				NOT = { has_government = totalist }
+				NOT = { has_government = radical_socialist }
+				NOT = { has_government = paternal_autocrat }
+			}
+			check_variable = {
+				YDS_olympiad_unlocked = 1
+			}
+		}
+	}
+	focus = {
+		id = YDS_chengdu_eight_school_joint_exam
+		x = 34
+		y = 7
+		cost = 5
+		icon = GFX_focus_YDS_chengdu_eight_school_joint_exam
+		continue_if_invalid = yes
+		cancel_if_invalid = yes
+		prerequisite = {
+			focus = YDS_olympiad_initiative
+		}
+		completion_reward = {
+			country_event = {
+				id = yds_olympiad_event.2
+			}
+		}
+		available = {
+			NOT = {
+				has_country_flag = YDS_anarchy_active
+			}
+			custom_trigger_tooltip = {
+				tooltip = YDS_TT_OLYMPIAD_FORBIDDEN_EQUALIZED
+				NOT = { has_government = totalist }
+				NOT = { has_government = radical_socialist }
+				NOT = { has_government = paternal_autocrat }
+			}
+		}
+	}
+	focus = {
+		id = YDS_specialty_funding_boost
+		x = 32
+		y = 7
+		cost = 5
+		icon = GFX_focus_YDS_specialty_funding_boost
+		continue_if_invalid = yes
+		cancel_if_invalid = yes
+		prerequisite = {
+			focus = YDS_olympiad_initiative
+		}
+		completion_reward = {
+			add_political_power = 50
+			if = {
+				limit = {
+					OR = {
+						has_government = paternal_autocrat
+						has_government = totalist
+						has_government = radical_socialist
+					}
+				}
+				add_to_variable = {
+					YDS_gpa_score = 10
+				}
+				custom_effect_tooltip = YDS_TT_OLYMPIAD_FUND_GAIN_COMMUNISM
+			}
+			if = {
+				limit = {
+					OR = {
+						has_government = national_populist
+						has_government = market_liberal
+						has_government = social_conservative
+					}
+				}
+				add_to_variable = {
+					YDS_alumni_funds = 20
+				}
+				custom_effect_tooltip = YDS_TT_OLYMPIAD_FUND_GAIN_FASCISM
+			}
+			if = {
+				limit = {
+					OR = {
+						has_government = social_liberal
+						has_government = authoritarian_democrat
+						has_government = social_democrat
+						has_government = syndicalist
+					}
+				}
+				add_to_variable = {
+					YDS_student_autonomy = 15
+				}
+				custom_effect_tooltip = YDS_TT_OLYMPIAD_FUND_GAIN_DEMOCRATIC
+			}
+		}
+		available = {
+			NOT = {
+				has_country_flag = YDS_anarchy_active
+			}
+			custom_trigger_tooltip = {
+				tooltip = YDS_TT_OLYMPIAD_FORBIDDEN_EQUALIZED
+				NOT = { has_government = totalist }
+				NOT = { has_government = radical_socialist }
+				NOT = { has_government = paternal_autocrat }
+			}
+		}
+	}
+	focus = {
+		id = YDS_train_olympiad_elites
+		x = 33
+		y = 8
+		cost = 5
+		icon = GFX_focus_YDS_train_olympiad_elites
+		continue_if_invalid = yes
+		cancel_if_invalid = yes
+		prerequisite = {
+			focus = YDS_chengdu_eight_school_joint_exam
+		}
+		prerequisite = {
+			focus = YDS_specialty_funding_boost
+		}
+		completion_reward = {
+			add_ideas = YDS_olympiad_elite_training_spirit
+			set_variable = { YDS_coach_energy_total = 12 }
+			set_variable = { YDS_coach_energy_available = YDS_coach_energy_total }
+			subtract_from_variable = { YDS_coach_energy_available = YDS_coach_energy_used }
+			add_to_variable = {
+				YDS_gpa_score = 5
+			}
+			if = {
+				limit = {
+					OR = {
+						has_government = paternal_autocrat
+						has_government = totalist
+						has_government = radical_socialist
+					}
+				}
+				add_to_variable = { global.track_physics_progress = 8 }
+				add_to_variable = { global.track_info_progress = 8 }
+			}
+			if = {
+				limit = {
+					OR = {
+						has_government = national_populist
+						has_government = market_liberal
+						has_government = social_conservative
+					}
+				}
+				add_to_variable = { global.track_chem_progress = 12 }
+			}
+			if = {
+				limit = {
+					OR = {
+						has_government = social_liberal
+						has_government = authoritarian_democrat
+						has_government = social_democrat
+						has_government = syndicalist
+					}
+				}
+				add_to_variable = { global.track_math_progress = 10 }
+				add_to_variable = { global.track_bio_progress = 10 }
+			}
+			clamp_exam_track_variables = yes
+		}
+		available = {
+			NOT = {
+				has_country_flag = YDS_anarchy_active
+			}
+			custom_trigger_tooltip = {
+				tooltip = YDS_TT_OLYMPIAD_FORBIDDEN_EQUALIZED
+				NOT = { has_government = totalist }
+				NOT = { has_government = radical_socialist }
+				NOT = { has_government = paternal_autocrat }
+			}
+		}
+	}
+	focus = {
+		id = YDS_national_olympiad_finals
+		x = 33
+		y = 9
+		cost = 5
+		icon = GFX_focus_YDS_national_olympiad_finals
+		continue_if_invalid = yes
+		cancel_if_invalid = yes
+		prerequisite = {
+			focus = YDS_train_olympiad_elites
+		}
+		completion_reward = {
+			set_country_flag = YDS_olympiad_finals_done
+			country_event = {
+				id = yds_olympiad_event.3
+			}
+			calculate_olympiad_finals_results = yes
+		}
+		available = {
+			NOT = {
+				has_country_flag = YDS_anarchy_active
+			}
+			custom_trigger_tooltip = {
+				tooltip = YDS_TT_OLYMPIAD_FORBIDDEN_EQUALIZED
+				NOT = { has_government = totalist }
+				NOT = { has_government = radical_socialist }
+				NOT = { has_government = paternal_autocrat }
+			}
+		}
+	}
+	# ==================== CAMPUS INDUSTRIAL & LOGISTICS BRANCH ====================
+	# 1. Campus Asset Inventory
+	focus = {
+		id = YDS_campus_asset_inventory
+		x = 35
+		y = 0
+		cost = 5
+		icon = GFX_goal_generic_construct_civ_factory
+		continue_if_invalid = yes
+		cancel_if_invalid = yes
+		completion_reward = {
+			capital_scope = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_tech_bonus = {
+				name = YDS_industrial_bonus
+				bonus = 1
+				uses = 1
+				category = industry
+			}
+		}
+		available = {
+			NOT = {
+				has_country_flag = YDS_anarchy_active
+			}
+			OR = {
+				has_country_flag = YDS_school_district_gui_unlocked
+				check_variable = {
+					YDS_olympiad_unlocked = 1
+				}
+			}
+		}
+		bypass = {
+			OR = {
+				tag = YDC
+				tag = YDF
+				tag = YDD
+			}
+		}
+	}
+	# 2. School Canteen Monopoly
+	focus = {
+		id = YDS_school_canteen_monopoly
+		x = 33
+		y = 1
+		cost = 5
+		icon = GFX_goal_generic_consumer_goods
+		continue_if_invalid = yes
+		cancel_if_invalid = yes
+		prerequisite = {
+			focus = YDS_campus_asset_inventory
+		}
+		completion_reward = {
+			capital_scope = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_ideas = YDS_canteen_monopoly_idea
+		}
+		available = {
+			NOT = {
+				has_country_flag = YDS_anarchy_active
+			}
+		}
+		bypass = {
+			OR = {
+				tag = YDC
+				tag = YDF
+				tag = YDD
+			}
+		}
+	}
+	# 3. Overhead Corridor Network
+	focus = {
+		id = YDS_overhead_corridor_network
+		x = 33
+		y = 2
+		cost = 5
+		icon = GFX_goal_generic_construct_infrastructure
+		continue_if_invalid = yes
+		cancel_if_invalid = yes
+		prerequisite = {
+			focus = YDS_school_canteen_monopoly
+		}
+		completion_reward = {
+			1041 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			1037 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+		available = {
+			NOT = {
+				has_country_flag = YDS_anarchy_active
+			}
+		}
+		bypass = {
+			OR = {
+				tag = YDC
+				tag = YDF
+				tag = YDD
+			}
+		}
+	}
+	# 4. Sports Room Requisition
+	focus = {
+		id = YDS_sports_room_requisition
+		x = 37
+		y = 1
+		cost = 5
+		icon = GFX_goal_generic_allies_build_infantry
+		continue_if_invalid = yes
+		cancel_if_invalid = yes
+		prerequisite = {
+			focus = YDS_campus_asset_inventory
+		}
+		completion_reward = {
+			capital_scope = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		available = {
+			NOT = {
+				has_country_flag = YDS_anarchy_active
+			}
+		}
+		bypass = {
+			OR = {
+				tag = YDC
+				tag = YDF
+				tag = YDD
+			}
+		}
+	}
+	# 5. Craft Class Armory
+	focus = {
+		id = YDS_craft_class_armory
+		x = 37
+		y = 2
+		cost = 5
+		icon = GFX_goal_generic_construct_mil_factory
+		continue_if_invalid = yes
+		cancel_if_invalid = yes
+		prerequisite = {
+			focus = YDS_sports_room_requisition
+		}
+		completion_reward = {
+			capital_scope = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			1037 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_ideas = YDS_sports_armory_idea
+		}
+		available = {
+			NOT = {
+				has_country_flag = YDS_anarchy_active
+			}
+		}
+		bypass = {
+			OR = {
+				tag = YDC
+				tag = YDF
+				tag = YDD
+			}
+		}
+	}
+	# 6. Print Shop Overdrive
+	focus = {
+		id = YDS_print_shop_overdrive
+		x = 35
+		y = 3
+		cost = 5
+		icon = GFX_goal_generic_scientific_exchange
+		continue_if_invalid = yes
+		cancel_if_invalid = yes
+		prerequisite = {
+			focus = YDS_overhead_corridor_network
+		}
+		prerequisite = {
+			focus = YDS_craft_class_armory
+		}
+		completion_reward = {
+			add_research_slot = 1
+		}
+		available = {
+			NOT = {
+				has_country_flag = YDS_anarchy_active
+			}
+		}
+		bypass = {
+			OR = {
+				tag = YDC
+				tag = YDF
+				tag = YDD
+			}
+		}
+	}
+	# 7. Chemistry Lab Reagents
+	focus = {
+		id = YDS_chemistry_lab_reagents
+		x = 33
+		y = 4
+		cost = 5
+		icon = GFX_goal_generic_oil_refinery
+		continue_if_invalid = yes
+		cancel_if_invalid = yes
+		prerequisite = {
+			focus = YDS_print_shop_overdrive
+		}
+		completion_reward = {
+			capital_scope = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = synthetic_refinery
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_ideas = YDS_chem_reagents_idea
+			add_tech_bonus = {
+				name = YDS_synth_bonus
+				bonus = 1
+				uses = 2
+				category = industry
+			}
+		}
+		available = {
+			NOT = {
+				has_country_flag = YDS_anarchy_active
+			}
+		}
+		bypass = {
+			OR = {
+				tag = YDC
+				tag = YDF
+				tag = YDD
+			}
+		}
+	}
+	# 8. Handicraft Standardization
+	focus = {
+		id = YDS_handicraft_standardization
+		x = 37
+		y = 4
+		cost = 5
+		icon = GFX_goal_generic_production
+		continue_if_invalid = yes
+		cancel_if_invalid = yes
+		prerequisite = {
+			focus = YDS_print_shop_overdrive
+		}
+		completion_reward = {
+			add_stability = 0.05
+			add_war_support = 0.05
+			add_tech_bonus = {
+				name = YDS_prod_bonus
+				bonus = 0.5
+				uses = 2
+				category = industry
+			}
+		}
+		available = {
+			NOT = {
+				has_country_flag = YDS_anarchy_active
+			}
+		}
+		bypass = {
+			OR = {
+				tag = YDC
+				tag = YDF
+				tag = YDD
+			}
+		}
+	}
+	# 9. Campus Logistics Gigafactory
+	focus = {
+		id = YDS_campus_logistics_gigafactory
+		x = 35
+		y = 5
+		cost = 5
+		icon = GFX_goal_generic_construct_civ_factory
+		continue_if_invalid = yes
+		cancel_if_invalid = yes
+		prerequisite = {
+			focus = YDS_chemistry_lab_reagents
+		}
+		prerequisite = {
+			focus = YDS_handicraft_standardization
+		}
+		completion_reward = {
+			capital_scope = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			add_ideas = YDS_campus_gigafactory_idea
+		}
+		available = {
+			NOT = {
+				has_country_flag = YDS_anarchy_active
+			}
+		}
+		bypass = {
+			OR = {
+				tag = YDC
+				tag = YDF
+				tag = YDD
+			}
+		}
+	}
+	# ==================== 1938 GAOKAO APOCALYPSE & UNIFICATION WAR BRANCH ====================
+	# Main Wartime Focus (Unlocks strictly on 1938.6.7 when Gaokao war starts)
+	focus = {
+		id = YDS_gaokao_war_mobilization
+		x = 28
+		y = 10
+		cost = 5
+		icon = GFX_goal_generic_major_war
+		continue_if_invalid = yes
+		cancel_if_invalid = yes
+		available = {
+			NOT = { has_country_flag = YDS_anarchy_active }
+			has_global_flag = yds_national_war_active
+		}
+		completion_reward = {
+			add_ideas = YDS_national_war_effort
+			add_political_power = 150
+			add_war_support = 0.20
+		}
+	}
+
+	# Tactical Focus 1: Exam Hall Tactics
+	focus = {
+		id = YDS_exam_hall_tactics
+		x = 26
+		y = 11
+		cost = 5
+		icon = GFX_goal_generic_position_armies
+		continue_if_invalid = yes
+		cancel_if_invalid = yes
+		prerequisite = {
+			focus = YDS_gaokao_war_mobilization
+		}
+		available = {
+			has_global_flag = yds_national_war_active
+		}
+		completion_reward = {
+			add_ideas = YDS_exam_hall_tactics_spirit
+			army_experience = 25
+		}
+	}
+
+	# Tactical Focus 2: Break Repeater Siege
+	focus = {
+		id = YDS_break_repeater_siege
+		x = 30
+		y = 11
+		cost = 5
+		icon = GFX_goal_generic_occupy_start_war
+		continue_if_invalid = yes
+		cancel_if_invalid = yes
+		prerequisite = {
+			focus = YDS_gaokao_war_mobilization
+		}
+		available = {
+			has_global_flag = yds_national_war_active
+		}
+		completion_reward = {
+			add_ideas = YDS_break_siege_spirit
+			add_stability = 0.05
+		}
+	}
+
+	# Tactical Focus 3: All-Front Counterattack
+	focus = {
+		id = YDS_all_front_counterattack
+		x = 28
+		y = 12
+		cost = 5
+		icon = GFX_goal_generic_scientific_exchange
+		continue_if_invalid = yes
+		cancel_if_invalid = yes
+		prerequisite = {
+			focus = YDS_exam_hall_tactics
+		}
+		prerequisite = {
+			focus = YDS_break_repeater_siege
+		}
+		available = {
+			has_global_flag = yds_national_war_active
+		}
+		completion_reward = {
+			add_political_power = 100
+			# Claims across all exam districts for 180-day coring integration
+			744 = { add_claim_by = YDS }
+			1032 = { add_claim_by = YDS }
+			1045 = { add_claim_by = YDS }
+			1046 = { add_claim_by = YDS }
+			283 = { add_claim_by = YDS }
+			622 = { add_claim_by = YDS }
+			1036 = { add_claim_by = YDS }
+			602 = { add_claim_by = YDS }
+			620 = { add_claim_by = YDS }
+			750 = { add_claim_by = YDS }
+			325 = { add_claim_by = YDS }
+			603 = { add_claim_by = YDS }
+			747 = { add_claim_by = YDS }
+			748 = { add_claim_by = YDS }
+			1038 = { add_claim_by = YDS }
+			597 = { add_claim_by = YDS }
+			607 = { add_claim_by = YDS }
+			614 = { add_claim_by = YDS }
+			615 = { add_claim_by = YDS }
+			743 = { add_claim_by = YDS }
+			592 = { add_claim_by = YDS }
+			591 = { add_claim_by = YDS }
+			593 = { add_claim_by = YDS }
+			594 = { add_claim_by = YDS }
+			599 = { add_claim_by = YDS }
+			1033 = { add_claim_by = YDS }
+			1035 = { add_claim_by = YDS }
+			1034 = { add_claim_by = YDS }
+			595 = { add_claim_by = YDS }
+			596 = { add_claim_by = YDS }
+			598 = { add_claim_by = YDS }
+			600 = { add_claim_by = YDS }
+			606 = { add_claim_by = YDS }
+			613 = { add_claim_by = YDS }
+			749 = { add_claim_by = YDS }
+			608 = { add_claim_by = YDS }
+			1039 = { add_claim_by = YDS }
+			328 = { add_claim_by = YDS }
+			609 = { add_claim_by = YDS }
+			610 = { add_claim_by = YDS }
+			714 = { add_claim_by = YDS }
+			715 = { add_claim_by = YDS }
+			716 = { add_claim_by = YDS }
+			717 = { add_claim_by = YDS }
+			745 = { add_claim_by = YDS }
+			761 = { add_claim_by = YDS }
+		}
+	}
+
+	# Capstone: All-China Educational Hegemony
+	focus = {
+		id = YDS_all_china_educational_hegemony
+		x = 28
+		y = 13
+		cost = 5
+		icon = GFX_goal_generic_forceful_treaty
+		continue_if_invalid = yes
+		cancel_if_invalid = yes
+		prerequisite = {
+			focus = YDS_all_front_counterattack
+		}
+		available = {
+			has_global_flag = yds_national_war_active
+			has_war = no
+		}
+		completion_reward = {
+			country_event = { id = yds_national_war.5 }
+			add_ideas = YDS_national_exam_hegemony
+		}
+	}
+}

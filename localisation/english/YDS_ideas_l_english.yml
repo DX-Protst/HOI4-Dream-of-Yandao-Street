@@ -1,0 +1,160 @@
+﻿l_english:
+
+ # MODMADE_PER_LOCALE_EMPTY YDS_academic_freedom
+
+ # MODMADE_PER_LOCALE_EMPTY YDS_autonomy_high_buff
+
+ # MODMADE_PER_LOCALE_EMPTY YDS_autonomy_low_debuff
+
+ # MODMADE_PER_LOCALE_EMPTY YDS_bureau_order
+
+ # MODMADE_PER_LOCALE_EMPTY YDS_bureau_supervision
+
+ # MODMADE_PER_LOCALE_EMPTY YDS_campus_gigafactory_idea
+
+ # MODMADE_PER_LOCALE_EMPTY YDS_canteen_monopoly_idea
+
+ # MODMADE_PER_LOCALE_EMPTY YDS_chem_reagents_idea
+
+ # MODMADE_PER_LOCALE_EMPTY YDS_chengwai_phase_1_buff
+
+ # MODMADE_PER_LOCALE_EMPTY YDS_chengwai_phase_2_buff
+
+ # MODMADE_PER_LOCALE_EMPTY YDS_chengwai_phase_3_buff
+
+ # MODMADE_PER_LOCALE_EMPTY YDS_class_1_civil_war_buff
+
+ # MODMADE_PER_LOCALE_EMPTY YDS_csfz_phase_1_buff
+
+ # MODMADE_PER_LOCALE_EMPTY YDS_csfz_phase_2_buff
+
+ # MODMADE_PER_LOCALE_EMPTY YDS_csfz_phase_3_buff
+
+ # MODMADE_PER_LOCALE_EMPTY YDS_educational_decline
+
+ # MODMADE_PER_LOCALE_EMPTY YDS_elite_materials
+
+ # MODMADE_PER_LOCALE_EMPTY YDS_gpa_high_buff
+
+ # MODMADE_PER_LOCALE_EMPTY YDS_gpa_low_debuff
+
+ # MODMADE_PER_LOCALE_EMPTY YDS_jiang_guangping_civil_war_buff
+
+ # MODMADE_PER_LOCALE_EMPTY YDS_li_gang_civil_war_buff
+
+ # MODMADE_PER_LOCALE_EMPTY YDS_merger_tension
+
+ # MODMADE_PER_LOCALE_EMPTY YDS_military_buff_1
+
+ # MODMADE_PER_LOCALE_EMPTY YDS_military_buff_2
+
+ # MODMADE_PER_LOCALE_EMPTY YDS_no7_phase_1_buff
+
+ # MODMADE_PER_LOCALE_EMPTY YDS_no7_phase_2_buff
+
+ # MODMADE_PER_LOCALE_EMPTY YDS_no7_phase_3_buff
+
+ # MODMADE_PER_LOCALE_EMPTY YDS_old_glory_buff
+
+ # MODMADE_PER_LOCALE_EMPTY YDS_olympiad_elite_training_spirit
+
+ # MODMADE_PER_LOCALE_EMPTY YDS_olympiad_excellent_spirit
+
+ # MODMADE_PER_LOCALE_EMPTY YDS_olympiad_gold_medal_focus
+
+ # MODMADE_PER_LOCALE_EMPTY YDS_olympiad_legend_spirit
+
+ # MODMADE_PER_LOCALE_EMPTY YDS_olympiad_solid_spirit
+
+ # MODMADE_PER_LOCALE_EMPTY YDS_olympiad_well_rounded_focus
+
+ # MODMADE_PER_LOCALE_EMPTY YDS_shishi_phase_1_buff
+
+ # MODMADE_PER_LOCALE_EMPTY YDS_shishi_phase_2_buff
+
+ # MODMADE_PER_LOCALE_EMPTY YDS_shishi_phase_3_buff
+
+ # MODMADE_PER_LOCALE_EMPTY YDS_shiwai_phase_1_buff
+
+ # MODMADE_PER_LOCALE_EMPTY YDS_shiwai_phase_2_buff
+
+ # MODMADE_PER_LOCALE_EMPTY YDS_shiwai_phase_3_buff
+
+ # MODMADE_PER_LOCALE_EMPTY YDS_shude_phase_1_buff
+
+ # MODMADE_PER_LOCALE_EMPTY YDS_shude_phase_2_buff
+
+ # MODMADE_PER_LOCALE_EMPTY YDS_shude_phase_3_buff
+
+ # MODMADE_PER_LOCALE_EMPTY YDS_sports_armory_idea
+
+ # MODMADE_PER_LOCALE_EMPTY YDS_student_faction_dominant
+
+ # MODMADE_PER_LOCALE_EMPTY YDS_teacher_faction_dominant
+
+ # MODMADE_PER_LOCALE_EMPTY YDS_wartime_alumni_spirit
+
+ # MODMADE_PER_LOCALE_EMPTY YDS_wartime_bureau_spirit
+
+ # MODMADE_PER_LOCALE_EMPTY YDS_wartime_student_spirit
+
+ # MODMADE_PER_LOCALE_EMPTY YDS_bureau_control_debuff
+
+ # MODMADE_PER_LOCALE_EMPTY YDS_autonomy_struggle_debuff
+
+ # MODMADE_PER_LOCALE_EMPTY YDS_alumni_division_debuff
+
+ # MODMADE_PER_LOCALE_EMPTY YDS_bureau_control_buff_1
+
+ # MODMADE_PER_LOCALE_EMPTY YDS_bureau_control_buff_2
+
+ # MODMADE_PER_LOCALE_EMPTY YDS_autonomy_buff_1
+
+ # MODMADE_PER_LOCALE_EMPTY YDS_autonomy_buff_2
+
+ # MODMADE_PER_LOCALE_EMPTY YDS_alumni_buff_1
+
+ # MODMADE_PER_LOCALE_EMPTY YDS_alumni_buff_2
+
+ YDS_bureau_industry_factor_05_tt:0 "Strengthen §YBureau Control§!: Factory Output §G+5.0%§!"
+
+ YDS_bureau_industry_factor_04_tt:0 "Strengthen §YBureau Control§!: Factory Output §G+4.0%§!"
+
+ YDS_bureau_industry_factor_03_tt:0 "Strengthen §YBureau Control§!: Factory Output §G+3.0%§!"
+
+ YDS_bureau_eff_factor_03_tt:0 "Strengthen §YInitial Order§!: Production Efficiency §G+3.0%§!"
+
+ YDS_autonomy_industry_factor_05_tt:0 "Strengthen §YModerate Governance§!: Factory Output §G+5.0%§!"
+
+ YDS_autonomy_industry_factor_04_tt:0 "Strengthen §YModerate Governance§!: Factory Output §G+4.0%§!"
+
+ YDS_autonomy_industry_factor_03_tt:0 "Strengthen §YModerate Governance§!: Factory Output §G+3.0%§!"
+
+ YDS_autonomy_goods_factor_03_tt:0 "Strengthen §YAdministrative Deal§!: Consumer Goods Factor §G-3.0%§!"
+
+ YDS_autonomy_goods_factor_02_tt:0 "Strengthen §YAdministrative Deal§!: Consumer Goods Factor §G-2.0%§!"
+
+ YDS_alumni_industry_factor_05_tt:0 "Strengthen §YStudy Guide Monopoly§!: Factory Output §G+5.0%§!"
+
+ YDS_alumni_industry_factor_04_tt:0 "Strengthen §YStudy Guide Monopoly§!: Factory Output §G+4.0%§!"
+
+ YDS_alumni_industry_factor_03_tt:0 "Strengthen §YStudy Guide Monopoly§!: Factory Output §G+3.0%§!"
+
+ YDS_alumni_org_factor_03_tt:0 "Strengthen §YCoup Action§!: Army Organization §G+3.0%§!"
+
+ YDS_exam_hall_tactics_spirit:0 "Exam Hall Tactics Spirit"
+
+ YDS_exam_hall_tactics_spirit_desc:0 "Disciplined examination composure and time management adapted into military combat doctrine, boosting attack and defense."
+
+ YDS_break_siege_spirit:0 "Breakthrough Siege Spirit"
+
+ YDS_break_siege_spirit_desc:0 "An unyielding resolve to break out of enemy encirclement, drastically improving division speed and breakthrough."
+
+ YDS_national_exam_hegemony:0 "National Exam Hegemony"
+
+ YDS_national_exam_hegemony_desc:0 "Yandao Street Middle School stands uncontested atop the educational order of China, yielding peerless national prestige and research prowess."
+
+ YDS_academic_ivory_tower_bias:0 "Ivory Tower Academic Bias"
+
+ YDS_academic_ivory_tower_bias_desc:0 "Students of Yandao Street Middle School dwell in an ivory tower of abstract math, exams, and formulas. While brilliant at theoretical logic, they suffer severe lack of hands-on industrial machining and military weaponry experience."
+

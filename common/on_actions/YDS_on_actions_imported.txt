@@ -1,0 +1,441 @@
+on_actions = {
+	on_daily = {
+		effect = {
+			# 1938.6.7 National Gaokao Reckoning check (strictly fires ONCE)
+			if = {
+				limit = {
+					date > 1938.6.6
+					NOT = { has_global_flag = yds_gaokao_reckoning_fired }
+				}
+				set_global_flag = yds_gaokao_reckoning_fired
+				# Trigger reckoning for the human player country (YDS, ECE, HBE, SHS, etc.)
+				every_country = {
+					limit = {
+						is_ai = no
+						is_educational_warlord = yes
+					}
+					calculate_gaokao_reckoning_1938 = yes
+				}
+				# Fallback if in spectator mode or no human educational country
+				if = {
+					limit = {
+						NOT = { any_country = { is_ai = no is_educational_warlord = yes } }
+					}
+					YDS = { calculate_gaokao_reckoning_1938 = yes }
+				}
+			}
+
+			# Mission Tracker
+			if = {
+				limit = { check_variable = { YDS_mission_active > 0 } }
+				add_to_variable = { YDS_mission_progress = 1 }
+				
+				if = {
+					limit = { check_variable = { YDS_mission_progress > 6 } }
+
+					if = {
+						limit = { check_variable = { YDS_mission_target = 1 } }
+						add_to_variable = { YDS_infiltration_chengwai = 25 }
+					}
+					if = {
+						limit = { check_variable = { YDS_mission_target = 2 } }
+						add_to_variable = { YDS_infiltration_shiwai = 25 }
+					}
+					if = {
+						limit = { check_variable = { YDS_mission_target = 3 } }
+						add_to_variable = { YDS_infiltration_csfz = 25 }
+					}
+					if = {
+						limit = { check_variable = { YDS_mission_target = 4 } }
+						if = {
+							limit = { has_completed_focus = YDS_cooperate_no_7 }
+							add_to_variable = { YDS_infiltration_no7 = 20 }
+						}
+						else_if = {
+							limit = { has_completed_focus = YDS_subvert_no_7 }
+							add_to_variable = { YDS_infiltration_no7 = 20 }
+						}
+						else_if = {
+							limit = { has_completed_focus = YDS_interact_with_no_7 }
+							add_to_variable = { YDS_infiltration_no7 = 15 }
+						}
+						else = {
+							add_to_variable = { YDS_infiltration_no7 = 10 }
+						}
+					}
+					if = {
+						limit = { check_variable = { YDS_mission_target = 5 } }
+						if = {
+							limit = { has_completed_focus = YDS_neo_confucian_alliance }
+							add_to_variable = { YDS_infiltration_shishi = 20 }
+						}
+						else_if = {
+							limit = { has_completed_focus = YDS_interact_with_shishi }
+							add_to_variable = { YDS_infiltration_shishi = 15 }
+						}
+						else = {
+							add_to_variable = { YDS_infiltration_shishi = 10 }
+						}
+					}
+					if = {
+						limit = { check_variable = { YDS_mission_target = 6 } }
+						if = {
+							limit = { has_completed_focus = YDS_discipline_pact }
+							add_to_variable = { YDS_infiltration_shude = 20 }
+						}
+						else_if = {
+							limit = { has_completed_focus = YDS_martial_competition }
+							add_to_variable = { YDS_infiltration_shude = 20 }
+						}
+						else_if = {
+							limit = { has_completed_focus = YDS_interact_with_shude }
+							add_to_variable = { YDS_infiltration_shude = 15 }
+						}
+						else = {
+							add_to_variable = { YDS_infiltration_shude = 10 }
+						}
+					}
+					set_variable = { YDS_mission_active = 0 }
+					set_variable = { YDS_mission_target = 0 }
+					set_variable = { YDS_mission_progress = 0 }
+				}
+			}
+
+			if = {
+				limit = {
+					original_tag = YDS
+					check_variable = { YDS_bureau_intervention > 99 }
+					NOT = { has_country_flag = YDS_liu_yan_active_trigger }
+				}
+				set_country_flag = YDS_liu_yan_active_trigger
+				country_event = { id = yds_event.1004 }
+			}
+			
+			if = {
+				limit = {
+					original_tag = YDS
+					check_variable = { YDS_gpa_score < 40 }
+					NOT = { has_country_flag = YDS_anarchy_active_trigger }
+				}
+				set_country_flag = YDS_anarchy_active_trigger
+				country_event = { id = yds_event.1003 }
+			}
+			
+			if = {
+				limit = {
+					original_tag = YDS
+					check_variable = { YDS_student_autonomy > 90 }
+					NOT = { has_country_flag = YDS_anarchy_active_trigger }
+				}
+				set_country_flag = YDS_anarchy_active_trigger
+				country_event = { id = yds_event.1000 }
+			}
+
+			# TLB Tongliang Bachuan inevitable crisis trigger backup
+			if = {
+				limit = {
+					original_tag = YDS
+					NOT = { has_country_flag = TLB_crisis_started }
+					OR = {
+						has_completed_focus = YDS_bureaucractic_integration
+						has_completed_focus = YDS_red_star_committee
+						has_completed_focus = YDS_student_parliament
+						has_completed_focus = YDS_pragmatic_deal
+						has_completed_focus = YDS_gpa_darwinism
+						has_completed_focus = YDS_alumni_alliance
+					}
+				}
+				set_country_flag = TLB_crisis_started
+				country_event = { id = tlb_event.1 days = 3 }
+			}
+
+			if = {
+				limit = { original_tag = YDS }
+				
+				# GPA High (> 80)
+				if = {
+					limit = { check_variable = { YDS_gpa_score > 80 } NOT = { has_idea = YDS_gpa_high_buff } }
+					add_ideas = YDS_gpa_high_buff
+				}
+				if = {
+					limit = { NOT = { check_variable = { YDS_gpa_score > 80 } } has_idea = YDS_gpa_high_buff }
+					remove_ideas = YDS_gpa_high_buff
+				}
+				
+				# GPA Low (< 60)
+				if = {
+					limit = { check_variable = { YDS_gpa_score < 60 } NOT = { has_idea = YDS_gpa_low_debuff } }
+					add_ideas = YDS_gpa_low_debuff
+				}
+				if = {
+					limit = { NOT = { check_variable = { YDS_gpa_score < 60 } } has_idea = YDS_gpa_low_debuff }
+					remove_ideas = YDS_gpa_low_debuff
+				}
+				
+				# Autonomy High (> 70)
+				if = {
+					limit = { check_variable = { YDS_student_autonomy > 70 } NOT = { has_idea = YDS_autonomy_high_buff } }
+					add_ideas = YDS_autonomy_high_buff
+				}
+				if = {
+					limit = { NOT = { check_variable = { YDS_student_autonomy > 70 } } has_idea = YDS_autonomy_high_buff }
+					remove_ideas = YDS_autonomy_high_buff
+				}
+				
+				# Autonomy Low (< 30)
+				if = {
+					limit = { check_variable = { YDS_student_autonomy < 30 } NOT = { has_idea = YDS_autonomy_low_debuff } }
+					add_ideas = YDS_autonomy_low_debuff
+				}
+				if = {
+					limit = { NOT = { check_variable = { YDS_student_autonomy < 30 } } has_idea = YDS_autonomy_low_debuff }
+					remove_ideas = YDS_autonomy_low_debuff
+				}
+			}
+
+			# Global Infiltration Phase Checks
+			if = {
+				limit = { original_tag = YDS }
+
+				# Infiltration debuff logic: active infiltration generates social friction
+				set_variable = { var = YDS_schools_infiltrating value = 0 }
+				if = { limit = { has_country_flag = YDS_chengwai_phase_1 NOT = { has_country_flag = YDS_chengwai_phase_3 } } add_to_variable = { var = YDS_schools_infiltrating value = 1 } }
+				if = { limit = { has_country_flag = YDS_shiwai_phase_1 NOT = { has_country_flag = YDS_shiwai_phase_3 } } add_to_variable = { var = YDS_schools_infiltrating value = 1 } }
+				if = { limit = { has_country_flag = YDS_csfz_phase_1 NOT = { has_country_flag = YDS_csfz_phase_3 } } add_to_variable = { var = YDS_schools_infiltrating value = 1 } }
+				if = { limit = { has_country_flag = YDS_no7_phase_1 NOT = { has_country_flag = YDS_no7_phase_3 } } add_to_variable = { var = YDS_schools_infiltrating value = 1 } }
+				if = { limit = { has_country_flag = YDS_shishi_phase_1 NOT = { has_country_flag = YDS_shishi_phase_3 } } add_to_variable = { var = YDS_schools_infiltrating value = 1 } }
+				if = { limit = { has_country_flag = YDS_shude_phase_1 NOT = { has_country_flag = YDS_shude_phase_3 } } add_to_variable = { var = YDS_schools_infiltrating value = 1 } }
+				if = { limit = { check_variable = { YDS_schools_infiltrating > 0 } NOT = { has_idea = YDS_school_resistance_debuff } } add_ideas = YDS_school_resistance_debuff }
+				if = { limit = { NOT = { check_variable = { YDS_schools_infiltrating > 0 } } has_idea = YDS_school_resistance_debuff } remove_ideas = YDS_school_resistance_debuff }
+
+				if = {
+					limit = { check_variable = { YDS_infiltration_chengwai > 29 } NOT = { has_country_flag = YDS_chengwai_phase_1 } }
+					set_country_flag = YDS_chengwai_phase_1
+					add_ideas = YDS_chengwai_phase_1_buff
+				}
+				if = {
+					limit = { check_variable = { YDS_infiltration_chengwai > 59 } NOT = { has_country_flag = YDS_chengwai_phase_2 } }
+					set_country_flag = YDS_chengwai_phase_2
+					remove_ideas = YDS_chengwai_phase_1_buff
+					add_ideas = YDS_chengwai_phase_2_buff
+				}
+				if = {
+					limit = { check_variable = { YDS_infiltration_chengwai > 99 } NOT = { has_country_flag = YDS_chengwai_phase_3 } }
+					set_country_flag = YDS_chengwai_phase_3
+					remove_ideas = YDS_chengwai_phase_2_buff
+					add_ideas = YDS_chengwai_phase_3_buff
+					country_event = { id = yds_school_district_event.1 }
+				}
+				if = {
+					limit = { check_variable = { YDS_infiltration_shiwai > 29 } NOT = { has_country_flag = YDS_shiwai_phase_1 } }
+					set_country_flag = YDS_shiwai_phase_1
+					add_ideas = YDS_shiwai_phase_1_buff
+				}
+				if = {
+					limit = { check_variable = { YDS_infiltration_shiwai > 59 } NOT = { has_country_flag = YDS_shiwai_phase_2 } }
+					set_country_flag = YDS_shiwai_phase_2
+					remove_ideas = YDS_shiwai_phase_1_buff
+					add_ideas = YDS_shiwai_phase_2_buff
+				}
+				if = {
+					limit = { check_variable = { YDS_infiltration_shiwai > 99 } NOT = { has_country_flag = YDS_shiwai_phase_3 } }
+					set_country_flag = YDS_shiwai_phase_3
+					remove_ideas = YDS_shiwai_phase_2_buff
+					add_ideas = YDS_shiwai_phase_3_buff
+					country_event = { id = yds_school_district_event.2 }
+				}
+				if = {
+					limit = { check_variable = { YDS_infiltration_csfz > 29 } NOT = { has_country_flag = YDS_csfz_phase_1 } }
+					set_country_flag = YDS_csfz_phase_1
+					add_ideas = YDS_csfz_phase_1_buff
+				}
+				if = {
+					limit = { check_variable = { YDS_infiltration_csfz > 59 } NOT = { has_country_flag = YDS_csfz_phase_2 } }
+					set_country_flag = YDS_csfz_phase_2
+					remove_ideas = YDS_csfz_phase_1_buff
+					add_ideas = YDS_csfz_phase_2_buff
+				}
+				if = {
+					limit = { check_variable = { YDS_infiltration_csfz > 99 } NOT = { has_country_flag = YDS_csfz_phase_3 } }
+					set_country_flag = YDS_csfz_phase_3
+					remove_ideas = YDS_csfz_phase_2_buff
+					add_ideas = YDS_csfz_phase_3_buff
+					country_event = { id = yds_school_district_event.3 }
+				}
+				if = {
+					limit = { check_variable = { YDS_infiltration_no7 > 29 } NOT = { has_country_flag = YDS_no7_phase_1 } }
+					set_country_flag = YDS_no7_phase_1
+					add_ideas = YDS_no7_phase_1_buff
+				}
+				if = {
+					limit = { check_variable = { YDS_infiltration_no7 > 59 } NOT = { has_country_flag = YDS_no7_phase_2 } }
+					set_country_flag = YDS_no7_phase_2
+					remove_ideas = YDS_no7_phase_1_buff
+					add_ideas = YDS_no7_phase_2_buff
+				}
+				if = {
+					limit = { check_variable = { YDS_infiltration_no7 > 99 } NOT = { has_country_flag = YDS_no7_phase_3 } }
+					set_country_flag = YDS_no7_phase_3
+					remove_ideas = YDS_no7_phase_2_buff
+					add_ideas = YDS_no7_phase_3_buff
+					country_event = { id = yds_school_district_event.4 }
+				}
+				if = {
+					limit = { check_variable = { YDS_infiltration_shishi > 29 } NOT = { has_country_flag = YDS_shishi_phase_1 } }
+					set_country_flag = YDS_shishi_phase_1
+					add_ideas = YDS_shishi_phase_1_buff
+				}
+				if = {
+					limit = { check_variable = { YDS_infiltration_shishi > 59 } NOT = { has_country_flag = YDS_shishi_phase_2 } }
+					set_country_flag = YDS_shishi_phase_2
+					remove_ideas = YDS_shishi_phase_1_buff
+					add_ideas = YDS_shishi_phase_2_buff
+				}
+				if = {
+					limit = { check_variable = { YDS_infiltration_shishi > 99 } NOT = { has_country_flag = YDS_shishi_phase_3 } }
+					set_country_flag = YDS_shishi_phase_3
+					remove_ideas = YDS_shishi_phase_2_buff
+					add_ideas = YDS_shishi_phase_3_buff
+					country_event = { id = yds_school_district_event.5 }
+				}
+				if = {
+					limit = { check_variable = { YDS_infiltration_shude > 29 } NOT = { has_country_flag = YDS_shude_phase_1 } }
+					set_country_flag = YDS_shude_phase_1
+					add_ideas = YDS_shude_phase_1_buff
+				}
+				if = {
+					limit = { check_variable = { YDS_infiltration_shude > 59 } NOT = { has_country_flag = YDS_shude_phase_2 } }
+					set_country_flag = YDS_shude_phase_2
+					remove_ideas = YDS_shude_phase_1_buff
+					add_ideas = YDS_shude_phase_2_buff
+				}
+				if = {
+					limit = { check_variable = { YDS_infiltration_shude > 99 } NOT = { has_country_flag = YDS_shude_phase_3 } }
+					set_country_flag = YDS_shude_phase_3
+					remove_ideas = YDS_shude_phase_2_buff
+					add_ideas = YDS_shude_phase_3_buff
+					country_event = { id = yds_school_district_event.6 }
+				}
+
+				# Elite schools united: replace individual phase 3 with united idea
+				if = {
+					limit = {
+						has_country_flag = YDS_shishi_phase_3
+						has_country_flag = YDS_no7_phase_3
+						has_country_flag = YDS_shude_phase_3
+						NOT = { has_idea = YDS_elite_schools_united }
+					}
+					remove_ideas = YDS_shishi_phase_3_buff
+					remove_ideas = YDS_no7_phase_3_buff
+					remove_ideas = YDS_shude_phase_3_buff
+					add_ideas = YDS_elite_schools_united
+					country_event = { id = yds_school_district_event.21 }
+				}
+
+				# Regular schools united: replace individual phase 3 with united idea
+				if = {
+					limit = {
+						has_country_flag = YDS_chengwai_phase_3
+						has_country_flag = YDS_shiwai_phase_3
+						has_country_flag = YDS_csfz_phase_3
+						NOT = { has_idea = YDS_regular_schools_united }
+					}
+					remove_ideas = YDS_chengwai_phase_3_buff
+					remove_ideas = YDS_shiwai_phase_3_buff
+					remove_ideas = YDS_csfz_phase_3_buff
+					add_ideas = YDS_regular_schools_united
+					country_event = { id = yds_school_district_event.20 }
+				}
+			}
+		}
+	}
+	
+	on_weekly = {
+		effect = {
+			# National Exam War victory settlement: remove wartime mobilization ideas
+			if = {
+				limit = {
+					has_global_flag = yds_national_war_victory
+					NOT = { has_war = yes }
+				}
+				YDS = {
+					remove_ideas = YDS_national_war_effort
+				}
+				every_country = {
+					remove_ideas = SXI_total_war_study_camp
+					remove_ideas = HBE_olympiad_shock_mobilization
+					remove_ideas = YNE_guerrilla_mobilization
+					remove_ideas = SHS_despair_wall_mobilization
+					remove_ideas = SNE_coastal_total_mobilization
+					remove_ideas = ECE_elite_levy
+					remove_ideas = EBS_bureau_total_control
+				}
+				clr_global_flag = yds_national_war_victory
+			}
+
+			if = {
+				limit = {
+					original_tag = YDS
+					has_country_flag = YDS_faction_struggle_active
+					NOT = { has_country_flag = YDS_anarchy_active }
+				}
+				
+				# Drift towards student (left) if autonomy is high
+				if = {
+					limit = { check_variable = { YDS_student_autonomy > 50 } }
+					add_power_balance_value = { id = YDS_class_1_bop value = -0.02 }
+				}
+				
+				# Drift towards teacher (right) if autonomy is low
+				if = {
+					limit = { check_variable = { YDS_student_autonomy < 30 } }
+					add_power_balance_value = { id = YDS_class_1_bop value = 0.02 }
+				}
+				
+				# Drift towards teacher (right) if GPA is high
+				if = {
+					limit = { check_variable = { YDS_gpa_score > 70 } }
+					add_power_balance_value = { id = YDS_class_1_bop value = 0.02 }
+				}
+				
+				# School District Snowball Effect (Student Attraction)
+				if = {
+					limit = { original_tag = YDS }
+
+					if = { limit = { has_idea = YDS_chengwai_phase_1_buff } add_to_variable = { YDS_student_attraction = 1 } }
+					if = { limit = { has_idea = YDS_chengwai_phase_2_buff } add_to_variable = { YDS_student_attraction = 2 } }
+					if = { limit = { has_idea = YDS_chengwai_phase_3_buff } add_to_variable = { YDS_student_attraction = 5 } }
+					if = { limit = { has_idea = YDS_shiwai_phase_1_buff } add_to_variable = { YDS_student_attraction = 1 } }
+					if = { limit = { has_idea = YDS_shiwai_phase_2_buff } add_to_variable = { YDS_student_attraction = 2 } }
+					if = { limit = { has_idea = YDS_shiwai_phase_3_buff } add_to_variable = { YDS_student_attraction = 5 } }
+					if = { limit = { has_idea = YDS_csfz_phase_1_buff } add_to_variable = { YDS_student_attraction = 1 } }
+					if = { limit = { has_idea = YDS_csfz_phase_2_buff } add_to_variable = { YDS_student_attraction = 2 } }
+					if = { limit = { has_idea = YDS_csfz_phase_3_buff } add_to_variable = { YDS_student_attraction = 5 } }
+					if = { limit = { has_idea = YDS_no7_phase_1_buff } add_to_variable = { YDS_student_attraction = 1 } }
+					if = { limit = { has_idea = YDS_no7_phase_2_buff } add_to_variable = { YDS_student_attraction = 2 } }
+					if = { limit = { has_idea = YDS_no7_phase_3_buff } add_to_variable = { YDS_student_attraction = 5 } }
+					if = { limit = { has_idea = YDS_shishi_phase_1_buff } add_to_variable = { YDS_student_attraction = 1 } }
+					if = { limit = { has_idea = YDS_shishi_phase_2_buff } add_to_variable = { YDS_student_attraction = 2 } }
+					if = { limit = { has_idea = YDS_shishi_phase_3_buff } add_to_variable = { YDS_student_attraction = 5 } }
+					if = { limit = { has_idea = YDS_shude_phase_1_buff } add_to_variable = { YDS_student_attraction = 1 } }
+					if = { limit = { has_idea = YDS_shude_phase_2_buff } add_to_variable = { YDS_student_attraction = 2 } }
+					if = { limit = { has_idea = YDS_shude_phase_3_buff } add_to_variable = { YDS_student_attraction = 5 } }
+					if = { limit = { has_idea = YDS_elite_schools_united } add_to_variable = { YDS_student_attraction = 15 } }
+					if = { limit = { has_idea = YDS_regular_schools_united } add_to_variable = { YDS_student_attraction = 15 } }
+				}
+			}
+
+			# Weekly pulse for Olympiad Exam Board Tug-of-War
+			# NOTE: this block lives in on_weekly; the old 90-step counter meant 90 WEEKS, not 90 days.
+			if = {
+				limit = {
+					original_tag = YDS
+					has_country_flag = YDS_olympiad_active
+					NOT = { has_global_flag = yds_national_war_active }
+				}
+				execute_exam_board_weekly_tick = yes
+			}
+		}
+	}
+}
+

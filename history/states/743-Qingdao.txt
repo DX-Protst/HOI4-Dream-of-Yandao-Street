@@ -1,0 +1,22 @@
+state = {
+	id = 743
+	name = "STATE_743"
+	manpower = 385000
+	state_category = city
+	history = {
+		owner = SHS
+		controller = SHS
+		add_core_of = SHS
+		victory_points = { 10000 5 }
+		buildings = {
+		arms_factory = 2
+			infrastructure = 3
+			industrial_complex = 2
+			air_base = 1
+		}
+	}
+	provinces = {
+		10000
+	}
+	local_supplies = 0
+}

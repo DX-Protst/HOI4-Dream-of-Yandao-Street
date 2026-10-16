@@ -1,0 +1,17 @@
+# TLB Civil War Decisions Category
+TLB_civil_war_category = {
+	icon = generic_decision
+	priority = 900
+	allowed = {
+		OR = {
+			tag = YDS
+			tag = TLB
+		}
+	}
+	visible = {
+		OR = {
+			has_war_with = TLB
+			has_war_with = YDS
+		}
+	}
+}

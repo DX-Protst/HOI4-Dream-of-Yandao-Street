@@ -1,0 +1,17 @@
+scripted_gui = {
+    YDS_route_guide_sgui = {
+        context_type = player_context
+        window_name = "YDS_route_guide_container"
+        parent_window_name = "countrypoliticsview"
+        
+        visible = {
+            always = yes
+        }
+
+        effects = {
+            YDS_route_guide_button_click = {
+                country_event = yds_route_guide.1
+            }
+        }
+    }
+}

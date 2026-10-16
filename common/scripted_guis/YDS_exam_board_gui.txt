@@ -1,0 +1,289 @@
+# Scripted GUI definition for National Exam Board and Olympiad Standalone GUI
+# All comments are strictly in pure ASCII.
+
+scripted_gui = {
+
+	# ==================== ENTRY BUTTON SGUI ====================
+	YDS_exam_league_btn_sgui = {
+		context_type = player_context
+		window_name = "YDS_exam_league_btn_container"
+		parent_window_name = "countrypoliticsview"
+
+		visible = {
+			is_educational_warlord = yes
+			OR = {
+				has_completed_focus = YDS_olympiad_initiative
+				has_country_flag = YDS_olympiad_active
+				NOT = { original_tag = YDS }
+			}
+		}
+
+		effects = {
+			YDS_exam_league_open_button_click = {
+				if = {
+					limit = { has_country_flag = YDS_exam_league_gui_open }
+					clr_country_flag = YDS_exam_league_gui_open
+				}
+				else = {
+					set_country_flag = YDS_exam_league_gui_open
+					update_exam_leaderboard_scores = yes
+				}
+			}
+		}
+	}
+
+	# ==================== MAIN STANDALONE WINDOW SGUI ====================
+	YDS_exam_league_main_sgui = {
+		context_type = player_context
+		window_name = "YDS_exam_league_main_window"
+
+		visible = {
+			has_country_flag = YDS_exam_league_gui_open
+		}
+
+		effects = {
+			# Window Controls
+			YDS_exam_league_close_btn_click = {
+				clr_country_flag = YDS_exam_league_gui_open
+			}
+			YDS_exam_league_refresh_btn_click = {
+				update_exam_leaderboard_scores = yes
+			}
+
+			# Track 1: Math (Lai Sihan)
+			YDS_math_plus_btn_click = {
+				add_political_power = -10
+				add_to_variable = { YDS_coach_energy_used = 1 }
+				add_to_variable = { YDS_invest_math = 1 }
+				set_variable = { YDS_coach_energy_available = YDS_coach_energy_total }
+				subtract_from_variable = { YDS_coach_energy_available = YDS_coach_energy_used }
+				update_exam_leaderboard_scores = yes
+			}
+			YDS_math_minus_btn_click = {
+				add_political_power = -5
+				subtract_from_variable = { YDS_coach_energy_used = 1 }
+				subtract_from_variable = { YDS_invest_math = 1 }
+				set_variable = { YDS_coach_energy_available = YDS_coach_energy_total }
+				subtract_from_variable = { YDS_coach_energy_available = YDS_coach_energy_used }
+				update_exam_leaderboard_scores = yes
+			}
+
+			# Track 2: Physics (Eluo Ningbei)
+			YDS_physics_plus_btn_click = {
+				add_political_power = -10
+				add_to_variable = { YDS_coach_energy_used = 1 }
+				add_to_variable = { YDS_invest_physics = 1 }
+				set_variable = { YDS_coach_energy_available = YDS_coach_energy_total }
+				subtract_from_variable = { YDS_coach_energy_available = YDS_coach_energy_used }
+				update_exam_leaderboard_scores = yes
+			}
+			YDS_physics_minus_btn_click = {
+				add_political_power = -5
+				subtract_from_variable = { YDS_coach_energy_used = 1 }
+				subtract_from_variable = { YDS_invest_physics = 1 }
+				set_variable = { YDS_coach_energy_available = YDS_coach_energy_total }
+				subtract_from_variable = { YDS_coach_energy_available = YDS_coach_energy_used }
+				update_exam_leaderboard_scores = yes
+			}
+
+			# Track 3: Chemistry (Zhou Jingsong)
+			YDS_chem_plus_btn_click = {
+				add_political_power = -10
+				add_to_variable = { YDS_coach_energy_used = 1 }
+				add_to_variable = { YDS_invest_chem = 1 }
+				set_variable = { YDS_coach_energy_available = YDS_coach_energy_total }
+				subtract_from_variable = { YDS_coach_energy_available = YDS_coach_energy_used }
+				update_exam_leaderboard_scores = yes
+			}
+			YDS_chem_minus_btn_click = {
+				add_political_power = -5
+				subtract_from_variable = { YDS_coach_energy_used = 1 }
+				subtract_from_variable = { YDS_invest_chem = 1 }
+				set_variable = { YDS_coach_energy_available = YDS_coach_energy_total }
+				subtract_from_variable = { YDS_coach_energy_available = YDS_coach_energy_used }
+				update_exam_leaderboard_scores = yes
+			}
+
+			# Track 4: Biology (Deng Yunbo)
+			YDS_bio_plus_btn_click = {
+				add_political_power = -10
+				add_to_variable = { YDS_coach_energy_used = 1 }
+				add_to_variable = { YDS_invest_bio = 1 }
+				set_variable = { YDS_coach_energy_available = YDS_coach_energy_total }
+				subtract_from_variable = { YDS_coach_energy_available = YDS_coach_energy_used }
+				update_exam_leaderboard_scores = yes
+			}
+			YDS_bio_minus_btn_click = {
+				add_political_power = -5
+				subtract_from_variable = { YDS_coach_energy_used = 1 }
+				subtract_from_variable = { YDS_invest_bio = 1 }
+				set_variable = { YDS_coach_energy_available = YDS_coach_energy_total }
+				subtract_from_variable = { YDS_coach_energy_available = YDS_coach_energy_used }
+				update_exam_leaderboard_scores = yes
+			}
+
+			# Track 5: Informatics (Tuo Wen)
+			YDS_info_plus_btn_click = {
+				add_political_power = -10
+				add_to_variable = { YDS_coach_energy_used = 1 }
+				add_to_variable = { YDS_invest_info = 1 }
+				set_variable = { YDS_coach_energy_available = YDS_coach_energy_total }
+				subtract_from_variable = { YDS_coach_energy_available = YDS_coach_energy_used }
+				update_exam_leaderboard_scores = yes
+			}
+			YDS_info_minus_btn_click = {
+				add_political_power = -5
+				subtract_from_variable = { YDS_coach_energy_used = 1 }
+				subtract_from_variable = { YDS_invest_info = 1 }
+				set_variable = { YDS_coach_energy_available = YDS_coach_energy_total }
+				subtract_from_variable = { YDS_coach_energy_available = YDS_coach_energy_used }
+				update_exam_leaderboard_scores = yes
+			}
+
+			# Sprint Decisions
+			YDS_sprint_math_btn_click = {
+				add_political_power = -25
+				add_to_variable = { global.track_math_progress = 10 }
+				add_to_variable = { YDS_academic_prestige = 5 }
+				clamp_exam_track_variables = yes
+				set_country_flag = { flag = YDS_boost_track_math_cooldown days = 90 }
+				update_exam_leaderboard_scores = yes
+			}
+			YDS_sprint_physics_btn_click = {
+				add_political_power = -25
+				add_to_variable = { global.track_physics_progress = 10 }
+				add_to_variable = { YDS_academic_prestige = 5 }
+				clamp_exam_track_variables = yes
+				set_country_flag = { flag = YDS_boost_track_physics_cooldown days = 90 }
+				update_exam_leaderboard_scores = yes
+			}
+			YDS_sprint_chem_btn_click = {
+				add_political_power = -25
+				add_to_variable = { global.track_chem_progress = 15 }
+				add_to_variable = { YDS_cheat_risk = 10 }
+				clamp_exam_track_variables = yes
+				set_country_flag = { flag = YDS_boost_track_chem_cooldown days = 90 }
+				update_exam_leaderboard_scores = yes
+			}
+			YDS_sprint_bio_btn_click = {
+				add_political_power = -25
+				add_to_variable = { global.track_bio_progress = 10 }
+				add_to_variable = { YDS_academic_prestige = 5 }
+				clamp_exam_track_variables = yes
+				set_country_flag = { flag = YDS_boost_track_bio_cooldown days = 90 }
+				update_exam_leaderboard_scores = yes
+			}
+			YDS_sprint_info_btn_click = {
+				add_political_power = -25
+				add_to_variable = { global.track_info_progress = 10 }
+				add_to_variable = { YDS_academic_prestige = 5 }
+				clamp_exam_track_variables = yes
+				set_country_flag = { flag = YDS_boost_track_info_cooldown days = 90 }
+				update_exam_leaderboard_scores = yes
+			}
+
+			# Counter Decisions
+			YDS_counter_ece_btn_click = {
+				add_political_power = -30
+				add_to_variable = { global.track_math_progress = 8 }
+				add_to_variable = { global.track_chem_progress = 8 }
+				clamp_exam_track_variables = yes
+				set_country_flag = { flag = YDS_counter_ece_cooldown days = 120 }
+				update_exam_leaderboard_scores = yes
+			}
+			YDS_counter_hbe_btn_click = {
+				add_political_power = -30
+				add_to_variable = { global.track_physics_progress = 12 }
+				clamp_exam_track_variables = yes
+				set_country_flag = { flag = YDS_counter_hbe_cooldown days = 120 }
+				update_exam_leaderboard_scores = yes
+			}
+		}
+
+		triggers = {
+			# Track 1: Math
+			YDS_math_plus_btn_click_enabled = {
+				check_variable = { YDS_coach_energy_used < YDS_coach_energy_total }
+				has_political_power > 9
+			}
+			YDS_math_minus_btn_click_enabled = {
+				check_variable = { YDS_invest_math > 0 }
+				has_political_power > 4
+			}
+
+			# Track 2: Physics
+			YDS_physics_plus_btn_click_enabled = {
+				check_variable = { YDS_coach_energy_used < YDS_coach_energy_total }
+				has_political_power > 9
+			}
+			YDS_physics_minus_btn_click_enabled = {
+				check_variable = { YDS_invest_physics > 0 }
+				has_political_power > 4
+			}
+
+			# Track 3: Chemistry
+			YDS_chem_plus_btn_click_enabled = {
+				check_variable = { YDS_coach_energy_used < YDS_coach_energy_total }
+				has_political_power > 9
+			}
+			YDS_chem_minus_btn_click_enabled = {
+				check_variable = { YDS_invest_chem > 0 }
+				has_political_power > 4
+			}
+
+			# Track 4: Biology
+			YDS_bio_plus_btn_click_enabled = {
+				check_variable = { YDS_coach_energy_used < YDS_coach_energy_total }
+				has_political_power > 9
+			}
+			YDS_bio_minus_btn_click_enabled = {
+				check_variable = { YDS_invest_bio > 0 }
+				has_political_power > 4
+			}
+
+			# Track 5: Informatics
+			YDS_info_plus_btn_click_enabled = {
+				check_variable = { YDS_coach_energy_used < YDS_coach_energy_total }
+				has_political_power > 9
+			}
+			YDS_info_minus_btn_click_enabled = {
+				check_variable = { YDS_invest_info > 0 }
+				has_political_power > 4
+			}
+
+			# Sprint Triggers
+			YDS_sprint_math_btn_click_enabled = {
+				has_political_power > 24
+				NOT = { has_country_flag = YDS_boost_track_math_cooldown }
+			}
+			YDS_sprint_physics_btn_click_enabled = {
+				has_political_power > 24
+				NOT = { has_country_flag = YDS_boost_track_physics_cooldown }
+			}
+			YDS_sprint_chem_btn_click_enabled = {
+				has_political_power > 24
+				NOT = { has_country_flag = YDS_boost_track_chem_cooldown }
+			}
+			YDS_sprint_bio_btn_click_enabled = {
+				has_political_power > 24
+				NOT = { has_country_flag = YDS_boost_track_bio_cooldown }
+			}
+			YDS_sprint_info_btn_click_enabled = {
+				has_political_power > 24
+				NOT = { has_country_flag = YDS_boost_track_info_cooldown }
+			}
+
+			# Counter Triggers
+			YDS_counter_ece_btn_click_enabled = {
+				has_political_power > 29
+				country_exists = ECE
+				NOT = { has_country_flag = YDS_counter_ece_cooldown }
+			}
+			YDS_counter_hbe_btn_click_enabled = {
+				has_political_power > 29
+				country_exists = HBE
+				NOT = { has_country_flag = YDS_counter_hbe_cooldown }
+			}
+		}
+	}
+}

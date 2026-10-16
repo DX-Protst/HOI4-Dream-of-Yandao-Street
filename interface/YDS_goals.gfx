@@ -1,0 +1,1684 @@
+spriteTypes = {
+	SpriteType = {
+		name = "GFX_focus_YDC_rectification"
+		texturefile = "gfx/interface/goals/GFX_focus_YDC_rectification.png"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_YDC_rectification_shine"
+		texturefile = "gfx/interface/goals/GFX_focus_YDC_rectification.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_focus_YDC_rectification.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	
+	SpriteType = {
+		name = "GFX_focus_YDS_abolish_extra_curriculars"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_abolish_extra_curriculars.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_YDS_abolish_extra_curriculars_shine"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_abolish_extra_curriculars.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_focus_YDS_abolish_extra_curriculars.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_focus_YDS_abolish_uniforms"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_abolish_uniforms.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_YDS_abolish_uniforms_shine"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_abolish_uniforms.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_focus_YDS_abolish_uniforms.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_focus_YDS_alumni_alliance"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_alumni_alliance.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_YDS_alumni_alliance_shine"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_alumni_alliance.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_focus_YDS_alumni_alliance.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_focus_YDS_alumni_network"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_alumni_network.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_YDS_alumni_network_shine"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_alumni_network.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_focus_YDS_alumni_network.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_focus_YDS_anime_propaganda"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_anime_propaganda.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_YDS_anime_propaganda_shine"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_anime_propaganda.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_focus_YDS_anime_propaganda.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_focus_YDS_autonomous_school"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_autonomous_school.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_YDS_autonomous_school_shine"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_autonomous_school.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_focus_YDS_autonomous_school.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_focus_YDS_balanced_curriculum"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_balanced_curriculum.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_YDS_balanced_curriculum_shine"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_balanced_curriculum.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_focus_YDS_balanced_curriculum.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_focus_YDS_bureaucractic_integration"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_bureaucractic_integration.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_YDS_bureaucractic_integration_shine"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_bureaucractic_integration.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_focus_YDS_bureaucractic_integration.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_focus_YDS_bureau_inspectors"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_bureau_inspectors.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_YDS_bureau_inspectors_shine"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_bureau_inspectors.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_focus_YDS_bureau_inspectors.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_focus_YDS_chengdu_eight_school_joint_exam"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_chengdu_eight_school_joint_exam.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_YDS_chengdu_eight_school_joint_exam_shine"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_chengdu_eight_school_joint_exam.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_focus_YDS_chengdu_eight_school_joint_exam.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_focus_YDS_chengdu_school_district_geopolitics"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_chengdu_school_district_geopolitics.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_YDS_chengdu_school_district_geopolitics_shine"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_chengdu_school_district_geopolitics.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_focus_YDS_chengdu_school_district_geopolitics.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_focus_YDS_class_1_awakening"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_class_1_awakening.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_YDS_class_1_awakening_shine"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_class_1_awakening.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_focus_YDS_class_1_awakening.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_focus_YDS_class_stratification"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_class_stratification.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_YDS_class_stratification_shine"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_class_stratification.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_focus_YDS_class_stratification.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_focus_YDS_club_feudalism"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_club_feudalism.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_YDS_club_feudalism_shine"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_club_feudalism.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_focus_YDS_club_feudalism.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_focus_YDS_communitarian_academy"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_communitarian_academy.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_YDS_communitarian_academy_shine"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_communitarian_academy.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_focus_YDS_communitarian_academy.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_focus_YDS_cooperate_no_7"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_cooperate_no_7.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_YDS_cooperate_no_7_shine"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_cooperate_no_7.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_focus_YDS_cooperate_no_7.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_focus_YDS_credit_system"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_credit_system.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_YDS_credit_system_shine"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_credit_system.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_focus_YDS_credit_system.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_focus_YDS_criticize_academic_authorities"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_criticize_academic_authorities.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_YDS_criticize_academic_authorities_shine"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_criticize_academic_authorities.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_focus_YDS_criticize_academic_authorities.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_focus_YDS_discipline_pact"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_discipline_pact.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_YDS_discipline_pact_shine"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_discipline_pact.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_focus_YDS_discipline_pact.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_focus_YDS_educational_crisis"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_educational_crisis.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_YDS_educational_crisis_shine"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_educational_crisis.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_focus_YDS_educational_crisis.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_focus_YDS_equalized_education"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_equalized_education.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_YDS_equalized_education_shine"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_equalized_education.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_focus_YDS_equalized_education.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_focus_YDS_expel_troublemakers"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_expel_troublemakers.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_YDS_expel_troublemakers_shine"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_expel_troublemakers.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_focus_YDS_expel_troublemakers.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_focus_YDS_experimental_base"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_experimental_base.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_YDS_experimental_base_shine"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_experimental_base.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_focus_YDS_experimental_base.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_focus_YDS_free_speech_corners"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_free_speech_corners.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_YDS_free_speech_corners_shine"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_free_speech_corners.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_focus_YDS_free_speech_corners.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_focus_YDS_general_strike"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_general_strike.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_YDS_general_strike_shine"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_general_strike.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_focus_YDS_general_strike.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_focus_YDS_gpa_darwinism"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_gpa_darwinism.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_YDS_gpa_darwinism_shine"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_gpa_darwinism.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_focus_YDS_gpa_darwinism.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_focus_YDS_great_yandao_empire"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_great_yandao_empire.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_YDS_great_yandao_empire_shine"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_great_yandao_empire.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_focus_YDS_great_yandao_empire.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_focus_YDS_hoard_study_guides"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_hoard_study_guides.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_YDS_hoard_study_guides_shine"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_hoard_study_guides.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_focus_YDS_hoard_study_guides.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_focus_YDS_interact_with_no_7"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_interact_with_no_7.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_YDS_interact_with_no_7_shine"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_interact_with_no_7.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_focus_YDS_interact_with_no_7.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_focus_YDS_interact_with_shishi"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_interact_with_shishi.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_YDS_interact_with_shishi_shine"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_interact_with_shishi.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_focus_YDS_interact_with_shishi.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_focus_YDS_interact_with_shude"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_interact_with_shude.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_YDS_interact_with_shude_shine"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_interact_with_shude.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_focus_YDS_interact_with_shude.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_focus_YDS_iron_discipline"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_iron_discipline.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_YDS_iron_discipline_shine"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_iron_discipline.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_focus_YDS_iron_discipline.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_focus_YDS_labor_education"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_labor_education.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_YDS_labor_education_shine"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_labor_education.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_focus_YDS_labor_education.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_focus_YDS_ly_absolute_control"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_ly_absolute_control.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_YDS_ly_absolute_control_shine"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_ly_absolute_control.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_focus_YDS_ly_absolute_control.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_focus_YDS_ly_ban_all_clubs"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_ly_ban_all_clubs.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_YDS_ly_ban_all_clubs_shine"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_ly_ban_all_clubs.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_focus_YDS_ly_ban_all_clubs.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_focus_YDS_ly_extreme_meritocracy"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_ly_extreme_meritocracy.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_YDS_ly_extreme_meritocracy_shine"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_ly_extreme_meritocracy.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_focus_YDS_ly_extreme_meritocracy.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_focus_YDS_ly_monitor_every_class"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_ly_monitor_every_class.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_YDS_ly_monitor_every_class_shine"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_ly_monitor_every_class.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_focus_YDS_ly_monitor_every_class.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_focus_YDS_ly_purge_dissent"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_ly_purge_dissent.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_YDS_ly_purge_dissent_shine"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_ly_purge_dissent.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_focus_YDS_ly_purge_dissent.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_focus_YDS_ly_the_perfect_machine"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_ly_the_perfect_machine.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_YDS_ly_the_perfect_machine_shine"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_ly_the_perfect_machine.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_focus_YDS_ly_the_perfect_machine.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_focus_YDS_ly_thought_policing"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_ly_thought_policing.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_YDS_ly_thought_policing_shine"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_ly_thought_policing.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_focus_YDS_ly_thought_policing.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_focus_YDS_mandatory_tutoring"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_mandatory_tutoring.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_YDS_mandatory_tutoring_shine"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_mandatory_tutoring.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_focus_YDS_mandatory_tutoring.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_focus_YDS_martial_competition"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_martial_competition.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_YDS_martial_competition_shine"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_martial_competition.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_focus_YDS_martial_competition.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_focus_YDS_merger_aftermath"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_merger_aftermath.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_YDS_merger_aftermath_shine"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_merger_aftermath.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_focus_YDS_merger_aftermath.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_focus_YDS_militarized_study_rooms"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_militarized_study_rooms.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_YDS_militarized_study_rooms_shine"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_militarized_study_rooms.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_focus_YDS_militarized_study_rooms.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_focus_YDS_national_olympiad_finals"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_national_olympiad_finals.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_YDS_national_olympiad_finals_shine"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_national_olympiad_finals.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_focus_YDS_national_olympiad_finals.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_focus_YDS_negotiate_with_admin"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_negotiate_with_admin.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_YDS_negotiate_with_admin_shine"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_negotiate_with_admin.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_focus_YDS_negotiate_with_admin.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_focus_YDS_neo_confucian_alliance"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_neo_confucian_alliance.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_YDS_neo_confucian_alliance_shine"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_neo_confucian_alliance.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_focus_YDS_neo_confucian_alliance.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_focus_YDS_nihilistic_nirvana"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_nihilistic_nirvana.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_YDS_nihilistic_nirvana_shine"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_nihilistic_nirvana.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_focus_YDS_nihilistic_nirvana.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_focus_YDS_olympiad_initiative"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_olympiad_initiative.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_YDS_olympiad_initiative_shine"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_olympiad_initiative.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_focus_YDS_olympiad_initiative.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_focus_YDS_playground_bonfire"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_playground_bonfire.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_YDS_playground_bonfire_shine"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_playground_bonfire.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_focus_YDS_playground_bonfire.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_focus_YDS_pragmatic_deal"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_pragmatic_deal.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_YDS_pragmatic_deal_shine"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_pragmatic_deal.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_focus_YDS_pragmatic_deal.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_focus_YDS_red_star_committee"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_red_star_committee.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_YDS_red_star_committee_shine"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_red_star_committee.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_focus_YDS_red_star_committee.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_focus_YDS_reformist_alliance"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_reformist_alliance.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_YDS_reformist_alliance_shine"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_reformist_alliance.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_focus_YDS_reformist_alliance.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_focus_YDS_regional_claims"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_regional_claims.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_YDS_regional_claims_shine"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_regional_claims.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_focus_YDS_regional_claims.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_focus_YDS_republic_of_letters"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_republic_of_letters.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_YDS_republic_of_letters_shine"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_republic_of_letters.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_focus_YDS_republic_of_letters.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_focus_YDS_restore_old_glory"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_restore_old_glory.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_YDS_restore_old_glory_shine"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_restore_old_glory.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_focus_YDS_restore_old_glory.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_focus_YDS_school_security_force"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_school_security_force.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_YDS_school_security_force_shine"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_school_security_force.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_focus_YDS_school_security_force.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_focus_YDS_specialty_funding_boost"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_specialty_funding_boost.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_YDS_specialty_funding_boost_shine"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_specialty_funding_boost.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_focus_YDS_specialty_funding_boost.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_focus_YDS_sports_league_militia"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_sports_league_militia.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_YDS_sports_league_militia_shine"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_sports_league_militia.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_focus_YDS_sports_league_militia.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_focus_YDS_standardized_syllabi"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_standardized_syllabi.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_YDS_standardized_syllabi_shine"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_standardized_syllabi.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_focus_YDS_standardized_syllabi.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_focus_YDS_students_unrest"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_students_unrest.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_YDS_students_unrest_shine"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_students_unrest.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_focus_YDS_students_unrest.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_focus_YDS_student_parliament"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_student_parliament.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_YDS_student_parliament_shine"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_student_parliament.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_focus_YDS_student_parliament.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_focus_YDS_subvert_no_7"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_subvert_no_7.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_YDS_subvert_no_7_shine"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_subvert_no_7.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_focus_YDS_subvert_no_7.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_focus_YDS_suppress_the_weak"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_suppress_the_weak.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_YDS_suppress_the_weak_shine"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_suppress_the_weak.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_focus_YDS_suppress_the_weak.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_focus_YDS_syndicalist_playground"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_syndicalist_playground.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_YDS_syndicalist_playground_shine"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_syndicalist_playground.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_focus_YDS_syndicalist_playground.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_focus_YDS_teachers_grievances"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_teachers_grievances.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_YDS_teachers_grievances_shine"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_teachers_grievances.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_focus_YDS_teachers_grievances.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_focus_YDS_technocratic_meritocracy"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_technocratic_meritocracy.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_YDS_technocratic_meritocracy_shine"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_technocratic_meritocracy.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_focus_YDS_technocratic_meritocracy.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_focus_YDS_the_perfect_standard_school"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_the_perfect_standard_school.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_YDS_the_perfect_standard_school_shine"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_the_perfect_standard_school.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_focus_YDS_the_perfect_standard_school.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_focus_YDS_the_tipping_point"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_the_tipping_point.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_YDS_the_tipping_point_shine"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_the_tipping_point.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_focus_YDS_the_tipping_point.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_focus_YDS_train_olympiad_elites"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_train_olympiad_elites.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_YDS_train_olympiad_elites_shine"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_train_olympiad_elites.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_focus_YDS_train_olympiad_elites.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_focus_YDS_unify_chengdu_schools"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_unify_chengdu_schools.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_YDS_unify_chengdu_schools_shine"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_unify_chengdu_schools.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_focus_YDS_unify_chengdu_schools.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_focus_YDS_yandao_street_coup"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_yandao_street_coup.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_YDS_yandao_street_coup_shine"
+		texturefile = "gfx/interface/goals/GFX_focus_YDS_yandao_street_coup.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/GFX_focus_YDS_yandao_street_coup.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+}
+
+

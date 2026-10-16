@@ -1,0 +1,625 @@
+add_namespace = tlb_event
+
+# Event 1: Inception - Students Crushed by Pressure
+country_event = {
+	id = tlb_event.1
+	title = tlb_event.1.t
+	desc = tlb_event.1.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = {
+		set_country_flag = TLB_crisis_started
+		set_variable = { YDS_tlb_blunders = 0 }
+	}
+
+	# Option A: Force gag orders and assist education bureau
+	option = {
+		name = tlb_event.1.a
+		add_stability = -0.05
+		hidden_effect = {
+			add_to_variable = { YDS_tlb_blunders = 1 }
+			country_event = { id = tlb_event.11 days = 3 }
+		}
+		ai_chance = { base = 60 }
+	}
+
+	# Option B: Acknowledge tragedy and investigative condolences
+	option = {
+		name = tlb_event.1.b
+		add_political_power = -20
+		hidden_effect = {
+			country_event = { id = tlb_event.12 days = 3 }
+		}
+		ai_chance = { base = 40 }
+	}
+}
+
+# Event 11: Media Track - Wall Posters and Mimeographed Leaflets
+country_event = {
+	id = tlb_event.11
+	title = tlb_event.11.t
+	desc = tlb_event.11.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	# Option A: Raid backpacks and confiscate student materials
+	option = {
+		name = tlb_event.11.a
+		add_stability = -0.05
+		hidden_effect = {
+			add_to_variable = { YDS_tlb_blunders = 1 }
+			if = {
+				limit = { check_variable = { YDS_tlb_blunders > 2 } }
+				country_event = { id = tlb_event.3 days = 2 }
+			}
+			else = {
+				country_event = { id = tlb_event.13 days = 3 }
+			}
+		}
+		ai_chance = { base = 60 }
+	}
+
+	# Option B: Open classroom discussions to vent emotions
+	option = {
+		name = tlb_event.11.b
+		add_political_power = -15
+		hidden_effect = {
+			country_event = { id = tlb_event.12 days = 3 }
+		}
+		ai_chance = { base = 40 }
+	}
+}
+
+# Event 12: Campus Unrest Track - Blackboard Slogans and Empty Desks
+country_event = {
+	id = tlb_event.12
+	title = tlb_event.12.t
+	desc = tlb_event.12.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	# Option A: Punish class cadres and student union leaders
+	option = {
+		name = tlb_event.12.a
+		add_stability = -0.05
+		hidden_effect = {
+			add_to_variable = { YDS_tlb_blunders = 1 }
+			if = {
+				limit = { check_variable = { YDS_tlb_blunders > 2 } }
+				country_event = { id = tlb_event.3 days = 2 }
+			}
+			else = {
+				country_event = { id = tlb_event.13 days = 3 }
+			}
+		}
+		ai_chance = { base = 60 }
+	}
+
+	# Option B: Head teachers dialogue and suspend public exam ranking
+	option = {
+		name = tlb_event.12.b
+		add_political_power = -15
+		hidden_effect = {
+			country_event = { id = tlb_event.13 days = 3 }
+		}
+		ai_chance = { base = 40 }
+	}
+}
+
+# Event 13: Chongqing Confrontation Track - Tongba Delegates Arrive
+country_event = {
+	id = tlb_event.13
+	title = tlb_event.13.t
+	desc = tlb_event.13.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	# Option A: Blockade bridge and forcefully disperse delegates
+	option = {
+		name = tlb_event.13.a
+		add_stability = -0.05
+		hidden_effect = {
+			add_to_variable = { YDS_tlb_blunders = 1 }
+			if = {
+				limit = { check_variable = { YDS_tlb_blunders > 2 } }
+				country_event = { id = tlb_event.3 days = 2 }
+			}
+			else = {
+				country_event = { id = tlb_event.14 days = 3 }
+			}
+		}
+		ai_chance = { base = 60 }
+	}
+
+	# Option B: Receive petition and hold closed-door hearing
+	option = {
+		name = tlb_event.13.b
+		add_political_power = -25
+		hidden_effect = {
+			country_event = { id = tlb_event.14 days = 3 }
+		}
+		ai_chance = { base = 40 }
+	}
+}
+
+# Event 14: School Board Factional Split Track
+country_event = {
+	id = tlb_event.14
+	title = tlb_event.14.t
+	desc = tlb_event.14.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	# Option A: Reprimand sympathetic teachers and purge dissent
+	option = {
+		name = tlb_event.14.a
+		add_stability = -0.05
+		hidden_effect = {
+			add_to_variable = { YDS_tlb_blunders = 1 }
+			if = {
+				limit = { check_variable = { YDS_tlb_blunders > 2 } }
+				country_event = { id = tlb_event.3 days = 2 }
+			}
+			else = {
+				country_event = { id = tlb_event.99 days = 3 }
+			}
+		}
+		ai_chance = { base = 60 }
+	}
+
+	# Option B: Convene full school open forum and compromise
+	option = {
+		name = tlb_event.14.b
+		add_political_power = -20
+		hidden_effect = {
+			country_event = { id = tlb_event.99 days = 3 }
+		}
+		ai_chance = { base = 40 }
+	}
+}
+
+# Event 3: Secret Dispatch: Fight for Sovereignty, Resist Injustice (Uprising Outbreak)
+country_event = {
+	id = tlb_event.3
+	title = tlb_event.3.t
+	desc = tlb_event.3.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	# Stay as YDS
+	option = {
+		name = tlb_event.3.a
+		1037 = {
+			add_core_of = TLB
+			transfer_state_to = TLB
+		}
+		1041 = { add_core_of = TLB }
+		605 = { add_core_of = TLB }
+		751 = { add_core_of = TLB }
+		752 = { add_core_of = TLB }
+		753 = { add_core_of = TLB }
+		TLB = {
+			set_politics = {
+				ruling_party = paternal_autocrat
+				last_election = "1936.1.1"
+				election_frequency = 48
+				elections_allowed = no
+			}
+			hidden_effect = {
+				if = {
+					limit = { NOT = { has_character = TLB_tang_qimei } }
+					recruit_character = TLB_tang_qimei
+				}
+				if = {
+					limit = { NOT = { has_character = TLB_hu_chaoqiang } }
+					recruit_character = TLB_hu_chaoqiang
+				}
+				if = {
+					limit = { NOT = { has_character = TLB_class_6_council } }
+					recruit_character = TLB_class_6_council
+				}
+				if = {
+					limit = { NOT = { has_character = TLB_zhang_hanyu } }
+					recruit_character = TLB_zhang_hanyu
+				}
+				promote_character = {
+					character = TLB_tang_qimei
+					ideology = military_boarding_regime
+				}
+				load_oob = "TLB_civil_war"
+			}
+			add_ideas = {
+				TLB_class_6_discord
+				TLB_tongba_movement
+			}
+			country_event = { id = tlb_event.4 days = 1 }
+		}
+		declare_war_on = {
+			target = TLB
+			type = annex_everything
+		}
+		ai_chance = { base = 80 }
+	}
+
+	# Switch to TLB
+	option = {
+		name = tlb_event.3.b
+		1037 = {
+			add_core_of = TLB
+			transfer_state_to = TLB
+		}
+		1041 = { add_core_of = TLB }
+		605 = { add_core_of = TLB }
+		751 = { add_core_of = TLB }
+		752 = { add_core_of = TLB }
+		753 = { add_core_of = TLB }
+		TLB = {
+			set_politics = {
+				ruling_party = paternal_autocrat
+				last_election = "1936.1.1"
+				election_frequency = 48
+				elections_allowed = no
+			}
+			hidden_effect = {
+				if = {
+					limit = { NOT = { has_character = TLB_tang_qimei } }
+					recruit_character = TLB_tang_qimei
+				}
+				if = {
+					limit = { NOT = { has_character = TLB_hu_chaoqiang } }
+					recruit_character = TLB_hu_chaoqiang
+				}
+				if = {
+					limit = { NOT = { has_character = TLB_class_6_council } }
+					recruit_character = TLB_class_6_council
+				}
+				if = {
+					limit = { NOT = { has_character = TLB_zhang_hanyu } }
+					recruit_character = TLB_zhang_hanyu
+				}
+				promote_character = {
+					character = TLB_tang_qimei
+					ideology = military_boarding_regime
+				}
+				load_oob = "TLB_civil_war"
+			}
+			add_ideas = {
+				TLB_class_6_discord
+				TLB_tongba_movement
+			}
+			country_event = { id = tlb_event.4 days = 1 }
+		}
+		declare_war_on = {
+			target = TLB
+			type = annex_everything
+		}
+		TLB = {
+			change_tag_from = ROOT
+		}
+		ai_chance = { base = 20 }
+	}
+}
+
+# Event 4: The Rostrum of Tongliang Bachuan (Faction Leadership Choice)
+country_event = {
+	id = tlb_event.4
+	title = tlb_event.4.t
+	desc = tlb_event.4.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	# Tang Qimei (Paternal Autocrat)
+	option = {
+		name = tlb_event.4.a
+		set_politics = {
+			ruling_party = paternal_autocrat
+		}
+		promote_character = {
+			character = TLB_tang_qimei
+			ideology = military_boarding_regime
+		}
+		add_political_power = 50
+		ai_chance = { base = 35 }
+	}
+
+	# Hu Chaoqiang (Authoritarian Democrat / Technocratic Reform)
+	option = {
+		name = tlb_event.4.b
+		set_politics = {
+			ruling_party = authoritarian_democrat
+		}
+		promote_character = {
+			character = TLB_hu_chaoqiang
+			ideology = technocratic_reformism
+		}
+		add_political_power = 50
+		ai_chance = { base = 35 }
+	}
+
+	# Class 6 Council (Radical Socialist / Student Union)
+	option = {
+		name = tlb_event.4.c
+		set_politics = {
+			ruling_party = radical_socialist
+		}
+		promote_character = {
+			character = TLB_class_6_council
+			ideology = student_unionism
+		}
+		add_political_power = 50
+		ai_chance = { base = 30 }
+	}
+}
+
+# Event 10: Outcome 1 - Uprising Succeeds: Taking Over Sichuan
+country_event = {
+	id = tlb_event.10
+	title = tlb_event.10.t
+	desc = tlb_event.10.d
+	picture = GFX_report_event_chinese_officers
+
+	trigger = {
+		tag = TLB
+		has_war_with = YDS
+		controls_state = 1041
+		controls_state = 1037
+	}
+
+	mean_time_to_happen = { days = 2 }
+	fire_only_once = yes
+
+	option = {
+		name = tlb_event.10.a
+		annex_country = {
+			target = YDS
+			transfer_troops = yes
+		}
+		add_ideas = TLB_hegemon_of_sichuan
+		add_stability = 0.20
+		add_war_support = 0.15
+		add_political_power = 100
+		ai_chance = { base = 100 }
+	}
+}
+
+# Event 21: YDS Proposes Armistice to TLB
+country_event = {
+	id = tlb_event.21
+	title = tlb_event.21.t
+	desc = tlb_event.21.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	# Agree to truce
+	option = {
+		name = tlb_event.21.a
+		hidden_effect = {
+			YDS = { clr_country_flag = YDS_tlb_truce_pending }
+			country_event = { id = tlb_event.20 }
+			YDS = { country_event = { id = tlb_event.20 } }
+		}
+		ai_chance = {
+			base = 80
+			modifier = {
+				factor = 0.5
+				controls_state = 1041
+			}
+		}
+	}
+
+	# Refuse truce
+	option = {
+		name = tlb_event.21.b
+		hidden_effect = {
+			YDS = { country_event = { id = tlb_event.22 days = 1 } }
+		}
+		ai_chance = {
+			base = 20
+			modifier = {
+				factor = 2.0
+				controls_state = 1041
+			}
+		}
+	}
+}
+
+# Event 22: TLB Rejects YDS Armistice Offer (Notifies YDS)
+country_event = {
+	id = tlb_event.22
+	title = tlb_event.22.t
+	desc = tlb_event.22.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = tlb_event.22.a
+		hidden_effect = {
+			clr_country_flag = YDS_tlb_truce_pending
+		}
+		add_war_support = 0.05
+		ai_chance = { base = 100 }
+	}
+}
+
+# Event 23: TLB Proposes Armistice to YDS
+country_event = {
+	id = tlb_event.23
+	title = tlb_event.23.t
+	desc = tlb_event.23.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	# Agree to truce
+	option = {
+		name = tlb_event.23.a
+		hidden_effect = {
+			TLB = { clr_country_flag = TLB_tlb_truce_pending }
+			country_event = { id = tlb_event.20 }
+			TLB = { country_event = { id = tlb_event.20 } }
+		}
+		ai_chance = {
+			base = 70
+			modifier = {
+				factor = 1.5
+				NOT = { controls_state = 1037 }
+			}
+			modifier = {
+				factor = 0.2
+				controls_state = 1037
+			}
+		}
+	}
+
+	# Refuse truce
+	option = {
+		name = tlb_event.23.b
+		hidden_effect = {
+			TLB = { country_event = { id = tlb_event.24 days = 1 } }
+		}
+		ai_chance = {
+			base = 30
+			modifier = {
+				factor = 3.0
+				controls_state = 1037
+			}
+		}
+	}
+}
+
+# Event 24: YDS Rejects TLB Armistice Offer (Notifies TLB)
+country_event = {
+	id = tlb_event.24
+	title = tlb_event.24.t
+	desc = tlb_event.24.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = tlb_event.24.a
+		hidden_effect = {
+			clr_country_flag = TLB_tlb_truce_pending
+		}
+		add_war_support = 0.05
+		ai_chance = { base = 100 }
+	}
+}
+
+# Event 20: Outcome 2 - Half Success: Armistice and Taking Over Chongqing
+country_event = {
+	id = tlb_event.20
+	title = tlb_event.20.t
+	desc = tlb_event.20.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = tlb_event.20.a
+		hidden_effect = {
+			clr_country_flag = YDS_tlb_truce_pending
+			clr_country_flag = TLB_tlb_truce_pending
+		}
+		if = {
+			limit = { tag = TLB }
+			white_peace = YDS
+			add_ideas = TLB_chongqing_autonomous_zone
+			add_stability = 0.10
+			add_political_power = 50
+		}
+		if = {
+			limit = { tag = YDS }
+			white_peace = TLB
+			1037 = {
+				transfer_state_to = TLB
+			}
+			add_stability = 0.05
+		}
+		ai_chance = { base = 100 }
+	}
+}
+
+# Event 30: Outcome 3 - Failure: The Failed Struggle (YDS Perspective)
+country_event = {
+	id = tlb_event.30
+	title = tlb_event.30.t
+	desc = tlb_event.30.d
+	picture = GFX_report_event_chinese_officers
+
+	trigger = {
+		tag = YDS
+		has_war_with = TLB
+		controls_state = 1037
+		controls_state = 1041
+	}
+
+	mean_time_to_happen = { days = 2 }
+	fire_only_once = yes
+
+	option = {
+		name = tlb_event.30.a
+		TLB = {
+			country_event = { id = tlb_event.31 }
+		}
+		annex_country = {
+			target = TLB
+		}
+		add_stability = 0.05
+		add_political_power = 50
+		ai_chance = { base = 100 }
+	}
+}
+
+# Event 31: Outcome 3 - Failure: The Failed Struggle (TLB Perspective)
+country_event = {
+	id = tlb_event.31
+	title = tlb_event.31.t
+	desc = tlb_event.31.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = tlb_event.31.a
+		ai_chance = { base = 100 }
+	}
+}
+
+# Event 99: Crisis Defused - Soft Landing
+country_event = {
+	id = tlb_event.99
+	title = tlb_event.99.t
+	desc = tlb_event.99.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = tlb_event.99.a
+		add_stability = 0.15
+		add_political_power = 50
+		set_country_flag = TLB_crisis_resolved
+		clr_country_flag = TLB_crisis_started
+		ai_chance = { base = 100 }
+	}
+}

@@ -1,0 +1,36 @@
+# YDS Dedicated Music Station Configuration
+
+music_station = "yds_music"
+
+music = {
+	song = "maintheme"
+	chance = {
+		base = 1
+		modifier = {
+			factor = 2
+			tag = YDS
+		}
+	}
+}
+
+music = {
+	song = "YDS_song_requiem_for_youth"
+	chance = {
+		base = 1
+		modifier = {
+			factor = 2
+			tag = YDS
+		}
+	}
+}
+
+music = {
+	song = "YDS_song_jinshui_yanguang_orchestral"
+	chance = {
+		base = 1
+		modifier = {
+			factor = 2
+			tag = YDS
+		}
+	}
+}

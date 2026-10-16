@@ -1,0 +1,92 @@
+characters = {
+	TLB_tang_qimei = {
+		name = TLB_tang_qimei
+		portraits = {
+			civilian = {
+				large = GFX_portrait_TLB_tang_qimei
+			}
+		}
+		country_leader = {
+			ideology = military_boarding_regime
+			traits = { TLB_strict_administrator }
+			id = -1
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = TLB_tang_qimei_advisor
+			allowed = {
+				original_tag = TLB
+			}
+			traits = { TLB_strict_administrator }
+			cost = 100
+		}
+	}
+
+	TLB_hu_chaoqiang = {
+		name = TLB_hu_chaoqiang
+		portraits = {
+			civilian = {
+				large = GFX_portrait_TLB_hu_chaoqiang
+			}
+		}
+		country_leader = {
+			ideology = technocratic_reformism
+			traits = { TLB_humorous_educator }
+			id = -1
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = TLB_hu_chaoqiang_advisor
+			allowed = {
+				original_tag = TLB
+			}
+			traits = { TLB_humorous_educator }
+			cost = 100
+		}
+	}
+
+	TLB_class_6_council = {
+		name = TLB_class_6_council
+		portraits = {
+			civilian = {
+				large = GFX_portrait_TLB_class_6_council
+			}
+		}
+		country_leader = {
+			ideology = student_unionism
+			traits = { TLB_class_6_trait }
+			id = -1
+		}
+	}
+
+	TLB_zhang_hanyu = {
+		name = TLB_zhang_hanyu
+		portraits = {
+			civilian = {
+				large = GFX_portrait_TLB_zhang_hanyu
+			}
+		}
+		country_leader = {
+			ideology = student_libertarianism
+			traits = { TLB_multi_talented_student }
+			id = -1
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = TLB_zhang_hanyu_advisor
+			allowed = {
+				original_tag = TLB
+			}
+			traits = { TLB_multi_talented_student }
+			cost = 100
+		}
+		corps_commander = {
+			traits = { trickster organizer }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 3
+		}
+	}
+}

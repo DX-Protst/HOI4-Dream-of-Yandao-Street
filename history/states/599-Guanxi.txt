@@ -1,0 +1,31 @@
+state = {
+	id = 599
+	name = "STATE_599"
+	manpower = 8685200
+	resources = {
+		tungsten = 15
+		steel = 15
+		chromium = 3
+	}
+	state_category = city
+	history = {
+		owner = SNE
+		controller = SNE
+		add_core_of = SNE
+		add_core_of = GXC
+		add_core_of = CHI
+		add_core_of = PRC
+		victory_points = { 10404 5 }
+		victory_points = { 1597 1 }
+		buildings = {
+			arms_factory = 1
+			industrial_complex = 1
+			infrastructure = 2
+			air_base = 2
+		}
+	}
+	provinces = {
+		1023 1597 4134 4152 7095 7128 7168 7210 10039 10404 10431 12407 12436
+	}
+	local_supplies = 0
+}

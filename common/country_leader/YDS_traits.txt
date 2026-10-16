@@ -1,0 +1,76 @@
+leader_traits = {
+	# Jiang Guangping: Balances Education Socialism
+	YDS_jiang_guangping_trait = {
+		random = no
+		
+		stability_factor = 0.10
+		political_power_gain = 0.04
+		research_speed_factor = -0.05
+	}
+	
+	# Li Gang: Old Campus Revivalism
+	YDS_li_gang_trait = {
+		random = no
+		
+		army_attack_factor = 0.10
+		political_power_gain = 0.03
+		consumer_goods_factor = 0.05
+	}
+	
+	# Tang Siyi: Student Liberal
+	YDS_tang_siyi_trait = {
+		random = no
+		
+		research_speed_factor = 0.03
+		stability_factor = 0.05
+		political_power_gain = -0.05
+	}
+	
+	# Deng Shuang: Reformist Educator
+	YDS_deng_shuang_trait = {
+		random = no
+		
+		stability_factor = 0.05
+		research_speed_factor = 0.02
+		political_power_gain = 0.03
+	}
+
+	# Autonomous Council: Transitional Collective Rule with severe deadlock debuffs
+	YDS_autonomous_council_trait = {
+		random = no
+		
+		stability_factor = -0.15
+		political_power_gain = -0.15
+		war_support_factor = -0.10
+		consumer_goods_factor = 0.05
+		production_factory_max_efficiency_factor = -0.10
+		army_org_factor = -0.10
+		drift_defence_factor = -0.20
+	}
+
+	# Anarchy Nihilist
+	YDS_nihilist_anarchy_trait = {
+		random = no
+		
+		stability_factor = -0.20
+		political_power_gain = -0.50
+	}
+	
+	# Anarchy Corporatist
+	YDS_corporatist_anarchy_trait = {
+		random = no
+		
+		stability_factor = -0.10
+		political_power_gain = -0.10
+	}
+
+	# Liu Yan: Extremist Egalitarian
+	YDS_liu_yan_trait = {
+		random = no
+		
+		stability_factor = -0.15
+		political_power_gain = 0.05
+		consumer_goods_factor = -0.10
+		research_speed_factor = -0.10
+	}
+}

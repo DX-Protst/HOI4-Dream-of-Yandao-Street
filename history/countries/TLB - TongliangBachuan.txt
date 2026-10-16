@@ -1,0 +1,42 @@
+capital = 1037 # Chongqing
+
+set_research_slots = 3
+
+# Starting ideas
+add_ideas = {
+	TLB_class_6_discord
+	TLB_tongba_movement
+}
+
+# Recruit characters
+recruit_character = TLB_tang_qimei
+recruit_character = TLB_hu_chaoqiang
+recruit_character = TLB_class_6_council
+recruit_character = TLB_zhang_hanyu
+
+# Starting politics
+set_politics = {
+	ruling_party = paternal_autocrat
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	paternal_autocrat = 35
+	authoritarian_democrat = 25
+	radical_socialist = 20
+	social_liberal = 10
+	social_democrat = 5
+	syndicalist = 5
+}
+
+# Technologies
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1
+	tech_recon = 1
+	tech_engineers = 1
+	gw_artillery = 1
+}

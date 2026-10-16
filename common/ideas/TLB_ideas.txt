@@ -1,0 +1,58 @@
+ideas = {
+	country = {
+		# Class 6 Discord: 56 students with hidden motives
+		TLB_class_6_discord = {
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = generic_disjointed_gov
+			modifier = {
+				stability_factor = -0.10
+				consumer_goods_factor = 0.05
+			}
+		}
+
+		# Tongba Movement Revolutionary Spirit
+		TLB_tongba_movement = {
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = generic_morale_bonus
+			modifier = {
+				war_support_factor = 0.15
+				mobilization_speed = 0.20
+				army_morale_factor = 0.10
+			}
+		}
+
+		# Hegemon of Sichuan: Gained upon victory
+		TLB_hegemon_of_sichuan = {
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = generic_victors_of_ww1
+			modifier = {
+				stability_factor = 0.15
+				political_power_gain = 0.50
+				research_speed_factor = 0.10
+			}
+		}
+
+		# Chongqing Autonomous Zone: Gained upon armistice
+		TLB_chongqing_autonomous_zone = {
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = generic_intel_bonus
+			modifier = {
+				stability_factor = 0.10
+				consumer_goods_factor = -0.05
+				war_support_factor = 0.10
+			}
+		}
+	}
+}

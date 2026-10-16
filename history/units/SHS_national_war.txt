@@ -1,0 +1,52 @@
+division_template = {
+	name = "Shanhe Maotanchang Infantry Division"
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+		artillery_brigade = { x = 3 y = 0 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }
+		artillery = { x = 0 y = 1 }
+	}
+}
+division_template = {
+	name = "Shanhe Armored Breakthrough Division"
+	regiments = {
+		light_armor = { x = 0 y = 0 }
+		light_armor = { x = 0 y = 1 }
+		light_armor = { x = 0 y = 2 }
+		motorized = { x = 1 y = 0 }
+		motorized = { x = 1 y = 1 }
+		motorized = { x = 1 y = 2 }
+		motorized = { x = 1 y = 3 }
+		motorized = { x = 1 y = 4 }
+		motorized = { x = 2 y = 0 }
+		motorized = { x = 2 y = 1 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }
+		artillery = { x = 0 y = 1 }
+	}
+}
+units = {
+	division = { name = "1st Shanhe Exam Division" location = 1084 division_template = "Shanhe Maotanchang Infantry Division" start_experience_factor = 0.55 start_equipment_factor = 1.0 }
+	division = { name = "2nd Shanhe Exam Division" location = 1124 division_template = "Shanhe Maotanchang Infantry Division" start_experience_factor = 0.55 start_equipment_factor = 1.0 }
+	division = { name = "3rd Shanhe Exam Division" location = 4010 division_template = "Shanhe Maotanchang Infantry Division" start_experience_factor = 0.55 start_equipment_factor = 1.0 }
+	division = { name = "4th Shanhe Exam Division" location = 4037 division_template = "Shanhe Maotanchang Infantry Division" start_experience_factor = 0.55 start_equipment_factor = 1.0 }
+	division = { name = "5th Shanhe Exam Division" location = 1069 division_template = "Shanhe Maotanchang Infantry Division" start_experience_factor = 0.55 start_equipment_factor = 1.0 }
+	division = { name = "6th Shanhe Exam Division" location = 4181 division_template = "Shanhe Maotanchang Infantry Division" start_experience_factor = 0.55 start_equipment_factor = 1.0 }
+	division = { name = "7th Shanhe Exam Division" location = 1084 division_template = "Shanhe Maotanchang Infantry Division" start_experience_factor = 0.55 start_equipment_factor = 1.0 }
+	division = { name = "8th Shanhe Exam Division" location = 1124 division_template = "Shanhe Maotanchang Infantry Division" start_experience_factor = 0.55 start_equipment_factor = 1.0 }
+	division = { name = "9th Shanhe Exam Division" location = 4010 division_template = "Shanhe Maotanchang Infantry Division" start_experience_factor = 0.55 start_equipment_factor = 1.0 }
+	division = { name = "10th Shanhe Exam Division" location = 4037 division_template = "Shanhe Maotanchang Infantry Division" start_experience_factor = 0.55 start_equipment_factor = 1.0 }
+	division = { name = "1st Shanhe Armored Division" location = 1084 division_template = "Shanhe Armored Breakthrough Division" start_experience_factor = 0.60 start_equipment_factor = 1.0 }
+	division = { name = "2nd Shanhe Armored Division" location = 1124 division_template = "Shanhe Armored Breakthrough Division" start_experience_factor = 0.60 start_equipment_factor = 1.0 }
+}

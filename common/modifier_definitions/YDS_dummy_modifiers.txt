@@ -1,0 +1,34 @@
+# Fallback dummy modifier definitions to silence vanilla unknown modifier logs
+# All comments are strictly pure ASCII.
+
+fascism_drift = {
+	category = politics
+}
+
+communism_drift = {
+	category = politics
+}
+
+democratic_drift = {
+	category = politics
+}
+
+neutrality_drift = {
+	category = politics
+}
+
+fascism_acceptance = {
+	category = politics
+}
+
+communism_acceptance = {
+	category = politics
+}
+
+democratic_acceptance = {
+	category = politics
+}
+
+neutrality_acceptance = {
+	category = politics
+}

@@ -1,0 +1,156 @@
+focus_tree = {
+	id = YDS_liu_yan_focus_tree
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = YDS
+			has_country_flag = YDS_liu_yan_active
+		}
+	}
+	default = no
+	focus = {
+		id = YDS_ly_absolute_control
+		x = 10
+		y = 0
+		cost = 3
+		icon = GFX_focus_YDS_ly_absolute_control
+		continue_if_invalid = no
+		cancel_if_invalid = yes
+		completion_reward = {
+			add_political_power = -50
+			add_stability = -0.1
+			set_politics = {
+				ruling_party = totalist
+				elections_allowed = no
+			}
+			add_popularity = {
+				ideology = totalist
+				popularity = 0.50
+			}
+			custom_effect_tooltip = YDS_TT_LIU_YAN_START
+			country_event = {
+				id = yds_event.1100
+			}
+		}
+	}
+	focus = {
+		id = YDS_ly_purge_dissent
+		x = 10
+		y = 1
+		cost = 3
+		icon = GFX_focus_YDS_ly_purge_dissent
+		continue_if_invalid = no
+		cancel_if_invalid = yes
+		prerequisite = {
+			focus = YDS_ly_absolute_control
+		}
+		completion_reward = {
+			add_stability = 0.05
+			add_war_support = -0.05
+			country_event = {
+				id = yds_event.1101
+			}
+		}
+	}
+	focus = {
+		id = YDS_ly_extreme_meritocracy
+		x = 8
+		y = 2
+		cost = 3
+		icon = GFX_focus_YDS_ly_extreme_meritocracy
+		continue_if_invalid = no
+		cancel_if_invalid = yes
+		prerequisite = {
+			focus = YDS_ly_purge_dissent
+		}
+		completion_reward = {
+			add_to_variable = {
+				YDS_gpa_score = 10
+			}
+			add_stability = -0.05
+			country_event = {
+				id = yds_event.1102
+			}
+		}
+	}
+	focus = {
+		id = YDS_ly_thought_policing
+		x = 12
+		y = 2
+		cost = 3
+		icon = GFX_focus_YDS_ly_thought_policing
+		continue_if_invalid = no
+		cancel_if_invalid = yes
+		prerequisite = {
+			focus = YDS_ly_purge_dissent
+		}
+		completion_reward = {
+			set_variable = {
+				YDS_student_autonomy = 0
+			}
+			add_stability = -0.05
+			country_event = {
+				id = yds_event.1103
+			}
+		}
+	}
+	focus = {
+		id = YDS_ly_ban_all_clubs
+		x = 8
+		y = 3
+		cost = 3
+		icon = GFX_focus_YDS_ly_ban_all_clubs
+		continue_if_invalid = no
+		cancel_if_invalid = yes
+		prerequisite = {
+			focus = YDS_ly_extreme_meritocracy
+		}
+		completion_reward = {
+			add_stability = -0.05
+			country_event = {
+				id = yds_event.1104
+			}
+		}
+	}
+	focus = {
+		id = YDS_ly_monitor_every_class
+		x = 12
+		y = 3
+		cost = 3
+		icon = GFX_focus_YDS_ly_monitor_every_class
+		continue_if_invalid = no
+		cancel_if_invalid = yes
+		prerequisite = {
+			focus = YDS_ly_thought_policing
+		}
+		completion_reward = {
+			add_war_support = -0.05
+			country_event = {
+				id = yds_event.1105
+			}
+		}
+	}
+	focus = {
+		id = YDS_ly_the_perfect_machine
+		x = 10
+		y = 4
+		cost = 3
+		icon = GFX_focus_YDS_ly_the_perfect_machine
+		continue_if_invalid = no
+		cancel_if_invalid = yes
+		prerequisite = {
+			focus = YDS_ly_ban_all_clubs
+		}
+		prerequisite = {
+			focus = YDS_ly_monitor_every_class
+		}
+		completion_reward = {
+			custom_effect_tooltip = YDS_TT_LIU_YAN_END
+			add_stability = -0.5
+			country_event = {
+				id = yds_event.1106
+			}
+		}
+	}
+}

@@ -1,0 +1,37 @@
+# GFX definitions for National Exam Board 5-Track GUI
+# All comments are strictly in pure ASCII.
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_YDS_exam_board_bg"
+		texturefile = "gfx/interface/exam_board_gui/YDS_exam_board_bg.tga"
+	}
+	spriteType = {
+		name = "GFX_YDS_btn_plus"
+		texturefile = "gfx/interface/exam_board_gui/YDS_btn_plus.tga"
+	}
+	spriteType = {
+		name = "GFX_YDS_btn_minus"
+		texturefile = "gfx/interface/exam_board_gui/YDS_btn_minus.tga"
+	}
+	spriteType = {
+		name = "GFX_YDS_icon_math"
+		texturefile = "gfx/interface/exam_board_gui/YDS_icon_math.tga"
+	}
+	spriteType = {
+		name = "GFX_YDS_icon_physics"
+		texturefile = "gfx/interface/exam_board_gui/YDS_icon_physics.tga"
+	}
+	spriteType = {
+		name = "GFX_YDS_icon_chem"
+		texturefile = "gfx/interface/exam_board_gui/YDS_icon_chem.tga"
+	}
+	spriteType = {
+		name = "GFX_YDS_icon_bio"
+		texturefile = "gfx/interface/exam_board_gui/YDS_icon_bio.tga"
+	}
+	spriteType = {
+		name = "GFX_YDS_icon_info"
+		texturefile = "gfx/interface/exam_board_gui/YDS_icon_info.tga"
+	}
+}

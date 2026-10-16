@@ -1,0 +1,26 @@
+state = {
+	id = 605
+	name = "STATE_605"
+	manpower = 2724437
+	resources = {
+		steel = 10
+	}
+	state_category = rural
+	history = {
+		owner = YDS
+		controller = YDS
+		add_core_of = YDS
+		add_core_of = CHI
+		add_core_of = PRC
+		victory_points = { 11865 1 }
+		buildings = {
+			infrastructure = 2
+			arms_factory = 1
+		}
+	}
+	provinces = {
+		1893 2030 2091 4041 4141 5048 7256 7948 10144 10304 10822 11865 12274
+	}
+	local_supplies = 0
+	buildings_max_level_factor = 1
+}

@@ -1,0 +1,19 @@
+# YDS Music Asset Definitions
+
+music = {
+	name = "maintheme"
+	file = "hoi4mainthemeallies.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "YDS_song_requiem_for_youth"
+	file = "YDS_requiem_for_youth.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "YDS_song_jinshui_yanguang_orchestral"
+	file = "YDS_jinshui_yanguang_orchestral.ogg"
+	volume = 0.65
+}

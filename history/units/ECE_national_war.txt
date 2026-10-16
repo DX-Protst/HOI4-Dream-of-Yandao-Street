@@ -1,0 +1,62 @@
+division_template = {
+	name = "Jiangnan Elite Academic Division"
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 3 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 1 y = 3 }
+		artillery_brigade = { x = 2 y = 0 }
+		artillery_brigade = { x = 2 y = 1 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }
+		recon = { x = 0 y = 1 }
+		artillery = { x = 0 y = 2 }
+		maintenance_company = { x = 0 y = 3 }
+	}
+}
+division_template = {
+	name = "Jiangnan Academic Armored Division"
+	regiments = {
+		light_armor = { x = 0 y = 0 }
+		light_armor = { x = 0 y = 1 }
+		light_armor = { x = 0 y = 2 }
+		light_armor = { x = 0 y = 3 }
+		motorized = { x = 1 y = 0 }
+		motorized = { x = 1 y = 1 }
+		motorized = { x = 1 y = 2 }
+		motorized = { x = 1 y = 3 }
+		motorized = { x = 1 y = 4 }
+		motorized = { x = 2 y = 0 }
+		motorized = { x = 2 y = 1 }
+		motorized = { x = 2 y = 2 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }
+		recon = { x = 0 y = 1 }
+		artillery = { x = 0 y = 2 }
+		maintenance_company = { x = 0 y = 3 }
+	}
+}
+units = {
+	division = { name = "1st Jiangnan Elite Division" location = 1146 division_template = "Jiangnan Elite Academic Division" start_experience_factor = 0.65 start_equipment_factor = 1.0 }
+	division = { name = "2nd Jiangnan Elite Division" location = 4148 division_template = "Jiangnan Elite Academic Division" start_experience_factor = 0.65 start_equipment_factor = 1.0 }
+	division = { name = "3rd Jiangnan Elite Division" location = 11913 division_template = "Jiangnan Elite Academic Division" start_experience_factor = 0.65 start_equipment_factor = 1.0 }
+	division = { name = "4th Jiangnan Elite Division" location = 1146 division_template = "Jiangnan Elite Academic Division" start_experience_factor = 0.65 start_equipment_factor = 1.0 }
+	division = { name = "5th Jiangnan Elite Division" location = 4148 division_template = "Jiangnan Elite Academic Division" start_experience_factor = 0.65 start_equipment_factor = 1.0 }
+	division = { name = "6th Jiangnan Elite Division" location = 11913 division_template = "Jiangnan Elite Academic Division" start_experience_factor = 0.65 start_equipment_factor = 1.0 }
+	division = { name = "7th Jiangnan Elite Division" location = 1146 division_template = "Jiangnan Elite Academic Division" start_experience_factor = 0.65 start_equipment_factor = 1.0 }
+	division = { name = "8th Jiangnan Elite Division" location = 4148 division_template = "Jiangnan Elite Academic Division" start_experience_factor = 0.65 start_equipment_factor = 1.0 }
+	division = { name = "9th Jiangnan Elite Division" location = 11913 division_template = "Jiangnan Elite Academic Division" start_experience_factor = 0.65 start_equipment_factor = 1.0 }
+	division = { name = "10th Jiangnan Elite Division" location = 1146 division_template = "Jiangnan Elite Academic Division" start_experience_factor = 0.65 start_equipment_factor = 1.0 }
+	division = { name = "11th Jiangnan Elite Division" location = 4148 division_template = "Jiangnan Elite Academic Division" start_experience_factor = 0.65 start_equipment_factor = 1.0 }
+	division = { name = "12th Jiangnan Elite Division" location = 11913 division_template = "Jiangnan Elite Academic Division" start_experience_factor = 0.65 start_equipment_factor = 1.0 }
+	division = { name = "1st Jiangnan Armored Division" location = 1146 division_template = "Jiangnan Academic Armored Division" start_experience_factor = 0.65 start_equipment_factor = 1.0 }
+	division = { name = "2nd Jiangnan Armored Division" location = 4148 division_template = "Jiangnan Academic Armored Division" start_experience_factor = 0.65 start_equipment_factor = 1.0 }
+	division = { name = "3rd Jiangnan Armored Division" location = 11913 division_template = "Jiangnan Academic Armored Division" start_experience_factor = 0.65 start_equipment_factor = 1.0 }
+	division = { name = "4th Jiangnan Armored Division" location = 1146 division_template = "Jiangnan Academic Armored Division" start_experience_factor = 0.65 start_equipment_factor = 1.0 }
+}

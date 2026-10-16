@@ -1,0 +1,150 @@
+scripted_gui = {
+	YDS_school_district_gui = {
+		context_type = decision_category
+		window_name = "YDS_school_district_gui_window"
+		
+		effects = {
+			YDS_node_chengwai_click = {
+				subtract_from_variable = { YDS_academic_prestige = 3 }
+				subtract_from_variable = { YDS_student_attraction = 2 }
+				
+				set_variable = { YDS_mission_active = 1 }
+				set_variable = { YDS_mission_target = 1 }
+				set_variable = { YDS_mission_progress = 0 }
+			}
+			YDS_node_shiwai_click = {
+				subtract_from_variable = { YDS_academic_prestige = 3 }
+				subtract_from_variable = { YDS_student_attraction = 2 }
+				
+				set_variable = { YDS_mission_active = 1 }
+				set_variable = { YDS_mission_target = 2 }
+				set_variable = { YDS_mission_progress = 0 }
+			}
+			YDS_node_csfz_click = {
+				subtract_from_variable = { YDS_academic_prestige = 3 }
+				subtract_from_variable = { YDS_student_attraction = 2 }
+				
+				set_variable = { YDS_mission_active = 1 }
+				set_variable = { YDS_mission_target = 3 }
+				set_variable = { YDS_mission_progress = 0 }
+			}
+			YDS_node_no7_click = {
+				subtract_from_variable = { YDS_academic_prestige = 5 }
+				subtract_from_variable = { YDS_student_attraction = 5 }
+				
+				set_variable = { YDS_mission_active = 1 }
+				set_variable = { YDS_mission_target = 4 }
+				set_variable = { YDS_mission_progress = 0 }
+			}
+			YDS_node_shishi_click = {
+				subtract_from_variable = { YDS_academic_prestige = 5 }
+				subtract_from_variable = { YDS_student_attraction = 5 }
+				
+				set_variable = { YDS_mission_active = 1 }
+				set_variable = { YDS_mission_target = 5 }
+				set_variable = { YDS_mission_progress = 0 }
+			}
+			YDS_node_shude_click = {
+				subtract_from_variable = { YDS_academic_prestige = 5 }
+				subtract_from_variable = { YDS_student_attraction = 5 }
+				
+				set_variable = { YDS_mission_active = 1 }
+				set_variable = { YDS_mission_target = 6 }
+				set_variable = { YDS_mission_progress = 0 }
+			}
+		}
+		
+		triggers = {
+			YDS_node_chengwai_visible = { always = yes }
+			YDS_node_shiwai_visible = { always = yes }
+			YDS_node_csfz_visible = { always = yes }
+			YDS_node_no7_visible = { always = yes }
+			YDS_node_shishi_visible = { always = yes }
+			YDS_node_shude_visible = { always = yes }
+
+			YDS_node_chengwai_click_enabled = {
+				always = yes
+				has_political_power > 19
+				check_variable = { YDS_academic_prestige > 2 }
+				check_variable = { YDS_student_attraction > 1 }
+				OR = {
+					NOT = { has_variable = YDS_infiltration_chengwai }
+					check_variable = { YDS_infiltration_chengwai < 100 }
+				}
+				OR = {
+					NOT = { has_variable = YDS_mission_active }
+					check_variable = { YDS_mission_active < 1 }
+				}
+			}
+			YDS_node_shiwai_click_enabled = {
+				always = yes
+				has_political_power > 19
+				check_variable = { YDS_academic_prestige > 2 }
+				check_variable = { YDS_student_attraction > 1 }
+				OR = {
+					NOT = { has_variable = YDS_infiltration_shiwai }
+					check_variable = { YDS_infiltration_shiwai < 100 }
+				}
+				OR = {
+					NOT = { has_variable = YDS_mission_active }
+					check_variable = { YDS_mission_active < 1 }
+				}
+			}
+			YDS_node_csfz_click_enabled = {
+				always = yes
+				has_political_power > 19
+				check_variable = { YDS_academic_prestige > 2 }
+				check_variable = { YDS_student_attraction > 1 }
+				OR = {
+					NOT = { has_variable = YDS_infiltration_csfz }
+					check_variable = { YDS_infiltration_csfz < 100 }
+				}
+				OR = {
+					NOT = { has_variable = YDS_mission_active }
+					check_variable = { YDS_mission_active < 1 }
+				}
+			}
+			YDS_node_no7_click_enabled = {
+				has_completed_focus = YDS_chengdu_school_district_geopolitics
+				has_political_power > 29
+				check_variable = { YDS_academic_prestige > 4 }
+				check_variable = { YDS_student_attraction > 4 }
+				OR = {
+					NOT = { has_variable = YDS_infiltration_no7 }
+					check_variable = { YDS_infiltration_no7 < 100 }
+				}
+				OR = {
+					NOT = { has_variable = YDS_mission_active }
+					check_variable = { YDS_mission_active < 1 }
+				}
+			}
+			YDS_node_shishi_click_enabled = {
+				has_completed_focus = YDS_chengdu_school_district_geopolitics
+				has_political_power > 29
+				check_variable = { YDS_academic_prestige > 4 }
+				check_variable = { YDS_student_attraction > 4 }
+				OR = {
+					NOT = { has_variable = YDS_infiltration_shishi }
+					check_variable = { YDS_infiltration_shishi < 100 }
+				}
+				OR = {
+					NOT = { has_variable = YDS_mission_active }
+					check_variable = { YDS_mission_active < 1 }
+				}
+			}
+			YDS_node_shude_click_enabled = {
+				has_completed_focus = YDS_chengdu_school_district_geopolitics
+				has_political_power > 29
+				check_variable = { YDS_academic_prestige > 4 }
+				check_variable = { YDS_student_attraction > 4 }
+				OR = {
+					NOT = { has_variable = YDS_infiltration_shude }
+					check_variable = { YDS_infiltration_shude < 100 }
+				}
+				OR = {
+					NOT = { has_variable = YDS_mission_active }
+					check_variable = { YDS_mission_active < 1 }
+				}
+			}		}
+	}
+}

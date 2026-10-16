@@ -1,0 +1,317 @@
+# Decisions for Olympiad 5-Track System and AI interactions
+# All comments are strictly in pure ASCII.
+
+YDS_olympiad_category = {
+
+	# ==================== STANDALONE GUI LAUNCHER ====================
+	YDS_open_exam_league_decision = {
+		icon = generic_research
+		visible = {
+			is_ai = no
+			is_educational_warlord = yes
+			OR = {
+				has_completed_focus = YDS_olympiad_initiative
+				has_country_flag = YDS_olympiad_active
+				NOT = { original_tag = YDS }
+			}
+		}
+		available = {
+			always = yes
+		}
+		fire_only_once = no
+		cost = 0
+		complete_effect = {
+			set_country_flag = YDS_exam_league_gui_open
+			update_exam_leaderboard_scores = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	YDS_exam_board_overview = {
+		icon = generic_research
+		visible = {
+			always = no
+		}
+		available = {
+			always = no
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	# ==================== ENERGY ALLOCATION: MATH ====================
+	YDS_assign_energy_math = {
+		icon = generic_research
+		available = {
+			check_variable = { YDS_coach_energy_used < YDS_coach_energy_total }
+		}
+		visible = {
+			always = no
+		}
+		cost = 10
+		complete_effect = {
+			add_to_variable = { YDS_invest_math = 1 }
+			add_to_variable = { YDS_coach_energy_used = 1 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	YDS_recall_energy_math = {
+		icon = generic_decision
+		available = {
+			check_variable = { YDS_invest_math > 0 }
+		}
+		visible = {
+			always = no
+		}
+		cost = 5
+		complete_effect = {
+			subtract_from_variable = { YDS_invest_math = 1 }
+			subtract_from_variable = { YDS_coach_energy_used = 1 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	# ==================== ENERGY ALLOCATION: PHYSICS ====================
+	YDS_assign_energy_physics = {
+		icon = generic_research
+		available = {
+			check_variable = { YDS_coach_energy_used < YDS_coach_energy_total }
+		}
+		visible = {
+			always = no
+		}
+		cost = 10
+		complete_effect = {
+			add_to_variable = { YDS_invest_physics = 1 }
+			add_to_variable = { YDS_coach_energy_used = 1 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	YDS_recall_energy_physics = {
+		icon = generic_decision
+		available = {
+			check_variable = { YDS_invest_physics > 0 }
+		}
+		visible = {
+			always = no
+		}
+		cost = 5
+		complete_effect = {
+			subtract_from_variable = { YDS_invest_physics = 1 }
+			subtract_from_variable = { YDS_coach_energy_used = 1 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	# ==================== ENERGY ALLOCATION: CHEMISTRY ====================
+	YDS_assign_energy_chem = {
+		icon = generic_research
+		available = {
+			check_variable = { YDS_coach_energy_used < YDS_coach_energy_total }
+		}
+		visible = {
+			always = no
+		}
+		cost = 10
+		complete_effect = {
+			add_to_variable = { YDS_invest_chem = 1 }
+			add_to_variable = { YDS_coach_energy_used = 1 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	YDS_recall_energy_chem = {
+		icon = generic_decision
+		available = {
+			check_variable = { YDS_invest_chem > 0 }
+		}
+		visible = {
+			always = no
+		}
+		cost = 5
+		complete_effect = {
+			subtract_from_variable = { YDS_invest_chem = 1 }
+			subtract_from_variable = { YDS_coach_energy_used = 1 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	# ==================== ENERGY ALLOCATION: BIOLOGY ====================
+	YDS_assign_energy_bio = {
+		icon = generic_research
+		available = {
+			check_variable = { YDS_coach_energy_used < YDS_coach_energy_total }
+		}
+		visible = {
+			always = no
+		}
+		cost = 10
+		complete_effect = {
+			add_to_variable = { YDS_invest_bio = 1 }
+			add_to_variable = { YDS_coach_energy_used = 1 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	YDS_recall_energy_bio = {
+		icon = generic_decision
+		available = {
+			check_variable = { YDS_invest_bio > 0 }
+		}
+		visible = {
+			always = no
+		}
+		cost = 5
+		complete_effect = {
+			subtract_from_variable = { YDS_invest_bio = 1 }
+			subtract_from_variable = { YDS_coach_energy_used = 1 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	# ==================== ENERGY ALLOCATION: INFORMATICS ====================
+	YDS_assign_energy_info = {
+		icon = generic_research
+		available = {
+			check_variable = { YDS_coach_energy_used < YDS_coach_energy_total }
+		}
+		visible = {
+			always = no
+		}
+		cost = 10
+		complete_effect = {
+			add_to_variable = { YDS_invest_info = 1 }
+			add_to_variable = { YDS_coach_energy_used = 1 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	YDS_recall_energy_info = {
+		icon = generic_decision
+		available = {
+			check_variable = { YDS_invest_info > 0 }
+		}
+		visible = {
+			always = no
+		}
+		cost = 5
+		complete_effect = {
+			subtract_from_variable = { YDS_invest_info = 1 }
+			subtract_from_variable = { YDS_coach_energy_used = 1 }
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	# ==================== STRATEGIC TRACK SPRINT DECISIONS (MOVED TO STANDALONE GUI) ====================
+	YDS_boost_track_math = {
+		icon = generic_research
+		visible = {
+			always = no
+		}
+		cost = 25
+		days_re_enable = 90
+		complete_effect = {
+			add_to_variable = { global.track_math_progress = 10 }
+			add_to_variable = { YDS_academic_prestige = 5 }
+			clamp_exam_track_variables = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	YDS_boost_track_physics = {
+		icon = generic_research
+		visible = {
+			always = no
+		}
+		cost = 25
+		days_re_enable = 90
+		complete_effect = {
+			add_to_variable = { global.track_physics_progress = 10 }
+			add_to_variable = { YDS_academic_prestige = 5 }
+			clamp_exam_track_variables = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	YDS_boost_track_chem = {
+		icon = generic_research
+		visible = {
+			always = no
+		}
+		cost = 25
+		days_re_enable = 90
+		complete_effect = {
+			add_to_variable = { global.track_chem_progress = 15 }
+			add_to_variable = { YDS_cheat_risk = 10 }
+			clamp_exam_track_variables = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	YDS_boost_track_bio = {
+		icon = generic_research
+		visible = {
+			always = no
+		}
+		cost = 25
+		days_re_enable = 90
+		complete_effect = {
+			add_to_variable = { global.track_bio_progress = 10 }
+			add_to_variable = { YDS_academic_prestige = 5 }
+			clamp_exam_track_variables = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	YDS_boost_track_info = {
+		icon = generic_research
+		visible = {
+			always = no
+		}
+		cost = 25
+		days_re_enable = 90
+		complete_effect = {
+			add_to_variable = { global.track_info_progress = 10 }
+			add_to_variable = { YDS_academic_prestige = 5 }
+			clamp_exam_track_variables = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	# ==================== COUNTER OPPONENT DECISIONS (MOVED TO STANDALONE GUI) ====================
+	YDS_counter_ece = {
+		icon = generic_propaganda
+		visible = {
+			always = no
+		}
+		cost = 30
+		days_re_enable = 120
+		complete_effect = {
+			add_to_variable = { global.track_math_progress = 8 }
+			add_to_variable = { global.track_chem_progress = 8 }
+			clamp_exam_track_variables = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	YDS_counter_hbe = {
+		icon = generic_propaganda
+		visible = {
+			always = no
+		}
+		cost = 30
+		days_re_enable = 120
+		complete_effect = {
+			add_to_variable = { global.track_physics_progress = 12 }
+			clamp_exam_track_variables = yes
+		}
+		ai_will_do = { factor = 0 }
+	}
+
+	# ==================== AI SHADOW DECISIONS (REMOVED) ====================
+	# Former HBE/ECE/SNE/EBS shadow decisions silently drained tracks every 45 days
+	# with no GUI feedback. Opponent pressure now lives in calc_exam_track_weekly_deltas
+	# as a visible, deterministic weekly resistance.
+
+}

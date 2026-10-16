@@ -1,0 +1,175 @@
+# Border War resolution events for PRC expansion decisions
+# Pure ASCII comments only
+
+add_namespace = SEA_PRC_border_war_events
+
+# Guyuan Border War: Attacker Victory
+country_event = {
+	id = SEA_PRC_border_war_events.1
+	title = SEA_PRC_border_war_events.1.t
+	desc = SEA_PRC_border_war_events.1.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = SEA_PRC_border_war_events.1.a
+		if = {
+			limit = {
+				tag = PRC
+			}
+			1045 = {
+				transfer_state_to = PRC
+			}
+			add_war_support = 0.05
+			army_experience = 10
+		}
+		if = {
+			limit = {
+				NOT = { tag = PRC }
+			}
+			add_war_support = -0.05
+		}
+	}
+}
+
+# Guyuan Border War: Attacker Defeat / Defender Victory
+country_event = {
+	id = SEA_PRC_border_war_events.2
+	title = SEA_PRC_border_war_events.2.t
+	desc = SEA_PRC_border_war_events.2.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = SEA_PRC_border_war_events.2.a
+		if = {
+			limit = {
+				tag = PRC
+			}
+			add_war_support = -0.05
+		}
+		if = {
+			limit = {
+				NOT = { tag = PRC }
+			}
+			add_war_support = 0.05
+			army_experience = 10
+		}
+	}
+}
+
+# Shanxi Border War: Attacker Victory
+country_event = {
+	id = SEA_PRC_border_war_events.3
+	title = SEA_PRC_border_war_events.3.t
+	desc = SEA_PRC_border_war_events.3.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = SEA_PRC_border_war_events.3.a
+		if = {
+			limit = {
+				tag = PRC
+			}
+			615 = {
+				transfer_state_to = PRC
+			}
+			add_war_support = 0.05
+			army_experience = 10
+		}
+		if = {
+			limit = {
+				NOT = { tag = PRC }
+			}
+			add_war_support = -0.05
+		}
+	}
+}
+
+# Shanxi Border War: Attacker Defeat / Defender Victory
+country_event = {
+	id = SEA_PRC_border_war_events.4
+	title = SEA_PRC_border_war_events.4.t
+	desc = SEA_PRC_border_war_events.4.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = SEA_PRC_border_war_events.4.a
+		if = {
+			limit = {
+				tag = PRC
+			}
+			add_war_support = -0.05
+		}
+		if = {
+			limit = {
+				NOT = { tag = PRC }
+			}
+			add_war_support = 0.05
+			army_experience = 10
+		}
+	}
+}
+
+# Yanan Border War: Attacker Victory
+country_event = {
+	id = SEA_PRC_border_war_events.5
+	title = SEA_PRC_border_war_events.5.t
+	desc = SEA_PRC_border_war_events.5.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = SEA_PRC_border_war_events.5.a
+		if = {
+			limit = {
+				tag = PRC
+			}
+			1032 = {
+				transfer_state_to = PRC
+			}
+			add_war_support = 0.05
+			army_experience = 10
+		}
+		if = {
+			limit = {
+				NOT = { tag = PRC }
+			}
+			add_war_support = -0.05
+		}
+	}
+}
+
+# Yanan Border War: Attacker Defeat / Defender Victory
+country_event = {
+	id = SEA_PRC_border_war_events.6
+	title = SEA_PRC_border_war_events.6.t
+	desc = SEA_PRC_border_war_events.6.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = SEA_PRC_border_war_events.6.a
+		if = {
+			limit = {
+				tag = PRC
+			}
+			add_war_support = -0.05
+		}
+		if = {
+			limit = {
+				NOT = { tag = PRC }
+			}
+			add_war_support = 0.05
+			army_experience = 10
+		}
+	}
+}

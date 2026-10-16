@@ -1,0 +1,31 @@
+state = {
+	impassable = yes
+	id = 612
+	name = "STATE_612"
+	manpower = 566000
+	resources = {
+		coal = 3
+	}
+	state_category = town
+	history = {
+		owner = ZBX
+		add_core_of = ZBX
+		controller = ZBX
+		add_core_of = EBS
+		add_core_of = MEN
+		add_core_of = CHI
+		add_core_of = PRC
+		victory_points = { 10372 1 }
+		victory_points = { 12448 1 }
+		buildings = {
+			arms_factory = 1
+			industrial_complex = 2
+			infrastructure = 1
+		}
+	}
+	provinces = {
+		1551 1608 1796 1811 1871 4222 4555 7578 7648 10363 10372 12348 12448 12554
+	}
+	local_supplies = 0
+	buildings_max_level_factor = 1
+}

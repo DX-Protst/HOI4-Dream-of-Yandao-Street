@@ -1,0 +1,30 @@
+state = {
+	id = 613
+	name = "STATE_613"
+	manpower = 6180392
+	state_category = large_city
+	history = {
+		owner = ECE
+		controller = ECE
+		add_core_of = ECE
+		add_core_of = CHI
+		add_core_of = PRC
+		victory_points = { 7014 5 }
+		buildings = {
+			arms_factory = 2
+			industrial_complex = 2
+			infrastructure = 3
+			air_base = 6
+			dockyard = 1
+			7014 = {
+				naval_base = 6
+				coastal_bunker = 1
+				bunker = 1
+			}
+		}
+	}
+	provinces = {
+		7014 10034 12052 12076
+	}
+	local_supplies = 0
+}

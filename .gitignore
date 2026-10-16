@@ -1,0 +1,18 @@
+# Temporary and dump scripts
+temp_dump.py
+
+# Python & agent cache/logs
+__pycache__/
+*.py[cod]
+*$py.class
+*.log
+.agents/teamwork/
+
+# OS metadata
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Editor/IDE files
+.vscode/
+.idea/

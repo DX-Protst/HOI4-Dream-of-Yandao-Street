@@ -1,0 +1,192 @@
+ideas = {
+
+	country = {
+		YDS_chengwai_phase_1_buff = {
+			removal_cost = -1
+			modifier = {
+				research_speed_factor = 0.01
+			}
+		}
+
+		YDS_chengwai_phase_2_buff = {
+			removal_cost = -1
+			modifier = {
+				research_speed_factor = 0.01
+				stability_factor = 0.05
+			}
+		}
+
+		YDS_chengwai_phase_3_buff = {
+			removal_cost = -1
+			modifier = {
+				research_speed_factor = 0.01
+				consumer_goods_factor = -0.05
+				political_power_gain = 0.01
+			}
+		}
+
+		YDS_csfz_phase_1_buff = {
+			removal_cost = -1
+			modifier = {
+				research_speed_factor = 0.01
+			}
+		}
+
+		YDS_csfz_phase_2_buff = {
+			removal_cost = -1
+			modifier = {
+				research_speed_factor = 0.01
+				stability_factor = 0.05
+			}
+		}
+
+		YDS_csfz_phase_3_buff = {
+			removal_cost = -1
+			modifier = {
+				research_speed_factor = 0.01
+				training_time_factor = -0.1
+				conscription_factor = 0.02
+			}
+		}
+
+		YDS_no7_phase_1_buff = {
+			removal_cost = -1
+			modifier = {
+				research_speed_factor = 0.01
+			}
+		}
+
+		YDS_no7_phase_2_buff = {
+			removal_cost = -1
+			modifier = {
+				research_speed_factor = 0.01
+				production_factory_max_efficiency_factor = 0.05
+			}
+		}
+
+		YDS_no7_phase_3_buff = {
+			removal_cost = -1
+			modifier = {
+				research_speed_factor = 0.02
+				production_factory_max_efficiency_factor = 0.1
+				political_power_gain = 0.02
+			}
+		}
+
+		YDS_shishi_phase_1_buff = {
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+			}
+		}
+
+		YDS_shishi_phase_2_buff = {
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.1
+				political_power_gain = 0.01
+			}
+		}
+
+		YDS_shishi_phase_3_buff = {
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.2
+				political_power_gain = 0.02
+				consumer_goods_factor = -0.05
+			}
+		}
+
+		YDS_shiwai_phase_1_buff = {
+			removal_cost = -1
+			modifier = {
+				research_speed_factor = 0.01
+			}
+		}
+
+		YDS_shiwai_phase_2_buff = {
+			removal_cost = -1
+			modifier = {
+				research_speed_factor = 0.01
+				stability_factor = 0.05
+			}
+		}
+
+		YDS_shiwai_phase_3_buff = {
+			removal_cost = -1
+			modifier = {
+				research_speed_factor = 0.01
+				industrial_capacity_factory = 0.1
+				production_factory_max_efficiency_factor = 0.05
+			}
+		}
+
+		YDS_shude_phase_1_buff = {
+			removal_cost = -1
+			modifier = {
+				army_org_factor = 0.05
+			}
+		}
+
+		YDS_shude_phase_2_buff = {
+			removal_cost = -1
+			modifier = {
+				army_org_factor = 0.1
+				training_time_factor = -0.1
+			}
+		}
+
+		YDS_shude_phase_3_buff = {
+			removal_cost = -1
+			modifier = {
+				army_org_factor = 0.15
+				training_time_factor = -0.15
+				experience_gain_army_factor = 0.2
+			}
+		}
+
+		# ==================== INFILTRATION RESISTANCE DEBUFF ====================
+
+		# Social friction when any school is being infiltrated
+		YDS_school_resistance_debuff = {
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.05
+				research_speed_factor = -0.05
+				consumer_goods_factor = 0.03
+			}
+		}
+
+		# ==================== UNITED SUBMISSION IDEAS ====================
+
+		# Elite schools united (Shishi, No.7, Shude all submitted)
+		YDS_elite_schools_united = {
+			removal_cost = -1
+			modifier = {
+				research_speed_factor = 0.04
+				stability_factor = 0.2
+				political_power_gain = 0.05
+				consumer_goods_factor = -0.05
+				production_factory_max_efficiency_factor = 0.1
+				army_org_factor = 0.15
+				training_time_factor = -0.15
+				experience_gain_army_factor = 0.2
+			}
+		}
+
+		# Regular schools united (Chengwai, Shiwai, CSFZ all submitted)
+		YDS_regular_schools_united = {
+			removal_cost = -1
+			modifier = {
+				research_speed_factor = 0.03
+				consumer_goods_factor = -0.05
+				political_power_gain = 0.03
+				industrial_capacity_factory = 0.1
+				production_factory_max_efficiency_factor = 0.05
+				training_time_factor = -0.1
+				conscription_factor = 0.02
+			}
+		}
+
+	}
+}

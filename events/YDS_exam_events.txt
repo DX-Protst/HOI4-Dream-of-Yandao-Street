@@ -1,0 +1,171 @@
+add_namespace = yds_event
+
+country_event = {
+	id = yds_event.60
+	title = yds_event.60.t
+	desc = yds_event.60.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = {
+		name = yds_event.60.a
+		add_to_variable = {
+			YDS_infiltration_shishi = 10
+		}
+		ai_chance = { base = 100 }
+	}
+
+	option = {
+		name = yds_event.60.b
+		add_to_variable = {
+			YDS_infiltration_shude = 10
+		}
+		ai_chance = { base = 100 }
+	}
+
+	option = {
+		name = yds_event.60.c
+		add_to_variable = {
+			YDS_infiltration_no7 = 10
+		}
+		ai_chance = { base = 100 }
+	}
+
+	option = {
+		name = yds_event.60.e
+		ai_chance = { base = 100 }
+	}
+}
+
+country_event = {
+	id = yds_event.61
+	title = yds_event.61.t
+	desc = yds_event.61.d
+	picture = GFX_report_event_generic_factory
+
+	is_triggered_only = yes
+
+	option = {
+		name = yds_event.61.a
+		add_to_variable = {
+			YDS_academic_prestige = 15
+		}
+		add_to_variable = {
+			YDS_infiltration_shishi = 5
+		}
+		ai_chance = { base = 100 }
+	}
+
+	option = {
+		name = yds_event.61.b
+		add_to_variable = {
+			YDS_academic_prestige = 15
+		}
+		add_to_variable = {
+			YDS_infiltration_shude = 5
+		}
+		ai_chance = { base = 100 }
+	}
+
+	option = {
+		name = yds_event.61.c
+		add_to_variable = {
+			YDS_academic_prestige = 15
+		}
+		add_to_variable = {
+			YDS_infiltration_no7 = 5
+		}
+		ai_chance = { base = 100 }
+	}
+
+	option = {
+		name = yds_event.61.e
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = 500
+			producer = YDS
+		}
+		ai_chance = { base = 100 }
+	}
+}
+
+country_event = {
+	id = yds_event.62
+	title = yds_event.62.t
+	desc = yds_event.62.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = yds_event.62.a
+		add_to_variable = {
+			YDS_academic_prestige = 15
+		}
+		add_to_variable = {
+			YDS_infiltration_chengwai = 15
+		}
+		ai_chance = { base = 100 }
+	}
+
+	option = {
+		name = yds_event.62.b
+		add_to_variable = {
+			YDS_academic_prestige = 15
+		}
+		add_to_variable = {
+			YDS_infiltration_shiwai = 15
+		}
+		ai_chance = { base = 100 }
+	}
+
+	option = {
+		name = yds_event.62.c
+		add_to_variable = {
+			YDS_academic_prestige = 15
+		}
+		add_to_variable = {
+			YDS_infiltration_csfz = 15
+		}
+		ai_chance = { base = 100 }
+	}
+
+	option = {
+		name = yds_event.62.e
+		add_political_power = 100
+		ai_chance = { base = 100 }
+	}
+}
+
+country_event = {
+	id = yds_event.63
+	title = yds_event.63.t
+	desc = yds_event.63.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = {
+		name = yds_event.63.a
+		trigger = {
+			check_variable = {
+				YDS_academic_prestige > 50
+			}
+		}
+		add_political_power = 150
+		add_stability = 0.1
+		ai_chance = { base = 100 }
+	}
+
+	option = {
+		name = yds_event.63.b
+		trigger = {
+			check_variable = {
+				YDS_academic_prestige < 51
+			}
+		}
+		add_political_power = -50
+		add_stability = -0.05
+		ai_chance = { base = 100 }
+	}
+}

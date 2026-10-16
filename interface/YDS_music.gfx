@@ -1,0 +1,7 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_yds_music_album_art"
+		texturefile = "gfx/interface/yds_music_album_art.dds"
+		noOfFrames = 2
+	}
+}

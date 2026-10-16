@@ -1,0 +1,754 @@
+ideas = {
+
+	country = {
+		# Academic ivory tower bias debuff: strong theoretical foundation but weak industrial engineering & military gear
+		YDS_academic_ivory_tower_bias = {
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				research_speed_factor = -0.20
+			}
+			research_bonus = {
+				industry = -0.30
+				infantry_weapons = -0.25
+				electronics = 0.10
+			}
+		}
+
+		YDS_academic_freedom = {
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				research_speed_factor = 0.15
+				stability_factor = 0.1
+			}
+		}
+
+		YDS_autonomy_high_buff = {
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.1
+				recruitable_population_factor = 0.1
+				army_morale_factor = 0.1
+			}
+		}
+
+		YDS_autonomy_low_debuff = {
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.1
+				army_org_factor = -0.1
+			}
+		}
+
+		YDS_bureau_order = {
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.15
+				political_power_gain = 0.03
+				research_speed_factor = -0.05
+			}
+		}
+
+		YDS_bureau_supervision = {
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_gain = 0.02
+				stability_factor = 0.05
+			}
+		}
+
+		YDS_campus_gigafactory_idea = {
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				industrial_capacity_factory = 0.1
+				consumer_goods_factor = -0.05
+				production_factory_max_efficiency_factor = 0.05
+			}
+		}
+
+		YDS_canteen_monopoly_idea = {
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = -0.05
+				political_power_gain = 0.02
+			}
+		}
+
+		YDS_chem_reagents_idea = {
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				production_speed_synthetic_refinery_factor = 0.15
+			}
+		}
+
+		YDS_class_1_civil_war_buff = {
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				army_morale_factor = 0.15
+				recruitable_population = 0.02
+			}
+		}
+
+		YDS_educational_decline = {
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				research_speed_factor = -0.1
+				consumer_goods_factor = 0.05
+				political_power_gain = -0.15
+			}
+		}
+
+		YDS_elite_materials = {
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				research_speed_factor = 0.03
+				political_power_gain = -0.05
+			}
+		}
+
+		YDS_gpa_high_buff = {
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				research_speed_factor = 0.04
+				stability_factor = -0.05
+			}
+		}
+
+		YDS_gpa_low_debuff = {
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				research_speed_factor = -0.15
+				stability_factor = -0.15
+			}
+		}
+
+		YDS_jiang_guangping_civil_war_buff = {
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				army_defence_factor = 0.15
+				weekly_manpower = 200
+			}
+		}
+
+		YDS_li_gang_civil_war_buff = {
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				army_attack_factor = 0.15
+				planning_speed = 0.2
+				army_speed_factor = 0.1
+			}
+		}
+
+		YDS_merger_tension = {
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.15
+				political_power_gain = -0.3
+				political_power_factor = -0.1
+			}
+		}
+
+		# ==================== POLITICAL ROUTE DEBUFFS ====================
+
+		YDS_bureau_control_debuff = {
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = 0.05
+				political_power_gain = -0.05
+				research_speed_factor = -0.1
+			}
+		}
+
+		YDS_autonomy_struggle_debuff = {
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.1
+				political_power_gain = -0.05
+				consumer_goods_factor = 0.05
+			}
+		}
+
+		YDS_alumni_division_debuff = {
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.1
+				political_power_gain = -0.1
+				army_org_factor = -0.1
+			}
+		}
+
+		# ==================== POLITICAL ROUTE DYNAMIC BUFFS ====================
+
+		YDS_military_buff_1 = {
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				army_attack_factor = 0.1
+				army_core_attack_factor = 0.05
+			}
+		}
+
+		YDS_military_buff_2 = {
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				army_defence_factor = 0.1
+				army_core_defence_factor = 0.05
+				conscription = 0.02
+			}
+		}
+
+		YDS_old_glory_buff = {
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.15
+				research_speed_factor = 0.03
+			}
+		}
+
+		YDS_olympiad_elite_training_spirit = {
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				research_speed_factor = 0.03
+				political_power_gain = 0.03
+			}
+		}
+
+		YDS_olympiad_excellent_spirit = {
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				research_speed_factor = 0.04
+				stability_factor = 0.05
+			}
+		}
+
+		YDS_olympiad_gold_medal_focus = {
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				research_speed_factor = 0.03
+				stability_factor = -0.1
+			}
+		}
+
+		YDS_olympiad_legend_spirit = {
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				research_speed_factor = 0.06
+				stability_factor = 0.1
+			}
+		}
+
+		YDS_olympiad_solid_spirit = {
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				research_speed_factor = 0.02
+				stability_factor = 0.02
+			}
+		}
+
+		YDS_olympiad_well_rounded_focus = {
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				research_speed_factor = 0.02
+				stability_factor = 0.05
+			}
+		}
+
+		YDS_sports_armory_idea = {
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				industrial_capacity_factory = 0.05
+				line_change_production_efficiency_factor = 0.1
+			}
+		}
+
+		YDS_student_faction_dominant = {
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				research_speed_factor = 0.03
+				social_liberal_drift = 0.05
+				consumer_goods_factor = -0.05
+			}
+		}
+
+		YDS_teacher_faction_dominant = {
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.15
+				political_power_gain = 0.03
+				authoritarian_democrat_drift = 0.05
+			}
+		}
+
+		YDS_wartime_alumni_spirit = {
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				army_attack_factor = 0.2
+				breakthrough_factor = 0.1
+			}
+		}
+
+		YDS_wartime_bureau_spirit = {
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				army_defence_factor = 0.2
+				org_loss_when_moving = -0.1
+			}
+		}
+
+		YDS_wartime_student_spirit = {
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				army_morale_factor = 0.2
+				army_speed_factor = 0.15
+			}
+		}
+
+		SXI_hengshui_militarization = {
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				army_org_factor = 0.20
+				max_dig_in = 5
+				dig_in_speed_factor = 0.15
+			}
+		}
+
+		HBE_olympiad_shock = {
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				army_artillery_attack_factor = 0.20
+				breakthrough_factor = 0.20
+				research_speed_factor = 0.15
+			}
+		}
+
+		YNE_highland_joint_exam = {
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				army_speed_factor = 0.20
+				supply_consumption_factor = -0.20
+			}
+		}
+
+		SHS_despair_wall = {
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				army_defence_factor = 0.20
+				army_org_factor = 0.20
+				army_attack_factor = -0.10
+			}
+		}
+
+		SNE_coastal_pragmatism = {
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = -0.10
+				industrial_capacity_factory = 0.15
+				stability_factor = 0.10
+			}
+		}
+
+		ECE_jiangnan_elites = {
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				research_speed_factor = 0.20
+				army_attack_factor = 0.15
+			}
+		}
+
+		EBS_privilege_iron_fist = {
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				industrial_capacity_factory = 0.20
+				production_speed_arms_factory_factor = 0.15
+				army_defence_factor = 0.25
+			}
+		}
+
+		# ==================== NATIONAL WAR WARTIME MOBILIZATION IDEAS ====================
+
+		# YDS: National Exam War Total Mobilization
+		YDS_national_war_effort = {
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				recruitable_population_factor = 0.10
+				weekly_manpower = 300
+				army_morale_factor = 0.10
+				war_support_factor = 0.20
+				political_power_gain = -0.10
+			}
+		}
+
+		# SXI: Hengshui-style Total War Mobilization
+		SXI_total_war_study_camp = {
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				army_org_factor = 0.10
+				max_dig_in = 5
+				dig_in_speed_factor = 0.10
+				conscription = 0.03
+			}
+		}
+
+		# HBE: Olympiad Shock Brigade Mobilization
+		HBE_olympiad_shock_mobilization = {
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				army_attack_factor = 0.15
+				breakthrough_factor = 0.10
+				army_artillery_attack_factor = 0.10
+				army_morale_factor = 0.10
+			}
+		}
+
+		# YNE: Plateau Guerrilla Mobilization
+		YNE_guerrilla_mobilization = {
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				army_speed_factor = 0.10
+				supply_consumption_factor = -0.10
+				army_defence_factor = 0.05
+				recruitable_population_factor = 0.05
+			}
+		}
+
+		# SHS: Despair Wall Absolute Defense
+		SHS_despair_wall_mobilization = {
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				army_defence_factor = 0.15
+				army_org_factor = 0.10
+				max_dig_in = 5
+				conscription = 0.03
+			}
+		}
+
+		# SNE: Coastal Economic Total Mobilization
+		SNE_coastal_total_mobilization = {
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				industrial_capacity_factory = 0.10
+				consumer_goods_factor = -0.05
+				political_power_gain = 0.10
+				weekly_manpower = 150
+			}
+		}
+
+		# ECE: Jiangnan Elite Levy
+		ECE_elite_levy = {
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				army_attack_factor = 0.15
+				breakthrough_factor = 0.15
+				army_speed_factor = 0.05
+				research_speed_factor = 0.10
+			}
+		}
+
+		# EBS: Bureau Wartime Total Control
+		EBS_bureau_total_control = {
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				army_defence_factor = 0.15
+				industrial_capacity_factory = 0.10
+				production_speed_arms_factory_factor = 0.10
+				political_power_gain = 0.05
+				stability_factor = 0.10
+				conscription = 0.02
+			}
+		}
+
+		# Olympiad Math Gold Spirit
+		YDS_olympiad_math_gold_spirit = {
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				army_artillery_attack_factor = 0.10
+				army_artillery_defence_factor = 0.10
+				research_speed_factor = 0.02
+			}
+		}
+
+		# Olympiad Physics Gold Spirit
+		YDS_olympiad_physics_gold_spirit = {
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				industrial_capacity_factory = 0.08
+				production_speed_industrial_complex_factor = 0.10
+				research_speed_factor = 0.02
+			}
+		}
+
+		# Olympiad Chemistry Gold Spirit
+		YDS_olympiad_chem_gold_spirit = {
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				production_speed_synthetic_refinery_factor = 0.20
+				fuel_gain_factor = 0.10
+			}
+		}
+
+		# Olympiad Biology Gold Spirit
+		YDS_olympiad_bio_gold_spirit = {
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				army_org_regain = 0.10
+				experience_loss_factor = -0.15
+			}
+		}
+
+		# Olympiad Informatics Gold Spirit
+		YDS_olympiad_info_gold_spirit = {
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				decryption_factor = 0.20
+				encryption_factor = 0.15
+				recon_factor = 0.10
+			}
+		}
+
+		# Ivory Tower Hegemony for Exam Winners (High buffs, but isolated and cannot ally)
+		YDS_ivory_tower_hegemony = {
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			rule = {
+				can_join_factions = no
+				can_create_factions = no
+			}
+			modifier = {
+				research_speed_factor = 0.03
+				industrial_capacity_factory = 0.15
+				army_core_attack_factor = 0.15
+				army_org_factor = -0.10
+			}
+		}
+
+
+		# Repeater Coalition Pact for Exam Losers
+		YDS_repeater_coalition_pact = {
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			rule = {
+				can_join_factions = yes
+				can_create_factions = yes
+			}
+			modifier = {
+				recruitable_population_factor = 0.10
+				mobilization_speed = 0.50
+				army_morale_factor = 0.15
+			}
+		}
+
+		# Repeater Underdog Spirit for YDS if Failed Exam
+		YDS_repeater_underdog_spirit = {
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			rule = {
+				can_join_factions = yes
+				can_create_factions = yes
+			}
+			modifier = {
+				recruitable_population_factor = 0.10
+				mobilization_speed = 0.50
+				army_org_regain = 0.20
+			}
+		}
+
+		# Gaokao Wartime Spirits
+		YDS_exam_hall_tactics_spirit = {
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				army_attack_factor = 0.10
+				army_defence_factor = 0.10
+			}
+		}
+
+		YDS_break_siege_spirit = {
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				army_speed_factor = 0.10
+				breakthrough_factor = 0.15
+			}
+		}
+
+		YDS_national_exam_hegemony = {
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.15
+				research_speed_factor = 0.03
+				political_power_gain = 0.05
+			}
+		}
+
+	}
+}

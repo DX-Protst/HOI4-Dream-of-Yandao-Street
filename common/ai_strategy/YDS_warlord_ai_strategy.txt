@@ -1,0 +1,26 @@
+# AI Strategy to prevent premature unscripted wars against YDS before Gaokao
+# All comments are strictly in pure ASCII.
+
+peace_before_gaokao = {
+	enable = {
+		NOT = { has_global_flag = yds_national_war_active }
+	}
+	abort = {
+		has_global_flag = yds_national_war_active
+	}
+	ai_strategy = {
+		type = antagonize
+		id = YDS
+		value = -200
+	}
+	ai_strategy = {
+		type = declare_war
+		id = YDS
+		value = -200
+	}
+	ai_strategy = {
+		type = conquer
+		id = YDS
+		value = -200
+	}
+}

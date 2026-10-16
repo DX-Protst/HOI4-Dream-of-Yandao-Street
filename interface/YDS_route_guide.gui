@@ -1,0 +1,17 @@
+guiTypes = {
+    containerWindowType = {
+        name = "YDS_route_guide_container"
+        position = { x = 330 y = 12 }
+        size = { width = 140 height = 35 }
+
+        buttonType = {
+            name = "YDS_route_guide_button"
+            position = { x = 0 y = 0 }
+            quadTextureSprite = "GFX_button_123x34"
+            buttonText = "YDS_ROUTE_GUIDE_TITLE"
+            buttonFont = "hoi_16mbs"
+            pdx_tooltip = "YDS_ROUTE_GUIDE_TT"
+            clicksound = click_default
+        }
+    }
+}

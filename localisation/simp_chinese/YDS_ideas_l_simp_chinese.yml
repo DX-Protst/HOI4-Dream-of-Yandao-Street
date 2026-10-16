@@ -1,0 +1,300 @@
+﻿l_simp_chinese:
+
+ EBS_privilege_iron_fist:0 "京津高考特权与铁腕巡视"
+
+ EBS_privilege_iron_fist_desc:0 "京津的清晨七点，东三环的车流已经堵到教委大楼门口，而大楼深处的卷宗室依然彻夜亮着灯。\n督导组手里攥着两样东西：京津录取率的特权指标，和东北老工业基地钢铁般的人情网络。红头文件从这里出发，三天之内就能抵达任何一个省份的课桌。\n高额的生产指标与高压巡视双重加持之下，没有任何一所学校敢在督导组的目光前抬起头来。"
+
+ ECE_jiangnan_elites:0 "江南精英教研与强基玄学"
+
+ ECE_jiangnan_elites_desc:0 "江南的梅雨季里，南京与上海的名校俱乐部从不缺伞——那是强基计划与自主招生撑开的保护伞。\n讲台上的精英们不背课本，他们背诵的是高等数学的公式与微积分的边界。当你还在为导数发愁时，他们已经用泰勒展开把你按在考场的地板上摩擦。\n降维打击从来不是修辞，而是华东教研的日常操作。"
+
+ HBE_olympiad_shock:0 "奥赛集训队魔鬼突击"
+
+ HBE_olympiad_shock_desc:0 "凌晨四点的黄冈，物理竞赛集训队的灯还亮着。周鹏亲自坐镇，把一本本绝版压轴题集拆解成一道道可以吞下去的弹药。\n这些由奥赛尖子生组成的突击旅，白天是教室里的学霸，入夜后便是题海中的魔鬼。他们突破的从来不只是试卷的最后一问，还有每一个对手精心构筑的防线。"
+
+ SHS_despair_wall:0 "地狱级录取率绝望壁垒"
+
+ SHS_despair_wall_desc:0 "河北、河南、山东、山西——四个省份的考生加起来比欧洲一半国家的人口还多，录取名额却像漏水的沙漏。\n在这地狱级的录取率面前，每一个山河学子都是退无可退的战士。他们把绝望砌成城墙，把卷子叠成堑壕，守在百万卷王组成的壁垒之后，寸步不让。"
+
+ SNE_coastal_pragmatism:0 "双轨国际部与广式实用主义"
+
+ SNE_coastal_pragmatism_desc:0 "珠江口的晚风里，华南的考霸们从不慌张。左手高考，右手AP与IB，两条轨道随时可以切换。\n广式实用主义刻在他们的骨子里：早茶可以慢慢喝，卷子必须快快刷；资金充沛得像珠江的潮水，后勤扎实得像骑楼下的老字号。\n他们不打没有把握的仗——但一旦开打，每一分钱都会花在刀刃上。"
+
+ SXI_hengshui_militarization:0 "衡式作息与秦岭天险"
+
+ SXI_hengshui_militarization_desc:0 "凌晨五点整，秦岭脚下的起床铃准时炸响。在这里，作息表不是建议，是军令。\n衡水式的军事化节奏把每一天压成一张严丝合缝的日程表，而秦岭的天险又把整个关中锁进一座天然的堡垒。\n驻守在堑壕与山脊之后的考霸们组织度极高，任何进攻者都将在山路上耗尽锐气。"
+
+ YDS_academic_freedom:0 "学术自治与教学自由"
+
+ YDS_academic_freedom_desc:0 "自由思考的微风吹拂着每一个人的课桌。去中心化的班级自治极大地激发了师生的学术创造力，盐中正在成为人道主义的学术重镇。"
+
+ YDS_autonomy_high_buff:0 "高度自由的学生自治"
+
+ YDS_autonomy_high_buff_desc:0 "学生们在自由的氛围中爆发出惊人的创造力与热情，这极大地提高了他们在战场和后方的士气与动员潜力。"
+
+ YDS_autonomy_low_debuff:0 "高压迫下的沉闷学风"
+
+ YDS_autonomy_low_debuff_desc:0 "极低的自治度使得整个学校变成了一台冰冷无情的考试机器，学生们普遍感到压抑和不满。"
+
+ YDS_bureau_order:0 "教育局制定的铁腕秩序"
+
+ YDS_bureau_order_desc:0 "在均等化方针的推行下，校园内建立起了分毫不差的铁腕行政秩序。尽管扼杀了天才的创新，但稳定的考绩提升了校委会的管理效率。"
+
+ YDS_bureau_supervision:0 "教育局监督机制"
+
+ YDS_bureau_supervision_desc:0 "来自上级教育局的强力行政督导，规范了一线教学动作，但也压制了学校的教研活力。"
+
+ YDS_campus_gigafactory_idea:0 "盐中校园后勤联合总社"
+
+ YDS_campus_gigafactory_idea_desc:0 "小卖部、文印室、体育库与实验室被深度整合为全校一体化的庞大后勤帝国。从考卷印制到后勤调度，盐道街中学的校内产学研后勤运转效率达到了无可比拟的巅峰。"
+
+ YDS_canteen_monopoly_idea:0 "小卖部垄断经济"
+
+ YDS_canteen_monopoly_idea_desc:0 "通过全面承包校园小卖部、冰镇汽水与辣条贩卖机，后勤部门牢牢垄断了全校师生的零食与能量补给线，为校方源源不断地输送流动资金与经营利润。"
+
+ YDS_chem_reagents_idea:0 "化学社试剂自给"
+
+ YDS_chem_reagents_idea_desc:0 "化学社的学生们在实验室里熬夜提炼无水乙醇与高锰酸钾，并批量调制批改作业所需的红墨水，实现了科研与实验物资的高度自给自足。"
+
+ YDS_chengwai_phase_1_buff:0 "初探成外"
+
+ YDS_chengwai_phase_2_buff:0 "深入成外"
+
+ YDS_chengwai_phase_3_buff:0 "成外附庸"
+
+ YDS_class_1_civil_war_buff:0 "为了自由而战的师生"
+
+ YDS_class_1_civil_war_buff_desc:0 "为了打破压抑的应试管理，一班的联合师生爆发出顽强的抵抗意志。"
+
+ YDS_csfz_phase_1_buff:0 "初探川师附中"
+
+ YDS_csfz_phase_2_buff:0 "深入川师附中"
+
+ YDS_csfz_phase_3_buff:0 "川师附中附庸"
+
+ YDS_educational_decline:0 "教学质量下滑"
+
+ YDS_educational_decline_desc:0 "在‘强制拉平、大纲统一’的行政高压下，原先个性化的培优教研被全面叫停，名师们被迫淹没在无意义的台账与表格中。师生的学术创造力遭到强力稀释，日常平均绩效与科研研究速度呈现出肉眼可见的不可逆下滑。"
+
+ YDS_elite_materials:0 "垄断的高端教辅"
+
+ YDS_elite_materials_desc:0 "通过秘密印刷走私的高端教辅试卷，尖子生们在繁重的刷题任务下精进着考试能力，虽然代价是期末前日益沉重的心理负累。"
+
+ YDS_gpa_high_buff:0 "高绩点学术繁荣"
+
+ YDS_gpa_high_buff_desc:0 "极高的绩点带动了整体科研的突破，但也带来了些许的学习压力。"
+
+ YDS_gpa_low_debuff:0 "学术降级警告"
+
+ YDS_gpa_low_debuff_desc:0 "由于绩点过低，学校面临家长和教育局的强烈抗议，科研和稳定度大幅下降。"
+
+ YDS_jiang_guangping_civil_war_buff:0 "校委会铁拳卫士"
+
+ YDS_jiang_guangping_civil_war_buff_desc:0 "为了维护学校秩序与教育局的指导方针，校委会将以铁腕捍卫体制内的教学防线。"
+
+ YDS_li_gang_civil_war_buff:0 "老校区狂热复兴者"
+
+ YDS_li_gang_civil_war_buff_desc:0 "带着夺回老盐道街荣誉的信念，狂热的师生将在闪电般的攻坚战中无往不利。"
+
+ YDS_merger_tension:0 "合并带来的动荡"
+
+ YDS_merger_tension_desc:0 "并校红头文件的签字虽然已干，但撕裂两个学校历史所引起的校园余震才刚刚开始。两拨背景迥异的师生被强行塞进同一个大门，日常教务的摩擦、老校荣誉受创的耻辱，正将往日的学术殿堂推向分崩离析的深渊。"
+
+ YDS_military_buff_1:0 "临战动员"
+
+ YDS_military_buff_1_desc:0 "前线战事吃紧，我们必须立刻武装起更多的学生，为最终的胜利铺平道路。"
+
+ YDS_military_buff_2:0 "全面阵地战"
+
+ YDS_military_buff_2_desc:0 "校园的每一间教室、每一个走廊都将成为我们坚守的阵地。"
+
+ YDS_no7_phase_1_buff:0 "干涉七中"
+
+ YDS_no7_phase_2_buff:0 "渗透七中"
+
+ YDS_no7_phase_3_buff:0 "七中附庸"
+
+ YDS_old_glory_buff:0 "老校区的精英主义胜利"
+
+ YDS_old_glory_buff_desc:0 "老校歌在校园重新奏响，镏金铜牌再度高悬。精英主义重归统治，以无可置疑的傲慢重新冲击川渝名校之巅。"
+
+ YDS_olympiad_elite_training_spirit:0 "奥赛魔鬼集训"
+
+ YDS_olympiad_elite_training_spirit_desc:0 "学校开展了高强度的奥赛封闭集训，邀请省队总教练亲自执教，全校学术氛围达到最高潮。"
+
+ YDS_olympiad_excellent_spirit:0 "名牌竞赛强校"
+
+ YDS_olympiad_excellent_spirit_desc:0 "在全国决赛中取得 2 枚金牌的好成绩，彰显了我校雄厚的竞赛教学底蕴，社会声望显著提升。"
+
+ YDS_olympiad_gold_medal_focus:0 "唯金牌论极端特化"
+
+ YDS_olympiad_gold_medal_focus_desc:0 "我们采取了高压的唯金牌竞赛策略。虽然极大地提升了科研速度，但繁重的压力导致学校稳定度大幅下降，学生的社团与自治活动也被全面禁绝。"
+
+ YDS_olympiad_legend_spirit:0 "奥赛传奇名校"
+
+ YDS_olympiad_legend_spirit_desc:0 "我校在全国学科决赛中豪取 3 枚金牌，所有参赛队员全员保送清华北大，盐道街中学成为了名副其实 of 奥赛传奇名校！"
+
+ YDS_olympiad_solid_spirit:0 "竞赛特色中学"
+
+ YDS_olympiad_solid_spirit_desc:0 "在决赛中斩获 1 枚金牌，成功完成了保送突破，初步奠定了我校竞赛特色中学的地位。"
+
+ YDS_olympiad_well_rounded_focus:0 "全面发展稳健策略"
+
+ YDS_olympiad_well_rounded_focus_desc:0 "我们注重特长生与普通学生的全面协调发展。学生在备考的同时仍保有充分 of 社团自由，提升了校园稳定度和学生自治积极性。"
+
+ YDS_shishi_phase_1_buff:0 "干涉石室"
+
+ YDS_shishi_phase_2_buff:0 "渗透石室"
+
+ YDS_shishi_phase_3_buff:0 "石室附庸"
+
+ YDS_shiwai_phase_1_buff:0 "初探实外"
+
+ YDS_shiwai_phase_2_buff:0 "深入实外"
+
+ YDS_shiwai_phase_3_buff:0 "实外附庸"
+
+ YDS_shude_phase_1_buff:0 "干涉树德"
+
+ YDS_shude_phase_2_buff:0 "渗透树德"
+
+ YDS_shude_phase_3_buff:0 "树德附庸"
+
+ YDS_sports_armory_idea:0 "体育器材室兵工化"
+
+ YDS_sports_armory_idea_desc:0 "在劳技课木工台与体育器材室的全力改装下，加厚扫把柄、实心球与防暴盾牌被源源不断地制造出来，大幅提升了自习纠察队与后勤预备队的装备生产速度。"
+
+ YDS_student_faction_dominant:0 "学生主导的学术自由"
+
+ YDS_student_faction_dominant_desc:0 "唐思懿掌权后，学校迎来了前所未有的自由，科研速度与民主气息蓬勃发展。"
+
+ YDS_teacher_faction_dominant:0 "教员主导的改良秩序"
+
+ YDS_teacher_faction_dominant_desc:0 "邓霜掌权后，温和而坚定的教员指导委员会稳定了局势，带来了高效的管理。"
+
+ YDS_wartime_alumni_spirit:0 "复仇主义突击"
+
+ YDS_wartime_alumni_spirit_desc:0 "为了老校区的牌匾，狂热的校友们爆发出恐怖的攻击力。"
+
+ YDS_wartime_bureau_spirit:0 "铁腕死守令"
+
+ YDS_wartime_bureau_spirit_desc:0 "防御力大幅提升，校委会绝不后退。"
+
+ YDS_wartime_student_spirit:0 "青春狂热冲锋"
+
+ YDS_wartime_student_spirit_desc:0 "无尽的士气和冲锋速度，自由的火焰燃烧一切。"
+
+ YNE_highland_joint_exam:0 "西南高原民办联考游击"
+
+ YNE_highland_joint_exam_desc:0 "云贵高原的雾，比任何防线都厚。\n滇黔的民办联考网络像藤蔓一样爬满了整片高原——今天在昆明的教室里开考，明天就转移到大理的某个农家小院。你永远不知道下一场考试在哪里，就像你永远追不上在山路上打游击的对手。\n山地机动与本地补给是他们的天赋，而你唯一能做的，是祈祷自己的后勤线别被高原的雨季冲断。"
+
+ YDS_bureau_control_debuff:0 "教育局管控失衡"
+
+ YDS_bureau_control_debuff_desc:0 "铁腕行政全面接管后，基层教研的自由度被压缩到极限。教师疲于应付台账与督导检查，科研与生产潜力在层层审批中不断流失。"
+
+ YDS_autonomy_struggle_debuff:0 "自治诉求之争"
+
+ YDS_autonomy_struggle_debuff_desc:0 "学生自治与行政管理的拉锯战白热化，校园里派系林立、人心浮动。频繁的谈判与博弈拖慢了教学节奏，也消耗了宝贵的行政资源。"
+
+ YDS_alumni_division_debuff:0 "校友会分裂危机"
+
+ YDS_alumni_division_debuff_desc:0 "复兴派校友与务实派校方在发展方向上激烈对立，校内校外两条战线的纷争不断。组织度被内耗瓦解，整个校园笼罩在分歧的阴影下。"
+
+ YDS_bureau_control_buff_1:0 "督导组全面进驻"
+
+ YDS_bureau_control_buff_1_desc:0 "教育局督导组全面进驻校园，行政链条高效运转。工业产出随铁腕行政国策的推进持续累加提升。"
+
+ YDS_bureau_control_buff_2:0 "清场后的秩序初建"
+
+ YDS_bureau_control_buff_2_desc:0 "捣乱分子被逐出校园后，教学秩序逐步恢复。工厂生产效率随行政国策的推进持续累加提升。"
+
+ YDS_autonomy_buff_1:0 "改良派的温和治理"
+
+ YDS_autonomy_buff_1_desc:0 "改革派上台后，校园氛围逐渐缓和，师生的创造力被重新激活。工业产出随自治国策的推进持续累加提升。"
+
+ YDS_autonomy_buff_2:0 "行政谈判成果"
+
+ YDS_autonomy_buff_2_desc:0 "与校委会的艰难谈判取得了实质成果，后勤资源重新向师生倾斜。消费品消耗随自治国策的推进持续降低。"
+
+ YDS_alumni_buff_1:0 "教辅垄断财源"
+
+ YDS_alumni_buff_1_desc:0 "校友会垄断了高端教辅的出版与发行渠道，滚滚财源流入复兴基金。工业产出随校友国策的推进持续累加提升。"
+
+ YDS_alumni_buff_2:0 "盐道街政变清障"
+
+ YDS_alumni_buff_2_desc:0 "校友会以雷霆手段清除了校内反对势力，为复兴计划扫平了道路。部队组织度随校友国策的推进持续累加提升。"
+
+ YDS_national_war_effort:0 "全国高考战争总动员"
+
+ YDS_national_war_effort_desc:0 "钟声取代了铃声，操场取代了教室。从成都到全国，盐道街的师生被卷入了这场决定高考霸权归属的大战。\n课堂变成了动员大会，晚自习变成了备战会议，连府南河边的晨读声都带上了金戈铁马的回音。每一个盐中人都明白：这不是一场普通的考试，这是决定全国教研格局的最后一战。\n全体师生，投入这场以试卷为枪、以课桌为垒的战争！"
+
+ SXI_total_war_study_camp:0 "衡式战时总动员"
+
+ SXI_total_war_study_camp_desc:0 "战时令下，秦岭脚下的作息表再次收紧——五点起床改成四点四十，跑操加倍，错题复盘延长到深夜。\n整个陕南被改造成一座巨大的军训营地，每一间教室都是兵营，每一个学生都是预备役。衡水式的钢铁纪律在战火中淬炼得更加冷硬。\n关中的考霸们把每一次刷题都当作守城，把每一场模考都当作决战。"
+
+ HBE_olympiad_shock_mobilization:0 "奥赛突击旅总动员"
+
+ HBE_olympiad_shock_mobilization_desc:0 "战争打响，周鹏一声令下，散落在各班的奥赛尖子被重新集结成突击旅。\n黄冈的密室里昼夜不熄，压轴题集被拆解成训练大纲，物理与化学的公式化作进攻的弹药。这些从题海里杀出来的天才，将用最暴烈的方式撕开敌人的防线。\n对华中楚天集团而言，进攻就是最好的防守。"
+
+ YNE_guerrilla_mobilization:0 "高原游击总动员"
+
+ YNE_guerrilla_mobilization_desc:0 "云贵高原的每一座山都成了战场，每一条山路都是补给线。\n民办联考的流动网络转入地下，化作游击队的通讯系统；山村的祠堂、茶棚、集市，一夜之间都成了临时指挥所。\n滇黔的学子们像候鸟一样熟悉这片高原的每一道褶皱，他们不筑城墙，因为他们自己就是城墙。"
+
+ SHS_despair_wall_mobilization:0 "绝望壁垒全面死守"
+
+ SHS_despair_wall_mobilization_desc:0 "战火烧到中原，山河四省的卷王们反而松了一口气——他们最擅长的，就是在绝境中死守。\n录取率的压迫早已把他们训练成最坚韧的守军：泰山崩于前而色不变，试卷堆于案而笔不停。\n每一座县城都是一座堡垒，每一个卷王都是一块砖。想攻破这面由苦难砌成的墙，就得先准备好撞碎自己。"
+
+ SNE_coastal_total_mobilization:0 "沿海全力经济动员"
+
+ SNE_coastal_total_mobilization_desc:0 "珠江口的工厂连夜改产，车间的机器声与海潮声交织成华南的战鼓。\n广式实用主义在战时发挥到极致：资金流向每一处需要的阵地，后勤补给像早茶一样准时，连小卖部的账本都变成了军需清单。\n华南考霸不打没把握的仗——他们用钱、用物资、用滴水不漏的算计，把战争拖进自己熟悉的节奏。"
+
+ ECE_elite_levy:0 "江南精英总动员"
+
+ ECE_elite_levy_desc:0 "强基计划的精英们放下课本，换上戎装。\n江南自古出才俊，而这一次，才俊们要上战场。微积分高手负责计算弹道，奥赛金牌得主领衔突击队，高等数学的公式在他们手中变成了攻城略地的兵器。\n华东的精英们相信：真正的学问，从来不只在纸上。"
+
+ EBS_bureau_total_control:0 "督导组战时全境管制"
+
+ EBS_bureau_total_control_desc:0 "战争令下，最高教育局巡视督导组的铁腕比任何时候都更冷硬。\n红头文件像雪片一样飞向京津与东北的每一个考点，阅卷标准被战时条例取代，一切资源向军工与防御倾斜。\n陈专员亲自坐镇调度——在这位老官僚看来，战争不过是另一场需要严格管理的大考，而他从来不允许任何人在自己的考场上作弊。"
+
+ YDS_bureau_industry_factor_05_tt:0 "强化§Y督导组全面进驻§!：工厂产出 §G+5.0%§!"
+
+ YDS_bureau_industry_factor_04_tt:0 "强化§Y督导组全面进驻§!：工厂产出 §G+4.0%§!"
+
+ YDS_bureau_industry_factor_03_tt:0 "强化§Y督导组全面进驻§!：工厂产出 §G+3.0%§!"
+
+ YDS_bureau_eff_factor_03_tt:0 "强化§Y清场后的秩序初建§!：工厂效率 §G+3.0%§!"
+
+ YDS_autonomy_industry_factor_05_tt:0 "强化§Y改良派的温和治理§!：工厂产出 §G+5.0%§!"
+
+ YDS_autonomy_industry_factor_04_tt:0 "强化§Y改良派的温和治理§!：工厂产出 §G+4.0%§!"
+
+ YDS_autonomy_industry_factor_03_tt:0 "强化§Y改良派的温和治理§!：工厂产出 §G+3.0%§!"
+
+ YDS_autonomy_goods_factor_03_tt:0 "强化§Y行政谈判成果§!：消费品消耗 §G-3.0%§!"
+
+ YDS_autonomy_goods_factor_02_tt:0 "强化§Y行政谈判成果§!：消费品消耗 §G-2.0%§!"
+
+ YDS_alumni_industry_factor_05_tt:0 "强化§Y教辅垄断财源§!：工厂产出 §G+5.0%§!"
+
+ YDS_alumni_industry_factor_04_tt:0 "强化§Y教辅垄断财源§!：工厂产出 §G+4.0%§!"
+
+ YDS_alumni_industry_factor_03_tt:0 "强化§Y教辅垄断财源§!：工厂产出 §G+3.0%§!"
+
+ YDS_alumni_org_factor_03_tt:0 "强化§Y盐道街政变清障§!：部队组织度 §G+3.0%§!"
+
+ YDS_exam_hall_tactics_spirit:0 "考场压迫战术精神"
+
+ YDS_exam_hall_tactics_spirit_desc:0 "将高考考场上的分秒必争与高度冷静融入部队战术体系中，使部队在攻守两端皆展现出极高水准。"
+
+ YDS_break_siege_spirit:0 "破围突击意志"
+
+ YDS_break_siege_spirit_desc:0 "面对复读生大军重重围堵所激发出的决死突围信念，大幅提升部队行军速度与正面突破攻坚能力。"
+
+ YDS_national_exam_hegemony:0 "全国统考霸权神话"
+
+ YDS_national_exam_hegemony_desc:0 "盐道街中学已彻底登顶全国教育秩序之巅，成为天下学子无上朝圣地，举国科研与政治威望达至极盛。"
+
+ YDS_academic_ivory_tower_bias:0 "象牙塔应试偏科"
+
+ YDS_academic_ivory_tower_bias_desc:0 "盐道街中学的学子们深居象牙塔，擅长高等数学逻辑推导与模拟试卷解题。然而在重工业装备、工程车床制造以及现代陆军枪炮军械等实操领域缺乏基本实践经验，科研重心极度偏科。"
+

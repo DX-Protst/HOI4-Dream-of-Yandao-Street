@@ -1,0 +1,3 @@
+# YDS mod: Main menu background override
+# Keep only load_completed -> fixes main menu background to load_completed.dds
+load_completed = {}

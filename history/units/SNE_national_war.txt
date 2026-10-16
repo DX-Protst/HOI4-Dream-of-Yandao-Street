@@ -1,0 +1,58 @@
+division_template = {
+	name = "Lingnan Elite Guards Division"
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 3 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 1 y = 3 }
+		artillery_brigade = { x = 2 y = 0 }
+		artillery_brigade = { x = 2 y = 1 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }
+		recon = { x = 0 y = 1 }
+		artillery = { x = 0 y = 2 }
+	}
+}
+division_template = {
+	name = "Lingnan Armored Shock Brigade"
+	regiments = {
+		light_armor = { x = 0 y = 0 }
+		light_armor = { x = 0 y = 1 }
+		light_armor = { x = 0 y = 2 }
+		light_armor = { x = 0 y = 3 }
+		motorized = { x = 1 y = 0 }
+		motorized = { x = 1 y = 1 }
+		motorized = { x = 1 y = 2 }
+		motorized = { x = 1 y = 3 }
+		motorized = { x = 1 y = 4 }
+		motorized = { x = 2 y = 0 }
+		motorized = { x = 2 y = 1 }
+		motorized = { x = 2 y = 2 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }
+		recon = { x = 0 y = 1 }
+		artillery = { x = 0 y = 2 }
+	}
+}
+units = {
+	division = { name = "1st Lingnan Guards Division" location = 1087 division_template = "Lingnan Elite Guards Division" start_experience_factor = 0.60 start_equipment_factor = 1.0 }
+	division = { name = "2nd Lingnan Guards Division" location = 1131 division_template = "Lingnan Elite Guards Division" start_experience_factor = 0.60 start_equipment_factor = 1.0 }
+	division = { name = "3rd Lingnan Guards Division" location = 1187 division_template = "Lingnan Elite Guards Division" start_experience_factor = 0.60 start_equipment_factor = 1.0 }
+	division = { name = "4th Lingnan Guards Division" location = 4092 division_template = "Lingnan Elite Guards Division" start_experience_factor = 0.60 start_equipment_factor = 1.0 }
+	division = { name = "5th Lingnan Guards Division" location = 1087 division_template = "Lingnan Elite Guards Division" start_experience_factor = 0.60 start_equipment_factor = 1.0 }
+	division = { name = "6th Lingnan Guards Division" location = 1131 division_template = "Lingnan Elite Guards Division" start_experience_factor = 0.60 start_equipment_factor = 1.0 }
+	division = { name = "7th Lingnan Guards Division" location = 1187 division_template = "Lingnan Elite Guards Division" start_experience_factor = 0.60 start_equipment_factor = 1.0 }
+	division = { name = "8th Lingnan Guards Division" location = 4092 division_template = "Lingnan Elite Guards Division" start_experience_factor = 0.60 start_equipment_factor = 1.0 }
+	division = { name = "9th Lingnan Guards Division" location = 1087 division_template = "Lingnan Elite Guards Division" start_experience_factor = 0.60 start_equipment_factor = 1.0 }
+	division = { name = "10th Lingnan Guards Division" location = 1131 division_template = "Lingnan Elite Guards Division" start_experience_factor = 0.60 start_equipment_factor = 1.0 }
+	division = { name = "11th Lingnan Guards Division" location = 1187 division_template = "Lingnan Elite Guards Division" start_experience_factor = 0.60 start_equipment_factor = 1.0 }
+	division = { name = "1st Lingnan Armored Brigade" location = 1087 division_template = "Lingnan Armored Shock Brigade" start_experience_factor = 0.60 start_equipment_factor = 1.0 }
+	division = { name = "2nd Lingnan Armored Brigade" location = 1131 division_template = "Lingnan Armored Shock Brigade" start_experience_factor = 0.60 start_equipment_factor = 1.0 }
+	division = { name = "3rd Lingnan Armored Brigade" location = 4092 division_template = "Lingnan Armored Shock Brigade" start_experience_factor = 0.60 start_equipment_factor = 1.0 }
+}

@@ -1,0 +1,25 @@
+state = {
+	id = 753
+	name = "STATE_753"
+	manpower = 3000000
+	state_category = rural
+	history = {
+		owner = YDS
+		controller = YDS
+		add_core_of = YDS
+		add_core_of = XSM
+		add_core_of = CHI
+		add_core_of = PRC
+		victory_points = { 5193 1 }
+		buildings = {
+			infrastructure = 2
+			arms_factory = 1
+			industrial_complex = 1
+		}
+	}
+	provinces = {
+		1257 2045 4375 4403 5193 9966 10787 10903
+	}
+	local_supplies = 1
+	buildings_max_level_factor = 1
+}

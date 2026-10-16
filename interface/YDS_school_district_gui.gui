@@ -1,0 +1,121 @@
+guiTypes = {
+	containerWindowType = {
+		name = "YDS_school_district_gui_window"
+		position = { x = 0 y = 0 }
+		size = { width = 500 height = 320 }
+		
+		# Map Background
+		iconType = {
+			name = "YDS_school_map_bg"
+			spriteType = "GFX_YDS_school_map_bg"
+			position = { x = 10 y = 10 }
+		}
+
+		# Academic Prestige Text
+		instantTextBoxType = {
+			name = "YDS_academic_prestige_text"
+			position = { x = 20 y = 20 }
+			font = "hoi_18mbs"
+			text = "YDS_ACADEMIC_PRESTIGE_TEXT"
+			maxWidth = 300
+			maxHeight = 24
+			format = left
+			pdx_tooltip = "YDS_ACADEMIC_PRESTIGE_TT"
+		}
+
+		# Student Attraction Text
+		instantTextBoxType = {
+			name = "YDS_student_attraction_text"
+			position = { x = 20 y = 45 }
+			font = "hoi_18mbs"
+			text = "YDS_STUDENT_ATTRACTION_TEXT"
+			maxWidth = 300
+			maxHeight = 24
+			format = left
+			pdx_tooltip = "YDS_STUDENT_ATTRACTION_TT"
+		}
+
+		# Yandao Street Node (Center)
+		iconType = {
+			name = "YDS_node_yandao"
+			spriteType = "GFX_YDS_node_yandao"
+			position = { x = 250 y = 140 }
+			pdx_tooltip = "YDS_NODE_YANDAO_TT"
+		}
+		
+		# Shishi Node
+		buttonType = {
+			name = "YDS_node_shishi"
+			quadTextureSprite = "GFX_YDS_node_shishi"
+			position = { x = 180 y = 100 }
+			pdx_tooltip = "YDS_NODE_SHISHI_TT"
+			clicksound = click_default
+		}
+		
+		# Shude Node
+		buttonType = {
+			name = "YDS_node_shude"
+			quadTextureSprite = "GFX_YDS_node_shude"
+			position = { x = 230 y = 80 }
+			pdx_tooltip = "YDS_NODE_SHUDE_TT"
+			clicksound = click_default
+		}
+		
+		# No7 Node
+		buttonType = {
+			name = "YDS_node_no7"
+			quadTextureSprite = "GFX_YDS_node_no7"
+			position = { x = 320 y = 180 }
+			pdx_tooltip = "YDS_NODE_NO7_TT"
+			clicksound = click_default
+		}
+
+		# Chengwai Node (Chengdu Foreign Languages)
+		buttonType = {
+			name = "YDS_node_chengwai"
+			quadTextureSprite = "GFX_YDS_node_chengwai"
+			position = { x = 100 y = 60 }
+			pdx_tooltip = "YDS_NODE_CHENGWAI_TT"
+			clicksound = click_default
+		}
+
+		# Shiwai Node (Experimental Foreign Languages)
+		buttonType = {
+			name = "YDS_node_shiwai"
+			quadTextureSprite = "GFX_YDS_node_shiwai"
+			position = { x = 120 y = 200 }
+			pdx_tooltip = "YDS_NODE_SHIWAI_TT"
+			clicksound = click_default
+		}
+
+		# Chuanshifuzhong Node (Sichuan Normal Univ. Affiliated)
+		buttonType = {
+			name = "YDS_node_csfz"
+			quadTextureSprite = "GFX_YDS_node_csfz"
+			position = { x = 380 y = 130 }
+			pdx_tooltip = "YDS_NODE_CSFZ_TT"
+			clicksound = click_default
+		}
+
+		# Mission Tracker Area
+		instantTextBoxType = {
+			name = "YDS_mission_target_text"
+			position = { x = 20 y = 260 }
+			font = "hoi_18mbs"
+			text = "YDS_MISSION_TARGET_TEXT"
+			maxWidth = 300
+			maxHeight = 24
+			format = left
+		}
+		
+		instantTextBoxType = {
+			name = "YDS_mission_progress_text"
+			position = { x = 20 y = 285 }
+			font = "hoi_18mbs"
+			text = "YDS_MISSION_PROGRESS_TEXT"
+			maxWidth = 300
+			maxHeight = 24
+			format = left
+		}
+	}
+}

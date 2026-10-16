@@ -1,0 +1,237 @@
+characters = {
+	YDS_anarchy_corporatist = {
+		name = YDS_anarchy_corporatist
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_anarchy"
+			}
+		}
+		country_leader = {
+			ideology = corporatist_xuexism
+			traits = { YDS_corporatist_anarchy_trait }
+			id = -1
+		}
+	}
+
+	YDS_anarchy_nihilist = {
+		name = YDS_anarchy_nihilist
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_anarchy"
+			}
+		}
+		country_leader = {
+			ideology = nihilistic_xuexism
+			traits = { YDS_nihilist_anarchy_trait }
+			id = -1
+		}
+	}
+
+	YDS_autonomous_council = {
+		name = YDS_autonomous_council
+		portraits = {
+			civilian = {
+				large = GFX_portrait_YDS_autonomous_council
+			}
+		}
+		country_leader = {
+			ideology = student_libertarianism
+			traits = { YDS_autonomous_council_trait }
+			id = -1
+		}
+		country_leader = {
+			ideology = tutor_guided_democracy
+			traits = { YDS_autonomous_council_trait }
+			id = -1
+		}
+	}
+
+	YDS_deng_shuang = {
+		name = YDS_deng_shuang
+		portraits = {
+			civilian = {
+				large = GFX_portrait_YDS_deng_shuang
+			}
+		}
+		country_leader = {
+			ideology = tutor_guided_democracy
+			traits = { YDS_deng_shuang_trait }
+			id = -1
+		}
+	}
+
+	YDS_jiang_guangping = {
+		name = YDS_jiang_guangping
+		portraits = {
+			civilian = {
+				large = GFX_portrait_YDS_jiang_guangping
+			}
+		}
+		country_leader = {
+			ideology = principal_autocracy
+			traits = { YDS_jiang_guangping_trait }
+			id = -1
+		}
+		country_leader = {
+			ideology = red_star_commune
+			traits = { YDS_jiang_guangping_trait }
+			id = -1
+		}
+	}
+
+	YDS_li_gang = {
+		name = YDS_li_gang
+		portraits = {
+			civilian = {
+				large = GFX_portrait_YDS_li_gang
+			}
+		}
+		country_leader = {
+			ideology = meritocratic_darwinism
+			traits = { YDS_li_gang_trait }
+			id = -1
+		}
+		country_leader = {
+			ideology = alumni_capitalism
+			traits = { YDS_li_gang_trait }
+			id = -1
+		}
+		country_leader = {
+			ideology = traditional_pedagogy
+			traits = { YDS_li_gang_trait }
+			id = -1
+		}
+	}
+
+	YDS_liu_yan = {
+		name = YDS_liu_yan
+		portraits = {
+			civilian = {
+				large = GFX_portrait_YDS_liu_yan
+			}
+		}
+		country_leader = {
+			ideology = bureau_totalitarianism
+			traits = { YDS_liu_yan_trait }
+			id = -1
+		}
+	}
+
+	YDS_missing_leader_c = {
+		name = YDS_missing_leader_c
+		country_leader = {
+			ideology = principal_autocracy
+			id = -1
+		}
+	}
+
+	YDS_missing_leader_d = {
+		name = YDS_missing_leader_d
+		country_leader = {
+			ideology = student_libertarianism
+			id = -1
+		}
+	}
+
+	YDS_missing_leader_f = {
+		name = YDS_missing_leader_f
+		country_leader = {
+			ideology = meritocratic_darwinism
+			id = -1
+		}
+	}
+
+	YDS_tang_siyi = {
+		name = YDS_tang_siyi
+		portraits = {
+			civilian = {
+				large = GFX_portrait_YDS_tang_siyi
+			}
+		}
+		country_leader = {
+			ideology = student_libertarianism
+			traits = { YDS_tang_siyi_trait }
+			id = -1
+		}
+	}
+
+	YDS_lai_sihan = {
+		name = YDS_lai_sihan
+		advisor = {
+			slot = theorist
+			idea_token = YDS_lai_sihan_advisor
+			allowed = {
+				original_tag = YDS
+			}
+			visible = {
+				has_country_flag = YDS_lai_gold_won
+			}
+			traits = { YDS_trait_advisor_lai }
+			cost = 75
+		}
+	}
+
+	YDS_eluo_ningbei = {
+		name = YDS_eluo_ningbei
+		advisor = {
+			slot = theorist
+			idea_token = YDS_eluo_ningbei_advisor
+			allowed = {
+				original_tag = YDS
+			}
+			visible = {
+				has_country_flag = YDS_eluo_gold_won
+			}
+			traits = { YDS_trait_advisor_eluo }
+			cost = 75
+		}
+	}
+
+	YDS_zhou_jingsong = {
+		name = YDS_zhou_jingsong
+		advisor = {
+			slot = theorist
+			idea_token = YDS_zhou_jingsong_advisor
+			allowed = {
+				original_tag = YDS
+			}
+			visible = {
+				has_country_flag = YDS_zhou_gold_won
+			}
+			traits = { YDS_trait_advisor_zhou }
+			cost = 75
+		}
+	}
+
+	YDS_deng_yunbo = {
+		name = YDS_deng_yunbo
+		advisor = {
+			slot = high_command
+			idea_token = YDS_deng_yunbo_advisor
+			allowed = {
+				original_tag = YDS
+			}
+			visible = {
+				has_country_flag = YDS_deng_gold_won
+			}
+			traits = { YDS_trait_advisor_deng }
+			cost = 75
+		}
+	}
+
+	YDS_tuo_wen = {
+		name = YDS_tuo_wen
+		advisor = {
+			slot = theorist
+			idea_token = YDS_tuo_wen_advisor
+			allowed = {
+				original_tag = YDS
+			}
+			visible = {
+				has_country_flag = YDS_tuo_gold_won
+			}
+			traits = { YDS_trait_advisor_tuo }
+			cost = 75
+		}
+	}
+}

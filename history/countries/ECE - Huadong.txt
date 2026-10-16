@@ -1,0 +1,33 @@
+capital = 1035
+oob = "ECE_national_war"
+
+set_research_slots = 3
+
+set_politics = {
+	ruling_party = market_liberal
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	market_liberal = 60
+	social_liberal = 40
+}
+
+recruit_character = ECE_leader_zhang_laoshi
+
+add_ideas = ECE_jiangnan_elites
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1
+	tech_recon = 1
+	tech_engineers = 1
+	tech_maintenance_company = 1
+	gw_artillery = 1
+	gwtank = 1
+	basic_light_tank = 1
+	motorised_infantry = 1
+}

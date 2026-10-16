@@ -1,0 +1,28 @@
+state = {
+	impassable = yes
+	id = 616
+	name = "STATE_616"
+	manpower = 1077600
+	resources = {
+		coal = 2
+	}
+	state_category = pastoral
+	history = {
+		owner = ZBX
+		add_core_of = ZBX
+		controller = ZBX
+		add_core_of = XSM
+		add_core_of = CHI
+		add_core_of = PRC
+		victory_points = { 8127 3 }
+		victory_points = { 5031 1 }
+		buildings = {
+			infrastructure = 1
+		}
+	}
+	provinces = {
+		3742 5031 7511 8055 8081 8127 10724 12750
+	}
+	local_supplies = 0
+	buildings_max_level_factor = 1
+}

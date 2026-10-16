@@ -1,0 +1,95 @@
+leader_traits = {
+
+	YDS_autonomous_council_trait = {
+		random = no
+		stability_factor = -0.15
+		political_power_gain = -0.15
+		war_support_factor = -0.10
+		consumer_goods_factor = 0.05
+		production_factory_max_efficiency_factor = -0.10
+		army_org_factor = -0.10
+		drift_defence_factor = -0.20
+	}
+
+	YDS_corporatist_anarchy_trait = {
+		random = no
+		stability_factor = -0.1
+		political_power_gain = -0.1
+	}
+
+	YDS_deng_shuang_trait = {
+		random = no
+		stability_factor = 0.05
+		research_speed_factor = 0.02
+		political_power_gain = 0.03
+	}
+
+	YDS_jiang_guangping_trait = {
+		random = no
+		stability_factor = 0.1
+		political_power_gain = 0.04
+		research_speed_factor = -0.05
+	}
+
+	YDS_li_gang_trait = {
+		random = no
+		army_attack_factor = 0.1
+		political_power_gain = 0.03
+		consumer_goods_factor = 0.05
+	}
+
+	YDS_liu_yan_trait = {
+		random = no
+		stability_factor = -0.15
+		political_power_gain = 0.05
+		consumer_goods_factor = -0.1
+		research_speed_factor = -0.1
+	}
+
+	YDS_nihilist_anarchy_trait = {
+		random = no
+		stability_factor = -0.2
+		political_power_gain = -0.5
+	}
+
+	YDS_tang_siyi_trait = {
+		random = no
+		research_speed_factor = 0.03
+		stability_factor = 0.05
+		political_power_gain = -0.05
+	}
+
+	YDS_trait_advisor_lai = {
+		random = no
+		army_artillery_attack_factor = 0.10
+		army_artillery_defence_factor = 0.10
+		research_speed_factor = 0.02
+	}
+
+	YDS_trait_advisor_eluo = {
+		random = no
+		industrial_capacity_factory = 0.05
+		research_speed_factor = 0.03
+		production_speed_industrial_complex_factor = 0.10
+	}
+
+	YDS_trait_advisor_zhou = {
+		random = no
+		production_speed_synthetic_refinery_factor = 0.20
+		fuel_gain_factor = 0.10
+	}
+
+	YDS_trait_advisor_deng = {
+		random = no
+		army_org_regain = 0.10
+		experience_loss_factor = -0.15
+	}
+
+	YDS_trait_advisor_tuo = {
+		random = no
+		decryption_factor = 0.25
+		encryption_factor = 0.15
+		recon_factor = 0.10
+	}
+
+}

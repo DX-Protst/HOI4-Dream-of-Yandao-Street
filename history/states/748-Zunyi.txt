@@ -1,0 +1,24 @@
+state = {
+	id = 748
+	name = "STATE_748"
+	manpower = 1500000
+	state_category = city
+	history = {
+		owner = YNE
+		controller = YNE
+		add_core_of = YNE
+		add_core_of = CHI
+		add_core_of = PRC
+		victory_points = { 1010 3 }
+		buildings = {
+			arms_factory = 1
+			industrial_complex = 1
+			infrastructure = 1
+		}
+	}
+	provinces = {
+		1010 4325 9939 10763
+	}
+	local_supplies = 0
+	buildings_max_level_factor = 1
+}

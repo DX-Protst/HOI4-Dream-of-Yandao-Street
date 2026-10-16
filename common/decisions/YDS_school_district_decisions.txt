@@ -1,0 +1,143 @@
+YDS_class_1_bop_decisions = {
+
+}
+
+YDS_olympiad_category = {
+
+}
+
+YDS_peacetime_alumni = {
+
+}
+
+YDS_peacetime_bureau = {
+
+}
+
+YDS_peacetime_student = {
+
+}
+
+YDS_school_district_category = {
+
+	YDS_decision_open_day = {
+		icon = GFX_decision_generic_construction
+		available = {
+			has_political_power > 9
+		}
+		cost = 10
+		days_remove = 14
+		complete_effect = {
+			add_to_variable = {
+				YDS_academic_prestige = 2
+			}
+			add_to_variable = {
+				YDS_student_attraction = 5
+			}
+			custom_effect_tooltip = YDS_TT_OPEN_DAY_GAIN
+			country_event = {
+				id = yds_school_district_event.11
+			}
+		}
+	}
+
+	YDS_decision_poach_teacher = {
+		icon = GFX_decision_generic_political_discourse
+		available = {
+			has_political_power > 49
+		}
+		cost = 50
+		days_remove = 20
+		complete_effect = {
+			add_to_variable = {
+				YDS_academic_prestige = 10
+			}
+			add_to_variable = {
+				YDS_student_attraction = 5
+			}
+			custom_effect_tooltip = YDS_TT_POACH_GAIN
+			country_event = {
+				id = yds_school_district_event.10
+			}
+		}
+	}
+
+	YDS_decision_spread_rumors = {
+		icon = GFX_decision_generic_intelligence_operation
+		available = {
+			has_political_power > 4
+		}
+		cost = 5
+		days_remove = 7
+		complete_effect = {
+			add_to_variable = {
+				YDS_academic_prestige = 1
+			}
+			add_to_variable = {
+				YDS_student_attraction = 1
+			}
+			custom_effect_tooltip = YDS_TT_RUMORS_GAIN
+			country_event = {
+				id = yds_school_district_event.12
+			}
+		}
+	}
+
+	YDS_decision_wendou = {
+		icon = GFX_decision_generic_intelligence_operation
+		available = {
+			has_political_power > 25
+		}
+		visible = {
+			has_completed_focus = YDS_chengdu_school_district_geopolitics
+		}
+		cost = 25
+		days_remove = 7
+		complete_effect = {
+			country_event = {
+				id = yds_event.60
+			}
+		}
+	}
+
+	YDS_decision_wudou = {
+		icon = GFX_decision_generic_military_operation
+		available = {
+			has_equipment = {
+				infantry_equipment > 500
+			}
+		}
+		visible = {
+			has_completed_focus = YDS_chengdu_school_district_geopolitics
+		}
+		days_remove = 14
+		remove_effect = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -500
+				producer = ROOT
+			}
+			custom_effect_tooltip = YDS_TT_WUDOU_GAIN
+			country_event = {
+				id = yds_event.61
+			}
+		}
+	}
+
+}
+
+YDS_universal_crisis = {
+
+}
+
+YDS_wartime_alumni = {
+
+}
+
+YDS_wartime_bureau = {
+
+}
+
+YDS_wartime_student = {
+
+}

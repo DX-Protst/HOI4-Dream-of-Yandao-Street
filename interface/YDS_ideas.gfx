@@ -1,0 +1,328 @@
+spriteTypes = {
+	# 1. 合并带来的动荡
+	spriteType = {
+		name = "GFX_idea_YDS_merger_tension"
+		texturefile = "gfx/interface/ideas/YDS/yds_merger_tension.png"
+	}
+	
+	# 2. 教学质量下滑
+	spriteType = {
+		name = "GFX_idea_YDS_educational_decline"
+		texturefile = "gfx/interface/ideas/YDS/yds_educational_decline.png"
+	}
+	
+	# 3. 校委会铁拳卫士
+	spriteType = {
+		name = "GFX_idea_YDS_jiang_guangping_civil_war_buff"
+		texturefile = "gfx/interface/ideas/YDS/yds_jiang_guangping_buff.png"
+	}
+	
+	# 4. 老校区狂热复兴者
+	spriteType = {
+		name = "GFX_idea_YDS_li_gang_civil_war_buff"
+		texturefile = "gfx/interface/ideas/YDS/yds_li_gang_buff.png"
+	}
+	
+	# 5. 为了自由而战的师生
+	spriteType = {
+		name = "GFX_idea_YDS_class_1_civil_war_buff"
+		texturefile = "gfx/interface/ideas/YDS/yds_class_1_buff.png"
+	}
+	
+	# 6. 教育局监督机制
+	spriteType = {
+		name = "GFX_idea_YDS_bureau_supervision"
+		texturefile = "gfx/interface/ideas/YDS/yds_bureau_supervision.png"
+	}
+	
+	# 7. 教育局制定的铁腕秩序
+	spriteType = {
+		name = "GFX_idea_YDS_bureau_order"
+		texturefile = "gfx/interface/ideas/YDS/yds_bureau_order.png"
+	}
+	
+	# 8. 学术自治与教学自由
+	spriteType = {
+		name = "GFX_idea_YDS_academic_freedom"
+		texturefile = "gfx/interface/ideas/YDS/yds_academic_freedom.png"
+	}
+	
+	# 9. 垄断的高端教辅
+	spriteType = {
+		name = "GFX_idea_YDS_elite_materials"
+		texturefile = "gfx/interface/ideas/YDS/yds_elite_materials.png"
+	}
+	
+	# 10. 老校区的精英主义胜利
+	spriteType = {
+		name = "GFX_idea_YDS_old_glory_buff"
+		texturefile = "gfx/interface/ideas/YDS/yds_old_glory.png"
+	}
+	
+	# 11. 军事攻击Buff 1
+	spriteType = {
+		name = "GFX_idea_YDS_military_buff_1"
+		texturefile = "gfx/interface/ideas/YDS/yds_military_attack.png"
+	}
+	
+	# 12. 军事防御Buff 2
+	spriteType = {
+		name = "GFX_idea_YDS_military_buff_2"
+		texturefile = "gfx/interface/ideas/YDS/yds_military_defense.png"
+	}
+	
+	# 13. 高绩点学术繁荣
+	spriteType = {
+		name = "GFX_idea_YDS_gpa_high_buff"
+		texturefile = "gfx/interface/ideas/YDS/yds_gpa_high.png"
+	}
+	
+	# 14. 学术降级警告 (使用教学质量下滑图标)
+	spriteType = {
+		name = "GFX_idea_YDS_gpa_low_debuff"
+		texturefile = "gfx/interface/ideas/YDS/yds_educational_decline.png"
+	}
+	
+	# 15. 战时临时秩序 (教育局防御Buff)
+	spriteType = {
+		name = "GFX_idea_YDS_wartime_bureau_spirit"
+		texturefile = "gfx/interface/ideas/YDS/yds_military_defense.png"
+	}
+	
+	# 16. 战时临时冲锋 (学生冲锋Buff)
+	spriteType = {
+		name = "GFX_idea_YDS_wartime_student_spirit"
+		texturefile = "gfx/interface/ideas/YDS/yds_class_1_buff.png"
+	}
+	
+	# 17. 战时临时复仇 (校友突击Buff)
+	spriteType = {
+		name = "GFX_idea_YDS_wartime_alumni_spirit"
+		texturefile = "gfx/interface/ideas/YDS/yds_li_gang_buff.png"
+	}
+	
+	# 18. 学生主导的学术自由
+	spriteType = {
+		name = "GFX_idea_YDS_student_faction_dominant"
+		texturefile = "gfx/interface/ideas/YDS/yds_academic_freedom.png"
+	}
+	
+	# 19. 教员主导的改良秩序 (使用铁腕秩序图标)
+	spriteType = {
+		name = "GFX_idea_YDS_teacher_faction_dominant"
+		texturefile = "gfx/interface/ideas/YDS/yds_bureau_order.png"
+	}
+	
+	# 20. 高度自由的学生自治
+	spriteType = {
+		name = "GFX_idea_YDS_autonomy_high_buff"
+		texturefile = "gfx/interface/ideas/YDS/yds_class_1_buff.png"
+	}
+	
+	# 21. 高压迫下的沉闷学风 (使用铁腕秩序图标)
+	spriteType = {
+		name = "GFX_idea_YDS_autonomy_low_debuff"
+		texturefile = "gfx/interface/ideas/YDS/yds_bureau_order.png"
+	}
+	
+	# === 动态精神：学校渗透与附庸 ===
+	
+	# 成外
+	spriteType = { name = "GFX_idea_YDS_chengwai_phase_1_buff" texturefile = "gfx/interface/ideas/YDS/yds_school_infiltration_1.png" }
+	spriteType = { name = "GFX_idea_YDS_chengwai_phase_2_buff" texturefile = "gfx/interface/ideas/YDS/yds_school_infiltration_2.png" }
+	spriteType = { name = "GFX_idea_YDS_chengwai_phase_3_buff" texturefile = "gfx/interface/ideas/YDS/yds_school_vassalization.png" }
+	
+	# 实外
+	spriteType = { name = "GFX_idea_YDS_shiwai_phase_1_buff" texturefile = "gfx/interface/ideas/YDS/yds_school_infiltration_1.png" }
+	spriteType = { name = "GFX_idea_YDS_shiwai_phase_2_buff" texturefile = "gfx/interface/ideas/YDS/yds_school_infiltration_2.png" }
+	spriteType = { name = "GFX_idea_YDS_shiwai_phase_3_buff" texturefile = "gfx/interface/ideas/YDS/yds_school_vassalization.png" }
+	
+	# 川师附中
+	spriteType = { name = "GFX_idea_YDS_csfz_phase_1_buff" texturefile = "gfx/interface/ideas/YDS/yds_school_infiltration_1.png" }
+	spriteType = { name = "GFX_idea_YDS_csfz_phase_2_buff" texturefile = "gfx/interface/ideas/YDS/yds_school_infiltration_2.png" }
+	spriteType = { name = "GFX_idea_YDS_csfz_phase_3_buff" texturefile = "gfx/interface/ideas/YDS/yds_school_vassalization.png" }
+	
+	# 七中
+	spriteType = { name = "GFX_idea_YDS_no7_phase_1_buff" texturefile = "gfx/interface/ideas/YDS/yds_school_infiltration_1.png" }
+	spriteType = { name = "GFX_idea_YDS_no7_phase_2_buff" texturefile = "gfx/interface/ideas/YDS/yds_school_infiltration_2.png" }
+	spriteType = { name = "GFX_idea_YDS_no7_phase_3_buff" texturefile = "gfx/interface/ideas/YDS/yds_school_vassalization.png" }
+	
+	# 石室
+	spriteType = { name = "GFX_idea_YDS_shishi_phase_1_buff" texturefile = "gfx/interface/ideas/YDS/yds_school_infiltration_1.png" }
+	spriteType = { name = "GFX_idea_YDS_shishi_phase_2_buff" texturefile = "gfx/interface/ideas/YDS/yds_school_infiltration_2.png" }
+	spriteType = { name = "GFX_idea_YDS_shishi_phase_3_buff" texturefile = "gfx/interface/ideas/YDS/yds_school_vassalization.png" }
+	
+	# 树德
+	spriteType = { name = "GFX_idea_YDS_shude_phase_1_buff" texturefile = "gfx/interface/ideas/YDS/yds_school_infiltration_1.png" }
+	spriteType = { name = "GFX_idea_YDS_shude_phase_2_buff" texturefile = "gfx/interface/ideas/YDS/yds_school_infiltration_2.png" }
+	spriteType = { name = "GFX_idea_YDS_shude_phase_3_buff" texturefile = "gfx/interface/ideas/YDS/yds_school_vassalization.png" }
+
+	# United Submission Ideas
+	spriteType = { name = "GFX_idea_YDS_elite_schools_united" texturefile = "gfx/interface/ideas/YDS/yds_elite_schools_united.png" }
+	spriteType = { name = "GFX_idea_YDS_regular_schools_united" texturefile = "gfx/interface/ideas/YDS/yds_regular_schools_united.png" }
+
+	# Infiltration Backlash Debuff
+	spriteType = { name = "GFX_idea_YDS_school_resistance_debuff" texturefile = "gfx/interface/ideas/YDS/yds_school_resistance_debuff.png" }
+
+	# Political Branch Debuffs
+	spriteType = { name = "GFX_idea_YDS_bureau_control_debuff" texturefile = "gfx/interface/ideas/YDS/yds_bureau_order.png" }
+	spriteType = { name = "GFX_idea_YDS_autonomy_struggle_debuff" texturefile = "gfx/interface/ideas/YDS/yds_class_1_buff.png" }
+	spriteType = { name = "GFX_idea_YDS_alumni_division_debuff" texturefile = "gfx/interface/ideas/YDS/yds_li_gang_buff.png" }
+
+	# Political Dynamic Modifiers
+	spriteType = { name = "GFX_idea_YDS_bureau_control_buff_1" texturefile = "gfx/interface/ideas/YDS/yds_bureau_order.png" }
+	spriteType = { name = "GFX_idea_YDS_bureau_control_buff_2" texturefile = "gfx/interface/ideas/YDS/yds_bureau_supervision.png" }
+	spriteType = { name = "GFX_idea_YDS_autonomy_buff_1" texturefile = "gfx/interface/ideas/YDS/yds_class_1_buff.png" }
+	spriteType = { name = "GFX_idea_YDS_autonomy_buff_2" texturefile = "gfx/interface/ideas/YDS/yds_academic_freedom.png" }
+	spriteType = { name = "GFX_idea_YDS_alumni_buff_1" texturefile = "gfx/interface/ideas/YDS/yds_elite_materials.png" }
+	spriteType = { name = "GFX_idea_YDS_alumni_buff_2" texturefile = "gfx/interface/ideas/YDS/yds_li_gang_buff.png" }
+
+	# Industrial Branch Ideas
+	spriteType = { name = "GFX_idea_YDS_canteen_monopoly_idea" texturefile = "gfx/interface/ideas/YDS/yds_canteen_monopoly_idea.png" }
+	spriteType = { name = "GFX_idea_YDS_sports_armory_idea" texturefile = "gfx/interface/ideas/YDS/yds_sports_armory_idea.png" }
+	spriteType = { name = "GFX_idea_YDS_chem_reagents_idea" texturefile = "gfx/interface/ideas/YDS/yds_chem_reagents_idea.png" }
+	spriteType = { name = "GFX_idea_YDS_campus_gigafactory_idea" texturefile = "gfx/interface/ideas/YDS/yds_campus_gigafactory_idea.png" }
+
+	# Academic Ivory Tower Bias
+	spriteType = {
+		name = "GFX_idea_YDS_academic_ivory_tower_bias"
+		texturefile = "gfx/interface/ideas/YDS/yds_academic_ivory_tower_bias.png"
+	}
+
+	# Gaokao Breakthrough & Tactics Spirits
+	spriteType = {
+		name = "GFX_idea_YDS_exam_hall_tactics_spirit"
+		texturefile = "gfx/interface/ideas/YDS/yds_exam_hall_tactics_spirit.png"
+	}
+	spriteType = {
+		name = "GFX_idea_YDS_break_siege_spirit"
+		texturefile = "gfx/interface/ideas/YDS/yds_break_siege_spirit.png"
+	}
+	spriteType = {
+		name = "GFX_idea_YDS_national_exam_hegemony"
+		texturefile = "gfx/interface/ideas/YDS/yds_national_exam_hegemony.png"
+	}
+	spriteType = {
+		name = "GFX_idea_YDS_ivory_tower_hegemony"
+		texturefile = "gfx/interface/ideas/YDS/yds_ivory_tower_hegemony.png"
+	}
+	spriteType = {
+		name = "GFX_idea_YDS_repeater_coalition_pact"
+		texturefile = "gfx/interface/ideas/YDS/yds_repeater_coalition_pact.png"
+	}
+	spriteType = {
+		name = "GFX_idea_YDS_repeater_underdog_spirit"
+		texturefile = "gfx/interface/ideas/YDS/yds_repeater_underdog_spirit.png"
+	}
+
+	# Olympiad Five Disciplines Gold Spirits
+	spriteType = {
+		name = "GFX_idea_YDS_olympiad_math_gold_spirit"
+		texturefile = "gfx/interface/ideas/YDS/yds_olympiad_math_gold_spirit.png"
+	}
+	spriteType = {
+		name = "GFX_idea_YDS_olympiad_physics_gold_spirit"
+		texturefile = "gfx/interface/ideas/YDS/yds_olympiad_physics_gold_spirit.png"
+	}
+	spriteType = {
+		name = "GFX_idea_YDS_olympiad_chem_gold_spirit"
+		texturefile = "gfx/interface/ideas/YDS/yds_olympiad_chem_gold_spirit.png"
+	}
+	spriteType = {
+		name = "GFX_idea_YDS_olympiad_bio_gold_spirit"
+		texturefile = "gfx/interface/ideas/YDS/yds_olympiad_bio_gold_spirit.png"
+	}
+	spriteType = {
+		name = "GFX_idea_YDS_olympiad_info_gold_spirit"
+		texturefile = "gfx/interface/ideas/YDS/yds_olympiad_info_gold_spirit.png"
+	}
+
+	# Olympiad Training Focuses Spirits
+	spriteType = {
+		name = "GFX_idea_YDS_olympiad_elite_training_spirit"
+		texturefile = "gfx/interface/ideas/YDS/yds_olympiad_elite_training_spirit.png"
+	}
+	spriteType = {
+		name = "GFX_idea_YDS_olympiad_gold_medal_focus"
+		texturefile = "gfx/interface/ideas/YDS/yds_olympiad_gold_medal_focus.png"
+	}
+	spriteType = {
+		name = "GFX_idea_YDS_olympiad_well_rounded_focus"
+		texturefile = "gfx/interface/ideas/YDS/yds_olympiad_well_rounded_focus.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_YDS_olympiad_legend_spirit"
+		texturefile = "gfx/interface/ideas/YDS/yds_olympiad_legend_spirit.png"
+	}
+	spriteType = {
+		name = "GFX_idea_YDS_olympiad_solid_spirit"
+		texturefile = "gfx/interface/ideas/YDS/yds_olympiad_solid_spirit.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SXI_hengshui_militarization"
+		texturefile = "gfx/interface/ideas/SXI/sxi_hengshui_militarization.png"
+	}
+	spriteType = {
+		name = "GFX_idea_HBE_olympiad_shock"
+		texturefile = "gfx/interface/ideas/HBE/hbe_olympiad_shock.png"
+	}
+	spriteType = {
+		name = "GFX_idea_YDS_olympiad_excellent_spirit"
+		texturefile = "gfx/interface/ideas/YDS/yds_olympiad_excellent_spirit.png"
+	}
+	spriteType = {
+		name = "GFX_idea_ECE_jiangnan_elites"
+		texturefile = "gfx/interface/ideas/ECE/ece_jiangnan_elites.png"
+	}
+	spriteType = {
+		name = "GFX_idea_YNE_highland_joint_exam"
+		texturefile = "gfx/interface/ideas/YNE/yne_highland_joint_exam.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SHS_despair_wall"
+		texturefile = "gfx/interface/ideas/SHS/shs_despair_wall.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SNE_coastal_pragmatism"
+		texturefile = "gfx/interface/ideas/SNE/sne_coastal_pragmatism.png"
+	}
+	spriteType = {
+		name = "GFX_idea_EBS_privilege_iron_fist"
+		texturefile = "gfx/interface/ideas/EBS/ebs_privilege_iron_fist.png"
+	}
+	spriteType = {
+		name = "GFX_idea_YDS_national_war_effort"
+		texturefile = "gfx/interface/ideas/YDS/yds_national_war_effort.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SXI_total_war_study_camp"
+		texturefile = "gfx/interface/ideas/SXI/sxi_total_war_study_camp.png"
+	}
+	spriteType = {
+		name = "GFX_idea_HBE_olympiad_shock_mobilization"
+		texturefile = "gfx/interface/ideas/HBE/hbe_olympiad_shock_mobilization.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_YNE_guerrilla_mobilization"
+		texturefile = "gfx/interface/ideas/YNE/yne_guerrilla_mobilization.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SHS_despair_wall_mobilization"
+		texturefile = "gfx/interface/ideas/SHS/shs_despair_wall_mobilization.png"
+	}
+	spriteType = {
+		name = "GFX_idea_SNE_coastal_total_mobilization"
+		texturefile = "gfx/interface/ideas/SNE/sne_coastal_total_mobilization.png"
+	}
+	spriteType = {
+		name = "GFX_idea_ECE_elite_levy"
+		texturefile = "gfx/interface/ideas/ECE/ece_elite_levy.png"
+	}
+	spriteType = {
+		name = "GFX_idea_EBS_bureau_total_control"
+		texturefile = "gfx/interface/ideas/EBS/ebs_bureau_total_control.png"
+	}
+}
+

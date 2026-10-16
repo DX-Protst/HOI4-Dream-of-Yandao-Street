@@ -1,0 +1,104 @@
+capital = 1041 # Chengdu is the capital of Yandao Street Middle School
+
+set_research_slots = 3
+
+# Add starting ideas
+add_ideas = {
+	YDS_merger_tension
+	YDS_educational_decline
+	YDS_academic_ivory_tower_bias
+}
+
+# Recruit all story characters
+recruit_character = YDS_jiang_guangping
+recruit_character = YDS_li_gang
+recruit_character = YDS_tang_siyi
+recruit_character = YDS_deng_shuang
+recruit_character = YDS_autonomous_council
+recruit_character = YDS_anarchy_nihilist
+recruit_character = YDS_anarchy_corporatist
+recruit_character = YDS_liu_yan
+recruit_character = YDS_lai_sihan
+recruit_character = YDS_eluo_ningbei
+recruit_character = YDS_zhou_jingsong
+recruit_character = YDS_deng_yunbo
+recruit_character = YDS_tuo_wen
+
+# Set starting politics under Jiang Guangping (Paternal Autocrat)
+set_politics = {
+	ruling_party = paternal_autocrat
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+# Set ideology popularities to reflect the power balance (all 10 KR ideologies active)
+set_popularities = {
+	paternal_autocrat = 36       # Jiang Guangping (Principal autocracy / Ruling party)
+	national_populist = 18       # Li Gang (Alumni revival coup faction)
+	social_liberal = 14          # Tang Siyi (Class 1 student council faction)
+	authoritarian_democrat = 12  # Deng Shuang (Class 1 teacher reformist faction)
+	radical_socialist = 6        # Grassroots curriculum equality commune
+	social_democrat = 4          # Student welfare reformist front
+	social_conservative = 3      # Traditional elite school fellowship
+	market_liberal = 3           # Course selection free market association
+	totalist = 2                 # Academic affairs control directorate
+	syndicalist = 2              # Student clubs autonomous federation
+}
+
+# Standard warlord technology definitions
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1
+	tech_recon = 1
+	tech_engineers = 1
+	gw_artillery = 1
+}
+
+# Initialize YDS Gameplay Mechanics Variables
+set_variable = { YDS_gpa_score = 70 }
+set_variable = { YDS_bureau_intervention = 30 }
+set_variable = { YDS_student_autonomy = 30 }
+set_variable = { YDS_alumni_funds = 30 }
+set_variable = { YDS_teacher_influence = 50 }
+set_variable = { YDS_student_influence = 50 }
+set_variable = { YDS_olympiad_unlocked = 0 }
+set_variable = { YDS_tlb_blunders = 0 }
+
+# Initialize YDS Political Line Dynamic Modifier Factor Variables
+set_variable = { YDS_bureau_industry_factor = 0 }
+set_variable = { YDS_bureau_eff_factor = 0 }
+set_variable = { YDS_autonomy_industry_factor = 0 }
+set_variable = { YDS_autonomy_goods_factor = 0 }
+set_variable = { YDS_alumni_industry_factor = 0 }
+set_variable = { YDS_alumni_org_factor = 0 }
+
+# Initialize YDS Geopolitics Variables
+set_variable = { YDS_academic_prestige = 10 }
+set_variable = { YDS_student_attraction = 10 }
+set_variable = { YDS_infiltration_shishi = 0 }
+set_variable = { YDS_infiltration_shude = 0 }
+set_variable = { YDS_infiltration_no7 = 0 }
+set_variable = { YDS_infiltration_chengwai = 0 }
+set_variable = { YDS_infiltration_shiwai = 0 }
+set_variable = { YDS_infiltration_csfz = 0 }
+
+# Initialize Olympiad and Exam Board Variables (Option A: foundation base progression)
+set_variable = { global.track_math_progress = 20 }
+set_variable = { global.track_physics_progress = 15 }
+set_variable = { global.track_chem_progress = 15 }
+set_variable = { global.track_bio_progress = 20 }
+set_variable = { global.track_info_progress = 15 }
+set_variable = { YDS_coach_energy_total = 0 }
+set_variable = { YDS_coach_energy_used = 0 }
+set_variable = { YDS_coach_energy_available = 0 }
+set_variable = { YDS_invest_math = 0 }
+set_variable = { YDS_invest_physics = 0 }
+set_variable = { YDS_invest_chem = 0 }
+set_variable = { YDS_invest_bio = 0 }
+set_variable = { YDS_invest_info = 0 }
+set_variable = { YDS_gold_medals_won = 0 }
+set_variable = { YDS_cheat_risk = 0 }
+set_variable = { YDS_exam_monopoly_score = 0 }
+

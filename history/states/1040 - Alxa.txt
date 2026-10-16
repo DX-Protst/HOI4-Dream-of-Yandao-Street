@@ -1,0 +1,24 @@
+state = {
+	impassable = yes
+	id = 1040
+	name = "STATE_1040"
+	manpower = 450000
+	state_category = wasteland
+	history = {
+		owner = ZBX
+		add_core_of = ZBX
+		controller = ZBX
+		add_core_of = XSM
+		add_core_of = CHI
+		add_core_of = PRC
+		victory_points = { 4783 1 }
+		buildings = {
+			infrastructure = 1
+		}
+	}
+	provinces = {
+		4783 7727 7803 8102 10770 10899
+	}
+	local_supplies = 0
+	buildings_max_level_factor = 1
+}

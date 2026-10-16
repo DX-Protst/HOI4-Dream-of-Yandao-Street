@@ -1,0 +1,1941 @@
+add_namespace = yds_event
+
+country_event = {
+	id = yds_event.2
+	title = yds_event.2.t
+	desc = yds_event.2.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = yds_event.2.a
+		add_political_power = 5
+		ai_chance = { base = 100 }
+	}
+}
+
+country_event = {
+	id = yds_event.3
+	title = yds_event.3.t
+	desc = yds_event.3.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = yds_event.3.a
+		add_stability = -0.01
+		add_political_power = 5
+		ai_chance = { base = 100 }
+	}
+}
+
+country_event = {
+	id = yds_event.4
+	title = yds_event.4.t
+	desc = yds_event.4.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = yds_event.4.a
+		add_popularity = {
+			ideology = national_populist
+			popularity = 0.05
+		}
+		ai_chance = { base = 100 }
+	}
+}
+
+country_event = {
+	id = yds_event.5
+	title = yds_event.5.t
+	desc = yds_event.5.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = yds_event.5.a
+		add_popularity = {
+			ideology = social_liberal
+			popularity = 0.05
+		}
+		ai_chance = { base = 100 }
+	}
+}
+
+country_event = {
+	id = yds_event.6
+	title = yds_event.6.t
+	desc = yds_event.6.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = yds_event.6.a
+		add_political_power = 5
+		retire_character = YDS_li_gang
+		recruit_character = YDS_missing_leader_f
+		promote_character = YDS_missing_leader_f
+		1037 = {
+			add_core_of = YDF
+			transfer_state_to = YDF
+		}
+		751 = {
+			add_core_of = YDF
+			transfer_state_to = YDF
+		}
+		YDF = {
+			set_politics = {
+				ruling_party = national_populist
+			}
+			recruit_character = YDS_li_gang
+			promote_character = {
+				character = YDS_li_gang
+				ideology = meritocratic_darwinism
+			}
+			load_oob = "YDS_civil_war_YDF"
+		}
+		retire_character = YDS_autonomous_council
+		retire_character = YDS_tang_siyi
+		recruit_character = YDS_missing_leader_d
+		promote_character = YDS_missing_leader_d
+		752 = {
+			add_core_of = YDD
+			transfer_state_to = YDD
+		}
+		753 = {
+			add_core_of = YDD
+			transfer_state_to = YDD
+		}
+		YDD = {
+			set_politics = {
+				ruling_party = social_liberal
+			}
+			recruit_character = YDS_autonomous_council
+			promote_character = {
+				character = YDS_autonomous_council
+				ideology = student_libertarianism
+			}
+			load_oob = "YDS_civil_war_YDD"
+			set_country_flag = YDS_faction_struggle_active
+			set_power_balance = {
+				id = YDS_class_1_bop
+			}
+		}
+		load_oob = YDS_civil_war_YDS
+		declare_war_on = {
+			target = YDF
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = YDD
+			type = annex_everything
+		}
+		YDF = {
+			declare_war_on = {
+				target = YDD
+				type = annex_everything
+			}
+		}
+		ai_chance = { base = 100 }
+	}
+}
+
+country_event = {
+	id = yds_event.7
+	title = yds_event.7.t
+	desc = yds_event.7.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = yds_event.7.a
+		add_political_power = 10
+		ai_chance = { base = 100 }
+	}
+}
+
+country_event = {
+	id = yds_event.8
+	title = yds_event.8.t
+	desc = yds_event.8.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = yds_event.8.a
+		add_political_power = 5
+		ai_chance = { base = 100 }
+	}
+}
+
+country_event = {
+	id = yds_event.9
+	title = yds_event.9.t
+	desc = yds_event.9.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = yds_event.9.a
+		add_stability = 0.05
+		add_political_power = 10
+		country_event = {
+			id = yds_event.1001
+			days = 1
+		}
+		ai_chance = { base = 100 }
+	}
+}
+
+country_event = {
+	id = yds_event.10
+	title = yds_event.10.t
+	desc = yds_event.10.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = yds_event.10.a
+		add_political_power = 5
+		retire_character = YDS_jiang_guangping
+		recruit_character = YDS_missing_leader_c
+		promote_character = YDS_missing_leader_c
+		1041 = {
+			add_core_of = YDC
+			transfer_state_to = YDC
+		}
+		605 = {
+			add_core_of = YDC
+			transfer_state_to = YDC
+		}
+		YDC = {
+			set_politics = {
+				ruling_party = paternal_autocrat
+			}
+			recruit_character = YDS_jiang_guangping
+			promote_character = {
+				character = YDS_jiang_guangping
+				ideology = principal_autocracy
+			}
+			load_oob = "YDS_civil_war_YDC"
+		}
+		retire_character = YDS_li_gang
+		recruit_character = YDS_missing_leader_f
+		promote_character = YDS_missing_leader_f
+		1037 = {
+			add_core_of = YDF
+			transfer_state_to = YDF
+		}
+		751 = {
+			add_core_of = YDF
+			transfer_state_to = YDF
+		}
+		YDF = {
+			set_politics = {
+				ruling_party = national_populist
+			}
+			recruit_character = YDS_li_gang
+			promote_character = {
+				character = YDS_li_gang
+				ideology = meritocratic_darwinism
+			}
+			load_oob = "YDS_civil_war_YDF"
+		}
+		load_oob = YDS_civil_war_YDS
+		set_politics = {
+			ruling_party = social_liberal
+		}
+		if = {
+			limit = { NOT = { has_character = YDS_autonomous_council } }
+			recruit_character = YDS_autonomous_council
+		}
+		promote_character = {
+			character = YDS_autonomous_council
+			ideology = student_libertarianism
+		}
+		set_country_flag = YDS_faction_struggle_active
+		set_power_balance = {
+			id = YDS_class_1_bop
+		}
+		declare_war_on = {
+			target = YDC
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = YDF
+			type = annex_everything
+		}
+		YDC = {
+			declare_war_on = {
+				target = YDF
+				type = annex_everything
+			}
+		}
+		ai_chance = { base = 100 }
+	}
+}
+
+country_event = {
+	id = yds_event.11
+	title = yds_event.11.t
+	desc = yds_event.11.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = yds_event.11.a
+		add_political_power = 10
+		ai_chance = { base = 100 }
+	}
+}
+
+country_event = {
+	id = yds_event.12
+	title = yds_event.12.t
+	desc = yds_event.12.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = yds_event.12.a
+		add_political_power = 5
+		ai_chance = { base = 100 }
+	}
+}
+
+country_event = {
+	id = yds_event.13
+	title = yds_event.13.t
+	desc = yds_event.13.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = yds_event.13.a
+		add_stability = 0.05
+		add_political_power = 10
+		country_event = {
+			id = yds_event.1002
+			days = 1
+		}
+		ai_chance = { base = 100 }
+	}
+}
+
+country_event = {
+	id = yds_event.14
+	title = yds_event.14.t
+	desc = yds_event.14.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = yds_event.14.next
+		country_event = {
+			id = yds_event.1214
+		}
+		ai_chance = { base = 100 }
+	}
+}
+
+country_event = {
+	id = yds_event.15
+	title = yds_event.15.t
+	desc = yds_event.15.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = yds_event.15.a
+		add_political_power = 10
+		ai_chance = { base = 100 }
+	}
+}
+
+country_event = {
+	id = yds_event.16
+	title = yds_event.16.t
+	desc = yds_event.16.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = yds_event.16.next
+		country_event = {
+			id = yds_event.1216
+		}
+		ai_chance = { base = 100 }
+	}
+}
+
+country_event = {
+	id = yds_event.17
+	title = yds_event.17.t
+	desc = yds_event.17.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = yds_event.17.a
+		add_stability = 0.05
+		add_political_power = 10
+		country_event = {
+			id = yds_event.1001
+			days = 1
+		}
+		ai_chance = { base = 100 }
+	}
+}
+
+country_event = {
+	id = yds_event.18
+	title = yds_event.18.t
+	desc = yds_event.18.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = yds_event.18.a
+		add_political_power = 5
+		ai_chance = { base = 100 }
+	}
+}
+
+country_event = {
+	id = yds_event.19
+	title = yds_event.19.t
+	desc = yds_event.19.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = yds_event.19.a
+		add_political_power = 5
+		ai_chance = { base = 100 }
+	}
+}
+
+country_event = {
+	id = yds_event.20
+	title = yds_event.20.t
+	desc = yds_event.20.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = yds_event.20.a
+		add_political_power = 5
+		ai_chance = { base = 100 }
+	}
+}
+
+country_event = {
+	id = yds_event.21
+	title = yds_event.21.t
+	desc = yds_event.21.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = yds_event.21.a
+		add_political_power = 10
+		add_stability = 0.05
+		ai_chance = { base = 100 }
+	}
+}
+
+country_event = {
+	id = yds_event.22
+	title = yds_event.22.t
+	desc = yds_event.22.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = yds_event.22.a
+		add_political_power = 10
+		add_popularity = {
+			ideology = radical_socialist
+			popularity = 0.10
+		}
+		ai_chance = { base = 100 }
+	}
+}
+
+country_event = {
+	id = yds_event.23
+	title = yds_event.23.t
+	desc = yds_event.23.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = yds_event.23.a
+		add_political_power = 5
+		ai_chance = { base = 100 }
+	}
+}
+
+country_event = {
+	id = yds_event.24
+	title = yds_event.24.t
+	desc = yds_event.24.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = yds_event.24.a
+		add_political_power = 5
+		ai_chance = { base = 100 }
+	}
+}
+
+country_event = {
+	id = yds_event.25
+	title = yds_event.25.t
+	desc = yds_event.25.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = yds_event.25.a
+		add_political_power = 10
+		add_stability = 0.05
+		ai_chance = { base = 100 }
+	}
+}
+
+country_event = {
+	id = yds_event.26
+	title = yds_event.26.t
+	desc = yds_event.26.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = yds_event.26.a
+		add_political_power = 5
+		ai_chance = { base = 100 }
+	}
+}
+
+country_event = {
+	id = yds_event.27
+	title = yds_event.27.t
+	desc = yds_event.27.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = yds_event.27.a
+		add_political_power = 5
+		ai_chance = { base = 100 }
+	}
+}
+
+country_event = {
+	id = yds_event.28
+	title = yds_event.28.t
+	desc = yds_event.28.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = yds_event.28.a
+		add_political_power = 5
+		ai_chance = { base = 100 }
+	}
+}
+
+country_event = {
+	id = yds_event.29
+	title = yds_event.29.t
+	desc = yds_event.29.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = yds_event.29.a
+		add_political_power = 10
+		add_stability = 0.05
+		ai_chance = { base = 100 }
+	}
+}
+
+country_event = {
+	id = yds_event.30
+	title = yds_event.30.t
+	desc = yds_event.30.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = yds_event.30.a
+		add_political_power = 5
+		ai_chance = { base = 100 }
+	}
+}
+
+country_event = {
+	id = yds_event.31
+	title = yds_event.31.t
+	desc = yds_event.31.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = yds_event.31.a
+		add_political_power = 5
+		ai_chance = { base = 100 }
+	}
+}
+
+country_event = {
+	id = yds_event.32
+	title = yds_event.32.t
+	desc = yds_event.32.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = yds_event.32.a
+		add_political_power = 5
+		ai_chance = { base = 100 }
+	}
+}
+
+country_event = {
+	id = yds_event.33
+	title = yds_event.33.t
+	desc = yds_event.33.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = yds_event.33.a
+		add_political_power = 10
+		add_stability = 0.05
+		ai_chance = { base = 100 }
+	}
+}
+
+country_event = {
+	id = yds_event.34
+	title = yds_event.34.t
+	desc = yds_event.34.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = yds_event.34.a
+		add_political_power = 5
+		ai_chance = { base = 100 }
+	}
+}
+
+country_event = {
+	id = yds_event.35
+	title = yds_event.35.t
+	desc = yds_event.35.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = yds_event.35.a
+		add_political_power = 5
+		ai_chance = { base = 100 }
+	}
+}
+
+country_event = {
+	id = yds_event.36
+	title = yds_event.36.t
+	desc = yds_event.36.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = yds_event.36.a
+		add_political_power = 5
+		ai_chance = { base = 100 }
+	}
+}
+
+country_event = {
+	id = yds_event.37
+	title = yds_event.37.t
+	desc = yds_event.37.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = yds_event.37.next
+		country_event = {
+			id = yds_event.1237
+		}
+		ai_chance = { base = 100 }
+	}
+}
+
+country_event = {
+	id = yds_event.38
+	title = yds_event.38.t
+	desc = yds_event.38.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = yds_event.38.a
+		add_political_power = 10
+		add_popularity = {
+			ideology = market_liberal
+			popularity = 0.10
+		}
+		ai_chance = { base = 100 }
+	}
+}
+
+country_event = {
+	id = yds_event.39
+	title = yds_event.39.t
+	desc = yds_event.39.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = yds_event.39.a
+		add_political_power = 5
+		ai_chance = { base = 100 }
+	}
+}
+
+country_event = {
+	id = yds_event.40
+	title = yds_event.40.t
+	desc = yds_event.40.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = yds_event.40.a
+		add_political_power = 5
+		ai_chance = { base = 100 }
+	}
+}
+
+country_event = {
+	id = yds_event.41
+	title = yds_event.41.t
+	desc = yds_event.41.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = yds_event.41.a
+		add_political_power = 10
+		add_stability = 0.05
+		ai_chance = { base = 100 }
+	}
+}
+
+country_event = {
+	id = yds_event.42
+	title = yds_event.42.t
+	desc = yds_event.42.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = yds_event.42.next
+		country_event = {
+			id = yds_event.1242
+		}
+		ai_chance = { base = 100 }
+	}
+}
+
+country_event = {
+	id = yds_event.43
+	title = yds_event.43.t
+	desc = yds_event.43.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = yds_event.43.next
+		country_event = {
+			id = yds_event.1243
+		}
+		ai_chance = { base = 100 }
+	}
+}
+
+country_event = {
+	id = yds_event.44
+	title = yds_event.44.t
+	desc = yds_event.44.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = yds_event.44.next
+		country_event = {
+			id = yds_event.1244
+		}
+		ai_chance = { base = 100 }
+	}
+}
+
+country_event = {
+	id = yds_event.45
+	title = yds_event.45.t
+	desc = yds_event.45.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = yds_event.45.a
+		custom_effect_tooltip = YDS_TT_MOD_END
+		add_political_power = 5
+		add_stability = -0.05
+		ai_chance = { base = 100 }
+	}
+}
+
+country_event = {
+	id = yds_event.46
+	title = yds_event.46.t
+	desc = yds_event.46.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = yds_event.46.a
+		add_political_power = 5
+		add_stability = -0.05
+		ai_chance = { base = 100 }
+	}
+}
+
+country_event = {
+	id = yds_event.47
+	title = yds_event.47.t
+	desc = yds_event.47.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = yds_event.47.next
+		country_event = {
+			id = yds_event.1247
+		}
+		ai_chance = { base = 100 }
+	}
+}
+
+country_event = {
+	id = yds_event.48
+	title = yds_event.48.t
+	desc = yds_event.48.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = yds_event.48.next
+		country_event = {
+			id = yds_event.1248
+		}
+		ai_chance = { base = 100 }
+	}
+}
+
+country_event = {
+	id = yds_event.49
+	title = yds_event.49.t
+	desc = yds_event.49.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = yds_event.49.a
+		add_political_power = 5
+		ai_chance = { base = 100 }
+	}
+}
+
+country_event = {
+	id = yds_event.50
+	title = yds_event.50.t
+	desc = yds_event.50.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = yds_event.50.a
+		add_political_power = 5
+		ai_chance = { base = 100 }
+	}
+}
+
+country_event = {
+	id = yds_event.51
+	title = yds_event.51.t
+	desc = yds_event.51.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = yds_event.51.a
+		add_political_power = 5
+		ai_chance = { base = 100 }
+	}
+}
+
+country_event = {
+	id = yds_event.52
+	title = yds_event.52.t
+	desc = yds_event.52.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = yds_event.52.a
+		add_political_power = 5
+		ai_chance = { base = 100 }
+	}
+}
+
+country_event = {
+	id = yds_event.53
+	title = yds_event.53.t
+	desc = yds_event.53.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = yds_event.53.a
+		add_political_power = 5
+		ai_chance = { base = 100 }
+	}
+}
+
+country_event = {
+	id = yds_event.54
+	title = yds_event.54.t
+	desc = yds_event.54.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = yds_event.54.a
+		add_political_power = 5
+		ai_chance = { base = 100 }
+	}
+}
+
+country_event = {
+	id = yds_event.55
+	title = yds_event.55.t
+	desc = yds_event.55.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = yds_event.55.a
+		add_political_power = 5
+		ai_chance = { base = 100 }
+	}
+}
+
+country_event = {
+	id = yds_event.56
+	title = yds_event.56.t
+	desc = yds_event.56.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = yds_event.56.a
+		add_political_power = 5
+		ai_chance = { base = 100 }
+	}
+}
+
+country_event = {
+	id = yds_event.57
+	title = yds_event.57.t
+	desc = yds_event.57.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = yds_event.57.a
+		add_political_power = 5
+		ai_chance = { base = 100 }
+	}
+}
+
+country_event = {
+	id = yds_event.58
+	title = yds_event.58.t
+	desc = yds_event.58.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = yds_event.58.a
+		custom_effect_tooltip = YDS_TT_MOD_END
+		add_political_power = 30
+		add_stability = 0.1
+		ai_chance = { base = 100 }
+	}
+}
+
+country_event = {
+	id = yds_event.99
+	title = yds_event.99.t
+	desc = yds_event.99.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = yds_event.99.next
+		country_event = {
+			id = yds_event.1299
+		}
+		ai_chance = { base = 100 }
+	}
+}
+
+country_event = {
+	id = yds_event.100
+	title = yds_event.100.t
+	desc = yds_event.100.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = yds_event.100.a
+		add_stability = -0.05
+		country_event = {
+			id = yds_event.101
+			days = 2
+		}
+		ai_chance = { base = 100 }
+	}
+
+	option = {
+		name = yds_event.100.b
+		add_political_power = 10
+		country_event = {
+			id = yds_event.102
+			days = 2
+		}
+		ai_chance = { base = 100 }
+	}
+}
+
+country_event = {
+	id = yds_event.101
+	title = yds_event.101.t
+	desc = yds_event.101.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = yds_event.101.a
+		complete_national_focus = YDS_iron_discipline
+		ai_chance = { base = 100 }
+	}
+
+	option = {
+		name = yds_event.101.b
+		complete_national_focus = YDS_iron_discipline
+		ai_chance = { base = 100 }
+	}
+
+	option = {
+		name = yds_event.101.c
+		complete_national_focus = YDS_class_1_awakening
+		ai_chance = { base = 100 }
+	}
+}
+
+country_event = {
+	id = yds_event.102
+	title = yds_event.102.t
+	desc = yds_event.102.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = yds_event.102.a
+		complete_national_focus = YDS_class_1_awakening
+		ai_chance = { base = 100 }
+	}
+
+	option = {
+		name = yds_event.102.b
+		complete_national_focus = YDS_alumni_network
+		ai_chance = { base = 100 }
+	}
+
+	option = {
+		name = yds_event.102.c
+		complete_national_focus = YDS_alumni_network
+		ai_chance = { base = 100 }
+	}
+}
+
+country_event = {
+	id = yds_event.1000
+	title = yds_event.1000.t
+	desc = yds_event.1000.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = yds_event.1000.a
+		set_country_flag = YDS_anarchy_active
+		clr_country_flag = YDS_faction_struggle_active
+		remove_power_balance = {
+			id = YDS_class_1_bop
+		}
+		load_focus_tree = YDS_anarchy_focus
+		if = {
+			limit = { NOT = { has_character = YDS_anarchy_nihilist } }
+			recruit_character = YDS_anarchy_nihilist
+		}
+		promote_character = {
+			character = YDS_anarchy_nihilist
+			ideology = nihilistic_xuexism
+		}
+		set_politics = {
+			ruling_party = anarcho_xuexism
+			elections_allowed = no
+		}
+		add_popularity = {
+			ideology = anarcho_xuexism
+			popularity = 0.60
+		}
+		set_variable = {
+			YDS_student_autonomy = 0
+		}
+		set_variable = {
+			YDS_gpa_score = 0
+		}
+		remove_ideas = YDS_bureau_order
+		remove_ideas = YDS_academic_freedom
+		remove_ideas = YDS_old_glory_buff
+		add_stability = -0.5
+		ai_chance = { base = 100 }
+	}
+}
+
+country_event = {
+	id = yds_event.1001
+	title = yds_event.1001.t
+	desc = yds_event.1001.d
+	picture = GFX_report_event_chinese_soldiers
+
+	is_triggered_only = yes
+
+	option = {
+		name = yds_event.1001.a
+		custom_effect_tooltip = YDS_TT_CRISIS_INTRO
+		set_country_flag = YDS_school_district_gui_unlocked
+		set_variable = {
+			YDS_olympiad_unlocked = 1
+		}
+		ai_chance = { base = 100 }
+	}
+}
+
+country_event = {
+	id = yds_event.1002
+	title = yds_event.1002.t
+	desc = yds_event.1002.d
+	picture = GFX_report_event_chinese_soldiers
+
+	is_triggered_only = yes
+
+	option = {
+		name = yds_event.1002.a
+		custom_effect_tooltip = YDS_TT_CRISIS_BOP_INTRO
+		set_country_flag = YDS_school_district_gui_unlocked
+		set_variable = {
+			YDS_olympiad_unlocked = 1
+		}
+		ai_chance = { base = 100 }
+	}
+}
+
+country_event = {
+	id = yds_event.1003
+	title = yds_event.1003.t
+	desc = yds_event.1003.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = yds_event.1003.a
+		set_country_flag = YDS_anarchy_active
+		clr_country_flag = YDS_faction_struggle_active
+		remove_power_balance = {
+			id = YDS_class_1_bop
+		}
+		load_focus_tree = YDS_anarchy_focus
+		if = {
+			limit = { NOT = { has_character = YDS_anarchy_nihilist } }
+			recruit_character = YDS_anarchy_nihilist
+		}
+		promote_character = {
+			character = YDS_anarchy_nihilist
+			ideology = nihilistic_xuexism
+		}
+		set_politics = {
+			ruling_party = anarcho_xuexism
+			elections_allowed = no
+		}
+		add_popularity = {
+			ideology = anarcho_xuexism
+			popularity = 0.60
+		}
+		set_variable = {
+			YDS_student_autonomy = 0
+		}
+		set_variable = {
+			YDS_gpa_score = 0
+		}
+		remove_ideas = YDS_bureau_order
+		remove_ideas = YDS_academic_freedom
+		remove_ideas = YDS_old_glory_buff
+		add_stability = -0.5
+		ai_chance = { base = 100 }
+	}
+}
+
+country_event = {
+	id = yds_event.1004
+	title = yds_event.1004.t
+	desc = yds_event.1004.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = yds_event.1004.a
+		set_country_flag = YDS_liu_yan_active
+		if = {
+			limit = { NOT = { has_character = YDS_liu_yan } }
+			recruit_character = YDS_liu_yan
+		}
+		set_politics = {
+			ruling_party = totalist
+			elections_allowed = no
+		}
+		add_popularity = {
+			ideology = totalist
+			popularity = 0.60
+		}
+		promote_character = {
+			character = YDS_liu_yan
+			ideology = bureau_totalitarianism
+		}
+		load_focus_tree = YDS_liu_yan_focus_tree
+		add_stability = -0.5
+		add_political_power = -200
+		set_variable = {
+			YDS_bureau_intervention = 0
+		}
+		ai_chance = { base = 100 }
+	}
+}
+
+country_event = {
+	id = yds_event.1100
+	title = yds_event.1100.t
+	desc = yds_event.1100.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = yds_event.1100.next
+		country_event = {
+			id = yds_event.2100
+		}
+		ai_chance = { base = 100 }
+	}
+}
+
+country_event = {
+	id = yds_event.1101
+	title = yds_event.1101.t
+	desc = yds_event.1101.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = yds_event.1101.next
+		country_event = {
+			id = yds_event.2101
+		}
+		ai_chance = { base = 100 }
+	}
+}
+
+country_event = {
+	id = yds_event.1102
+	title = yds_event.1102.t
+	desc = yds_event.1102.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = yds_event.1102.a
+		add_stability = -0.05
+		ai_chance = { base = 100 }
+	}
+}
+
+country_event = {
+	id = yds_event.1103
+	title = yds_event.1103.t
+	desc = yds_event.1103.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = yds_event.1103.next
+		country_event = {
+			id = yds_event.2103
+		}
+		ai_chance = { base = 100 }
+	}
+}
+
+country_event = {
+	id = yds_event.1104
+	title = yds_event.1104.t
+	desc = yds_event.1104.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = yds_event.1104.next
+		country_event = {
+			id = yds_event.2104
+		}
+		ai_chance = { base = 100 }
+	}
+}
+
+country_event = {
+	id = yds_event.1105
+	title = yds_event.1105.t
+	desc = yds_event.1105.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = yds_event.1105.next
+		country_event = {
+			id = yds_event.2105
+		}
+		ai_chance = { base = 100 }
+	}
+}
+
+country_event = {
+	id = yds_event.1106
+	title = yds_event.1106.t
+	desc = yds_event.1106.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = yds_event.1106.next
+		country_event = {
+			id = yds_event.2106
+		}
+		ai_chance = { base = 100 }
+	}
+}
+
+country_event = {
+	id = yds_event.1214
+	title = yds_event.1214.t
+	desc = yds_event.1214.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = yds_event.1214.prev
+		country_event = {
+			id = yds_event.14
+		}
+		ai_chance = { base = 100 }
+	}
+
+	option = {
+		name = yds_event.1214.a
+		add_political_power = 5
+		retire_character = YDS_jiang_guangping
+		recruit_character = YDS_missing_leader_c
+		promote_character = YDS_missing_leader_c
+		1041 = {
+			add_core_of = YDC
+			transfer_state_to = YDC
+		}
+		605 = {
+			add_core_of = YDC
+			transfer_state_to = YDC
+		}
+		YDC = {
+			set_politics = {
+				ruling_party = paternal_autocrat
+			}
+			recruit_character = YDS_jiang_guangping
+			promote_character = {
+				character = YDS_jiang_guangping
+				ideology = principal_autocracy
+			}
+			load_oob = "YDS_civil_war_YDC"
+		}
+		retire_character = YDS_autonomous_council
+		retire_character = YDS_tang_siyi
+		recruit_character = YDS_missing_leader_d
+		promote_character = YDS_missing_leader_d
+		752 = {
+			add_core_of = YDD
+			transfer_state_to = YDD
+		}
+		753 = {
+			add_core_of = YDD
+			transfer_state_to = YDD
+		}
+		YDD = {
+			set_politics = {
+				ruling_party = social_liberal
+			}
+			recruit_character = YDS_autonomous_council
+			promote_character = {
+				character = YDS_autonomous_council
+				ideology = student_libertarianism
+			}
+			load_oob = "YDS_civil_war_YDD"
+			set_country_flag = YDS_faction_struggle_active
+			set_power_balance = {
+				id = YDS_class_1_bop
+			}
+		}
+		load_oob = YDS_civil_war_YDS
+		set_politics = {
+			ruling_party = national_populist
+		}
+		if = {
+			limit = { NOT = { has_character = YDS_li_gang } }
+			recruit_character = YDS_li_gang
+		}
+		promote_character = {
+			character = YDS_li_gang
+			ideology = meritocratic_darwinism
+		}
+		declare_war_on = {
+			target = YDC
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = YDD
+			type = annex_everything
+		}
+		YDC = {
+			declare_war_on = {
+				target = YDD
+				type = annex_everything
+			}
+		}
+		ai_chance = { base = 100 }
+	}
+}
+
+country_event = {
+	id = yds_event.1216
+	title = yds_event.1216.t
+	desc = yds_event.1216.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = yds_event.1216.prev
+		country_event = {
+			id = yds_event.16
+		}
+		ai_chance = { base = 100 }
+	}
+
+	option = {
+		name = yds_event.1216.a
+		add_political_power = 5
+		ai_chance = { base = 100 }
+	}
+}
+
+country_event = {
+	id = yds_event.1237
+	title = yds_event.1237.t
+	desc = yds_event.1237.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = yds_event.1237.prev
+		country_event = {
+			id = yds_event.37
+		}
+		ai_chance = { base = 100 }
+	}
+
+	option = {
+		name = yds_event.1237.a
+		add_political_power = 10
+		add_stability = 0.05
+		ai_chance = { base = 100 }
+	}
+}
+
+country_event = {
+	id = yds_event.1242
+	title = yds_event.1242.t
+	desc = yds_event.1242.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = yds_event.1242.prev
+		country_event = {
+			id = yds_event.42
+		}
+		ai_chance = { base = 100 }
+	}
+
+	option = {
+		name = yds_event.1242.a
+		add_political_power = 5
+		add_stability = -0.05
+		ai_chance = { base = 100 }
+	}
+}
+
+country_event = {
+	id = yds_event.1243
+	title = yds_event.1243.t
+	desc = yds_event.1243.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = yds_event.1243.prev
+		country_event = {
+			id = yds_event.43
+		}
+		ai_chance = { base = 100 }
+	}
+
+	option = {
+		name = yds_event.1243.a
+		add_political_power = 5
+		ai_chance = { base = 100 }
+	}
+}
+
+country_event = {
+	id = yds_event.1244
+	title = yds_event.1244.t
+	desc = yds_event.1244.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = yds_event.1244.prev
+		country_event = {
+			id = yds_event.44
+		}
+		ai_chance = { base = 100 }
+	}
+
+	option = {
+		name = yds_event.1244.a
+		add_political_power = 5
+		ai_chance = { base = 100 }
+	}
+}
+
+country_event = {
+	id = yds_event.1247
+	title = yds_event.1247.t
+	desc = yds_event.1247.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = yds_event.1247.prev
+		country_event = {
+			id = yds_event.47
+		}
+		ai_chance = { base = 100 }
+	}
+
+	option = {
+		name = yds_event.1247.a
+		add_political_power = 5
+		add_stability = -0.05
+		ai_chance = { base = 100 }
+	}
+}
+
+country_event = {
+	id = yds_event.1248
+	title = yds_event.1248.t
+	desc = yds_event.1248.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = yds_event.1248.prev
+		country_event = {
+			id = yds_event.48
+		}
+		ai_chance = { base = 100 }
+	}
+
+	option = {
+		name = yds_event.1248.a
+		custom_effect_tooltip = YDS_TT_MOD_END
+		add_political_power = 5
+		add_stability = -0.05
+		ai_chance = { base = 100 }
+	}
+}
+
+country_event = {
+	id = yds_event.1299
+	title = yds_event.1299.t
+	desc = yds_event.1299.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = yds_event.1299.prev
+		country_event = {
+			id = yds_event.99
+		}
+		ai_chance = { base = 100 }
+	}
+
+	option = {
+		name = yds_event.1299.a
+		add_political_power = 5
+		country_event = {
+			id = yds_event.2
+		}
+		ai_chance = { base = 100 }
+	}
+}
+
+country_event = {
+	id = yds_event.2001
+	title = yds_event.2001.t
+	desc = yds_event.2001.d
+
+	
+	trigger = {
+		NOT = { has_country_flag = YDS_anarchy_active }
+	}
+is_triggered_only = yes
+
+	option = {
+		name = yds_event.2001.a
+		retire_character = YDS_autonomous_council
+		if = {
+			limit = { NOT = { has_character = YDS_tang_siyi } }
+			recruit_character = YDS_tang_siyi
+		}
+		promote_character = {
+			character = YDS_tang_siyi
+			ideology = student_libertarianism
+		}
+		set_politics = {
+			ruling_party = social_liberal
+			elections_allowed = yes
+		}
+		add_popularity = {
+			ideology = social_liberal
+			popularity = 0.25
+		}
+		add_ideas = YDS_student_faction_dominant
+		remove_ideas = YDS_teacher_faction_dominant
+		clr_country_flag = YDS_faction_struggle_active
+		remove_power_balance = {
+			id = YDS_class_1_bop
+		}
+		ai_chance = { base = 100 }
+	}
+}
+
+country_event = {
+	id = yds_event.2002
+	title = yds_event.2002.t
+	desc = yds_event.2002.d
+
+	
+	trigger = {
+		NOT = { has_country_flag = YDS_anarchy_active }
+	}
+is_triggered_only = yes
+
+	option = {
+		name = yds_event.2002.a
+		retire_character = YDS_autonomous_council
+		if = {
+			limit = { NOT = { has_character = YDS_deng_shuang } }
+			recruit_character = YDS_deng_shuang
+		}
+		promote_character = {
+			character = YDS_deng_shuang
+			ideology = tutor_guided_democracy
+		}
+		set_politics = {
+			ruling_party = authoritarian_democrat
+			elections_allowed = no
+		}
+		add_popularity = {
+			ideology = authoritarian_democrat
+			popularity = 0.25
+		}
+		add_ideas = YDS_teacher_faction_dominant
+		remove_ideas = YDS_student_faction_dominant
+		clr_country_flag = YDS_faction_struggle_active
+		remove_power_balance = {
+			id = YDS_class_1_bop
+		}
+		ai_chance = { base = 100 }
+	}
+}
+
+country_event = {
+	id = yds_event.2100
+	title = yds_event.2100.t
+	desc = yds_event.2100.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = yds_event.2100.prev
+		country_event = {
+			id = yds_event.1100
+		}
+		ai_chance = { base = 100 }
+	}
+
+	option = {
+		name = yds_event.2100.a
+		add_stability = -0.1
+		ai_chance = { base = 100 }
+	}
+}
+
+country_event = {
+	id = yds_event.2101
+	title = yds_event.2101.t
+	desc = yds_event.2101.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = yds_event.2101.prev
+		country_event = {
+			id = yds_event.1101
+		}
+		ai_chance = { base = 100 }
+	}
+
+	option = {
+		name = yds_event.2101.a
+		add_stability = -0.05
+		ai_chance = { base = 100 }
+	}
+}
+
+country_event = {
+	id = yds_event.2103
+	title = yds_event.2103.t
+	desc = yds_event.2103.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = yds_event.2103.prev
+		country_event = {
+			id = yds_event.1103
+		}
+		ai_chance = { base = 100 }
+	}
+
+	option = {
+		name = yds_event.2103.a
+		add_stability = -0.05
+		ai_chance = { base = 100 }
+	}
+}
+
+country_event = {
+	id = yds_event.2104
+	title = yds_event.2104.t
+	desc = yds_event.2104.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = yds_event.2104.prev
+		country_event = {
+			id = yds_event.1104
+		}
+		ai_chance = { base = 100 }
+	}
+
+	option = {
+		name = yds_event.2104.a
+		add_stability = -0.05
+		ai_chance = { base = 100 }
+	}
+}
+
+country_event = {
+	id = yds_event.2105
+	title = yds_event.2105.t
+	desc = yds_event.2105.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = yds_event.2105.prev
+		country_event = {
+			id = yds_event.1105
+		}
+		ai_chance = { base = 100 }
+	}
+
+	option = {
+		name = yds_event.2105.a
+		add_stability = -0.05
+		ai_chance = { base = 100 }
+	}
+}
+
+country_event = {
+	id = yds_event.2106
+	title = yds_event.2106.t
+	desc = yds_event.2106.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = yds_event.2106.prev
+		country_event = {
+			id = yds_event.1106
+		}
+		ai_chance = { base = 100 }
+	}
+
+	option = {
+		name = yds_event.2106.a
+		add_stability = -0.5
+		ai_chance = { base = 100 }
+	}
+}

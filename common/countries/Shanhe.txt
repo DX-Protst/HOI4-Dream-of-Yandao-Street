@@ -1,0 +1,4 @@
+graphical_culture = oriental_graphics
+graphical_culture_2d = oriental_2d
+
+color = { 180 80 30 }

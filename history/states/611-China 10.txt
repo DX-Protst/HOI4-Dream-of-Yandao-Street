@@ -1,0 +1,26 @@
+state = {
+	impassable = yes
+	id = 611
+	name = "STATE_611"
+	manpower = 1470000
+	state_category = town
+	history = {
+		owner = ZBX
+		add_core_of = ZBX
+		controller = ZBX
+		add_core_of = EBS
+		add_core_of = MEN
+		add_core_of = CHI
+		add_core_of = PRC
+		victory_points = { 10397 2 }
+		buildings = {
+			arms_factory = 2
+			industrial_complex = 1
+			infrastructure = 2
+		}
+	}
+	provinces = {
+		828 952 1489 4495 4612 7545 7674 10397 11752 13379
+	}
+	local_supplies = 0
+}

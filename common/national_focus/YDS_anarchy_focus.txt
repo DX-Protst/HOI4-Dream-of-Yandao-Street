@@ -1,0 +1,207 @@
+focus_tree = {
+	id = YDS_anarchy_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			has_country_flag = YDS_anarchy_active
+		}
+	}
+	default = no
+	# ==================== SECRET ANARCHY PATH ====================
+	focus = {
+		id = YDS_club_feudalism
+		x = 10
+		y = 5
+		cost = 5
+		icon = GFX_focus_YDS_club_feudalism
+		continue_if_invalid = yes
+		cancel_if_invalid = yes
+		available = {
+			has_country_flag = YDS_anarchy_active
+		}
+		mutually_exclusive = {
+			focus = YDS_general_strike
+		}
+		completion_reward = {
+			promote_character = YDS_anarchy_corporatist
+			set_politics = {
+				ruling_party = anarcho_xuexism
+				elections_allowed = no
+			}
+			add_popularity = {
+				ideology = anarcho_xuexism
+				popularity = 0.50
+			}
+			add_stability = -0.1
+			country_event = {
+				id = yds_event.42
+			}
+			subtract_from_variable = {
+				YDS_gpa_score = 10
+			}
+			add_to_variable = {
+				YDS_student_autonomy = 15
+			}
+			custom_effect_tooltip = YDS_TT_LAX_FOCUS
+		}
+	}
+	focus = {
+		id = YDS_anime_propaganda
+		x = 9
+		y = 7
+		cost = 5
+		icon = GFX_focus_YDS_anime_propaganda
+		continue_if_invalid = yes
+		cancel_if_invalid = yes
+		available = {
+			always = yes
+		}
+		prerequisite = {
+			focus = YDS_club_feudalism
+		}
+		completion_reward = {
+			country_event = {
+				id = yds_event.43
+			}
+			subtract_from_variable = {
+				YDS_gpa_score = 10
+			}
+			add_to_variable = {
+				YDS_student_autonomy = 15
+			}
+			custom_effect_tooltip = YDS_TT_LAX_FOCUS
+		}
+	}
+	focus = {
+		id = YDS_sports_league_militia
+		x = 11
+		y = 7
+		cost = 5
+		icon = GFX_focus_YDS_sports_league_militia
+		continue_if_invalid = yes
+		cancel_if_invalid = yes
+		available = {
+			always = yes
+		}
+		prerequisite = {
+			focus = YDS_club_feudalism
+		}
+		completion_reward = {
+			country_event = {
+				id = yds_event.44
+			}
+			subtract_from_variable = {
+				YDS_gpa_score = 10
+			}
+			add_to_variable = {
+				YDS_student_autonomy = 15
+			}
+			custom_effect_tooltip = YDS_TT_LAX_FOCUS
+		}
+	}
+	focus = {
+		id = YDS_syndicalist_playground
+		x = 10
+		y = 9
+		cost = 5
+		icon = GFX_focus_YDS_syndicalist_playground
+		continue_if_invalid = yes
+		cancel_if_invalid = yes
+		available = {
+			always = yes
+		}
+		prerequisite = {
+			focus = YDS_anime_propaganda
+			focus = YDS_sports_league_militia
+		}
+		completion_reward = {
+			add_stability = 0.05
+			country_event = {
+				id = yds_event.45
+			}
+		}
+	}
+	focus = {
+		id = YDS_general_strike
+		x = 13
+		y = 5
+		cost = 5
+		icon = GFX_focus_YDS_general_strike
+		continue_if_invalid = yes
+		cancel_if_invalid = yes
+		available = {
+			has_country_flag = YDS_anarchy_active
+		}
+		mutually_exclusive = {
+			focus = YDS_club_feudalism
+		}
+		completion_reward = {
+			promote_character = YDS_anarchy_nihilist
+			set_politics = {
+				ruling_party = anarcho_xuexism
+				elections_allowed = no
+			}
+			add_popularity = {
+				ideology = anarcho_xuexism
+				popularity = 0.50
+			}
+			add_stability = -0.15
+			country_event = {
+				id = yds_event.46
+			}
+		}
+	}
+	focus = {
+		id = YDS_playground_bonfire
+		x = 13
+		y = 7
+		cost = 5
+		icon = GFX_focus_YDS_playground_bonfire
+		continue_if_invalid = yes
+		cancel_if_invalid = yes
+		available = {
+			always = yes
+		}
+		prerequisite = {
+			focus = YDS_general_strike
+		}
+		completion_reward = {
+			country_event = {
+				id = yds_event.47
+			}
+		}
+	}
+	focus = {
+		id = YDS_nihilistic_nirvana
+		x = 13
+		y = 9
+		cost = 5
+		icon = GFX_focus_YDS_nihilistic_nirvana
+		continue_if_invalid = yes
+		cancel_if_invalid = yes
+		available = {
+			always = yes
+		}
+		prerequisite = {
+			focus = YDS_playground_bonfire
+		}
+		completion_reward = {
+			capital_scope = {
+				add_extra_state_shared_building_slots = -2
+				remove_building = {
+					type = industrial_complex
+					level = 1
+				}
+				remove_building = {
+					type = arms_factory
+					level = 1
+				}
+			}
+			add_stability = 0.05
+			country_event = {
+				id = yds_event.48
+			}
+		}
+	}
+}

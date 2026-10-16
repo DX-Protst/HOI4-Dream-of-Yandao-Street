@@ -1,0 +1,99 @@
+﻿l_english:
+ # MODMADE_PER_LOCALE_EMPTY YDS_merger_aftermath
+ # MODMADE_PER_LOCALE_EMPTY YDS_educational_crisis
+ # MODMADE_PER_LOCALE_EMPTY YDS_teachers_grievances
+ # MODMADE_PER_LOCALE_EMPTY YDS_students_unrest
+ # MODMADE_PER_LOCALE_EMPTY YDS_the_tipping_point
+ # MODMADE_PER_LOCALE_EMPTY YDS_iron_discipline
+ # MODMADE_PER_LOCALE_EMPTY YDS_expel_troublemakers
+ # MODMADE_PER_LOCALE_EMPTY YDS_bureau_inspectors
+ # MODMADE_PER_LOCALE_EMPTY YDS_equalized_education
+ # MODMADE_PER_LOCALE_EMPTY YDS_class_1_awakening
+ # MODMADE_PER_LOCALE_EMPTY YDS_reformist_alliance
+ # MODMADE_PER_LOCALE_EMPTY YDS_negotiate_with_admin
+ # MODMADE_PER_LOCALE_EMPTY YDS_autonomous_school
+ # MODMADE_PER_LOCALE_EMPTY YDS_alumni_network
+ # MODMADE_PER_LOCALE_EMPTY YDS_hoard_study_guides
+ # MODMADE_PER_LOCALE_EMPTY YDS_yandao_street_coup
+ # MODMADE_PER_LOCALE_EMPTY YDS_restore_old_glory
+ # MODMADE_PER_LOCALE_EMPTY YDS_bureaucractic_integration
+ # MODMADE_PER_LOCALE_EMPTY YDS_standardized_syllabi
+ # MODMADE_PER_LOCALE_EMPTY YDS_abolish_extra_curriculars
+ # MODMADE_PER_LOCALE_EMPTY YDS_the_perfect_standard_school
+ # MODMADE_PER_LOCALE_EMPTY YDS_red_star_committee
+ # MODMADE_PER_LOCALE_EMPTY YDS_criticize_academic_authorities
+ # MODMADE_PER_LOCALE_EMPTY YDS_labor_education
+ # MODMADE_PER_LOCALE_EMPTY YDS_communitarian_academy
+ # MODMADE_PER_LOCALE_EMPTY YDS_student_parliament
+ # MODMADE_PER_LOCALE_EMPTY YDS_abolish_uniforms
+ # MODMADE_PER_LOCALE_EMPTY YDS_free_speech_corners
+ # MODMADE_PER_LOCALE_EMPTY YDS_republic_of_letters
+ # MODMADE_PER_LOCALE_EMPTY YDS_pragmatic_deal
+ # MODMADE_PER_LOCALE_EMPTY YDS_credit_system
+ # MODMADE_PER_LOCALE_EMPTY YDS_balanced_curriculum
+ # MODMADE_PER_LOCALE_EMPTY YDS_experimental_base
+ # MODMADE_PER_LOCALE_EMPTY YDS_gpa_darwinism
+ # MODMADE_PER_LOCALE_EMPTY YDS_class_stratification
+ # MODMADE_PER_LOCALE_EMPTY YDS_militarized_study_rooms
+ # MODMADE_PER_LOCALE_EMPTY YDS_technocratic_meritocracy
+ # MODMADE_PER_LOCALE_EMPTY YDS_alumni_alliance
+ # MODMADE_PER_LOCALE_EMPTY YDS_school_security_force
+ # MODMADE_PER_LOCALE_EMPTY YDS_regional_claims
+ # MODMADE_PER_LOCALE_EMPTY YDS_great_yandao_empire
+ # MODMADE_PER_LOCALE_EMPTY YDS_chengdu_school_district_geopolitics
+ # MODMADE_PER_LOCALE_EMPTY YDS_interact_with_no_7
+ # MODMADE_PER_LOCALE_EMPTY YDS_interact_with_shishi
+ # MODMADE_PER_LOCALE_EMPTY YDS_interact_with_shude
+ # MODMADE_PER_LOCALE_EMPTY YDS_cooperate_no_7
+ # MODMADE_PER_LOCALE_EMPTY YDS_subvert_no_7
+ # MODMADE_PER_LOCALE_EMPTY YDS_neo_confucian_alliance
+ # MODMADE_PER_LOCALE_EMPTY YDS_discipline_pact
+ # MODMADE_PER_LOCALE_EMPTY YDS_martial_competition
+ # MODMADE_PER_LOCALE_EMPTY YDS_unify_chengdu_schools
+ # MODMADE_PER_LOCALE_EMPTY YDS_olympiad_initiative
+ # MODMADE_PER_LOCALE_EMPTY YDS_chengdu_eight_school_joint_exam
+ # MODMADE_PER_LOCALE_EMPTY YDS_specialty_funding_boost
+ # MODMADE_PER_LOCALE_EMPTY YDS_train_olympiad_elites
+ # MODMADE_PER_LOCALE_EMPTY YDS_national_olympiad_finals
+ # MODMADE_PER_LOCALE_EMPTY YDS_campus_asset_inventory
+ # MODMADE_PER_LOCALE_EMPTY YDS_school_canteen_monopoly
+ # MODMADE_PER_LOCALE_EMPTY YDS_overhead_corridor_network
+ # MODMADE_PER_LOCALE_EMPTY YDS_sports_room_requisition
+ # MODMADE_PER_LOCALE_EMPTY YDS_craft_class_armory
+ # MODMADE_PER_LOCALE_EMPTY YDS_print_shop_overdrive
+ # MODMADE_PER_LOCALE_EMPTY YDS_chemistry_lab_reagents
+ # MODMADE_PER_LOCALE_EMPTY YDS_handicraft_standardization
+ # MODMADE_PER_LOCALE_EMPTY YDS_campus_logistics_gigafactory
+ # MODMADE_PER_LOCALE_EMPTY YDS_break_provincial_borders
+ # MODMADE_PER_LOCALE_EMPTY YDS_subdue_shaanxi
+ # MODMADE_PER_LOCALE_EMPTY YDS_crush_hubei
+ # MODMADE_PER_LOCALE_EMPTY YDS_breach_guizhou
+ # MODMADE_PER_LOCALE_EMPTY YDS_annex_yunnan
+ # MODMADE_PER_LOCALE_EMPTY YDS_defy_central_bureau
+ # MODMADE_PER_LOCALE_EMPTY YDS_national_exam_triumph
+ YDS_gaokao_war_mobilization: "Gaokao Wartime Mobilization"
+ YDS_gaokao_war_mobilization_desc: "The final battle has begun. Enact wartime educational mobilization across the entire school to repel the repeater coalition and rival provincial warlords."
+ YDS_exam_hall_tactics: "Exam Hall Tactics"
+ YDS_exam_hall_tactics_desc: "Apply high-pressure examination timing and disciplined pacing to frontline battlefield tactics, enhancing unit attack and defense."
+ YDS_break_repeater_siege: "Break the Repeater Siege"
+ YDS_break_repeater_siege_desc: "Smash through the repeater encirclement network with overwhelming speed and breakthrough power, liberating the examination corridors out of Sichuan."
+ YDS_all_front_counterattack: "All-Front Counterattack"
+ YDS_all_front_counterattack_desc: "Assert territorial and educational claims across every examination district in China, sweeping away all provincial education warlords."
+ YDS_all_china_educational_hegemony: "All-China Educational Hegemony"
+ YDS_all_china_educational_hegemony_desc: "With all regional education cliques subdued, Yandao Street Middle School establishes supreme educational dominion over the entire nation."
+ YDS_liu_yan_focus_tree: "Liu Yan Totalitarian Focus Tree"
+ YDS_liu_yan_focus_tree_desc: "High-pressure totalitarian national focus tree forcibly enacted following full Bureau takeover."
+ YDS_ly_absolute_control: "Absolute Total Control"
+ YDS_ly_absolute_control_desc: "Enforce total administrative control, suspending all non-exam subjects and requiring 16-hour daily study."
+ YDS_ly_purge_dissent: "Purge Dissenting Teachers and Students"
+ YDS_ly_purge_dissent_desc: "Purge anyone deviating from standardized syllabus, replacing individuality with rote machine learning."
+ YDS_ly_extreme_meritocracy: "Extreme Meritocracy"
+ YDS_ly_extreme_meritocracy_desc: "Implement dynamic blackboard judgment and basement intensive drill rooms, classifying students solely by score."
+ YDS_ly_thought_policing: "Thought Policing"
+ YDS_ly_thought_policing_desc: "Inspect daily learning journals and transform students into informants watching one another."
+ YDS_ly_ban_all_clubs: "Ban All Student Clubs"
+ YDS_ly_ban_all_clubs_desc: "Permanently ban all extracurricular clubs, throwing romance and hobbies into iron bins."
+ YDS_ly_monitor_every_class: "24/7 Classroom Surveillance"
+ YDS_ly_monitor_every_class_desc: "Deploy 360-degree PTZ cameras across all classrooms to capture every stroke of pencil and movement."
+ YDS_ly_the_perfect_machine: "Build the Soulless Perfect Machine"
+ YDS_ly_the_perfect_machine_desc: "Celebrate the completion of the soulless, flawless examination megamachine."

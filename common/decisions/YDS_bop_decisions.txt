@@ -1,0 +1,318 @@
+YDS_class_1_bop_decisions = {
+
+	# 1. Student Side: Organize Student Autonomy Rally
+	# Cost: 15 PP, Duration: 14 days, Cooldown: 25 days
+	YDS_bop_rally_students = {
+		icon = generic_propaganda
+		available = {
+			check_variable = {
+				YDS_gpa_score > 4
+			}
+		}
+		cost = 15
+		days_remove = 14
+		days_re_enable = 25
+		remove_effect = {
+			custom_effect_tooltip = YDS_TT_RALLY_STUDENTS
+			subtract_from_variable = {
+				YDS_gpa_score = 4
+			}
+			add_to_variable = {
+				YDS_student_autonomy = 8
+			}
+			add_power_balance_value = {
+				id = YDS_class_1_bop
+				value = -0.08
+			}
+		}
+	}
+
+	# 2. Student Side: Distribute Campus Autonomy Wall-Newspapers
+	# Cost: 25 PP, Duration: 10 days, Cooldown: 20 days
+	YDS_bop_student_wall_newspapers = {
+		icon = generic_civil_support
+		available = {
+			always = yes
+		}
+		cost = 25
+		days_remove = 10
+		days_re_enable = 20
+		modifier = {
+			stability_factor = -0.03
+		}
+		remove_effect = {
+			custom_effect_tooltip = YDS_TT_STUDENT_WALL_NEWSPAPERS
+			add_popularity = {
+				ideology = social_liberal
+				popularity = 0.05
+			}
+			add_to_variable = {
+				YDS_student_autonomy = 6
+			}
+			add_power_balance_value = {
+				id = YDS_class_1_bop
+				value = -0.10
+			}
+		}
+	}
+
+	# 3. Student Side: Empower Autonomous Student Club Festival
+	# Cost: 20 PP, Duration: 14 days, Cooldown: 30 days
+	YDS_bop_fund_student_clubs = {
+		icon = generic_civil_support
+		available = {
+			check_variable = {
+				YDS_gpa_score > 6
+			}
+		}
+		cost = 20
+		days_remove = 14
+		days_re_enable = 30
+		remove_effect = {
+			custom_effect_tooltip = YDS_TT_FUND_STUDENT_CLUBS
+			subtract_from_variable = {
+				YDS_gpa_score = 6
+			}
+			add_to_variable = {
+				YDS_student_autonomy = 10
+			}
+			add_power_balance_value = {
+				id = YDS_class_1_bop
+				value = -0.12
+			}
+		}
+	}
+
+	# 4. Student Side: Arm Class 1 Autonomy Pickets
+	# Cost: 20 PP, Duration: 7 days, Cooldown: 30 days
+	YDS_bop_mobilize_campus_guard = {
+		icon = generic_prepare_civil_war
+		available = {
+			has_equipment = {
+				infantry_equipment > 50
+			}
+		}
+		cost = 20
+		days_remove = 7
+		days_re_enable = 30
+		remove_effect = {
+			custom_effect_tooltip = YDS_TT_MOBILIZE_CAMPUS_GUARD
+			add_war_support = 0.03
+			subtract_from_variable = {
+				YDS_gpa_score = 3
+			}
+			add_to_variable = {
+				YDS_student_autonomy = 8
+			}
+			add_power_balance_value = {
+				id = YDS_class_1_bop
+				value = -0.15
+			}
+		}
+	}
+
+	# 5. Student Side: Boycott Uniform Exams and Call General Strike
+	# Cost: 35 PP, Duration: 14 days, Cooldown: 40 days
+	YDS_bop_boycott_standardized_tests = {
+		icon = generic_burn_land
+		available = {
+			check_variable = {
+				YDS_gpa_score > 11
+			}
+		}
+		cost = 35
+		days_remove = 14
+		days_re_enable = 40
+		remove_effect = {
+			custom_effect_tooltip = YDS_TT_BOYCOTT_TESTS
+			subtract_from_variable = {
+				YDS_gpa_score = 10
+			}
+			add_to_variable = {
+				YDS_student_autonomy = 15
+			}
+			add_stability = -0.05
+			add_power_balance_value = {
+				id = YDS_class_1_bop
+				value = -0.20
+			}
+		}
+	}
+
+	# 6. Teacher Side: Strengthen Teacher Study Inspection
+	# Cost: 15 PP, Duration: 14 days, Cooldown: 25 days
+	YDS_bop_teacher_crackdown = {
+		icon = generic_propaganda
+		available = {
+			check_variable = {
+				YDS_student_autonomy > 8
+			}
+		}
+		cost = 15
+		days_remove = 14
+		days_re_enable = 25
+		remove_effect = {
+			custom_effect_tooltip = YDS_TT_TEACHER_CRACKDOWN
+			subtract_from_variable = {
+				YDS_student_autonomy = 8
+			}
+			add_to_variable = {
+				YDS_gpa_score = 5
+			}
+			add_power_balance_value = {
+				id = YDS_class_1_bop
+				value = 0.08
+			}
+		}
+	}
+
+	# 7. Teacher Side: Promulgate Classroom Disciplinary Code
+	# Cost: 25 PP, Duration: 10 days, Cooldown: 20 days
+	YDS_bop_enforce_study_discipline = {
+		icon = generic_stability
+		available = {
+			always = yes
+		}
+		cost = 25
+		days_remove = 10
+		days_re_enable = 20
+		modifier = {
+			stability_factor = 0.03
+		}
+		remove_effect = {
+			custom_effect_tooltip = YDS_TT_STUDY_DISCIPLINE
+			add_popularity = {
+				ideology = authoritarian_democrat
+				popularity = 0.05
+			}
+			subtract_from_variable = {
+				YDS_student_autonomy = 5
+			}
+			add_to_variable = {
+				YDS_gpa_score = 5
+			}
+			add_power_balance_value = {
+				id = YDS_class_1_bop
+				value = 0.10
+			}
+		}
+	}
+
+	# 8. Teacher Side: Enforce Faculty Evening Remedial Tutoring
+	# Cost: 20 PP, Duration: 14 days, Cooldown: 30 days
+	YDS_bop_academic_remedial_funds = {
+		icon = generic_research
+		available = {
+			check_variable = {
+				YDS_student_autonomy > 6
+			}
+		}
+		cost = 20
+		days_remove = 14
+		days_re_enable = 30
+		remove_effect = {
+			custom_effect_tooltip = YDS_TT_REMEDIAL_FUNDS
+			subtract_from_variable = {
+				YDS_student_autonomy = 6
+			}
+			add_to_variable = {
+				YDS_gpa_score = 8
+			}
+			add_power_balance_value = {
+				id = YDS_class_1_bop
+				value = 0.12
+			}
+		}
+	}
+
+	# 9. Teacher Side: Deploy Faculty Supervisory Team
+	# Cost: 20 PP, Duration: 7 days, Cooldown: 30 days
+	YDS_bop_recruit_faculty_constabulary = {
+		icon = generic_constitutional_guarantee
+		available = {
+			command_power > 9
+		}
+		cost = 20
+		days_remove = 7
+		days_re_enable = 30
+		remove_effect = {
+			custom_effect_tooltip = YDS_TT_FACULTY_CONSTABULARY
+			add_stability = 0.04
+			subtract_from_variable = {
+				YDS_student_autonomy = 8
+			}
+			add_to_variable = {
+				YDS_gpa_score = 6
+			}
+			add_power_balance_value = {
+				id = YDS_class_1_bop
+				value = 0.15
+			}
+		}
+	}
+
+	# 10. Teacher Side: Enforce Emergency Academic Lockdown
+	# Cost: 35 PP, Duration: 14 days, Cooldown: 40 days
+	YDS_bop_emergency_curriculum_lockdown = {
+		icon = generic_industry
+		available = {
+			check_variable = {
+				YDS_student_autonomy > 14
+			}
+		}
+		cost = 35
+		days_remove = 14
+		days_re_enable = 40
+		remove_effect = {
+			custom_effect_tooltip = YDS_TT_CURRICULUM_LOCKDOWN
+			subtract_from_variable = {
+				YDS_student_autonomy = 15
+			}
+			add_to_variable = {
+				YDS_gpa_score = 12
+			}
+			add_stability = -0.05
+			add_power_balance_value = {
+				id = YDS_class_1_bop
+				value = 0.20
+			}
+		}
+	}
+
+}
+
+YDS_olympiad_category = {
+
+}
+
+YDS_peacetime_alumni = {
+
+}
+
+YDS_peacetime_bureau = {
+
+}
+
+YDS_peacetime_student = {
+
+}
+
+YDS_school_district_category = {
+
+}
+
+YDS_universal_crisis = {
+
+}
+
+YDS_wartime_alumni = {
+
+}
+
+YDS_wartime_bureau = {
+
+}
+
+YDS_wartime_student = {
+
+}

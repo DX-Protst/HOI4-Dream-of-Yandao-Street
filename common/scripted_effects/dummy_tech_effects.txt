@@ -1,0 +1,52 @@
+ITA_add_improved_light_tank_templates = {
+
+}
+
+ITA_add_improved_medium_tank_templates = {
+
+}
+
+ITA_add_advanced_medium_tank_templates = {
+
+}
+
+ITA_add_improved_heavy_tank_templates = {
+
+}
+
+ITA_add_advanced_heavy_tank_templates = {
+
+}
+
+ITA_add_il_duce_sh_tank_template_and_production = {
+
+}
+
+ITA_add_modern_musculus_sh_tank_template_and_production = {
+
+}
+
+ITA_add_hand_of_god_sh_tank_template_and_production = {
+
+}
+
+SP_create_variant_based_on_country_armored_engineer = {
+
+}
+
+SP_create_variant_based_on_country_armored_maintenance = {
+
+}
+
+SP_create_variant_based_on_country_armored_signal = {
+
+}
+
+play_warning_to_japan_effect = {
+
+}
+
+FIN_nokia_tires_after_tech_effect = {
+
+}
+

@@ -1,0 +1,29 @@
+bookmarks = {
+	bookmark = {
+		name = "GATHERING_STORM_NAME"
+		desc = "GATHERING_STORM_DESC"
+		date = 1936.1.1.12
+		picture = "GFX_select_date_1936"
+		default_country = "YDS"
+		default = yes
+
+		"YDS" = {
+			history = "YDS_GATHERING_STORM_DESC"
+			ideology = paternal_autocrat
+			ideas = {
+				YDS_merger_tension
+				YDS_educational_decline
+			}
+
+			focuses = {
+				YDS_iron_discipline
+				YDS_class_1_awakening
+				YDS_alumni_network
+			}
+		}
+
+		"---"={
+			history = "OTHER_GATHERING_STORM_DESC"
+		}
+	}
+}

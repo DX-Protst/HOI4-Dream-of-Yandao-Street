@@ -1,0 +1,14 @@
+add_namespace = yds_route_guide
+
+country_event = {
+	id = yds_route_guide.1
+	title = yds_route_guide.1.t
+	desc = yds_route_guide.1.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = yds_route_guide.1.a
+		ai_chance = { base = 100 }
+	}
+}

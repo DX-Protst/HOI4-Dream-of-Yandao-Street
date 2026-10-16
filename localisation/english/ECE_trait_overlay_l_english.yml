@@ -1,0 +1,3 @@
+﻿l_english:
+ ece_trait_overlay.1.t: "Trait Overlay (hidden)"
+ ece_trait_overlay.1.d: "Internally fired at game start to apply custom country leader, unit leader, and scientist traits to existing vanilla characters without replacing the character file."

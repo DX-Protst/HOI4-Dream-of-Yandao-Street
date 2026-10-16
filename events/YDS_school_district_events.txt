@@ -1,0 +1,164 @@
+add_namespace = yds_school_district_event
+
+country_event = {
+	id = yds_school_district_event.1
+	title = yds_school_district_event.1.t
+	desc = yds_school_district_event.1.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = yds_school_district_event.1.a
+		add_political_power = 20
+		ai_chance = { base = 100 }
+	}
+}
+
+country_event = {
+	id = yds_school_district_event.2
+	title = yds_school_district_event.2.t
+	desc = yds_school_district_event.2.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = yds_school_district_event.2.a
+		add_political_power = 20
+		ai_chance = { base = 100 }
+	}
+}
+
+country_event = {
+	id = yds_school_district_event.3
+	title = yds_school_district_event.3.t
+	desc = yds_school_district_event.3.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = yds_school_district_event.3.a
+		add_political_power = 20
+		ai_chance = { base = 100 }
+	}
+}
+
+country_event = {
+	id = yds_school_district_event.4
+	title = yds_school_district_event.4.t
+	desc = yds_school_district_event.4.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = yds_school_district_event.4.a
+		add_political_power = 50
+		ai_chance = { base = 100 }
+	}
+}
+
+country_event = {
+	id = yds_school_district_event.5
+	title = yds_school_district_event.5.t
+	desc = yds_school_district_event.5.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = yds_school_district_event.5.a
+		add_political_power = 50
+		ai_chance = { base = 100 }
+	}
+}
+
+country_event = {
+	id = yds_school_district_event.6
+	title = yds_school_district_event.6.t
+	desc = yds_school_district_event.6.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = yds_school_district_event.6.a
+		add_political_power = 50
+		ai_chance = { base = 100 }
+	}
+}
+
+country_event = {
+	id = yds_school_district_event.10
+	title = yds_school_district_event.10.t
+	desc = yds_school_district_event.10.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = yds_school_district_event.10.a
+		ai_chance = { base = 100 }
+	}
+}
+
+country_event = {
+	id = yds_school_district_event.11
+	title = yds_school_district_event.11.t
+	desc = yds_school_district_event.11.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = yds_school_district_event.11.a
+		ai_chance = { base = 100 }
+	}
+}
+
+country_event = {
+	id = yds_school_district_event.12
+	title = yds_school_district_event.12.t
+	desc = yds_school_district_event.12.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = yds_school_district_event.12.a
+		ai_chance = { base = 100 }
+	}
+}
+
+# Regular schools fully united event
+country_event = {
+	id = yds_school_district_event.20
+	title = yds_school_district_event.20.t
+	desc = yds_school_district_event.20.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = yds_school_district_event.20.a
+		ai_chance = { base = 100 }
+	}
+}
+
+# Elite schools fully united event
+country_event = {
+	id = yds_school_district_event.21
+	title = yds_school_district_event.21.t
+	desc = yds_school_district_event.21.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = yds_school_district_event.21.a
+		ai_chance = { base = 100 }
+	}
+}
+

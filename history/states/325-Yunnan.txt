@@ -1,0 +1,31 @@
+state = {
+	id = 325
+	name = "STATE_325"
+	manpower = 10994500
+	resources = {
+		tungsten = 2
+	}
+	state_category = metropolis
+	history = {
+		owner = YNE
+		controller = YNE
+		add_core_of = YNE
+		add_core_of = YUN
+		add_core_of = CHI
+		add_core_of = PRC
+		victory_points = { 1319 10 }
+		victory_points = { 4501 1 }
+		victory_points = { 12262 1 }
+		victory_points = { 5072 1 }
+		buildings = {
+			arms_factory = 3
+			industrial_complex = 3
+			infrastructure = 2
+		}
+	}
+	provinces = {
+		1114 1172 1196 1319 1383 1522 1653 4192 4501 5072 7446 7606 8023 10346 10776 12262 12282 12841
+	}
+	local_supplies = 3
+	buildings_max_level_factor = 1
+}

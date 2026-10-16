@@ -1,0 +1,34 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_YDS_school_map_bg"
+		texturefile = "gfx/interface/school_district_gui/YDS_school_map_bg.tga"
+	}
+	spriteType = {
+		name = "GFX_YDS_node_yandao"
+		texturefile = "gfx/interface/school_district_gui/YDS_node_yandao.tga"
+	}
+	spriteType = {
+		name = "GFX_YDS_node_shishi"
+		texturefile = "gfx/interface/school_district_gui/YDS_node_shishi.tga"
+	}
+	spriteType = {
+		name = "GFX_YDS_node_shude"
+		texturefile = "gfx/interface/school_district_gui/YDS_node_shude.tga"
+	}
+	spriteType = {
+		name = "GFX_YDS_node_no7"
+		texturefile = "gfx/interface/school_district_gui/YDS_node_no7.tga"
+	}
+	spriteType = {
+		name = "GFX_YDS_node_chengwai"
+		texturefile = "gfx/interface/school_district_gui/YDS_node_chengwai.tga"
+	}
+	spriteType = {
+		name = "GFX_YDS_node_shiwai"
+		texturefile = "gfx/interface/school_district_gui/YDS_node_shiwai.tga"
+	}
+	spriteType = {
+		name = "GFX_YDS_node_csfz"
+		texturefile = "gfx/interface/school_district_gui/YDS_node_csfz.tga"
+	}
+}

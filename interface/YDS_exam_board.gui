@@ -1,0 +1,676 @@
+# Interface definition for National Exam Board and Olympiad Standalone GUI
+# All comments are strictly in pure ASCII.
+
+guiTypes = {
+
+	# ==================== ENTRY BUTTON IN COUNTRY POLITICS VIEW ====================
+	containerWindowType = {
+		name = "YDS_exam_league_btn_container"
+		position = { x = 200 y = 12 }
+		size = { width = 130 height = 35 }
+
+		buttonType = {
+			name = "YDS_exam_league_open_button"
+			position = { x = 0 y = 0 }
+			quadTextureSprite = "GFX_button_123x34"
+			buttonText = "YDS_EXAM_LEAGUE_TITLE_SHORT"
+			buttonFont = "hoi_16mbs"
+			pdx_tooltip = "YDS_EXAM_LEAGUE_BTN_TT"
+			clicksound = click_default
+		}
+	}
+
+	# ==================== STANDALONE MAIN WINDOW ====================
+	containerWindowType = {
+		name = "YDS_exam_league_main_window"
+		position = { x = -545 y = -365 }
+		size = { width = 1090 height = 730 }
+		orientation = CENTER
+		moveable = yes
+		click_to_front = yes
+
+		background = {
+			name = "Background"
+			quadTextureSprite = "GFX_tiled_window_thin_border2"
+		}
+
+		# Top Header Title
+		instantTextBoxType = {
+			name = "YDS_exam_league_title"
+			position = { x = 30 y = 14 }
+			font = "hoi_24header"
+			text = "YDS_EXAM_LEAGUE_TITLE"
+			maxWidth = 750
+			maxHeight = 30
+			format = left
+		}
+
+		# Refresh Button
+		buttonType = {
+			name = "YDS_exam_league_refresh_btn"
+			position = { x = 880 y = 12 }
+			quadTextureSprite = "GFX_button_123x34"
+			buttonText = "YDS_REFRESH_LEAGUE_BTN"
+			buttonFont = "hoi_16mbs"
+			pdx_tooltip = "YDS_REFRESH_LEAGUE_TT"
+			clicksound = click_default
+		}
+
+		# Close Button
+		buttonType = {
+			name = "YDS_exam_league_close_btn"
+			position = { x = 1045 y = 14 }
+			quadTextureSprite = "GFX_closebutton"
+			shortcut = "ESCAPE"
+			pdx_tooltip = "CLOSE"
+			clicksound = click_close
+		}
+
+		# ==================== LEFT COLUMN: 5 TRACKS & DECISIONS ====================
+		instantTextBoxType = {
+			name = "tracks_header"
+			position = { x = 25 y = 50 }
+			font = "hoi_18mbs"
+			text = "YDS_EXAM_BOARD_TRACKS_TITLE"
+			maxWidth = 500
+			maxHeight = 22
+			format = left
+		}
+
+		instantTextBoxType = {
+			name = "energy_pool_status"
+			position = { x = 25 y = 72 }
+			font = "hoi_16mbs"
+			text = "YDS_COACH_ENERGY_POOL_LBL"
+			maxWidth = 500
+			maxHeight = 20
+			format = left
+			pdx_tooltip = "YDS_EXAM_BOARD_ENERGY_TT"
+		}
+
+		# 1. Math Track (Lai Sihan)
+		iconType = {
+			name = "YDS_math_icon"
+			spriteType = "GFX_YDS_icon_math"
+			position = { x = 25 y = 96 }
+			pdx_tooltip = "YDS_TRACK_MATH_TT"
+		}
+		instantTextBoxType = {
+			name = "YDS_math_title"
+			position = { x = 62 y = 95 }
+			font = "hoi_16mbs"
+			text = "YDS_TRACK_MATH_TITLE"
+			maxWidth = 260
+			maxHeight = 18
+			format = left
+			pdx_tooltip = "YDS_TRACK_MATH_TT"
+		}
+		instantTextBoxType = {
+			name = "YDS_math_progress"
+			position = { x = 62 y = 113 }
+			font = "hoi_16mbs"
+			text = "YDS_TRACK_MATH_PROGRESS_TXT"
+			maxWidth = 260
+			maxHeight = 18
+			format = left
+			pdx_tooltip = "YDS_TRACK_MATH_TT"
+		}
+		instantTextBoxType = {
+			name = "YDS_math_energy_lbl"
+			position = { x = 325 y = 102 }
+			font = "hoi_16mbs"
+			text = "YDS_MATH_ENERGY_LBL"
+			maxWidth = 95
+			maxHeight = 20
+			format = right
+		}
+		buttonType = {
+			name = "YDS_math_minus_btn"
+			quadTextureSprite = "GFX_YDS_btn_minus"
+			position = { x = 425 y = 102 }
+			pdx_tooltip = "YDS_RECALL_MATH_TT"
+			clicksound = click_default
+		}
+		buttonType = {
+			name = "YDS_math_plus_btn"
+			quadTextureSprite = "GFX_YDS_btn_plus"
+			position = { x = 460 y = 102 }
+			pdx_tooltip = "YDS_ASSIGN_MATH_TT"
+			clicksound = click_default
+		}
+
+		# 2. Physics Track (Eluo Ningbei)
+		iconType = {
+			name = "YDS_physics_icon"
+			spriteType = "GFX_YDS_icon_physics"
+			position = { x = 25 y = 146 }
+			pdx_tooltip = "YDS_TRACK_PHYSICS_TT"
+		}
+		instantTextBoxType = {
+			name = "YDS_physics_title"
+			position = { x = 62 y = 145 }
+			font = "hoi_16mbs"
+			text = "YDS_TRACK_PHYSICS_TITLE"
+			maxWidth = 260
+			maxHeight = 18
+			format = left
+			pdx_tooltip = "YDS_TRACK_PHYSICS_TT"
+		}
+		instantTextBoxType = {
+			name = "YDS_physics_progress"
+			position = { x = 62 y = 163 }
+			font = "hoi_16mbs"
+			text = "YDS_TRACK_PHYSICS_PROGRESS_TXT"
+			maxWidth = 260
+			maxHeight = 18
+			format = left
+			pdx_tooltip = "YDS_TRACK_PHYSICS_TT"
+		}
+		instantTextBoxType = {
+			name = "YDS_physics_energy_lbl"
+			position = { x = 325 y = 152 }
+			font = "hoi_16mbs"
+			text = "YDS_PHYSICS_ENERGY_LBL"
+			maxWidth = 95
+			maxHeight = 20
+			format = right
+		}
+		buttonType = {
+			name = "YDS_physics_minus_btn"
+			quadTextureSprite = "GFX_YDS_btn_minus"
+			position = { x = 425 y = 152 }
+			pdx_tooltip = "YDS_RECALL_PHYSICS_TT"
+			clicksound = click_default
+		}
+		buttonType = {
+			name = "YDS_physics_plus_btn"
+			quadTextureSprite = "GFX_YDS_btn_plus"
+			position = { x = 460 y = 152 }
+			pdx_tooltip = "YDS_ASSIGN_PHYSICS_TT"
+			clicksound = click_default
+		}
+
+		# 3. Chemistry Track (Zhou Jingsong)
+		iconType = {
+			name = "YDS_chem_icon"
+			spriteType = "GFX_YDS_icon_chem"
+			position = { x = 25 y = 196 }
+			pdx_tooltip = "YDS_TRACK_CHEM_TT"
+		}
+		instantTextBoxType = {
+			name = "YDS_chem_title"
+			position = { x = 62 y = 195 }
+			font = "hoi_16mbs"
+			text = "YDS_TRACK_CHEM_TITLE"
+			maxWidth = 260
+			maxHeight = 18
+			format = left
+			pdx_tooltip = "YDS_TRACK_CHEM_TT"
+		}
+		instantTextBoxType = {
+			name = "YDS_chem_progress"
+			position = { x = 62 y = 213 }
+			font = "hoi_16mbs"
+			text = "YDS_TRACK_CHEM_PROGRESS_TXT"
+			maxWidth = 260
+			maxHeight = 18
+			format = left
+			pdx_tooltip = "YDS_TRACK_CHEM_TT"
+		}
+		instantTextBoxType = {
+			name = "YDS_chem_energy_lbl"
+			position = { x = 325 y = 202 }
+			font = "hoi_16mbs"
+			text = "YDS_CHEM_ENERGY_LBL"
+			maxWidth = 95
+			maxHeight = 20
+			format = right
+		}
+		buttonType = {
+			name = "YDS_chem_minus_btn"
+			quadTextureSprite = "GFX_YDS_btn_minus"
+			position = { x = 425 y = 202 }
+			pdx_tooltip = "YDS_RECALL_CHEM_TT"
+			clicksound = click_default
+		}
+		buttonType = {
+			name = "YDS_chem_plus_btn"
+			quadTextureSprite = "GFX_YDS_btn_plus"
+			position = { x = 460 y = 202 }
+			pdx_tooltip = "YDS_ASSIGN_CHEM_TT"
+			clicksound = click_default
+		}
+
+		# 4. Biology Track (Deng Yunbo)
+		iconType = {
+			name = "YDS_bio_icon"
+			spriteType = "GFX_YDS_icon_bio"
+			position = { x = 25 y = 246 }
+			pdx_tooltip = "YDS_TRACK_BIO_TT"
+		}
+		instantTextBoxType = {
+			name = "YDS_bio_title"
+			position = { x = 62 y = 245 }
+			font = "hoi_16mbs"
+			text = "YDS_TRACK_BIO_TITLE"
+			maxWidth = 260
+			maxHeight = 18
+			format = left
+			pdx_tooltip = "YDS_TRACK_BIO_TT"
+		}
+		instantTextBoxType = {
+			name = "YDS_bio_progress"
+			position = { x = 62 y = 263 }
+			font = "hoi_16mbs"
+			text = "YDS_TRACK_BIO_PROGRESS_TXT"
+			maxWidth = 260
+			maxHeight = 18
+			format = left
+			pdx_tooltip = "YDS_TRACK_BIO_TT"
+		}
+		instantTextBoxType = {
+			name = "YDS_bio_energy_lbl"
+			position = { x = 325 y = 252 }
+			font = "hoi_16mbs"
+			text = "YDS_BIO_ENERGY_LBL"
+			maxWidth = 95
+			maxHeight = 20
+			format = right
+		}
+		buttonType = {
+			name = "YDS_bio_minus_btn"
+			quadTextureSprite = "GFX_YDS_btn_minus"
+			position = { x = 425 y = 252 }
+			pdx_tooltip = "YDS_RECALL_BIO_TT"
+			clicksound = click_default
+		}
+		buttonType = {
+			name = "YDS_bio_plus_btn"
+			quadTextureSprite = "GFX_YDS_btn_plus"
+			position = { x = 460 y = 252 }
+			pdx_tooltip = "YDS_ASSIGN_BIO_TT"
+			clicksound = click_default
+		}
+
+		# 5. Informatics Track (Tuo Wen)
+		iconType = {
+			name = "YDS_info_icon"
+			spriteType = "GFX_YDS_icon_info"
+			position = { x = 25 y = 296 }
+			pdx_tooltip = "YDS_TRACK_INFO_TT"
+		}
+		instantTextBoxType = {
+			name = "YDS_info_title"
+			position = { x = 62 y = 295 }
+			font = "hoi_16mbs"
+			text = "YDS_TRACK_INFO_TITLE"
+			maxWidth = 260
+			maxHeight = 18
+			format = left
+			pdx_tooltip = "YDS_TRACK_INFO_TT"
+		}
+		instantTextBoxType = {
+			name = "YDS_info_progress"
+			position = { x = 62 y = 313 }
+			font = "hoi_16mbs"
+			text = "YDS_TRACK_INFO_PROGRESS_TXT"
+			maxWidth = 260
+			maxHeight = 18
+			format = left
+			pdx_tooltip = "YDS_TRACK_INFO_TT"
+		}
+		instantTextBoxType = {
+			name = "YDS_info_energy_lbl"
+			position = { x = 325 y = 302 }
+			font = "hoi_16mbs"
+			text = "YDS_INFO_ENERGY_LBL"
+			maxWidth = 95
+			maxHeight = 20
+			format = right
+		}
+		buttonType = {
+			name = "YDS_info_minus_btn"
+			quadTextureSprite = "GFX_YDS_btn_minus"
+			position = { x = 425 y = 302 }
+			pdx_tooltip = "YDS_RECALL_INFO_TT"
+			clicksound = click_default
+		}
+		buttonType = {
+			name = "YDS_info_plus_btn"
+			quadTextureSprite = "GFX_YDS_btn_plus"
+			position = { x = 460 y = 302 }
+			pdx_tooltip = "YDS_ASSIGN_INFO_TT"
+			clicksound = click_default
+		}
+
+		# ==================== STRATEGIC ACTIONS CONSOLE ====================
+		instantTextBoxType = {
+			name = "decisions_console_title"
+			position = { x = 25 y = 350 }
+			font = "hoi_18mbs"
+			text = "YDS_STRATEGIC_ACTIONS_TITLE"
+			maxWidth = 500
+			maxHeight = 20
+			format = left
+		}
+
+		instantTextBoxType = {
+			name = "decisions_console_sub"
+			position = { x = 25 y = 370 }
+			font = "hoi_16mbs"
+			text = "YDS_STRATEGIC_ACTIONS_SUB"
+			maxWidth = 500
+			maxHeight = 18
+			format = left
+		}
+
+		# Row 1 - Sprints: Math, Physics, Chem
+		buttonType = {
+			name = "YDS_sprint_math_btn"
+			position = { x = 25 y = 394 }
+			quadTextureSprite = "GFX_button_123x34"
+			buttonText = "YDS_BTN_BOOST_MATH"
+			buttonFont = "hoi_16mbs"
+			pdx_tooltip = "YDS_BOOST_TRACK_MATH_GUI_TT"
+			clicksound = click_default
+		}
+		buttonType = {
+			name = "YDS_sprint_physics_btn"
+			position = { x = 160 y = 394 }
+			quadTextureSprite = "GFX_button_123x34"
+			buttonText = "YDS_BTN_BOOST_PHYSICS"
+			buttonFont = "hoi_16mbs"
+			pdx_tooltip = "YDS_BOOST_TRACK_PHYSICS_GUI_TT"
+			clicksound = click_default
+		}
+		buttonType = {
+			name = "YDS_sprint_chem_btn"
+			position = { x = 295 y = 394 }
+			quadTextureSprite = "GFX_button_123x34"
+			buttonText = "YDS_BTN_BOOST_CHEM"
+			buttonFont = "hoi_16mbs"
+			pdx_tooltip = "YDS_BOOST_TRACK_CHEM_GUI_TT"
+			clicksound = click_default
+		}
+
+		# Row 2 - Sprints: Bio, Info
+		buttonType = {
+			name = "YDS_sprint_bio_btn"
+			position = { x = 25 y = 434 }
+			quadTextureSprite = "GFX_button_123x34"
+			buttonText = "YDS_BTN_BOOST_BIO"
+			buttonFont = "hoi_16mbs"
+			pdx_tooltip = "YDS_BOOST_TRACK_BIO_GUI_TT"
+			clicksound = click_default
+		}
+		buttonType = {
+			name = "YDS_sprint_info_btn"
+			position = { x = 160 y = 434 }
+			quadTextureSprite = "GFX_button_123x34"
+			buttonText = "YDS_BTN_BOOST_INFO"
+			buttonFont = "hoi_16mbs"
+			pdx_tooltip = "YDS_BOOST_TRACK_INFO_GUI_TT"
+			clicksound = click_default
+		}
+
+		# Row 3 - Opponent Counters: ECE, HBE
+		buttonType = {
+			name = "YDS_counter_ece_btn"
+			position = { x = 25 y = 474 }
+			quadTextureSprite = "GFX_button_221x34"
+			buttonText = "YDS_BTN_COUNTER_ECE"
+			buttonFont = "hoi_16mbs"
+			pdx_tooltip = "YDS_COUNTER_ECE_GUI_TT"
+			clicksound = click_default
+		}
+		buttonType = {
+			name = "YDS_counter_hbe_btn"
+			position = { x = 255 y = 474 }
+			quadTextureSprite = "GFX_button_221x34"
+			buttonText = "YDS_BTN_COUNTER_HBE"
+			buttonFont = "hoi_16mbs"
+			pdx_tooltip = "YDS_COUNTER_HBE_GUI_TT"
+			clicksound = click_default
+		}
+
+		# Rules and Strategy Info Box
+		instantTextBoxType = {
+			name = "rules_box_title"
+			position = { x = 25 y = 522 }
+			font = "hoi_18mbs"
+			text = "YDS_RULES_BOX_TITLE"
+			maxWidth = 490
+			maxHeight = 20
+			format = left
+		}
+		instantTextBoxType = {
+			name = "rules_box_desc"
+			position = { x = 25 y = 544 }
+			font = "hoi_16mbs"
+			text = "YDS_RULES_BOX_DESC"
+			maxWidth = 490
+			maxHeight = 165
+			format = left
+		}
+
+		# ==================== RIGHT COLUMN: NATIONWIDE LEADERBOARD ====================
+		instantTextBoxType = {
+			name = "leaderboard_title"
+			position = { x = 550 y = 50 }
+			font = "hoi_18mbs"
+			text = "YDS_LEADERBOARD_TITLE"
+			maxWidth = 500
+			maxHeight = 20
+			format = left
+		}
+		instantTextBoxType = {
+			name = "leaderboard_sub"
+			position = { x = 550 y = 72 }
+			font = "hoi_16mbs"
+			text = "YDS_LEADERBOARD_SUB"
+			maxWidth = 500
+			maxHeight = 18
+			format = left
+		}
+
+		# Player Live Summary Card
+		instantTextBoxType = {
+			name = "player_card_l1"
+			position = { x = 550 y = 98 }
+			font = "hoi_18mbs"
+			text = "YDS_PLAYER_CARD_L1"
+			maxWidth = 500
+			maxHeight = 22
+			format = left
+		}
+		instantTextBoxType = {
+			name = "player_card_l2"
+			position = { x = 550 y = 122 }
+			font = "hoi_16mbs"
+			text = "YDS_PLAYER_CARD_L2"
+			maxWidth = 500
+			maxHeight = 20
+			format = left
+		}
+		instantTextBoxType = {
+			name = "player_card_l3"
+			position = { x = 550 y = 144 }
+			font = "hoi_16mbs"
+			text = "YDS_PLAYER_CARD_L3"
+			maxWidth = 500
+			maxHeight = 20
+			format = left
+		}
+
+		# 1. YDS Row
+		instantTextBoxType = {
+			name = "yds_row_t"
+			position = { x = 550 y = 182 }
+			font = "hoi_16mbs"
+			text = "YDS_ROW_YDS_T"
+			maxWidth = 500
+			maxHeight = 18
+			format = left
+		}
+		instantTextBoxType = {
+			name = "yds_row_d"
+			position = { x = 550 y = 200 }
+			font = "hoi_16mbs"
+			text = "YDS_ROW_YDS_D"
+			maxWidth = 500
+			maxHeight = 18
+			format = left
+		}
+
+		# 2. ECE Row
+		instantTextBoxType = {
+			name = "ece_row_t"
+			position = { x = 550 y = 232 }
+			font = "hoi_16mbs"
+			text = "YDS_ROW_ECE_T"
+			maxWidth = 500
+			maxHeight = 18
+			format = left
+		}
+		instantTextBoxType = {
+			name = "ece_row_d"
+			position = { x = 550 y = 250 }
+			font = "hoi_16mbs"
+			text = "YDS_ROW_ECE_D"
+			maxWidth = 500
+			maxHeight = 18
+			format = left
+		}
+
+		# 3. HBE Row
+		instantTextBoxType = {
+			name = "hbe_row_t"
+			position = { x = 550 y = 282 }
+			font = "hoi_16mbs"
+			text = "YDS_ROW_HBE_T"
+			maxWidth = 500
+			maxHeight = 18
+			format = left
+		}
+		instantTextBoxType = {
+			name = "hbe_row_d"
+			position = { x = 550 y = 300 }
+			font = "hoi_16mbs"
+			text = "YDS_ROW_HBE_D"
+			maxWidth = 500
+			maxHeight = 18
+			format = left
+		}
+
+		# 4. SHS Row
+		instantTextBoxType = {
+			name = "shs_row_t"
+			position = { x = 550 y = 332 }
+			font = "hoi_16mbs"
+			text = "YDS_ROW_SHS_T"
+			maxWidth = 500
+			maxHeight = 18
+			format = left
+		}
+		instantTextBoxType = {
+			name = "shs_row_d"
+			position = { x = 550 y = 350 }
+			font = "hoi_16mbs"
+			text = "YDS_ROW_SHS_D"
+			maxWidth = 500
+			maxHeight = 18
+			format = left
+		}
+
+		# 5. EBS Row
+		instantTextBoxType = {
+			name = "ebs_row_t"
+			position = { x = 550 y = 382 }
+			font = "hoi_16mbs"
+			text = "YDS_ROW_EBS_T"
+			maxWidth = 500
+			maxHeight = 18
+			format = left
+		}
+		instantTextBoxType = {
+			name = "ebs_row_d"
+			position = { x = 550 y = 400 }
+			font = "hoi_16mbs"
+			text = "YDS_ROW_EBS_D"
+			maxWidth = 500
+			maxHeight = 18
+			format = left
+		}
+
+		# 6. SXI Row
+		instantTextBoxType = {
+			name = "sxi_row_t"
+			position = { x = 550 y = 432 }
+			font = "hoi_16mbs"
+			text = "YDS_ROW_SXI_T"
+			maxWidth = 500
+			maxHeight = 18
+			format = left
+		}
+		instantTextBoxType = {
+			name = "sxi_row_d"
+			position = { x = 550 y = 450 }
+			font = "hoi_16mbs"
+			text = "YDS_ROW_SXI_D"
+			maxWidth = 500
+			maxHeight = 18
+			format = left
+		}
+
+		# 7. SNE Row
+		instantTextBoxType = {
+			name = "sne_row_t"
+			position = { x = 550 y = 482 }
+			font = "hoi_16mbs"
+			text = "YDS_ROW_SNE_T"
+			maxWidth = 500
+			maxHeight = 18
+			format = left
+		}
+		instantTextBoxType = {
+			name = "sne_row_d"
+			position = { x = 550 y = 500 }
+			font = "hoi_16mbs"
+			text = "YDS_ROW_SNE_D"
+			maxWidth = 500
+			maxHeight = 18
+			format = left
+		}
+
+		# 8. YNE Row
+		instantTextBoxType = {
+			name = "yne_row_t"
+			position = { x = 550 y = 532 }
+			font = "hoi_16mbs"
+			text = "YDS_ROW_YNE_T"
+			maxWidth = 500
+			maxHeight = 18
+			format = left
+		}
+		instantTextBoxType = {
+			name = "yne_row_d"
+			position = { x = 550 y = 550 }
+			font = "hoi_16mbs"
+			text = "YDS_ROW_YNE_D"
+			maxWidth = 500
+			maxHeight = 18
+			format = left
+		}
+
+		# Footer Notice
+		instantTextBoxType = {
+			name = "leaderboard_footer"
+			position = { x = 550 y = 595 }
+			font = "hoi_16mbs"
+			text = "YDS_LEADERBOARD_FOOTER_TXT"
+			maxWidth = 500
+			maxHeight = 110
+			format = left
+		}
+	}
+}

@@ -1,0 +1,24 @@
+state = {
+	id = 1034
+	name = "STATE_1034"
+	manpower = 2472157
+	state_category = metropolis
+	history = {
+		owner = ECE
+		controller = ECE
+		add_core_of = ECE
+		add_core_of = CHI
+		add_core_of = PRC
+		victory_points = { 10076 3 }
+		victory_points = { 4091 1 }
+		buildings = {
+			arms_factory = 2
+			industrial_complex = 2
+			infrastructure = 2
+		}
+	}
+	provinces = {
+		996 1089 4091 7120 10076 11928 11982 13142
+	}
+	local_supplies = 0
+}

@@ -1,0 +1,28 @@
+state = {
+	id = 1041
+	name = "STATE_1041"
+	manpower = 5448874
+	resources = {
+		steel = 4
+	}
+	state_category = town
+	history = {
+		owner = YDS
+		controller = YDS
+		add_core_of = YDS
+		add_core_of = CHI
+		add_core_of = PRC
+		victory_points = { 4925 10 }
+		victory_points = { 1367 1 }
+		buildings = {
+			infrastructure = 2
+			arms_factory = 1
+			industrial_complex = 1
+		}
+	}
+	provinces = {
+		1367 1395 4925 8026 10132 12141 12767 12819
+	}
+	local_supplies = 0
+	buildings_max_level_factor = 1
+}

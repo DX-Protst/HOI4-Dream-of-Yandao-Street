@@ -1,0 +1,23 @@
+state={
+	impassable = yes
+	id=758
+	name="STATE_758"
+	provinces={
+		1961 5094 8029 10802 12784 12801 
+	}
+	manpower=1000000
+	buildings_max_level_factor=1.000
+	state_category = pastoral
+	history={
+		owner = ZBX
+		add_core_of = ZBX
+		controller = ZBX
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = TIB
+
+	}
+
+	local_supplies=0.0 
+}

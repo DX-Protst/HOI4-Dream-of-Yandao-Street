@@ -1,0 +1,114 @@
+spriteTypes = {
+	corneredTileSpriteType = {
+		name = "GFX_frontend_bg"
+		texturefile = "gfx/loadingscreens/load_completed.dds"
+		borderSize = { x=0 y=0 }
+		size = { x=1920 y=1080 }
+		tilingCenter = no
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+	corneredTileSpriteType = {
+		name = "GFX_frontend_bg_gotterdammerung"
+		texturefile = "gfx/loadingscreens/load_completed.dds"
+		borderSize = { x=0 y=0 }
+		size = { x=1920 y=1080 }
+		tilingCenter = no
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+	corneredTileSpriteType = {
+		name = "GFX_frontend_bg_graveyard_of_empires"
+		texturefile = "gfx/loadingscreens/load_completed.dds"
+		borderSize = { x=0 y=0 }
+		size = { x=1920 y=1080 }
+		tilingCenter = no
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+	corneredTileSpriteType = {
+		name = "GFX_frontend_bg_no_compromise_no_surrender"
+		texturefile = "gfx/loadingscreens/load_completed.dds"
+		borderSize = { x=0 y=0 }
+		size = { x=1920 y=1080 }
+		tilingCenter = no
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+	corneredTileSpriteType = {
+		name = "GFX_frontend_bg_trial_of_allegiance"
+		texturefile = "gfx/loadingscreens/load_completed.dds"
+		borderSize = { x=0 y=0 }
+		size = { x=1920 y=1080 }
+		tilingCenter = no
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+	corneredTileSpriteType = {
+		name = "GFX_frontend_bg_arms_against_tyranny"
+		texturefile = "gfx/loadingscreens/load_completed.dds"
+		borderSize = { x=0 y=0 }
+		size = { x=1920 y=1080 }
+		tilingCenter = no
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+	corneredTileSpriteType = {
+		name = "GFX_frontend_bg_by_blood_alone"
+		texturefile = "gfx/loadingscreens/load_completed.dds"
+		borderSize = { x=0 y=0 }
+		size = { x=1920 y=1080 }
+		tilingCenter = no
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+	corneredTileSpriteType = {
+		name = "GFX_frontend_bg_no_step_back"
+		texturefile = "gfx/loadingscreens/load_completed.dds"
+		borderSize = { x=0 y=0 }
+		size = { x=1920 y=1080 }
+		tilingCenter = no
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+	corneredTileSpriteType = {
+		name = "GFX_frontend_bg_battle_for_the_bosporus"
+		texturefile = "gfx/loadingscreens/load_completed.dds"
+		borderSize = { x=0 y=0 }
+		size = { x=1920 y=1080 }
+		tilingCenter = no
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+	corneredTileSpriteType = {
+		name = "GFX_frontend_bg_la_resistance"
+		texturefile = "gfx/loadingscreens/load_completed.dds"
+		borderSize = { x=0 y=0 }
+		size = { x=1920 y=1080 }
+		tilingCenter = no
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+	corneredTileSpriteType = {
+		name = "GFX_frontend_bg_man_the_guns"
+		texturefile = "gfx/loadingscreens/load_completed.dds"
+		borderSize = { x=0 y=0 }
+		size = { x=1920 y=1080 }
+		tilingCenter = no
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+	corneredTileSpriteType = {
+		name = "GFX_frontend_bg_waking_the_tiger"
+		texturefile = "gfx/loadingscreens/load_completed.dds"
+		borderSize = { x=0 y=0 }
+		size = { x=1920 y=1080 }
+		tilingCenter = no
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+	corneredTileSpriteType = {
+		name = "GFX_frontend_bg_death_or_dishonor"
+		texturefile = "gfx/loadingscreens/load_completed.dds"
+		borderSize = { x=0 y=0 }
+		size = { x=1920 y=1080 }
+		tilingCenter = no
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+	corneredTileSpriteType = {
+		name = "GFX_frontend_bg_together_for_victory"
+		texturefile = "gfx/loadingscreens/load_completed.dds"
+		borderSize = { x=0 y=0 }
+		size = { x=1920 y=1080 }
+		tilingCenter = no
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+}
