@@ -21,11 +21,7 @@ TLB_civil_war_category = {
 			factor = 1
 			modifier = {
 				factor = 0
-				controls_state = 1037
-			}
-			modifier = {
-				factor = 2
-				surrender_progress > 0.15
+				surrender_progress < 0.50
 			}
 		}
 		complete_effect = {

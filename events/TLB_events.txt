@@ -474,14 +474,10 @@ country_event = {
 			TLB = { country_event = { id = tlb_event.20 } }
 		}
 		ai_chance = {
-			base = 70
+			base = 0
 			modifier = {
-				factor = 1.5
-				NOT = { controls_state = 1037 }
-			}
-			modifier = {
-				factor = 0.2
-				controls_state = 1037
+				add = 100
+				surrender_progress > 0.50
 			}
 		}
 	}
@@ -493,10 +489,10 @@ country_event = {
 			TLB = { country_event = { id = tlb_event.24 } }
 		}
 		ai_chance = {
-			base = 30
+			base = 100
 			modifier = {
-				factor = 3.0
-				controls_state = 1037
+				factor = 0
+				surrender_progress > 0.50
 			}
 		}
 	}
