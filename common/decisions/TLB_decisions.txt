@@ -6,10 +6,12 @@ TLB_civil_war_category = {
 		available = {
 			tag = YDS
 			has_war_with = TLB
-			NOT = { has_country_flag = YDS_tlb_truce_pending }
+			custom_trigger_tooltip = {
+				tooltip = YDS_tlb_truce_not_pending_tt
+				NOT = { has_country_flag = YDS_tlb_truce_pending }
+			}
 		}
 		cost = 25
-		days_remove = 5
 		days_re_enable = 20
 		visible = {
 			tag = YDS
@@ -27,9 +29,12 @@ TLB_civil_war_category = {
 			}
 		}
 		complete_effect = {
-			set_country_flag = YDS_tlb_truce_pending
-			TLB = {
-				country_event = { id = tlb_event.21 days = 1 }
+			custom_effect_tooltip = YDS_tlb_truce_offer_effect_tt
+			hidden_effect = {
+				set_country_flag = YDS_tlb_truce_pending
+				TLB = {
+					country_event = { id = tlb_event.21 }
+				}
 			}
 		}
 	}
@@ -41,10 +46,12 @@ TLB_civil_war_category = {
 			tag = TLB
 			has_war_with = YDS
 			controls_state = 1037
-			NOT = { has_country_flag = TLB_tlb_truce_pending }
+			custom_trigger_tooltip = {
+				tooltip = TLB_tlb_truce_not_pending_tt
+				NOT = { has_country_flag = TLB_tlb_truce_pending }
+			}
 		}
 		cost = 25
-		days_remove = 5
 		days_re_enable = 20
 		visible = {
 			tag = TLB
@@ -62,9 +69,12 @@ TLB_civil_war_category = {
 			}
 		}
 		complete_effect = {
-			set_country_flag = TLB_tlb_truce_pending
-			YDS = {
-				country_event = { id = tlb_event.23 days = 1 }
+			custom_effect_tooltip = TLB_armistice_chongqing_effect_tt
+			hidden_effect = {
+				set_country_flag = TLB_tlb_truce_pending
+				YDS = {
+					country_event = { id = tlb_event.23 }
+				}
 			}
 		}
 	}
