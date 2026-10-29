@@ -50,12 +50,45 @@ on_actions = {
 				}
 			}
 
+			# Initialize EBS inspector capacity and five directorates
+			if = {
+				limit = { country_exists = EBS }
+				EBS = {
+					set_variable = { EBS_inspectors_total = 8 }
+					set_variable = { EBS_inspectors_deployed = 0 }
+					set_variable = { EBS_inspectors_available = 8 }
+					set_variable = { EBS_invest_privilege = 0 }
+					set_variable = { EBS_invest_cyber = 0 }
+					set_variable = { EBS_invest_inspection = 0 }
+					set_variable = { EBS_invest_logistics = 0 }
+					set_variable = { EBS_invest_dongbei = 0 }
+					set_variable = { EBS_track_privilege = 20 }
+					set_variable = { EBS_track_cyber = 30 }
+					set_variable = { EBS_track_inspection = 15 }
+					set_variable = { EBS_track_logistics = 20 }
+					set_variable = { EBS_track_dongbei = 15 }
+					set_variable = { EBS_bonus_focus_score = 0 }
+					set_variable = { EBS_bonus_decree_score = 0 }
+					set_variable = { EBS_academic_prestige = 25 }
+					set_variable = { EBS_cheat_risk = 5 }
+					set_variable = { EBS_pillars_achieved = 0 }
+				}
+			}
+
 			# Initialize nationwide exam leaderboard scores
 			if = {
 				limit = {
 					country_exists = YDS
 				}
 				YDS = {
+					update_exam_leaderboard_scores = yes
+				}
+			}
+			if = {
+				limit = {
+					country_exists = EBS
+				}
+				EBS = {
 					update_exam_leaderboard_scores = yes
 				}
 			}

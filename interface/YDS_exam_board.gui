@@ -66,7 +66,205 @@ guiTypes = {
 			clicksound = click_close
 		}
 
-		# ==================== LEFT COLUMN: 5 TRACKS & DECISIONS ====================
+		# ==================== RIGHT COLUMN: NATIONWIDE LEADERBOARD ====================
+		instantTextBoxType = {
+			name = "leaderboard_title"
+			position = { x = 550 y = 50 }
+			font = "hoi_18mbs"
+			text = "YDS_LEADERBOARD_TITLE"
+			maxWidth = 500
+			maxHeight = 20
+			format = left
+		}
+		instantTextBoxType = {
+			name = "leaderboard_sub"
+			position = { x = 550 y = 72 }
+			font = "hoi_16mbs"
+			text = "YDS_LEADERBOARD_SUB"
+			maxWidth = 500
+			maxHeight = 18
+			format = left
+		}
+
+		# 1. YDS Row
+		instantTextBoxType = {
+			name = "yds_row_t"
+			position = { x = 550 y = 182 }
+			font = "hoi_16mbs"
+			text = "YDS_ROW_YDS_T"
+			maxWidth = 500
+			maxHeight = 18
+			format = left
+		}
+		instantTextBoxType = {
+			name = "yds_row_d"
+			position = { x = 550 y = 200 }
+			font = "hoi_16mbs"
+			text = "YDS_ROW_YDS_D"
+			maxWidth = 500
+			maxHeight = 18
+			format = left
+		}
+
+		# 2. ECE Row
+		instantTextBoxType = {
+			name = "ece_row_t"
+			position = { x = 550 y = 232 }
+			font = "hoi_16mbs"
+			text = "YDS_ROW_ECE_T"
+			maxWidth = 500
+			maxHeight = 18
+			format = left
+		}
+		instantTextBoxType = {
+			name = "ece_row_d"
+			position = { x = 550 y = 250 }
+			font = "hoi_16mbs"
+			text = "YDS_ROW_ECE_D"
+			maxWidth = 500
+			maxHeight = 18
+			format = left
+		}
+
+		# 3. HBE Row
+		instantTextBoxType = {
+			name = "hbe_row_t"
+			position = { x = 550 y = 282 }
+			font = "hoi_16mbs"
+			text = "YDS_ROW_HBE_T"
+			maxWidth = 500
+			maxHeight = 18
+			format = left
+		}
+		instantTextBoxType = {
+			name = "hbe_row_d"
+			position = { x = 550 y = 300 }
+			font = "hoi_16mbs"
+			text = "YDS_ROW_HBE_D"
+			maxWidth = 500
+			maxHeight = 18
+			format = left
+		}
+
+		# 4. SHS Row
+		instantTextBoxType = {
+			name = "shs_row_t"
+			position = { x = 550 y = 332 }
+			font = "hoi_16mbs"
+			text = "YDS_ROW_SHS_T"
+			maxWidth = 500
+			maxHeight = 18
+			format = left
+		}
+		instantTextBoxType = {
+			name = "shs_row_d"
+			position = { x = 550 y = 350 }
+			font = "hoi_16mbs"
+			text = "YDS_ROW_SHS_D"
+			maxWidth = 500
+			maxHeight = 18
+			format = left
+		}
+
+		# 5. EBS Row
+		instantTextBoxType = {
+			name = "ebs_row_t"
+			position = { x = 550 y = 382 }
+			font = "hoi_16mbs"
+			text = "YDS_ROW_EBS_T"
+			maxWidth = 500
+			maxHeight = 18
+			format = left
+		}
+		instantTextBoxType = {
+			name = "ebs_row_d"
+			position = { x = 550 y = 400 }
+			font = "hoi_16mbs"
+			text = "YDS_ROW_EBS_D"
+			maxWidth = 500
+			maxHeight = 18
+			format = left
+		}
+
+		# 6. SXI Row
+		instantTextBoxType = {
+			name = "sxi_row_t"
+			position = { x = 550 y = 432 }
+			font = "hoi_16mbs"
+			text = "YDS_ROW_SXI_T"
+			maxWidth = 500
+			maxHeight = 18
+			format = left
+		}
+		instantTextBoxType = {
+			name = "sxi_row_d"
+			position = { x = 550 y = 450 }
+			font = "hoi_16mbs"
+			text = "YDS_ROW_SXI_D"
+			maxWidth = 500
+			maxHeight = 18
+			format = left
+		}
+
+		# 7. SNE Row
+		instantTextBoxType = {
+			name = "sne_row_t"
+			position = { x = 550 y = 482 }
+			font = "hoi_16mbs"
+			text = "YDS_ROW_SNE_T"
+			maxWidth = 500
+			maxHeight = 18
+			format = left
+		}
+		instantTextBoxType = {
+			name = "sne_row_d"
+			position = { x = 550 y = 500 }
+			font = "hoi_16mbs"
+			text = "YDS_ROW_SNE_D"
+			maxWidth = 500
+			maxHeight = 18
+			format = left
+		}
+
+		# 8. YNE Row
+		instantTextBoxType = {
+			name = "yne_row_t"
+			position = { x = 550 y = 532 }
+			font = "hoi_16mbs"
+			text = "YDS_ROW_YNE_T"
+			maxWidth = 500
+			maxHeight = 18
+			format = left
+		}
+		instantTextBoxType = {
+			name = "yne_row_d"
+			position = { x = 550 y = 550 }
+			font = "hoi_16mbs"
+			text = "YDS_ROW_YNE_D"
+			maxWidth = 500
+			maxHeight = 18
+			format = left
+		}
+
+		# Footer Notice
+		instantTextBoxType = {
+			name = "leaderboard_footer"
+			position = { x = 550 y = 595 }
+			font = "hoi_16mbs"
+			text = "YDS_LEADERBOARD_FOOTER_TXT"
+			maxWidth = 500
+			maxHeight = 110
+			format = left
+		}
+	}
+
+	# ==================== YDS STUDENT PANEL ====================
+	containerWindowType = {
+		name = "YDS_student_panel"
+		position = { x = 0 y = 0 }
+		size = { width = 1090 height = 730 }
+
+# ==================== LEFT COLUMN: 5 TRACKS & DECISIONS ====================
 		instantTextBoxType = {
 			name = "tracks_header"
 			position = { x = 25 y = 50 }
@@ -453,26 +651,6 @@ guiTypes = {
 			format = left
 		}
 
-		# ==================== RIGHT COLUMN: NATIONWIDE LEADERBOARD ====================
-		instantTextBoxType = {
-			name = "leaderboard_title"
-			position = { x = 550 y = 50 }
-			font = "hoi_18mbs"
-			text = "YDS_LEADERBOARD_TITLE"
-			maxWidth = 500
-			maxHeight = 20
-			format = left
-		}
-		instantTextBoxType = {
-			name = "leaderboard_sub"
-			position = { x = 550 y = 72 }
-			font = "hoi_16mbs"
-			text = "YDS_LEADERBOARD_SUB"
-			maxWidth = 500
-			maxHeight = 18
-			format = left
-		}
-
 		# Player Live Summary Card
 		instantTextBoxType = {
 			name = "player_card_l1"
@@ -502,174 +680,427 @@ guiTypes = {
 			format = left
 		}
 
-		# 1. YDS Row
+			}
+
+	# ==================== EBS DIRECTORATES PANEL ====================
+	containerWindowType = {
+		name = "EBS_directorates_panel"
+		position = { x = 0 y = 0 }
+		size = { width = 1090 height = 730 }
+
+		# Left Column Header
 		instantTextBoxType = {
-			name = "yds_row_t"
-			position = { x = 550 y = 182 }
-			font = "hoi_16mbs"
-			text = "YDS_ROW_YDS_T"
+			name = "ebs_tracks_header"
+			position = { x = 25 y = 50 }
+			font = "hoi_18mbs"
+			text = "EBS_EXAM_BOARD_TRACKS_TITLE"
 			maxWidth = 500
-			maxHeight = 18
+			maxHeight = 22
 			format = left
 		}
+
 		instantTextBoxType = {
-			name = "yds_row_d"
-			position = { x = 550 y = 200 }
+			name = "ebs_inspector_pool_status"
+			position = { x = 25 y = 72 }
 			font = "hoi_16mbs"
-			text = "YDS_ROW_YDS_D"
+			text = "EBS_INSPECTOR_POOL_LBL"
+			maxWidth = 500
+			maxHeight = 20
+			format = left
+			pdx_tooltip = "EBS_EXAM_BOARD_INSPECTORS_TT"
+		}
+
+		# 1. Privilege Track (Chen Zhuanyuan)
+		iconType = {
+			name = "EBS_privilege_icon"
+			spriteType = "GFX_EBS_icon_privilege"
+			position = { x = 25 y = 96 }
+			pdx_tooltip = "EBS_TRACK_PRIVILEGE_TT"
+		}
+		instantTextBoxType = {
+			name = "EBS_privilege_title"
+			position = { x = 62 y = 95 }
+			font = "hoi_16mbs"
+			text = "EBS_TRACK_PRIVILEGE_TITLE"
+			maxWidth = 260
+			maxHeight = 18
+			format = left
+			pdx_tooltip = "EBS_TRACK_PRIVILEGE_TT"
+		}
+		instantTextBoxType = {
+			name = "EBS_privilege_progress"
+			position = { x = 62 y = 113 }
+			font = "hoi_16mbs"
+			text = "EBS_TRACK_PRIVILEGE_PROGRESS_TXT"
+			maxWidth = 260
+			maxHeight = 18
+			format = left
+			pdx_tooltip = "EBS_TRACK_PRIVILEGE_TT"
+		}
+		instantTextBoxType = {
+			name = "EBS_privilege_energy_lbl"
+			position = { x = 325 y = 102 }
+			font = "hoi_16mbs"
+			text = "EBS_PRIVILEGE_ENERGY_LBL"
+			maxWidth = 95
+			maxHeight = 20
+			format = right
+		}
+		buttonType = {
+			name = "EBS_privilege_minus_btn"
+			quadTextureSprite = "GFX_YDS_btn_minus"
+			position = { x = 425 y = 102 }
+			pdx_tooltip = "EBS_RECALL_PRIVILEGE_TT"
+			clicksound = click_default
+		}
+		buttonType = {
+			name = "EBS_privilege_plus_btn"
+			quadTextureSprite = "GFX_YDS_btn_plus"
+			position = { x = 460 y = 102 }
+			pdx_tooltip = "EBS_ASSIGN_PRIVILEGE_TT"
+			clicksound = click_default
+		}
+
+		# 2. Cybernetic Track (Huai Zonggong)
+		iconType = {
+			name = "EBS_cyber_icon"
+			spriteType = "GFX_EBS_icon_cyber"
+			position = { x = 25 y = 148 }
+			pdx_tooltip = "EBS_TRACK_CYBER_TT"
+		}
+		instantTextBoxType = {
+			name = "EBS_cyber_title"
+			position = { x = 62 y = 147 }
+			font = "hoi_16mbs"
+			text = "EBS_TRACK_CYBER_TITLE"
+			maxWidth = 260
+			maxHeight = 18
+			format = left
+			pdx_tooltip = "EBS_TRACK_CYBER_TT"
+		}
+		instantTextBoxType = {
+			name = "EBS_cyber_progress"
+			position = { x = 62 y = 165 }
+			font = "hoi_16mbs"
+			text = "EBS_TRACK_CYBER_PROGRESS_TXT"
+			maxWidth = 260
+			maxHeight = 18
+			format = left
+			pdx_tooltip = "EBS_TRACK_CYBER_TT"
+		}
+		instantTextBoxType = {
+			name = "EBS_cyber_energy_lbl"
+			position = { x = 325 y = 154 }
+			font = "hoi_16mbs"
+			text = "EBS_CYBER_ENERGY_LBL"
+			maxWidth = 95
+			maxHeight = 20
+			format = right
+		}
+		buttonType = {
+			name = "EBS_cyber_minus_btn"
+			quadTextureSprite = "GFX_YDS_btn_minus"
+			position = { x = 425 y = 154 }
+			pdx_tooltip = "EBS_RECALL_CYBER_TT"
+			clicksound = click_default
+		}
+		buttonType = {
+			name = "EBS_cyber_plus_btn"
+			quadTextureSprite = "GFX_YDS_btn_plus"
+			position = { x = 460 y = 154 }
+			pdx_tooltip = "EBS_ASSIGN_CYBER_TT"
+			clicksound = click_default
+		}
+
+		# 3. Nationwide Inspection Track (Zhou Zongdao)
+		iconType = {
+			name = "EBS_inspection_icon"
+			spriteType = "GFX_EBS_icon_inspection"
+			position = { x = 25 y = 200 }
+			pdx_tooltip = "EBS_TRACK_INSPECTION_TT"
+		}
+		instantTextBoxType = {
+			name = "EBS_inspection_title"
+			position = { x = 62 y = 199 }
+			font = "hoi_16mbs"
+			text = "EBS_TRACK_INSPECTION_TITLE"
+			maxWidth = 260
+			maxHeight = 18
+			format = left
+			pdx_tooltip = "EBS_TRACK_INSPECTION_TT"
+		}
+		instantTextBoxType = {
+			name = "EBS_inspection_progress"
+			position = { x = 62 y = 217 }
+			font = "hoi_16mbs"
+			text = "EBS_TRACK_INSPECTION_PROGRESS_TXT"
+			maxWidth = 260
+			maxHeight = 18
+			format = left
+			pdx_tooltip = "EBS_TRACK_INSPECTION_TT"
+		}
+		instantTextBoxType = {
+			name = "EBS_inspection_energy_lbl"
+			position = { x = 325 y = 206 }
+			font = "hoi_16mbs"
+			text = "EBS_INSPECTION_ENERGY_LBL"
+			maxWidth = 95
+			maxHeight = 20
+			format = right
+		}
+		buttonType = {
+			name = "EBS_inspection_minus_btn"
+			quadTextureSprite = "GFX_YDS_btn_minus"
+			position = { x = 425 y = 206 }
+			pdx_tooltip = "EBS_RECALL_INSPECTION_TT"
+			clicksound = click_default
+		}
+		buttonType = {
+			name = "EBS_inspection_plus_btn"
+			quadTextureSprite = "GFX_YDS_btn_plus"
+			position = { x = 460 y = 206 }
+			pdx_tooltip = "EBS_ASSIGN_INSPECTION_TT"
+			clicksound = click_default
+		}
+
+		# 4. Logistics Track (Wang Sichang & Wang Zongguan)
+		iconType = {
+			name = "EBS_logistics_icon"
+			spriteType = "GFX_EBS_icon_logistics"
+			position = { x = 25 y = 252 }
+			pdx_tooltip = "EBS_TRACK_LOGISTICS_TT"
+		}
+		instantTextBoxType = {
+			name = "EBS_logistics_title"
+			position = { x = 62 y = 251 }
+			font = "hoi_16mbs"
+			text = "EBS_TRACK_LOGISTICS_TITLE"
+			maxWidth = 260
+			maxHeight = 18
+			format = left
+			pdx_tooltip = "EBS_TRACK_LOGISTICS_TT"
+		}
+		instantTextBoxType = {
+			name = "EBS_logistics_progress"
+			position = { x = 62 y = 269 }
+			font = "hoi_16mbs"
+			text = "EBS_TRACK_LOGISTICS_PROGRESS_TXT"
+			maxWidth = 260
+			maxHeight = 18
+			format = left
+			pdx_tooltip = "EBS_TRACK_LOGISTICS_TT"
+		}
+		instantTextBoxType = {
+			name = "EBS_logistics_energy_lbl"
+			position = { x = 325 y = 258 }
+			font = "hoi_16mbs"
+			text = "EBS_LOGISTICS_ENERGY_LBL"
+			maxWidth = 95
+			maxHeight = 20
+			format = right
+		}
+		buttonType = {
+			name = "EBS_logistics_minus_btn"
+			quadTextureSprite = "GFX_YDS_btn_minus"
+			position = { x = 425 y = 258 }
+			pdx_tooltip = "EBS_RECALL_LOGISTICS_TT"
+			clicksound = click_default
+		}
+		buttonType = {
+			name = "EBS_logistics_plus_btn"
+			quadTextureSprite = "GFX_YDS_btn_plus"
+			position = { x = 460 y = 258 }
+			pdx_tooltip = "EBS_ASSIGN_LOGISTICS_TT"
+			clicksound = click_default
+		}
+
+		# 5. Dongbei Heavy Industry Track (Dongbei Council)
+		iconType = {
+			name = "EBS_dongbei_icon"
+			spriteType = "GFX_EBS_icon_dongbei"
+			position = { x = 25 y = 304 }
+			pdx_tooltip = "EBS_TRACK_DONGBEI_TT"
+		}
+		instantTextBoxType = {
+			name = "EBS_dongbei_title"
+			position = { x = 62 y = 303 }
+			font = "hoi_16mbs"
+			text = "EBS_TRACK_DONGBEI_TITLE"
+			maxWidth = 260
+			maxHeight = 18
+			format = left
+			pdx_tooltip = "EBS_TRACK_DONGBEI_TT"
+		}
+		instantTextBoxType = {
+			name = "EBS_dongbei_progress"
+			position = { x = 62 y = 321 }
+			font = "hoi_16mbs"
+			text = "EBS_TRACK_DONGBEI_PROGRESS_TXT"
+			maxWidth = 260
+			maxHeight = 18
+			format = left
+			pdx_tooltip = "EBS_TRACK_DONGBEI_TT"
+		}
+		instantTextBoxType = {
+			name = "EBS_dongbei_energy_lbl"
+			position = { x = 325 y = 310 }
+			font = "hoi_16mbs"
+			text = "EBS_DONGBEI_ENERGY_LBL"
+			maxWidth = 95
+			maxHeight = 20
+			format = right
+		}
+		buttonType = {
+			name = "EBS_dongbei_minus_btn"
+			quadTextureSprite = "GFX_YDS_btn_minus"
+			position = { x = 425 y = 310 }
+			pdx_tooltip = "EBS_RECALL_DONGBEI_TT"
+			clicksound = click_default
+		}
+		buttonType = {
+			name = "EBS_dongbei_plus_btn"
+			quadTextureSprite = "GFX_YDS_btn_plus"
+			position = { x = 460 y = 310 }
+			pdx_tooltip = "EBS_ASSIGN_DONGBEI_TT"
+			clicksound = click_default
+		}
+
+		# ==================== STRATEGIC ACTIONS CONSOLE ====================
+		instantTextBoxType = {
+			name = "ebs_decisions_console_title"
+			position = { x = 25 y = 350 }
+			font = "hoi_18mbs"
+			text = "EBS_STRATEGIC_ACTIONS_TITLE"
+			maxWidth = 500
+			maxHeight = 20
+			format = left
+		}
+
+		instantTextBoxType = {
+			name = "ebs_decisions_console_sub"
+			position = { x = 25 y = 370 }
+			font = "hoi_16mbs"
+			text = "EBS_STRATEGIC_ACTIONS_SUB"
 			maxWidth = 500
 			maxHeight = 18
 			format = left
 		}
 
-		# 2. ECE Row
+		# Row 1 - Directives: Privilege, Cyber, Inspection
+		buttonType = {
+			name = "EBS_decree_privilege_btn"
+			position = { x = 25 y = 394 }
+			quadTextureSprite = "GFX_button_123x34"
+			buttonText = "EBS_BTN_DECREE_PRIVILEGE"
+			buttonFont = "hoi_16mbs"
+			pdx_tooltip = "EBS_DECREE_PRIVILEGE_TT"
+			clicksound = click_default
+		}
+		buttonType = {
+			name = "EBS_decree_cyber_btn"
+			position = { x = 160 y = 394 }
+			quadTextureSprite = "GFX_button_123x34"
+			buttonText = "EBS_BTN_DECREE_CYBER"
+			buttonFont = "hoi_16mbs"
+			pdx_tooltip = "EBS_DECREE_CYBER_TT"
+			clicksound = click_default
+		}
+		buttonType = {
+			name = "EBS_decree_inspection_btn"
+			position = { x = 295 y = 394 }
+			quadTextureSprite = "GFX_button_123x34"
+			buttonText = "EBS_BTN_DECREE_INSPECTION"
+			buttonFont = "hoi_16mbs"
+			pdx_tooltip = "EBS_DECREE_INSPECTION_TT"
+			clicksound = click_default
+		}
+
+		# Row 2 - Directives: Logistics, Dongbei
+		buttonType = {
+			name = "EBS_decree_logistics_btn"
+			position = { x = 25 y = 434 }
+			quadTextureSprite = "GFX_button_123x34"
+			buttonText = "EBS_BTN_DECREE_LOGISTICS"
+			buttonFont = "hoi_16mbs"
+			pdx_tooltip = "EBS_DECREE_LOGISTICS_TT"
+			clicksound = click_default
+		}
+		buttonType = {
+			name = "EBS_decree_dongbei_btn"
+			position = { x = 160 y = 434 }
+			quadTextureSprite = "GFX_button_123x34"
+			buttonText = "EBS_BTN_DECREE_DONGBEI"
+			buttonFont = "hoi_16mbs"
+			pdx_tooltip = "EBS_DECREE_DONGBEI_TT"
+			clicksound = click_default
+		}
+
+		# Row 3 - Inter-provincial Raids: ECE, HBE
+		buttonType = {
+			name = "EBS_raid_ece_btn"
+			position = { x = 25 y = 474 }
+			quadTextureSprite = "GFX_button_221x34"
+			buttonText = "EBS_BTN_RAID_ECE"
+			buttonFont = "hoi_16mbs"
+			pdx_tooltip = "EBS_RAID_ECE_TT"
+			clicksound = click_default
+		}
+		buttonType = {
+			name = "EBS_raid_hbe_btn"
+			position = { x = 255 y = 474 }
+			quadTextureSprite = "GFX_button_221x34"
+			buttonText = "EBS_BTN_RAID_HBE"
+			buttonFont = "hoi_16mbs"
+			pdx_tooltip = "EBS_RAID_HBE_TT"
+			clicksound = click_default
+		}
+
+		# EBS Rules Box
 		instantTextBoxType = {
-			name = "ece_row_t"
-			position = { x = 550 y = 232 }
-			font = "hoi_16mbs"
-			text = "YDS_ROW_ECE_T"
-			maxWidth = 500
-			maxHeight = 18
+			name = "ebs_rules_box_title"
+			position = { x = 25 y = 522 }
+			font = "hoi_18mbs"
+			text = "EBS_RULES_BOX_TITLE"
+			maxWidth = 490
+			maxHeight = 20
 			format = left
 		}
 		instantTextBoxType = {
-			name = "ece_row_d"
-			position = { x = 550 y = 250 }
+			name = "ebs_rules_box_desc"
+			position = { x = 25 y = 544 }
 			font = "hoi_16mbs"
-			text = "YDS_ROW_ECE_D"
-			maxWidth = 500
-			maxHeight = 18
+			text = "EBS_RULES_BOX_DESC"
+			maxWidth = 490
+			maxHeight = 165
 			format = left
 		}
 
-		# 3. HBE Row
+		# EBS Live Summary Card (Right Column)
 		instantTextBoxType = {
-			name = "hbe_row_t"
-			position = { x = 550 y = 282 }
-			font = "hoi_16mbs"
-			text = "YDS_ROW_HBE_T"
+			name = "ebs_player_card_l1"
+			position = { x = 550 y = 98 }
+			font = "hoi_18mbs"
+			text = "EBS_PLAYER_CARD_L1"
 			maxWidth = 500
-			maxHeight = 18
+			maxHeight = 22
 			format = left
 		}
 		instantTextBoxType = {
-			name = "hbe_row_d"
-			position = { x = 550 y = 300 }
+			name = "ebs_player_card_l2"
+			position = { x = 550 y = 122 }
 			font = "hoi_16mbs"
-			text = "YDS_ROW_HBE_D"
+			text = "EBS_PLAYER_CARD_L2"
 			maxWidth = 500
-			maxHeight = 18
-			format = left
-		}
-
-		# 4. SHS Row
-		instantTextBoxType = {
-			name = "shs_row_t"
-			position = { x = 550 y = 332 }
-			font = "hoi_16mbs"
-			text = "YDS_ROW_SHS_T"
-			maxWidth = 500
-			maxHeight = 18
+			maxHeight = 20
 			format = left
 		}
 		instantTextBoxType = {
-			name = "shs_row_d"
-			position = { x = 550 y = 350 }
+			name = "ebs_player_card_l3"
+			position = { x = 550 y = 144 }
 			font = "hoi_16mbs"
-			text = "YDS_ROW_SHS_D"
+			text = "EBS_PLAYER_CARD_L3"
 			maxWidth = 500
-			maxHeight = 18
-			format = left
-		}
-
-		# 5. EBS Row
-		instantTextBoxType = {
-			name = "ebs_row_t"
-			position = { x = 550 y = 382 }
-			font = "hoi_16mbs"
-			text = "YDS_ROW_EBS_T"
-			maxWidth = 500
-			maxHeight = 18
-			format = left
-		}
-		instantTextBoxType = {
-			name = "ebs_row_d"
-			position = { x = 550 y = 400 }
-			font = "hoi_16mbs"
-			text = "YDS_ROW_EBS_D"
-			maxWidth = 500
-			maxHeight = 18
-			format = left
-		}
-
-		# 6. SXI Row
-		instantTextBoxType = {
-			name = "sxi_row_t"
-			position = { x = 550 y = 432 }
-			font = "hoi_16mbs"
-			text = "YDS_ROW_SXI_T"
-			maxWidth = 500
-			maxHeight = 18
-			format = left
-		}
-		instantTextBoxType = {
-			name = "sxi_row_d"
-			position = { x = 550 y = 450 }
-			font = "hoi_16mbs"
-			text = "YDS_ROW_SXI_D"
-			maxWidth = 500
-			maxHeight = 18
-			format = left
-		}
-
-		# 7. SNE Row
-		instantTextBoxType = {
-			name = "sne_row_t"
-			position = { x = 550 y = 482 }
-			font = "hoi_16mbs"
-			text = "YDS_ROW_SNE_T"
-			maxWidth = 500
-			maxHeight = 18
-			format = left
-		}
-		instantTextBoxType = {
-			name = "sne_row_d"
-			position = { x = 550 y = 500 }
-			font = "hoi_16mbs"
-			text = "YDS_ROW_SNE_D"
-			maxWidth = 500
-			maxHeight = 18
-			format = left
-		}
-
-		# 8. YNE Row
-		instantTextBoxType = {
-			name = "yne_row_t"
-			position = { x = 550 y = 532 }
-			font = "hoi_16mbs"
-			text = "YDS_ROW_YNE_T"
-			maxWidth = 500
-			maxHeight = 18
-			format = left
-		}
-		instantTextBoxType = {
-			name = "yne_row_d"
-			position = { x = 550 y = 550 }
-			font = "hoi_16mbs"
-			text = "YDS_ROW_YNE_D"
-			maxWidth = 500
-			maxHeight = 18
-			format = left
-		}
-
-		# Footer Notice
-		instantTextBoxType = {
-			name = "leaderboard_footer"
-			position = { x = 550 y = 595 }
-			font = "hoi_16mbs"
-			text = "YDS_LEADERBOARD_FOOTER_TXT"
-			maxWidth = 500
-			maxHeight = 110
+			maxHeight = 20
 			format = left
 		}
 	}

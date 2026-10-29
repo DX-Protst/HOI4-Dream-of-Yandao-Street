@@ -429,9 +429,14 @@ on_actions = {
 			# NOTE: this block lives in on_weekly; the old 90-step counter meant 90 WEEKS, not 90 days.
 			if = {
 				limit = {
-					original_tag = YDS
-					has_country_flag = YDS_olympiad_active
 					NOT = { has_global_flag = yds_national_war_active }
+					OR = {
+						AND = {
+							original_tag = YDS
+							has_country_flag = YDS_olympiad_active
+						}
+						tag = EBS
+					}
 				}
 				execute_exam_board_weekly_tick = yes
 			}

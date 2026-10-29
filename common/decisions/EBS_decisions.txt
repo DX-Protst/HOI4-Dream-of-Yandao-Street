@@ -155,8 +155,10 @@ EBS_exam_board_category = {
 				limit = { check_variable = { global.track_info_progress > 5 } }
 				subtract_from_variable = { global.track_info_progress = 5 }
 			}
-			add_to_variable = { EBS.YDS_exam_monopoly_score = 10 }
-			set_variable = { YDS_score_EBS = EBS.YDS_exam_monopoly_score }
+			add_to_variable = { EBS_bonus_decree_score = 10 }
+			add_to_variable = { EBS_track_cyber = 10 }
+			clamp_ebs_exam_track_variables = yes
+			update_exam_leaderboard_scores = yes
 		}
 	}
 
@@ -177,8 +179,11 @@ EBS_exam_board_category = {
 		}
 		complete_effect = {
 			custom_effect_tooltip = EBS_strike_at_jiangnan_math_tt
-			subtract_from_variable = { ECE.YDS_exam_monopoly_score = 10 }
+			subtract_from_variable = { ECE.YDS_exam_monopoly_score = 12 }
 			set_variable = { YDS_score_ECE = ECE.YDS_exam_monopoly_score }
+			add_to_variable = { EBS_track_inspection = 10 }
+			clamp_ebs_exam_track_variables = yes
+			update_exam_leaderboard_scores = yes
 		}
 	}
 
@@ -199,8 +204,11 @@ EBS_exam_board_category = {
 		}
 		complete_effect = {
 			custom_effect_tooltip = EBS_strike_at_chutian_physics_tt
-			subtract_from_variable = { HBE.YDS_exam_monopoly_score = 10 }
+			subtract_from_variable = { HBE.YDS_exam_monopoly_score = 12 }
 			set_variable = { YDS_score_HBE = HBE.YDS_exam_monopoly_score }
+			add_to_variable = { EBS_track_inspection = 10 }
+			clamp_ebs_exam_track_variables = yes
+			update_exam_leaderboard_scores = yes
 		}
 	}
 
@@ -220,9 +228,11 @@ EBS_exam_board_category = {
 		}
 		complete_effect = {
 			custom_effect_tooltip = EBS_affirmative_action_tt
-			add_to_variable = { EBS.YDS_exam_monopoly_score = 15 }
-			set_variable = { YDS_score_EBS = EBS.YDS_exam_monopoly_score }
+			add_to_variable = { EBS_bonus_decree_score = 15 }
+			add_to_variable = { EBS_track_privilege = 10 }
 			add_stability = -0.05
+			clamp_ebs_exam_track_variables = yes
+			update_exam_leaderboard_scores = yes
 		}
 	}
 

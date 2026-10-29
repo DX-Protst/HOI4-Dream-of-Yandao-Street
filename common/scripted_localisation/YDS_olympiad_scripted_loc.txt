@@ -328,3 +328,16 @@ defined_text = {
 	text = { localization_key = YDS_STATUS_LOSER_DESC }
 }
 
+# EBS status loc for ranking card
+defined_text = {
+	name = EBS_get_player_status_loc
+	text = {
+		trigger = { check_variable = { YDS_rank_EBS < 4 } }
+		localization_key = EBS_STATUS_PLAYER_TOP3
+	}
+	text = {
+		localization_key = EBS_STATUS_PLAYER_REPEATER
+	}
+}
+
+

@@ -94,16 +94,93 @@ calc_exam_track_weekly_deltas = {
 	}
 }
 
+# ==================== EBS WEEKLY REGULATORY DELTA ENGINE ====================
+# Calculates the weekly change of EBS five directorate pillars.
+calc_ebs_exam_board_weekly_deltas = {
+	# 1. Privilege Track (Chen Zhuanyuan / Capital Aristocracy)
+	set_variable = { EBS_delta_privilege = EBS_invest_privilege }
+	multiply_variable = { var = EBS_delta_privilege value = 0.7 }
+	if = {
+		limit = { has_stability > 0.6 }
+		add_to_variable = { EBS_delta_privilege = 0.3 }
+	}
+
+	# 2. Cybernetic Informatics Track (Huai Zonggong / Tsinghua High Computing)
+	set_variable = { EBS_delta_cyber = EBS_invest_cyber }
+	multiply_variable = { var = EBS_delta_cyber value = 0.7 }
+	if = {
+		limit = { amount_research_slots > 3 }
+		add_to_variable = { EBS_delta_cyber = 0.4 }
+	}
+
+	# 3. Nationwide Surprise Inspection Track (Zhou Zongdao / 5-Day Blitz)
+	set_variable = { EBS_delta_inspection = EBS_invest_inspection }
+	multiply_variable = { var = EBS_delta_inspection value = 0.7 }
+	if = {
+		limit = { has_war_support > 0.6 }
+		add_to_variable = { EBS_delta_inspection = 0.3 }
+	}
+
+	# 4. Logistics and Sports Track (Wang Sichang & Wang Zongguan)
+	set_variable = { EBS_delta_logistics = EBS_invest_logistics }
+	multiply_variable = { var = EBS_delta_logistics value = 0.7 }
+	add_to_variable = { EBS_delta_logistics = 0.2 }
+
+	# 5. Dongbei Heavy Industry Exam Track (Dongbei Council)
+	set_variable = { EBS_delta_dongbei = EBS_invest_dongbei }
+	multiply_variable = { var = EBS_delta_dongbei value = 0.7 }
+	if = {
+		limit = {
+			controls_state = 328
+			controls_state = 714
+			controls_state = 715
+		}
+		add_to_variable = { EBS_delta_dongbei = 0.4 }
+	}
+}
+
 # Weekly pulse: apply previewed deltas, clamp, then refresh the leaderboard
 execute_exam_board_weekly_tick = {
-	calc_exam_track_weekly_deltas = yes
-	add_to_variable = { global.track_math_progress = YDS_delta_math }
-	add_to_variable = { global.track_physics_progress = YDS_delta_physics }
-	add_to_variable = { global.track_chem_progress = YDS_delta_chem }
-	add_to_variable = { global.track_bio_progress = YDS_delta_bio }
-	add_to_variable = { global.track_info_progress = YDS_delta_info }
-	clamp_exam_track_variables = yes
-	update_exam_leaderboard_scores = yes
+	if = {
+		limit = { tag = EBS }
+		calc_ebs_exam_board_weekly_deltas = yes
+		add_to_variable = { EBS_track_privilege = EBS_delta_privilege }
+		add_to_variable = { EBS_track_cyber = EBS_delta_cyber }
+		add_to_variable = { EBS_track_inspection = EBS_delta_inspection }
+		add_to_variable = { EBS_track_logistics = EBS_delta_logistics }
+		add_to_variable = { EBS_track_dongbei = EBS_delta_dongbei }
+		clamp_ebs_exam_track_variables = yes
+		if = {
+			limit = { check_variable = { EBS_invest_logistics > 0 } }
+			set_variable = { temp_logistics_pp = EBS_invest_logistics }
+			multiply_variable = { var = temp_logistics_pp value = 0.05 }
+			add_political_power = temp_logistics_pp
+		}
+		update_exam_leaderboard_scores = yes
+	}
+	else = {
+		calc_exam_track_weekly_deltas = yes
+		add_to_variable = { global.track_math_progress = YDS_delta_math }
+		add_to_variable = { global.track_physics_progress = YDS_delta_physics }
+		add_to_variable = { global.track_chem_progress = YDS_delta_chem }
+		add_to_variable = { global.track_bio_progress = YDS_delta_bio }
+		add_to_variable = { global.track_info_progress = YDS_delta_info }
+		clamp_exam_track_variables = yes
+		update_exam_leaderboard_scores = yes
+	}
+}
+
+clamp_ebs_exam_track_variables = {
+	if = { limit = { check_variable = { EBS_track_privilege > 100 } } set_variable = { EBS_track_privilege = 100 } }
+	if = { limit = { check_variable = { EBS_track_privilege < 0 } } set_variable = { EBS_track_privilege = 0 } }
+	if = { limit = { check_variable = { EBS_track_cyber > 100 } } set_variable = { EBS_track_cyber = 100 } }
+	if = { limit = { check_variable = { EBS_track_cyber < 0 } } set_variable = { EBS_track_cyber = 0 } }
+	if = { limit = { check_variable = { EBS_track_inspection > 100 } } set_variable = { EBS_track_inspection = 100 } }
+	if = { limit = { check_variable = { EBS_track_inspection < 0 } } set_variable = { EBS_track_inspection = 0 } }
+	if = { limit = { check_variable = { EBS_track_logistics > 100 } } set_variable = { EBS_track_logistics = 100 } }
+	if = { limit = { check_variable = { EBS_track_logistics < 0 } } set_variable = { EBS_track_logistics = 0 } }
+	if = { limit = { check_variable = { EBS_track_dongbei > 100 } } set_variable = { EBS_track_dongbei = 100 } }
+	if = { limit = { check_variable = { EBS_track_dongbei < 0 } } set_variable = { EBS_track_dongbei = 0 } }
 }
 
 clamp_exam_track_variables = {
@@ -367,7 +444,13 @@ calculate_gaokao_reckoning_1938 = {
 
 update_exam_leaderboard_scores = {
 	# 0. Refresh weekly delta preview so the GUI always matches the next pulse
-	calc_exam_track_weekly_deltas = yes
+	if = {
+		limit = { tag = EBS }
+		calc_ebs_exam_board_weekly_deltas = yes
+	}
+	else = {
+		calc_exam_track_weekly_deltas = yes
+	}
 
 	# 1. Gold count used for scoring:
 	#    after finals -> real medals; before finals -> projected medals (tracks > 69)
@@ -448,13 +531,73 @@ update_exam_leaderboard_scores = {
 	# 5. Update EBS Score
 	if = {
 		limit = { country_exists = EBS }
-		set_variable = { EBS.YDS_exam_monopoly_score = 42 }
-		set_variable = { temp_val = 70 }
-		subtract_from_variable = { temp_val = global.track_info_progress }
-		if = { limit = { check_variable = { temp_val < 0 } } set_variable = { temp_val = 0 } }
-		multiply_variable = { var = temp_val value = 0.33 }
-		add_to_variable = { EBS.YDS_exam_monopoly_score = temp_val }
-		set_variable = { YDS_score_EBS = EBS.YDS_exam_monopoly_score }
+		if = {
+			limit = { EBS = { is_ai = no } }
+			set_variable = { EBS.YDS_exam_monopoly_score = 35 }
+			set_variable = { EBS.EBS_pillars_achieved = 0 }
+
+			if = {
+				limit = { check_variable = { EBS.EBS_track_privilege > 69 } }
+				add_to_variable = { EBS.YDS_exam_monopoly_score = 12 }
+				add_to_variable = { EBS.EBS_pillars_achieved = 1 }
+			}
+			if = {
+				limit = { check_variable = { EBS.EBS_track_cyber > 69 } }
+				add_to_variable = { EBS.YDS_exam_monopoly_score = 12 }
+				add_to_variable = { EBS.EBS_pillars_achieved = 1 }
+			}
+			if = {
+				limit = { check_variable = { EBS.EBS_track_inspection > 69 } }
+				add_to_variable = { EBS.YDS_exam_monopoly_score = 12 }
+				add_to_variable = { EBS.EBS_pillars_achieved = 1 }
+			}
+			if = {
+				limit = { check_variable = { EBS.EBS_track_logistics > 69 } }
+				add_to_variable = { EBS.YDS_exam_monopoly_score = 12 }
+				add_to_variable = { EBS.EBS_pillars_achieved = 1 }
+			}
+			if = {
+				limit = { check_variable = { EBS.EBS_track_dongbei > 69 } }
+				add_to_variable = { EBS.YDS_exam_monopoly_score = 12 }
+				add_to_variable = { EBS.EBS_pillars_achieved = 1 }
+			}
+
+			if = {
+				limit = { check_variable = { EBS.EBS_bonus_focus_score > 0 } }
+				add_to_variable = { EBS.YDS_exam_monopoly_score = EBS.EBS_bonus_focus_score }
+			}
+			if = {
+				limit = { check_variable = { EBS.EBS_bonus_decree_score > 0 } }
+				add_to_variable = { EBS.YDS_exam_monopoly_score = EBS.EBS_bonus_decree_score }
+			}
+
+			set_variable = { temp_ebs_prog = EBS.EBS_track_privilege }
+			add_to_variable = { temp_ebs_prog = EBS.EBS_track_cyber }
+			add_to_variable = { temp_ebs_prog = EBS.EBS_track_inspection }
+			add_to_variable = { temp_ebs_prog = EBS.EBS_track_logistics }
+			add_to_variable = { temp_ebs_prog = EBS.EBS_track_dongbei }
+			divide_variable = { var = temp_ebs_prog value = 25 }
+			add_to_variable = { EBS.YDS_exam_monopoly_score = temp_ebs_prog }
+
+			set_variable = { YDS_score_EBS = EBS.YDS_exam_monopoly_score }
+		}
+		else = {
+			set_variable = { EBS.YDS_exam_monopoly_score = 42 }
+			set_variable = { temp_val = 70 }
+			subtract_from_variable = { temp_val = global.track_info_progress }
+			if = { limit = { check_variable = { temp_val < 0 } } set_variable = { temp_val = 0 } }
+			multiply_variable = { var = temp_val value = 0.33 }
+			add_to_variable = { EBS.YDS_exam_monopoly_score = temp_val }
+			if = {
+				limit = { check_variable = { EBS.EBS_bonus_focus_score > 0 } }
+				add_to_variable = { EBS.YDS_exam_monopoly_score = EBS.EBS_bonus_focus_score }
+			}
+			if = {
+				limit = { check_variable = { EBS.EBS_bonus_decree_score > 0 } }
+				add_to_variable = { EBS.YDS_exam_monopoly_score = EBS.EBS_bonus_decree_score }
+			}
+			set_variable = { YDS_score_EBS = EBS.YDS_exam_monopoly_score }
+		}
 	}
 
 	# 6. Update SHS Score

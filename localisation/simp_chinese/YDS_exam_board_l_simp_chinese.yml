@@ -154,3 +154,73 @@
  YDS_counter_hbe_cooldown:0 "针对楚天集团行动冷却期"
  YDS_GOLD_LABEL_PROJECTED:0 "预计金牌"
  YDS_GOLD_LABEL_ACTUAL:0 "金牌"
+
+ # ==================== EBS EXAM BOARD & LEADERBOARD SYSTEM ====================
+ EBS_EXAM_BOARD_TRACKS_TITLE:0 "§H教育部最高教育巡视督导五大局司§!"
+ EBS_INSPECTOR_POOL_LBL:0 "待命督导特派员编队: §O[?EBS_inspectors_available]§! 组  |  已派出: §Y[?EBS_inspectors_deployed]§!/§G[?EBS_inspectors_total]§! 组"
+ EBS_EXAM_BOARD_INSPECTORS_TT:0 "§H中枢督导特派员编队§!\n这是最高教育督导专署向全国各考区与局司派驻的特使编制。\n• 派驻特派员（+）消耗 10 政治点，每周稳定提供 §G+0.7%§! 管辖推进度。\n• 撤回特派员（-）消耗 5 政治点，返还至待命编队。\n• 待命特派员为 0 时无法增派。"
+
+ # EBS Tracks
+ EBS_TRACK_PRIVILEGE_TITLE:0 "§H京津大院特权司§! §Y(陈专员)§!"
+ EBS_TRACK_PRIVILEGE_PROGRESS_TXT:0 "管辖度: §Y[?EBS_track_privilege|1]%§!/§G70%§!  每周 [?EBS_delta_privilege|+1]%"
+ EBS_PRIVILEGE_ENERGY_LBL:0 "特派员: §O[?EBS_invest_privilege]§!"
+ EBS_TRACK_PRIVILEGE_TT:0 "§H京津大院特权与配额统调司§!\n陈专员统辖的中枢命脉，掌控全国一本与清北名额统筹分配。\n• 达到 §G70%§! 时确立中枢第一支柱，全国大盘积分永久 §G+12§! 点。\n• 全国稳定度 > 60% 时，每周额外提供 §G+0.3%§! 推进度。"
+ EBS_ASSIGN_PRIVILEGE_TT:0 "§H增派督导特派员至特权司§!\n消耗 10 政治点，派驻 1 支特派员，每周推进度 +0.7%。"
+ EBS_RECALL_PRIVILEGE_TT:0 "§H从特权司撤回督导特派员§!\n消耗 5 政治点，收回 1 支特派员至待命池。"
+
+ EBS_TRACK_CYBER_TITLE:0 "§H赛博考务与信息算力机房§! §Y(怀总工)§!"
+ EBS_TRACK_CYBER_PROGRESS_TXT:0 "算力度: §Y[?EBS_track_cyber|1]%§!/§G70%§!  每周 [?EBS_delta_cyber|+1]%"
+ EBS_CYBER_ENERGY_LBL:0 "特派员: §O[?EBS_invest_cyber]§!"
+ EBS_TRACK_CYBER_TT:0 "§H赛博考务与信息算力机房§!\n怀总工主持的清华附中超算中心与脑电波监控天网。\n• 达到 §G70%§! 时确立中枢第二支柱，全国大盘积分永久 §G+12§! 点。\n• 科研槽 > 3 时，超算加持每周额外提供 §G+0.4%§! 推进度。\n• 常驻对全国所有竞争对手的信息学科施加压制。"
+ EBS_ASSIGN_CYBER_TT:0 "§H增派督导特派员至算力机房§!\n消耗 10 政治点，派驻 1 支特派员，每周推进度 +0.7%。"
+ EBS_RECALL_CYBER_TT:0 "§H从算力机房撤回督导特派员§!\n消耗 5 政治点，收回 1 支特派员至待命池。"
+
+ EBS_TRACK_INSPECTION_TITLE:0 "§H全国突击大迎检督查组§! §Y(周总导)§!"
+ EBS_TRACK_INSPECTION_PROGRESS_TXT:0 "震慑度: §Y[?EBS_track_inspection|1]%§!/§G70%§!  每周 [?EBS_delta_inspection|+1]%"
+ EBS_INSPECTION_ENERGY_LBL:0 "特派员: §O[?EBS_invest_inspection]§!"
+ EBS_TRACK_INSPECTION_TT:0 "§H全国突击大迎检督查组§!\n周总导率领的五天突击大迎检督察总署，逼迫各地操场刷绿漆与通宵抄假教案。\n• 达到 §G70%§! 时确立中枢第三支柱，全国大盘积分永久 §G+12§! 点。\n• 战争支持度 > 60% 时，整肃风暴每周额外提供 §G+0.3%§! 推进度。"
+ EBS_ASSIGN_INSPECTION_TT:0 "§H增派督导特派员至迎检督查组§!\n消耗 10 政治点，派驻 1 支特派员，每周推进度 +0.7%。"
+ EBS_RECALL_INSPECTION_TT:0 "§H从迎检督查组撤回督导特派员§!\n消耗 5 政治点，收回 1 支特派员至待命池。"
+
+ EBS_TRACK_LOGISTICS_TITLE:0 "§H体卫艺与后勤总务商会§! §Y(双王同盟)§!"
+ EBS_TRACK_LOGISTICS_PROGRESS_TXT:0 "垄断度: §Y[?EBS_track_logistics|1]%§!/§G70%§!  每周 [?EBS_delta_logistics|+1]%"
+ EBS_LOGISTICS_ENERGY_LBL:0 "特派员: §O[?EBS_invest_logistics]§!"
+ EBS_TRACK_LOGISTICS_TT:0 "§H体卫艺特招与后勤总务商会§!\n王司长与王总管操盘的全国预制菜营养餐与二级运动员批发帝国。\n• 达到 §G70%§! 时确立中枢第四支柱，全国大盘积分永久 §G+12§! 点。\n• 每派驻 1 支特派员，每周额外产出 §G+0.05 政治点§! 贪腐红利。"
+ EBS_ASSIGN_LOGISTICS_TT:0 "§H增派督导特派员至后勤商会§!\n消耗 10 政治点，派驻 1 支特派员，每周推进度 +0.7% 并产生政治点分红。"
+ EBS_RECALL_LOGISTICS_TT:0 "§H从后勤商会撤回督导特派员§!\n消耗 5 政治点，收回 1 支特派员至待命池。"
+
+ EBS_TRACK_DONGBEI_TITLE:0 "§H关东重工做题大平权统考司§! §Y(东北公社)§!"
+ EBS_TRACK_DONGBEI_PROGRESS_TXT:0 "重工度: §Y[?EBS_track_dongbei|1]%§!/§G70%§!  每周 [?EBS_delta_dongbei|+1]%"
+ EBS_DONGBEI_ENERGY_LBL:0 "特派员: §O[?EBS_invest_dongbei]§!"
+ EBS_TRACK_DONGBEI_TT:0 "§H关东重工做题大平权统考司§!\n东三省名校联合公社与重工流水线赋能的做题机器实验区。\n• 达到 §G70%§! 时确立中枢第五支柱，全国大盘积分永久 §G+12§! 点。\n• 完全控制东三省核心（长春、哈尔滨、沈阳）时，工业底蕴每周额外提供 §G+0.4%§! 推进度。"
+ EBS_ASSIGN_DONGBEI_TT:0 "§H增派督导特派员至关东统考司§!\n消耗 10 政治点，派驻 1 支特派员，每周推进度 +0.7%。"
+ EBS_RECALL_DONGBEI_TT:0 "§H从关东统考司撤回督导特派员§!\n消耗 5 政治点，收回 1 支特派员至待命池。"
+
+ # EBS Decrees
+ EBS_STRATEGIC_ACTIONS_TITLE:0 "§H中枢红头行政指令与专案整肃裁决台§!"
+ EBS_STRATEGIC_ACTIONS_SUB:0 "§C动用教育部公权力，向全国发布考纲红头文件，或对地方学阀发动定点整肃！§!"
+ EBS_BTN_DECREE_PRIVILEGE:0 "密发强基保送令"
+ EBS_DECREE_PRIVILEGE_TT:0 "§H密发清北强基专项保送令§!\n消耗 30 政治点。\n• 京津大院特权度 §G+12%§!\n• 中枢权威声望 §G+5§!\n• 全国大盘常驻加分 §G+1§!\n冷却时间：90 天。"
+ EBS_BTN_DECREE_CYBER:0 "超算算力接管"
+ EBS_DECREE_CYBER_TT:0 "§H超算天网全网算力接管§!\n消耗 30 政治点。\n• 赛博考务算力度 §G+12%§!\n• 削弱全境考生信息学进度 §R-5%§!\n• 全国大盘常驻加分 §G+1§!\n冷却时间：90 天。"
+ EBS_BTN_DECREE_INSPECTION:0 "签发万校迎检令"
+ EBS_DECREE_INSPECTION_TT:0 "§H签发全国万校突击迎检令§!\n消耗 30 政治点。\n• 迎检震慑度 §G+12%§!\n• 查处江南 ECE 与楚天 HBE 违规，各扣减 §R8§! 点大盘分\n• 全国大盘常驻加分 §G+1§!\n冷却时间：90 天。"
+ EBS_BTN_DECREE_LOGISTICS:0 "特许批发特长证"
+ EBS_DECREE_LOGISTICS_TT:0 "§H特许批发二级运动员证书§!\n后勤商会暗箱操作。\n• 获得资金红利 §G+25 政治点§!\n• 后勤垄断度 §G+10%§!\n• 违规黑金风险 §R+5%§!\n• 全国大盘常驻加分 §G+1§!\n冷却时间：90 天。"
+ EBS_BTN_DECREE_DONGBEI:0 "调拨关东流水卷"
+ EBS_DECREE_DONGBEI_TT:0 "§H调拨关东重工流水线题库§!\n消耗 30 政治点。\n• 关东重工度 §G+12%§!\n• 工业做题产能转化为全国大盘常驻加分 §G+1§!\n冷却时间：90 天。"
+ EBS_BTN_RAID_ECE:0 "立案整肃：查封江南奥数秘卷"
+ EBS_RAID_ECE_TT:0 "§H立案整肃：查封江南奥数秘卷§!\n消耗 40 政治点，针对华东学校组织 (ECE) 展开特派督导突查。\n• 没收全部绝密考卷，直接扣减 ECE 全国大盘 §R12§! 分！\n• 迎检震慑度 §G+8%§!\n冷却时间：120 天。"
+ EBS_BTN_RAID_HBE:0 "红头通报：没收楚天物理题库"
+ EBS_RAID_HBE_TT:0 "§H红头通报：没收黄冈华师一物理题库§!\n消耗 40 政治点，针对华中楚天集团 (HBE) 发起跨省联合执法。\n• 查封题库核心，直接扣减 HBE 全国大盘 §R12§! 分！\n• 迎检震慑度 §G+8%§!\n冷却时间：120 天。"
+
+ # EBS Rules Box
+ EBS_RULES_BOX_TITLE:0 "§H教育部国家试卷院操盘圣典指南§!"
+ EBS_RULES_BOX_DESC:0 "§W1. 【督导派驻】特派员按周稳定提供 §G+0.7%§! 规制推进；任何局司进度突破 §G70%§!，即确立该中枢统治支柱（每支柱全国大盘直接锁定 §G+12§! 分）！\n2. 【中枢裁决】适时发动五大红头通报与两大跨省整肃，不仅能阻滞江南与楚天做题大军，更能将中枢权威稳固在全国天梯之巅！\n3. 【高考宿命】1938年6月7日高考总放榜：只要稳居全国前三甲，即刻独享【象牙塔技术霸权】，统帅全国统考大纲；若跌落至第四名及以后，中枢威信荡然无存，关外考霸将大举入关夺权！§!"
+
+ # EBS Status Cards
+ EBS_PLAYER_CARD_L1:0 "§H中枢督导统考总分: §Y[?YDS_score_EBS|0] 分§!  |  当前全国排位: §G第 [?YDS_rank_EBS|0] 名§!"
+ EBS_PLAYER_CARD_L2:0 "中枢前瞻预判: [EBS_get_player_status_loc]"
+ EBS_PLAYER_CARD_L3:0 "中枢威权: §Y[?EBS_academic_prestige|0]§! | 统辖支柱达标: §G[?EBS_pillars_achieved|0]/5§! | 待命特派员: §O[?EBS_inspectors_available|0] 组§! | 黑金作弊风险: §R[?EBS_cheat_risk|0]%§!"
+ EBS_STATUS_PLAYER_TOP3:0 "§Y【前瞻预判：稳坐全国前三 · 象牙塔中枢技术霸权】§!"
+ EBS_STATUS_PLAYER_REPEATER:0 "§R【前瞻预判：跌出前三 · 威信破产 · 奉系入关政变或全境大暴动】§!"

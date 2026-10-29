@@ -15,6 +15,7 @@ scripted_gui = {
 				has_completed_focus = YDS_olympiad_initiative
 				has_country_flag = YDS_olympiad_active
 				NOT = { original_tag = YDS }
+				tag = EBS
 			}
 		}
 
@@ -49,7 +50,21 @@ scripted_gui = {
 			YDS_exam_league_refresh_btn_click = {
 				update_exam_leaderboard_scores = yes
 			}
+		}
+	}
 
+	# ==================== YDS STUDENT PANEL SGUI ====================
+	YDS_student_panel_sgui = {
+		context_type = player_context
+		window_name = "YDS_student_panel"
+		parent_window_name = "YDS_exam_league_main_window"
+
+		visible = {
+			has_country_flag = YDS_exam_league_gui_open
+			NOT = { tag = EBS }
+		}
+
+		effects = {
 			# Track 1: Math (Lai Sihan)
 			YDS_math_plus_btn_click = {
 				add_political_power = -10
@@ -283,6 +298,252 @@ scripted_gui = {
 				has_political_power > 29
 				country_exists = HBE
 				NOT = { has_country_flag = YDS_counter_hbe_cooldown }
+			}
+		}
+	}
+
+	# ==================== EBS DIRECTORATES PANEL SGUI ====================
+	EBS_directorates_panel_sgui = {
+		context_type = player_context
+		window_name = "EBS_directorates_panel"
+		parent_window_name = "YDS_exam_league_main_window"
+
+		visible = {
+			has_country_flag = YDS_exam_league_gui_open
+			tag = EBS
+		}
+
+		effects = {
+			# EBS Track 1: Privilege (Chen Zhuanyuan)
+			EBS_privilege_plus_btn_click = {
+				add_political_power = -10
+				add_to_variable = { EBS_inspectors_deployed = 1 }
+				add_to_variable = { EBS_invest_privilege = 1 }
+				set_variable = { EBS_inspectors_available = EBS_inspectors_total }
+				subtract_from_variable = { EBS_inspectors_available = EBS_inspectors_deployed }
+				update_exam_leaderboard_scores = yes
+			}
+			EBS_privilege_minus_btn_click = {
+				add_political_power = -5
+				subtract_from_variable = { EBS_inspectors_deployed = 1 }
+				subtract_from_variable = { EBS_invest_privilege = 1 }
+				set_variable = { EBS_inspectors_available = EBS_inspectors_total }
+				subtract_from_variable = { EBS_inspectors_available = EBS_inspectors_deployed }
+				update_exam_leaderboard_scores = yes
+			}
+
+			# EBS Track 2: Cyber (Huai Zonggong)
+			EBS_cyber_plus_btn_click = {
+				add_political_power = -10
+				add_to_variable = { EBS_inspectors_deployed = 1 }
+				add_to_variable = { EBS_invest_cyber = 1 }
+				set_variable = { EBS_inspectors_available = EBS_inspectors_total }
+				subtract_from_variable = { EBS_inspectors_available = EBS_inspectors_deployed }
+				update_exam_leaderboard_scores = yes
+			}
+			EBS_cyber_minus_btn_click = {
+				add_political_power = -5
+				subtract_from_variable = { EBS_inspectors_deployed = 1 }
+				subtract_from_variable = { EBS_invest_cyber = 1 }
+				set_variable = { EBS_inspectors_available = EBS_inspectors_total }
+				subtract_from_variable = { EBS_inspectors_available = EBS_inspectors_deployed }
+				update_exam_leaderboard_scores = yes
+			}
+
+			# EBS Track 3: Inspection (Zhou Zongdao)
+			EBS_inspection_plus_btn_click = {
+				add_political_power = -10
+				add_to_variable = { EBS_inspectors_deployed = 1 }
+				add_to_variable = { EBS_invest_inspection = 1 }
+				set_variable = { EBS_inspectors_available = EBS_inspectors_total }
+				subtract_from_variable = { EBS_inspectors_available = EBS_inspectors_deployed }
+				update_exam_leaderboard_scores = yes
+			}
+			EBS_inspection_minus_btn_click = {
+				add_political_power = -5
+				subtract_from_variable = { EBS_inspectors_deployed = 1 }
+				subtract_from_variable = { EBS_invest_inspection = 1 }
+				set_variable = { EBS_inspectors_available = EBS_inspectors_total }
+				subtract_from_variable = { EBS_inspectors_available = EBS_inspectors_deployed }
+				update_exam_leaderboard_scores = yes
+			}
+
+			# EBS Track 4: Logistics (Wang Sichang & Wang Zongguan)
+			EBS_logistics_plus_btn_click = {
+				add_political_power = -10
+				add_to_variable = { EBS_inspectors_deployed = 1 }
+				add_to_variable = { EBS_invest_logistics = 1 }
+				set_variable = { EBS_inspectors_available = EBS_inspectors_total }
+				subtract_from_variable = { EBS_inspectors_available = EBS_inspectors_deployed }
+				update_exam_leaderboard_scores = yes
+			}
+			EBS_logistics_minus_btn_click = {
+				add_political_power = -5
+				subtract_from_variable = { EBS_inspectors_deployed = 1 }
+				subtract_from_variable = { EBS_invest_logistics = 1 }
+				set_variable = { EBS_inspectors_available = EBS_inspectors_total }
+				subtract_from_variable = { EBS_inspectors_available = EBS_inspectors_deployed }
+				update_exam_leaderboard_scores = yes
+			}
+
+			# EBS Track 5: Dongbei (Dongbei Council)
+			EBS_dongbei_plus_btn_click = {
+				add_political_power = -10
+				add_to_variable = { EBS_inspectors_deployed = 1 }
+				add_to_variable = { EBS_invest_dongbei = 1 }
+				set_variable = { EBS_inspectors_available = EBS_inspectors_total }
+				subtract_from_variable = { EBS_inspectors_available = EBS_inspectors_deployed }
+				update_exam_leaderboard_scores = yes
+			}
+			EBS_dongbei_minus_btn_click = {
+				add_political_power = -5
+				subtract_from_variable = { EBS_inspectors_deployed = 1 }
+				subtract_from_variable = { EBS_invest_dongbei = 1 }
+				set_variable = { EBS_inspectors_available = EBS_inspectors_total }
+				subtract_from_variable = { EBS_inspectors_available = EBS_inspectors_deployed }
+				update_exam_leaderboard_scores = yes
+			}
+
+			# EBS Decrees
+			EBS_decree_privilege_btn_click = {
+				add_political_power = -30
+				add_to_variable = { EBS_track_privilege = 12 }
+				add_to_variable = { EBS_academic_prestige = 5 }
+				add_to_variable = { EBS_bonus_decree_score = 1 }
+				clamp_ebs_exam_track_variables = yes
+				set_country_flag = { flag = EBS_decree_privilege_cooldown days = 90 }
+				update_exam_leaderboard_scores = yes
+			}
+			EBS_decree_cyber_btn_click = {
+				add_political_power = -30
+				add_to_variable = { EBS_track_cyber = 12 }
+				if = { limit = { check_variable = { global.track_info_progress > 5 } } subtract_from_variable = { global.track_info_progress = 5 } }
+				add_to_variable = { EBS_bonus_decree_score = 1 }
+				clamp_ebs_exam_track_variables = yes
+				set_country_flag = { flag = EBS_decree_cyber_cooldown days = 90 }
+				update_exam_leaderboard_scores = yes
+			}
+			EBS_decree_inspection_btn_click = {
+				add_political_power = -30
+				add_to_variable = { EBS_track_inspection = 12 }
+				if = { limit = { country_exists = ECE } subtract_from_variable = { ECE.YDS_exam_monopoly_score = 8 } }
+				if = { limit = { country_exists = HBE } subtract_from_variable = { HBE.YDS_exam_monopoly_score = 8 } }
+				add_to_variable = { EBS_bonus_decree_score = 1 }
+				clamp_ebs_exam_track_variables = yes
+				set_country_flag = { flag = EBS_decree_inspection_cooldown days = 90 }
+				update_exam_leaderboard_scores = yes
+			}
+			EBS_decree_logistics_btn_click = {
+				add_political_power = 25
+				add_to_variable = { EBS_track_logistics = 10 }
+				add_to_variable = { EBS_cheat_risk = 5 }
+				add_to_variable = { EBS_bonus_decree_score = 1 }
+				clamp_ebs_exam_track_variables = yes
+				set_country_flag = { flag = EBS_decree_logistics_cooldown days = 90 }
+				update_exam_leaderboard_scores = yes
+			}
+			EBS_decree_dongbei_btn_click = {
+				add_political_power = -30
+				add_to_variable = { EBS_track_dongbei = 12 }
+				add_to_variable = { EBS_bonus_decree_score = 1 }
+				clamp_ebs_exam_track_variables = yes
+				set_country_flag = { flag = EBS_decree_dongbei_cooldown days = 90 }
+				update_exam_leaderboard_scores = yes
+			}
+
+			# EBS Raids
+			EBS_raid_ece_btn_click = {
+				add_political_power = -40
+				if = { limit = { country_exists = ECE } subtract_from_variable = { ECE.YDS_exam_monopoly_score = 12 } }
+				add_to_variable = { EBS_track_inspection = 8 }
+				clamp_ebs_exam_track_variables = yes
+				set_country_flag = { flag = EBS_raid_ece_cooldown days = 120 }
+				update_exam_leaderboard_scores = yes
+			}
+			EBS_raid_hbe_btn_click = {
+				add_political_power = -40
+				if = { limit = { country_exists = HBE } subtract_from_variable = { HBE.YDS_exam_monopoly_score = 12 } }
+				add_to_variable = { EBS_track_inspection = 8 }
+				clamp_ebs_exam_track_variables = yes
+				set_country_flag = { flag = EBS_raid_hbe_cooldown days = 120 }
+				update_exam_leaderboard_scores = yes
+			}
+		}
+
+		triggers = {
+			# EBS Plus Triggers
+			EBS_privilege_plus_btn_click_enabled = {
+				check_variable = { EBS_inspectors_deployed < EBS_inspectors_total }
+				has_political_power > 9
+			}
+			EBS_privilege_minus_btn_click_enabled = {
+				check_variable = { EBS_invest_privilege > 0 }
+				has_political_power > 4
+			}
+			EBS_cyber_plus_btn_click_enabled = {
+				check_variable = { EBS_inspectors_deployed < EBS_inspectors_total }
+				has_political_power > 9
+			}
+			EBS_cyber_minus_btn_click_enabled = {
+				check_variable = { EBS_invest_cyber > 0 }
+				has_political_power > 4
+			}
+			EBS_inspection_plus_btn_click_enabled = {
+				check_variable = { EBS_inspectors_deployed < EBS_inspectors_total }
+				has_political_power > 9
+			}
+			EBS_inspection_minus_btn_click_enabled = {
+				check_variable = { EBS_invest_inspection > 0 }
+				has_political_power > 4
+			}
+			EBS_logistics_plus_btn_click_enabled = {
+				check_variable = { EBS_inspectors_deployed < EBS_inspectors_total }
+				has_political_power > 9
+			}
+			EBS_logistics_minus_btn_click_enabled = {
+				check_variable = { EBS_invest_logistics > 0 }
+				has_political_power > 4
+			}
+			EBS_dongbei_plus_btn_click_enabled = {
+				check_variable = { EBS_inspectors_deployed < EBS_inspectors_total }
+				has_political_power > 9
+			}
+			EBS_dongbei_minus_btn_click_enabled = {
+				check_variable = { EBS_invest_dongbei > 0 }
+				has_political_power > 4
+			}
+
+			# EBS Decree Triggers
+			EBS_decree_privilege_btn_click_enabled = {
+				has_political_power > 29
+				NOT = { has_country_flag = EBS_decree_privilege_cooldown }
+			}
+			EBS_decree_cyber_btn_click_enabled = {
+				has_political_power > 29
+				NOT = { has_country_flag = EBS_decree_cyber_cooldown }
+			}
+			EBS_decree_inspection_btn_click_enabled = {
+				has_political_power > 29
+				NOT = { has_country_flag = EBS_decree_inspection_cooldown }
+			}
+			EBS_decree_logistics_btn_click_enabled = {
+				NOT = { has_country_flag = EBS_decree_logistics_cooldown }
+			}
+			EBS_decree_dongbei_btn_click_enabled = {
+				has_political_power > 29
+				NOT = { has_country_flag = EBS_decree_dongbei_cooldown }
+			}
+
+			# EBS Raid Triggers
+			EBS_raid_ece_btn_click_enabled = {
+				has_political_power > 39
+				country_exists = ECE
+				NOT = { has_country_flag = EBS_raid_ece_cooldown }
+			}
+			EBS_raid_hbe_btn_click_enabled = {
+				has_political_power > 39
+				country_exists = HBE
+				NOT = { has_country_flag = EBS_raid_hbe_cooldown }
 			}
 		}
 	}

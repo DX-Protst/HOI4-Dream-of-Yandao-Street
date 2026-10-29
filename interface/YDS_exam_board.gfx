@@ -34,4 +34,24 @@ spriteTypes = {
 		name = "GFX_YDS_icon_info"
 		texturefile = "gfx/interface/exam_board_gui/YDS_icon_info.tga"
 	}
+	spriteType = {
+		name = "GFX_EBS_icon_privilege"
+		texturefile = "gfx/interface/exam_board_gui/EBS_icon_privilege.tga"
+	}
+	spriteType = {
+		name = "GFX_EBS_icon_cyber"
+		texturefile = "gfx/interface/exam_board_gui/EBS_icon_cyber.tga"
+	}
+	spriteType = {
+		name = "GFX_EBS_icon_inspection"
+		texturefile = "gfx/interface/exam_board_gui/EBS_icon_inspection.tga"
+	}
+	spriteType = {
+		name = "GFX_EBS_icon_logistics"
+		texturefile = "gfx/interface/exam_board_gui/EBS_icon_logistics.tga"
+	}
+	spriteType = {
+		name = "GFX_EBS_icon_dongbei"
+		texturefile = "gfx/interface/exam_board_gui/EBS_icon_dongbei.tga"
+	}
 }

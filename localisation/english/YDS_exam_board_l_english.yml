@@ -92,3 +92,73 @@
  YDS_exam_board_overview_desc:0 "Real-time surveillance of the national 5-track competition. Coach energy can be reallocated at any time until Gaokao reckoning!"
  YDS_GOLD_LABEL_PROJECTED:0 "Projected Gold"
  YDS_GOLD_LABEL_ACTUAL:0 "Gold"
+
+ # ==================== EBS EXAM BOARD & LEADERBOARD SYSTEM ====================
+ EBS_EXAM_BOARD_TRACKS_TITLE:0 "Supreme Inspection Bureau Regulatory Directorates"
+ EBS_INSPECTOR_POOL_LBL:0 "Available Inspectors: §O[?EBS_inspectors_available]§! Teams  |  Deployed: §Y[?EBS_inspectors_deployed]§!/§G[?EBS_inspectors_total]§! Teams"
+ EBS_EXAM_BOARD_INSPECTORS_TT:0 "§HImperial Inspector Taskforces§!\nSpecial taskforces dispatched by the Supreme Education Bureau across provinces and ministries.\n• Deploy inspector (+) costs 10 PP, generates §G+0.7%§! progress weekly.\n• Recall inspector (-) costs 5 PP, returning the taskforce to pool.\n• Cannot deploy when available teams reach 0."
+
+ # EBS Tracks
+ EBS_TRACK_PRIVILEGE_TITLE:0 "§HCapital Aristocracy Quota Bureau§! §Y(Chen)§!"
+ EBS_TRACK_PRIVILEGE_PROGRESS_TXT:0 "Control: §Y[?EBS_track_privilege|1]%§!/§G70%§!  Weekly [?EBS_delta_privilege|+1]%"
+ EBS_PRIVILEGE_ENERGY_LBL:0 "Inspectors: §O[?EBS_invest_privilege]§!"
+ EBS_TRACK_PRIVILEGE_TT:0 "§HCapital Aristocracy & Quota Allocation Directorate§!\nChen's core bureaucracy, commanding Ivy League admissions.\n• Reaching §G70%§! establishes Pillar 1, adding §G+12§! points to National Score.\n• Stability > 60% provides extra §G+0.3%§! weekly progress."
+ EBS_ASSIGN_PRIVILEGE_TT:0 "§HDeploy Inspector to Quota Bureau§!\nCosts 10 PP, grants +0.7% weekly progress."
+ EBS_RECALL_PRIVILEGE_TT:0 "§HRecall Inspector from Quota Bureau§!\nCosts 5 PP, returns 1 taskforce to pool."
+
+ EBS_TRACK_CYBER_TITLE:0 "§HCybernetic Exam & Supercomputing Center§! §Y(Huai)§!"
+ EBS_TRACK_CYBER_PROGRESS_TXT:0 "Computing: §Y[?EBS_track_cyber|1]%§!/§G70%§!  Weekly [?EBS_delta_cyber|+1]%"
+ EBS_CYBER_ENERGY_LBL:0 "Inspectors: §O[?EBS_invest_cyber]§!"
+ EBS_TRACK_CYBER_TT:0 "§HCybernetic Exam & Supercomputing Center§!\nHuai's AI exam supervision and Tsinghua High School supercomputer.\n• Reaching §G70%§! establishes Pillar 2, adding §G+12§! points to National Score.\n• Research slots > 3 provides extra §G+0.4%§! weekly progress.\n• Passively suppresses rivals' informatics tracks."
+ EBS_ASSIGN_CYBER_TT:0 "§HDeploy Inspector to Supercomputing Center§!\nCosts 10 PP, grants +0.7% weekly progress."
+ EBS_RECALL_CYBER_TT:0 "§HRecall Inspector from Supercomputing Center§!\nCosts 5 PP, returns 1 taskforce to pool."
+
+ EBS_TRACK_INSPECTION_TITLE:0 "§HNationwide Surprise Inspection Taskforce§! §Y(Zhou)§!"
+ EBS_TRACK_INSPECTION_PROGRESS_TXT:0 "Deterrence: §Y[?EBS_track_inspection|1]%§!/§G70%§!  Weekly [?EBS_delta_inspection|+1]%"
+ EBS_INSPECTION_ENERGY_LBL:0 "Inspectors: §O[?EBS_invest_inspection]§!"
+ EBS_TRACK_INSPECTION_TT:0 "§HNationwide Surprise Inspection Taskforce§!\nZhou's ironclad 5-day blitz inspection taskforce.\n• Reaching §G70%§! establishes Pillar 3, adding §G+12§! points to National Score.\n• War Support > 60% provides extra §G+0.3%§! weekly progress."
+ EBS_ASSIGN_INSPECTION_TT:0 "§HDeploy Inspector to Inspection Taskforce§!\nCosts 10 PP, grants +0.7% weekly progress."
+ EBS_RECALL_INSPECTION_TT:0 "§HRecall Inspector from Inspection Taskforce§!\nCosts 5 PP, returns 1 taskforce to pool."
+
+ EBS_TRACK_LOGISTICS_TITLE:0 "§HSports Quotas & Canteen Logistics Cartel§! §Y(Wang)§!"
+ EBS_TRACK_LOGISTICS_PROGRESS_TXT:0 "Monopoly: §Y[?EBS_track_logistics|1]%§!/§G70%§!  Weekly [?EBS_delta_logistics|+1]%"
+ EBS_LOGISTICS_ENERGY_LBL:0 "Inspectors: §O[?EBS_invest_logistics]§!"
+ EBS_TRACK_LOGISTICS_TT:0 "§HSports Quotas & Canteen Logistics Cartel§!\nWang's pre-cooked meal and grade 2 athlete wholesale cartel.\n• Reaching §G70%§! establishes Pillar 4, adding §G+12§! points to National Score.\n• Each deployed inspector yields §G+0.05 PP§! weekly."
+ EBS_ASSIGN_LOGISTICS_TT:0 "§HDeploy Inspector to Logistics Cartel§!\nCosts 10 PP, grants +0.7% weekly progress and political kickbacks."
+ EBS_RECALL_LOGISTICS_TT:0 "§HRecall Inspector from Logistics Cartel§!\nCosts 5 PP, returns 1 taskforce to pool."
+
+ EBS_TRACK_DONGBEI_TITLE:0 "§HManchurian Heavy-Industry Exam Foundry§! §Y(Dongbei)§!"
+ EBS_TRACK_DONGBEI_PROGRESS_TXT:0 "Industry: §Y[?EBS_track_dongbei|1]%§!/§G70%§!  Weekly [?EBS_delta_dongbei|+1]%"
+ EBS_DONGBEI_ENERGY_LBL:0 "Inspectors: §O[?EBS_invest_dongbei]§!"
+ EBS_TRACK_DONGBEI_TT:0 "§HManchurian Heavy-Industry Exam Foundry§!\nNortheast Elite Schools Commune industrial test-grinding foundry.\n• Reaching §G70%§! establishes Pillar 5, adding §G+12§! points to National Score.\n• Controlling Changchun, Harbin, and Mukden grants extra §G+0.4%§! weekly progress."
+ EBS_ASSIGN_DONGBEI_TT:0 "§HDeploy Inspector to Manchurian Foundry§!\nCosts 10 PP, grants +0.7% weekly progress."
+ EBS_RECALL_DONGBEI_TT:0 "§HRecall Inspector from Manchurian Foundry§!\nCosts 5 PP, returns 1 taskforce to pool."
+
+ # EBS Decrees
+ EBS_STRATEGIC_ACTIONS_TITLE:0 "§HImperial Administrative Directives & Inquisitions§!"
+ EBS_STRATEGIC_ACTIONS_SUB:0 "§CUtilize central authority to issue exam decrees and enforce regional crackdowns!§!"
+ EBS_BTN_DECREE_PRIVILEGE:0 "Tsinghua/Peking Quota"
+ EBS_DECREE_PRIVILEGE_TT:0 "§HIssue Secret Tsinghua/Peking Quota Directive§!\nCosts 30 PP.\n• Capital Privilege +12%\n• Central Authority +5\n• Permanent National Score +1\nCooldown: 90 days."
+ EBS_BTN_DECREE_CYBER:0 "Supercomputing Overdrive"
+ EBS_DECREE_CYBER_TT:0 "§HDeploy Cybernetic Supercomputing Overdrive§!\nCosts 30 PP.\n• Cybernetic Control +12%\n• Suppress rival examinees' informatics progress by -5%\n• Permanent National Score +1\nCooldown: 90 days."
+ EBS_BTN_DECREE_INSPECTION:0 "Nationwide Surprise Raid"
+ EBS_DECREE_INSPECTION_TT:0 "§HIssue Nationwide Surprise Inspection Order§!\nCosts 30 PP.\n• Inspection Deterrence +12%\n• Docks ECE and HBE scores by 8 points each\n• Permanent National Score +1\nCooldown: 90 days."
+ EBS_BTN_DECREE_LOGISTICS:0 "Wholesale Sports Permits"
+ EBS_DECREE_LOGISTICS_TT:0 "§HAuthorize Wholesale Sports Athlete Permits§!\nBackroom deal with sports cartel.\n• Gains +25 PP\n• Logistics Monopoly +10%\n• Corruption Risk +5%\n• Permanent National Score +1\nCooldown: 90 days."
+ EBS_BTN_DECREE_DONGBEI:0 "Manchurian Paper Foundry"
+ EBS_DECREE_DONGBEI_TT:0 "§HMobilize Manchurian Heavy-Industry Question Banks§!\nCosts 30 PP.\n• Heavy-Industry Exam Progress +12%\n• Permanent National Score +1\nCooldown: 90 days."
+ EBS_BTN_RAID_ECE:0 "Raid East China ECE Math League"
+ EBS_RAID_ECE_TT:0 "§HInquisition: Confiscate East China Math Papers§!\nCosts 40 PP. Raids East China Schools Organization (ECE).\n• Docks ECE National Score by 12 points!\n• Inspection Progress +8%\nCooldown: 120 days."
+ EBS_BTN_RAID_HBE:0 "Raid Hubei HBE Physics Vault"
+ EBS_RAID_HBE_TT:0 "§HImperial Notice: Confiscate Hubei Physics Vault§!\nCosts 40 PP. Raids Hubei Chutian Group (HBE).\n• Docks HBE National Score by 12 points!\n• Inspection Progress +8%\nCooldown: 120 days."
+
+ # EBS Rules Box
+ EBS_RULES_BOX_TITLE:0 "§HImperial Exam Board Codex & Inspection Guide§!"
+ EBS_RULES_BOX_DESC:0 "§W1. [Deployment] Each inspector provides +0.7% weekly progress. Reaching 70% in any pillar permanently locks +12 points on the National Ladder!\n2. [Directives] Deploy decrees and inter-provincial raids to suppress rivals and reinforce central authority.\n3. [Gaokao Reckoning] On June 7, 1938: Holding Top 3 secures Ivory Tower Hegemony; falling to 4th or below collapses central authority and triggers nationwide revolution!§!"
+
+ # EBS Status Cards
+ EBS_PLAYER_CARD_L1:0 "§HCentral Exam Score: §Y[?YDS_score_EBS|0] Pts§!  |  Current Rank: §G#[?YDS_rank_EBS|0]§!"
+ EBS_PLAYER_CARD_L2:0 "Central Destiny: [EBS_get_player_status_loc]"
+ EBS_PLAYER_CARD_L3:0 "Authority: §Y[?EBS_academic_prestige|0]§! | Pillars Met: §G[?EBS_pillars_achieved|0]/5§! | Available Inspectors: §O[?EBS_inspectors_available|0]§! | Corruption Risk: §R[?EBS_cheat_risk|0]%§!"
+ EBS_STATUS_PLAYER_TOP3:0 "§Y[Projected: Firmly Top 3 · Ivory Tower Hegemony]§!"
+ EBS_STATUS_PLAYER_REPEATER:0 "§R[Projected: Out of Top 3 · Authority Collapsed · Revolution Inevitable]§!"

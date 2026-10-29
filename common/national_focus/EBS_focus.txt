@@ -560,8 +560,10 @@ focus_tree = {
 		prerequisite = { focus = EBS_supreme_inspection_bureau }
 		completion_reward = {
 			add_political_power = 60
-			add_to_variable = { EBS.YDS_exam_monopoly_score = 10 }
-			set_variable = { YDS_score_EBS = EBS.YDS_exam_monopoly_score }
+			add_to_variable = { EBS_bonus_focus_score = 10 }
+			add_to_variable = { EBS_track_privilege = 10 }
+			clamp_ebs_exam_track_variables = yes
+			update_exam_leaderboard_scores = yes
 			country_event = { id = ebs_focus_event.26 }
 		}
 	}
@@ -574,8 +576,10 @@ focus_tree = {
 		cost = 5
 		prerequisite = { focus = EBS_seize_central_printing_press }
 		completion_reward = {
-			add_to_variable = { EBS.YDS_exam_monopoly_score = 15 }
-			set_variable = { YDS_score_EBS = EBS.YDS_exam_monopoly_score }
+			add_to_variable = { EBS_bonus_focus_score = 15 }
+			add_to_variable = { EBS_track_cyber = 15 }
+			clamp_ebs_exam_track_variables = yes
+			update_exam_leaderboard_scores = yes
 			country_event = { id = ebs_event.20 }
 		}
 	}
@@ -590,6 +594,9 @@ focus_tree = {
 		completion_reward = {
 			if = { limit = { country_exists = ECE } subtract_from_variable = { ECE.YDS_exam_monopoly_score = 10 } }
 			if = { limit = { country_exists = HBE } subtract_from_variable = { HBE.YDS_exam_monopoly_score = 10 } }
+			add_to_variable = { EBS_track_inspection = 15 }
+			clamp_ebs_exam_track_variables = yes
+			update_exam_leaderboard_scores = yes
 			country_event = { id = ebs_focus_event.27 }
 		}
 	}
@@ -604,8 +611,11 @@ focus_tree = {
 		prerequisite = { focus = EBS_suppress_southern_olympiad }
 		completion_reward = {
 			add_political_power = 80
-			add_to_variable = { EBS.YDS_exam_monopoly_score = 20 }
-			set_variable = { YDS_score_EBS = EBS.YDS_exam_monopoly_score }
+			add_to_variable = { EBS_bonus_focus_score = 20 }
+			add_to_variable = { EBS_track_privilege = 10 }
+			add_to_variable = { EBS_track_cyber = 10 }
+			clamp_ebs_exam_track_variables = yes
+			update_exam_leaderboard_scores = yes
 			country_event = { id = ebs_focus_event.28 }
 		}
 	}
@@ -620,6 +630,8 @@ focus_tree = {
 		completion_reward = {
 			add_ideas = EBS_privilege_iron_fist
 			add_stability = 0.10
+			add_to_variable = { EBS_bonus_focus_score = 10 }
+			update_exam_leaderboard_scores = yes
 			country_event = { id = ebs_focus_event.29 }
 		}
 	}
