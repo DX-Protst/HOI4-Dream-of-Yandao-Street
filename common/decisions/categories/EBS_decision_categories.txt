@@ -1,4 +1,5 @@
 # EBS Supreme Education Inspection Categories
+
 EBS_inspection_category = {
 	icon = generic_decision
 	priority = 850
@@ -10,7 +11,6 @@ EBS_inspection_category = {
 	}
 }
 
-# EBS Manchurian Undercurrent & Placation Category
 EBS_manchurian_crisis_category = {
 	icon = generic_decision
 	priority = 840
@@ -19,5 +19,28 @@ EBS_manchurian_crisis_category = {
 	}
 	visible = {
 		tag = EBS
+	}
+}
+
+EBS_exam_board_category = {
+	icon = generic_research
+	priority = 830
+	allowed = {
+		tag = EBS
+	}
+	visible = {
+		tag = EBS
+	}
+}
+
+EBS_wartime_reconstruction_category = {
+	icon = generic_civil_support
+	priority = 820
+	allowed = {
+		tag = EBS
+	}
+	visible = {
+		tag = EBS
+		has_global_flag = yds_national_war_active
 	}
 }

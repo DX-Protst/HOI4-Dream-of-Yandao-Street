@@ -676,16 +676,20 @@ graph TD
 *   **社团封建割据**：动漫社宣传部 (`YDS_anime_propaganda`)、体训队纠察军 (`YDS_sports_league_militia`)、操场工团公社 (`YDS_syndicalist_playground`)。
 *   **虚无白卷涅槃**：全校总罢考 (`YDS_general_strike`)、操场篝火焚书 (`YDS_playground_bonfire`)、虚无主义涅槃 (`YDS_nihilistic_nirvana`) —— 拆除全校工厂，回归纯粹精神解脱。
 
-### 4.4 最高教育局巡视督导组国策树与东三省“取而代之”企划预留 (`EBS_focus.txt`)
-国家代码 `EBS`。坐拥北京大院中枢与北方广袤版图，共有 20 个全定制国策节点（均严格满足 `x >= 9` 引擎排版防遮挡规范），分为四大分支：
-1.  **京津特权与学阀自招分支 (x: 10-12)**：
-    *   `EBS_strengthen_beijing_admissions` (巩固京津录取特权) ➜ `EBS_haidian_early_talent_program` (海淀早培垄断) 与 `EBS_shunyi_ivy_corridor` (顺义大藤免考走廊) ➜ `EBS_plateau_quota_airdrop` (郗特使高原三年空挂直通车) ➜ `EBS_canteen_skimming_monopoly` (王总管全国营养餐大包干)。
-2.  **巡视天下与大迎检风暴分支 (x: 15-17)**：
-    *   `EBS_nationwide_evaluation_wave` (五年教学大评估) ➜ `EBS_paint_lawns_green` (周总导操场刷绿漆与荒地插麦苗) 与 `EBS_fake_paperwork_industry` (通宵手抄十年假教案) ➜ `EBS_squeeze_water_out` (陈专员狠挤水分淘汰水课) 与 `EBS_cybernetic_exam_net` (怀总工赛博考务天网) ➜ `EBS_football_special_fund` (王司长校园足球亿元专项)。
-3.  **关外羁縻与东三省火药桶分支 (x: 21-23，⭐️ 核心企划预留接口)**：
-    *   `EBS_manchurian_pacification` (关外三省考区统抚) ➜ `EBS_placate_dongbei_normal` (拉拢长春东北师大附中) 与 `EBS_inspect_benxi_athletes` (突击严查本溪高中87名体优生) ➜ `EBS_harbin_heavy_exam_industry` (收编哈三中极寒重工试题库) ➜ `EBS_suppress_dongbei_ambition` (压制关外“取而代之”的狂傲) ➜ **`EBS_the_manchurian_storm` (【企划预留】关外暗雷：东三省取而代之风暴，触发事件 `ebs_dongbei.1`)**。
-4.  **全国应试征伐与接管川渝分支 (x: 14-18, y: 5-7)**：
-    *   `EBS_prepare_national_crackdown` (发布最高督导动员令) ➜ 兵分三路踏平山河四省 (`EBS_pacify_shanhe_coalition`)、查抄华中楚天题库 (`EBS_confiscate_huazhong_test_bank`)、摧垮华东华南自主命题 (`EBS_crush_east_and_south`) ➜ **终决战：兵临蓉城彻底接管盐道街 (`EBS_final_march_on_yandao`)**。
+### 4.4 最高教育局巡视督导组国策树与东三省“取而代之”企划 (`EBS_focus.txt`)
+国家代码 `EBS`。坐拥北京大院中枢与北方广袤版图，已拓展为 **35+ 核心与分支节点的大型博弈国策树**（严格遵循 `x >= 9` 引擎防遮挡规范），完整呈现督导中枢的派系决裂与全国统战：
+1.  **阶段一：督导总署中枢整风与路线博弈 (x: 14-18, y: 0-3)**：
+    *   `EBS_supreme_inspection_bureau` (最高教育局巡视督导专署) ➜ `EBS_inspectors_general_assembly` (常务例会) ➜ `EBS_balance_bureaucratic_interests` (安抚利益) 与 `EBS_uncover_internal_corruption` (暗查黑料) ➜ **`EBS_the_council_schism` (中枢路线总博弈，触发决裂事件 `ebs_event.10`)**。
+2.  **阶段二：五大互斥决裂路线分支 (y: 4-8)**：
+    *   **路线 A：陈专员官僚大院特权独裁 (x: 9-11)**：陈专员集权 (`EBS_chen_absolutism`) ➜ 巩固京津特权 (`EBS_strengthen_beijing_admissions`) ➜ 海淀早培垄断 (`EBS_fortify_haidian_bastion`) ➜ 西藏三年空挂直通车 (`EBS_tibet_airdrop_express`) ➜ 京津不可动摇之特权 (`EBS_the_untouchable_nobility`)。
+    *   **路线 B：怀总工赛博算力专政 (x: 12-14)**：技术官僚政变 (`EBS_huai_technocratic_coup`) ➜ 清华附中超算天网 (`EBS_tsinghua_supercomputer_grid`) ➜ 脑电波微表情防作弊 (`EBS_ai_proctoring_neurolink`) ➜ 做题家信用算法 (`EBS_algorithmic_credit_system`) ➜ 算法即命运 (`EBS_algorithm_determines_destiny`)。
+    *   **路线 C：周总导铁血迎检大极权 (x: 15-17)**：全面极权接管 (`EBS_zhou_evaluation_frenzy`) ➜ 万校操场狂刷绿漆 (`EBS_nationwide_lawn_greening`) ➜ 百万师生通宵抄假教案 (`EBS_midnight_paperwork_mobilization`) ➜ 以评促肃反 (`EBS_evaluation_or_shutdown`) ➜ 极权示范帝国 (`EBS_total_inspection_state`)。
+    *   **路线 D：王司长与王总管黑金帝国 (x: 18-20)**：后勤体育联合执政 (`EBS_wang_commercial_consortium`) ➜ 二级运动员加分倒卖 (`EBS_sports_quota_black_market`) ➜ 全国预制菜垄断包干 (`EBS_school_canteen_cartel`) ➜ 黑金小金库 (`EBS_educational_slush_funds`) ➜ 黑金教育财阀 (`EBS_educational_plutocracy`)。
+    *   **⭐️ 路线 E：东三省名校“奉系入关”政变 (x: 22-24)**：关外风暴摔碎茶缸 (`EBS_dongbei_conspiracy_active`) ➜ 联络长春东北师大附中 (`EBS_placate_dongbei_normal`) ➜ 哈尔滨沈阳铁血结盟 (`EBS_secret_alliance_of_three_provinces`) ➜ 奉系考霸专列誓师入关 (`EBS_mukden_express_to_beijing`) ➜ **攻占教育部大楼 (`EBS_dongbei_takes_over_moe`，触发政变大捷事件 `ebs_dongbei.2`)** ➜ 全国重工平权统考试卷 (`EBS_heavy_industry_exam_equality`)！
+3.  **阶段三：全国高考试卷院与试题垄断支线 (x: 26-28, y: 1-4)**：
+    *   掌控中央绝密印厂 (`EBS_seize_central_printing_press`) ➜ 垄断全国信息学命题 (`EBS_rig_informatics_syllabus`，压制全境信息学赛道阻力) 与 打击华东楚天奥赛题库 (`EBS_suppress_southern_olympiad`) ➜ 操纵试卷院排位大盘 (`EBS_manipulate_national_exam_board`) ➜ **提前锁定全国前三甲象牙塔霸权 (`EBS_lock_ivory_tower_top3`)**。
+4.  **阶段四：1938 盛夏全国教育大战总动员 (x: 14-18, y: 8-11，受控于 `yds_national_war_active`)**：
+    *   战时全境管制动员 (`EBS_war_mobilization_1938`) ➜ 踏平山河四省 (`EBS_pacify_shanhe_coalition`)、抄没楚天题库 (`EBS_subjugate_huazhong_hbe`)、摧垮华东华南 (`EBS_strike_east_and_south`) ➜ 决战兵临蓉城接管盐道街 (`EBS_final_siege_of_yandao`) ➜ **全国一统：颁发中央统考圣典与180天全境核心化 (`EBS_nationwide_educational_dominion`)**。
 
 > 详尽的领袖黑历史现实原型剖析、特质参数精算与东三省考霸入关政变三大路线推演，请参阅专属说明文档：[README_EBS.md](README_EBS.md)。
 

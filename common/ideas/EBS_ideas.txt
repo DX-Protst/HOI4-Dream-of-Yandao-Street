@@ -1,6 +1,6 @@
 ideas = {
 	country = {
-		# EBS: Manchurian Discontent & Ambition
+		# EBS: Manchurian Discontent & Ambition (Starting Idea)
 		EBS_northeast_undercurrent = {
 			allowed = {
 				always = yes
@@ -13,40 +13,86 @@ ideas = {
 			}
 		}
 
-		# EBS: Inspection Frenzy & Faked Paperwork
-		EBS_inspection_frenzy = {
+		# EBS: Chen Absolutism Spirit (Conservative Bureaucracy)
+		EBS_chen_absolutism_spirit = {
 			allowed = {
 				always = yes
 			}
 			removal_cost = -1
 			modifier = {
-				production_speed_buildings_factor = 0.15
-				industrial_capacity_factory = -0.10
-				drift_defence_factor = 0.20
+				political_power_gain = 0.50
+				stability_factor = 0.20
+				army_core_defence_factor = 0.15
+				research_speed_factor = -0.10
 			}
 		}
 
-		# EBS: Cybernetic Proctoring Grid
-		EBS_cybernetic_exam_grid = {
+		# EBS: Cybernetic Dictatorship Spirit (Huai Technocracy)
+		EBS_cybernetic_dictatorship_spirit = {
 			allowed = {
 				always = yes
 			}
 			removal_cost = -1
 			modifier = {
-				research_speed_factor = 0.15
+				research_speed_factor = 0.25
+				industrial_capacity_factory = 0.15
+				production_factory_max_efficiency_factor = 0.10
+				stability_factor = -0.10
+			}
+		}
+
+		# EBS: Lawn Greening Totalism Spirit (Zhou Inspection Frenzy)
+		EBS_lawn_greening_totalism_spirit = {
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				production_speed_buildings_factor = 0.30
+				production_speed_infrastructure_factor = 0.25
+				war_support_factor = 0.15
+				industrial_capacity_factory = -0.15
+			}
+		}
+
+		# EBS: Canteen Black Gold Spirit (Wang Commercial Cartel)
+		EBS_canteen_black_gold_spirit = {
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_gain = 0.35
+				consumer_goods_factor = -0.05
+				supply_consumption_factor = 0.10
 				stability_factor = -0.05
 			}
 		}
 
-		# EBS: Haidian Elite Quotas
-		EBS_haidian_privilege = {
+		# EBS: Dongbei Liberation Spirit (Manchurian Commune)
+		EBS_dongbei_liberation_spirit = {
 			allowed = {
 				always = yes
 			}
 			removal_cost = -1
 			modifier = {
+				army_attack_factor = 0.15
+				army_morale_factor = 0.15
+				recruitable_population_factor = 0.15
 				political_power_gain = 0.25
-				army_org_factor = 0.05
+			}
+		}
+
+		# EBS: Nationwide Information Monopoly Spirit (Exam Board)
+		EBS_information_monopoly_spirit = {
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				research_speed_factor = 0.10
+				decryption_power = 10
+				subversive_activites_upkeep = -0.20
 			}
 		}
 

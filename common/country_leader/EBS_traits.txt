@@ -61,4 +61,22 @@ leader_traits = {
 		political_power_gain = 0.15
 	}
 
+	# Dongbei Schools Coalition: Heavy Industry Exam Equality
+	EBS_dongbei_equality = {
+		random = no
+		political_power_gain = 0.50
+		army_attack_factor = 0.15
+		army_defence_factor = 0.15
+		research_speed_factor = 0.05
+		stability_factor = 0.10
+	}
+
+	# Northern Enlightened Teachers: Rational Progressive Reform
+	EBS_enlightened_reform = {
+		random = no
+		stability_factor = 0.20
+		research_speed_factor = 0.15
+		consumer_goods_factor = -0.05
+	}
+
 }

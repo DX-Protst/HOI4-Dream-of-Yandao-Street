@@ -1,4 +1,5 @@
 characters = {
+	# Chen Commissioner: Supreme Bureaucracy & Conservative Elites
 	EBS_leader_chen_zhuanyuan = {
 		name = EBS_leader_chen_zhuanyuan
 		portraits = {
@@ -9,6 +10,11 @@ characters = {
 		country_leader = {
 			ideology = bureaucratic_despotism
 			traits = { EBS_the_grand_commissioner }
+			id = -1
+		}
+		country_leader = {
+			ideology = regional_protectionism
+			traits = { EBS_the_grand_commissioner EBS_haidian_aristocrat }
 			id = -1
 		}
 		advisor = {
@@ -22,6 +28,7 @@ characters = {
 		}
 	}
 
+	# Chief Engineer Huai: Cybernetic Technocracy & Liberal AI Evaluation
 	EBS_huai_zonggong = {
 		name = EBS_huai_zonggong
 		portraits = {
@@ -31,6 +38,11 @@ characters = {
 		}
 		country_leader = {
 			ideology = technocratic_reformism
+			traits = { EBS_cybernetic_technocrat }
+			id = -1
+		}
+		country_leader = {
+			ideology = civic_liberalism
 			traits = { EBS_cybernetic_technocrat }
 			id = -1
 		}
@@ -45,12 +57,18 @@ characters = {
 		}
 	}
 
+	# Director Zhou: Inspection Totalitarianism
 	EBS_zhou_zongdao = {
 		name = EBS_zhou_zongdao
 		portraits = {
 			civilian = {
 				large = "GFX_portrait_chi_wang_jingwei"
 			}
+		}
+		country_leader = {
+			ideology = bureau_totalitarianism
+			traits = { EBS_evaluation_maniac }
+			id = -1
 		}
 		advisor = {
 			slot = political_advisor
@@ -63,6 +81,7 @@ characters = {
 		}
 	}
 
+	# Director Wang: School Sports & Exam Darwinism
 	EBS_wang_sichang = {
 		name = EBS_wang_sichang
 		portraits = {
@@ -72,6 +91,11 @@ characters = {
 			army = {
 				large = "GFX_portrait_chi_chen_jitang"
 			}
+		}
+		country_leader = {
+			ideology = exam_hell_fanaticism
+			traits = { EBS_football_czar }
+			id = -1
 		}
 		advisor = {
 			slot = political_advisor
@@ -92,6 +116,95 @@ characters = {
 		}
 	}
 
+	# Manager Wang: School Canteen & Educational Capital Cartel
+	EBS_wang_zongguan = {
+		name = EBS_wang_zongguan
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_chi_long_yun"
+			}
+		}
+		country_leader = {
+			ideology = alumni_capitalism
+			traits = { EBS_banquet_mastermind }
+			id = -1
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = EBS_wang_zongguan_advisor
+			allowed = {
+				original_tag = EBS
+			}
+			traits = { EBS_banquet_mastermind }
+			cost = 100
+		}
+	}
+
+	# Dongbei Schools Coalition: Manchurian Heavy Industry Exam Commune
+	EBS_dongbei_council = {
+		name = EBS_dongbei_council
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_chi_zhang_xueliang"
+			}
+			army = {
+				large = "GFX_portrait_chi_zhang_xueliang"
+			}
+		}
+		country_leader = {
+			ideology = educational_egalitarianism
+			traits = { EBS_dongbei_equality }
+			id = -1
+		}
+		country_leader = {
+			ideology = academic_syndicalism
+			traits = { EBS_dongbei_equality }
+			id = -1
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = EBS_dongbei_council_advisor
+			allowed = {
+				original_tag = EBS
+			}
+			traits = { EBS_dongbei_equality }
+			cost = 100
+		}
+		corps_commander = {
+			traits = { winter_specialist fortress_buster }
+			skill = 3
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+
+	# Northern Enlightened Teachers Union: Progressive Pedagogy
+	EBS_enlightened_teachers = {
+		name = EBS_enlightened_teachers
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_chi_song_zheyuan"
+			}
+		}
+		country_leader = {
+			ideology = progressive_pedagogy
+			traits = { EBS_enlightened_reform }
+			id = -1
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = EBS_enlightened_teachers_advisor
+			allowed = {
+				original_tag = EBS
+			}
+			traits = { EBS_enlightened_reform }
+			cost = 100
+		}
+	}
+
+	# Special Envoy Xi: High Plateau Skygate Express
 	EBS_xi_teshi = {
 		name = EBS_xi_teshi
 		portraits = {
@@ -110,24 +223,7 @@ characters = {
 		}
 	}
 
-	EBS_wang_zongguan = {
-		name = EBS_wang_zongguan
-		portraits = {
-			civilian = {
-				large = "GFX_portrait_chi_long_yun"
-			}
-		}
-		advisor = {
-			slot = political_advisor
-			idea_token = EBS_wang_zongguan_advisor
-			allowed = {
-				original_tag = EBS
-			}
-			traits = { EBS_banquet_mastermind }
-			cost = 100
-		}
-	}
-
+	# Haidian Academic Oligarchs
 	EBS_haidian_council = {
 		name = EBS_haidian_council
 		portraits = {

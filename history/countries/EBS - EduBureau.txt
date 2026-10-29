@@ -11,16 +11,21 @@ set_politics = {
 }
 
 set_popularities = {
-	paternal_autocrat = 80
-	totalist = 20
+	paternal_autocrat = 60
+	totalist = 15
+	authoritarian_democrat = 15
+	national_populist = 5
+	market_liberal = 5
 }
 
 recruit_character = EBS_leader_chen_zhuanyuan
 recruit_character = EBS_huai_zonggong
 recruit_character = EBS_zhou_zongdao
 recruit_character = EBS_wang_sichang
-recruit_character = EBS_xi_teshi
 recruit_character = EBS_wang_zongguan
+recruit_character = EBS_dongbei_council
+recruit_character = EBS_enlightened_teachers
+recruit_character = EBS_xi_teshi
 recruit_character = EBS_haidian_council
 
 add_ideas = EBS_privilege_iron_fist

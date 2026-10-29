@@ -44,6 +44,27 @@ EBS_inspection_category = {
 		}
 	}
 
+	# Midnight lesson plan inspection
+	EBS_midnight_lesson_plan_check = {
+		icon = generic_research
+		cost = 35
+		days_re_enable = 90
+		available = {
+			tag = EBS
+		}
+		visible = {
+			tag = EBS
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		complete_effect = {
+			add_stability = 0.04
+			add_war_support = 0.02
+			custom_effect_tooltip = EBS_midnight_lesson_plan_check_tt
+		}
+	}
+
 }
 
 EBS_manchurian_crisis_category = {
@@ -106,6 +127,144 @@ EBS_manchurian_crisis_category = {
 		complete_effect = {
 			add_research_slot_temporary = 1
 			custom_effect_tooltip = EBS_bribe_dongbei_principals_tt
+		}
+	}
+
+}
+
+EBS_exam_board_category = {
+
+	# Manipulate Informatics track resistance via Tsinghua High Computer Lab
+	EBS_manipulate_informatics_board = {
+		icon = generic_research
+		cost = 30
+		days_re_enable = 90
+		available = {
+			tag = EBS
+			check_variable = { global.track_info_progress > 0 }
+		}
+		visible = {
+			tag = EBS
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		complete_effect = {
+			custom_effect_tooltip = EBS_manipulate_informatics_board_tt
+			if = {
+				limit = { check_variable = { global.track_info_progress > 5 } }
+				subtract_from_variable = { global.track_info_progress = 5 }
+			}
+			add_to_variable = { EBS.YDS_exam_monopoly_score = 10 }
+			set_variable = { YDS_score_EBS = EBS.YDS_exam_monopoly_score }
+		}
+	}
+
+	# Sabotage Jiangnan Math monopoly
+	EBS_strike_at_jiangnan_math = {
+		icon = generic_propaganda
+		cost = 40
+		days_re_enable = 120
+		available = {
+			tag = EBS
+			country_exists = ECE
+		}
+		visible = {
+			tag = EBS
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		complete_effect = {
+			custom_effect_tooltip = EBS_strike_at_jiangnan_math_tt
+			subtract_from_variable = { ECE.YDS_exam_monopoly_score = 10 }
+			set_variable = { YDS_score_ECE = ECE.YDS_exam_monopoly_score }
+		}
+	}
+
+	# Sabotage Hubei Chutian physics monopoly
+	EBS_strike_at_chutian_physics = {
+		icon = generic_propaganda
+		cost = 40
+		days_re_enable = 120
+		available = {
+			tag = EBS
+			country_exists = HBE
+		}
+		visible = {
+			tag = EBS
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		complete_effect = {
+			custom_effect_tooltip = EBS_strike_at_chutian_physics_tt
+			subtract_from_variable = { HBE.YDS_exam_monopoly_score = 10 }
+			set_variable = { YDS_score_HBE = HBE.YDS_exam_monopoly_score }
+		}
+	}
+
+	# Issue affirmative action directive to boost EBS score
+	EBS_issue_affirmative_action_directive = {
+		icon = generic_civil_support
+		cost = 50
+		days_re_enable = 150
+		available = {
+			tag = EBS
+		}
+		visible = {
+			tag = EBS
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		complete_effect = {
+			custom_effect_tooltip = EBS_affirmative_action_tt
+			add_to_variable = { EBS.YDS_exam_monopoly_score = 15 }
+			set_variable = { YDS_score_EBS = EBS.YDS_exam_monopoly_score }
+			add_stability = -0.05
+		}
+	}
+
+}
+
+EBS_wartime_reconstruction_category = {
+
+	# 180-day coring integration for nationwide schools
+	EBS_integrate_national_curriculum = {
+		icon = generic_diplomatic_treaty
+		cost = 100
+		days_remove = 180
+		available = {
+			tag = EBS
+			has_global_flag = yds_national_war_active
+			controls_state = 1041 # Chengdu
+		}
+		visible = {
+			tag = EBS
+			has_global_flag = yds_national_war_active
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		complete_effect = {
+			custom_effect_tooltip = EBS_integrate_national_curriculum_start_tt
+		}
+		remove_effect = {
+			custom_effect_tooltip = EBS_integrate_national_curriculum_finish_tt
+			# Core all regional exam districts
+			1041 = { add_core_of = EBS }
+			1037 = { add_core_of = EBS }
+			1036 = { add_core_of = EBS }
+			1035 = { add_core_of = EBS }
+			1038 = { add_core_of = EBS }
+			592 = { add_core_of = EBS }
+			605 = { add_core_of = EBS }
+			597 = { add_core_of = EBS }
+			598 = { add_core_of = EBS }
+			600 = { add_core_of = EBS }
+			add_stability = 0.15
+			add_war_support = 0.10
 		}
 	}
 

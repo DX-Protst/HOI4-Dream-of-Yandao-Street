@@ -22,6 +22,21 @@ bookmarks = {
 			}
 		}
 
+		"EBS" = {
+			history = "EBS_GATHERING_STORM_DESC"
+			ideology = paternal_autocrat
+			ideas = {
+				EBS_privilege_iron_fist
+				EBS_northeast_undercurrent
+			}
+
+			focuses = {
+				EBS_supreme_inspection_bureau
+				EBS_balance_bureaucratic_interests
+				EBS_seize_central_printing_press
+			}
+		}
+
 		"---"={
 			history = "OTHER_GATHERING_STORM_DESC"
 		}

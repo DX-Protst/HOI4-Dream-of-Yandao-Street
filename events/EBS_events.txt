@@ -32,7 +32,7 @@ country_event = {
 
 	option = {
 		name = ebs_event.2.a
-		add_ideas = EBS_inspection_frenzy
+		add_ideas = EBS_lawn_greening_totalism_spirit
 		add_political_power = 25
 		ai_chance = { base = 70 }
 	}
@@ -87,6 +87,61 @@ country_event = {
 	}
 }
 
+# EBS Event 10: The Council Schism - Factions Collide
+country_event = {
+	id = ebs_event.10
+	title = ebs_event.10.t
+	desc = ebs_event.10.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	# Option A: Back Commissioner Chen (Paternal Autocrat)
+	option = {
+		name = ebs_event.10.a
+		set_country_flag = EBS_path_chen
+		add_political_power = 50
+		add_stability = 0.05
+		ai_chance = { base = 40 }
+	}
+
+	# Option B: Back Chief Engineer Huai (Authoritarian Democrat)
+	option = {
+		name = ebs_event.10.b
+		set_country_flag = EBS_path_huai
+		set_politics = {
+			ruling_party = authoritarian_democrat
+			elections_allowed = no
+		}
+		add_ideas = EBS_cybernetic_dictatorship_spirit
+		ai_chance = { base = 25 }
+	}
+
+	# Option C: Back Director Zhou (Totalist)
+	option = {
+		name = ebs_event.10.c
+		set_country_flag = EBS_path_zhou
+		set_politics = {
+			ruling_party = totalist
+			elections_allowed = no
+		}
+		add_ideas = EBS_lawn_greening_totalism_spirit
+		ai_chance = { base = 20 }
+	}
+
+	# Option D: Back Wang & Wang (Market Liberal)
+	option = {
+		name = ebs_event.10.d
+		set_country_flag = EBS_path_wang
+		set_politics = {
+			ruling_party = market_liberal
+			elections_allowed = no
+		}
+		add_ideas = EBS_canteen_black_gold_spirit
+		ai_chance = { base = 15 }
+	}
+}
+
 # EBS Dongbei Event 1: The Soul-Searching Question of the Northeast Schools
 country_event = {
 	id = ebs_dongbei.1
@@ -104,6 +159,67 @@ country_event = {
 			add_idea = EBS_dongbei_unrest_high
 		}
 		custom_effect_tooltip = EBS_dongbei_future_expansion_tt
+		ai_chance = { base = 100 }
+	}
+}
+
+# EBS Dongbei Event 2: The Mukden Coup - Northeast Takes Over the MOE!
+country_event = {
+	id = ebs_dongbei.2
+	title = ebs_dongbei.2.t
+	desc = ebs_dongbei.2.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = ebs_dongbei.2.a
+		set_country_flag = EBS_path_dongbei
+		set_politics = {
+			ruling_party = radical_socialist
+			elections_allowed = no
+		}
+		swap_ideas = {
+			remove_idea = EBS_dongbei_unrest_high
+			add_idea = EBS_dongbei_liberation_spirit
+		}
+		add_political_power = 100
+		add_stability = 0.20
+		ai_chance = { base = 100 }
+	}
+}
+
+# EBS Event 20: Informatics Track Hegemony
+country_event = {
+	id = ebs_event.20
+	title = ebs_event.20.t
+	desc = ebs_event.20.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = ebs_event.20.a
+		add_ideas = EBS_information_monopoly_spirit
+		add_political_power = 50
+		ai_chance = { base = 100 }
+	}
+}
+
+# EBS Event 21: Wartime Total Control Mobilization
+country_event = {
+	id = ebs_event.21
+	title = ebs_event.21.t
+	desc = ebs_event.21.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = ebs_event.21.a
+		add_ideas = EBS_bureau_total_control
+		add_war_support = 0.20
+		add_manpower = 50000
 		ai_chance = { base = 100 }
 	}
 }
