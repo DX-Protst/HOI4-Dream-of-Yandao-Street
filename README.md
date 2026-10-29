@@ -679,9 +679,9 @@ graph TD
 ### 4.4 最高教育局巡视督导组国策树与东三省“取而代之”企划 (`EBS_focus.txt`)
 国家代码 `EBS`。坐拥北京大院中枢与北方广袤版图，已升级为 **42 核心与分支节点的大型防重叠博弈国策树**（严格遵循 `x >= 10` 与宽间距排版规范，每个国策完成均触发独立叙事事件，共 70 个专属剧情事件），完整呈现督导中枢的五阶段交织危机与全国统战：
 1.  **阶段一：督导总署中枢整风与危机发端 (Center x: 28, y: 0-3)**：
-    *   `EBS_supreme_inspection_bureau` (最高教育局巡视督导专署) ➜ `EBS_inspectors_general_assembly` (常务例会) ➜ `EBS_balance_bureaucratic_interests` (安抚利益) 与 `EBS_uncover_internal_corruption` (暗查黑料) ➜ **`EBS_the_council_schism` (中枢决裂，联动多阶段危机大决战 `ebs_crisis.6`)**。
+    *   `EBS_supreme_inspection_bureau` (最高教育局巡视督导专署) ➜ `EBS_inspectors_general_assembly` (常务例会) ➜ `EBS_balance_bureaucratic_interests` (安抚利益) 与 `EBS_uncover_internal_corruption` (暗查黑料) ➜ **`EBS_the_council_schism` (中枢决裂，联动危机数理大决算)**。
 2.  **阶段二：中枢多阶段交织危机事件链与五大路线夺权 (x: 10-46, y: 4-8)**：
-    *   基于类似 TLB 反抗 YDJ 机制的多阶段交织危机链（`ebs_crisis.1` ~ `ebs_crisis.6`），实时追踪 5 大派系声望变量（`EBS_power_chen/huai/zhou/wang/dongbei`），于西单绝杀夜动态决出最终统治者：
+    *   严格遵循 TLB 级深度小说叙事规范，构建 5 阶段交织危机链（`ebs_crisis.1` ~ `ebs_crisis.5`，严格每事件 2 选项、无领导人名、300~500字长篇长文），实时追踪 5 大派系声望变量（`EBS_power_chen/huai/zhou/wang/dongbei`），在决算点动态触发唯一终局事件（`ebs_ending.1` ~ `ebs_ending.5`，单选项确立统治不可逆转）：
     *   **路线 A：陈专员官僚大院特权集权 (x: 10-14, y: 4-7)**：陈专员集权 (`EBS_chen_absolutism`) ➜ 巩固京津特权 (`EBS_strengthen_beijing_admissions`) ➜ 海淀早培垄断 (`EBS_fortify_haidian_bastion`) ➜ 西藏三年空挂直通车 (`EBS_tibet_airdrop_express`) ➜ 京津不可动摇之特权 (`EBS_the_untouchable_nobility`)。
     *   **路线 B：怀总工赛博算力专政 (x: 18-22, y: 4-7)**：技术官僚政变 (`EBS_huai_technocratic_coup`) ➜ 清华附中超算天网 (`EBS_tsinghua_supercomputer_grid`) ➜ 脑电波微表情防作弊 (`EBS_ai_proctoring_neurolink`) ➜ 做题家信用算法 (`EBS_algorithmic_credit_system`) ➜ 算法即命运 (`EBS_algorithm_determines_destiny`)。
     *   **路线 C：周总导铁血迎检大极权 (x: 26-30, y: 4-7)**：全面极权接管 (`EBS_zhou_evaluation_frenzy`) ➜ 万校操场狂刷绿漆 (`EBS_nationwide_lawn_greening`) ➜ 百万师生通宵抄假教案 (`EBS_midnight_paperwork_mobilization`) ➜ 以评促肃反 (`EBS_evaluation_or_shutdown`) ➜ 极权示范帝国 (`EBS_total_inspection_state`)。

@@ -217,52 +217,58 @@ flowchart TD
 
 ## 6. 中枢路线多阶段交织危机事件链 (Interwoven Crisis Event Chain)
 
-中枢政治路线的决战**不再是由单次弹窗轻易决定的儿戏**，而是参考了 TLB（铜梁巴川）与 YDJ 反抗链的精妙设计，由一系列环环相扣、多方势力暗中博弈的**五阶段危机事件链**所主导：
+中枢政治路线的决战**彻底摒弃单次弹窗与生硬标签**，深度复刻 TLB（铜梁巴川）高质量多阶段政治叙事规范：
+* **严控选项防重叠**：危机事件严格限制为 **每个事件恰好 2 个选项**，彻底消除原版弹窗选项挤压重叠的 UI 缺陷；
+* **去除人名与阶段编号**：选项中绝不生硬出现领导人名（以行政、机构与政策动作替代），标题全面采用长篇沉浸式叙事标题（如《西单保密室的撬痕》、《绿漆操场上的刺鼻晨雾》）；
+* **数理决算单一定局**：危机积累的变量最终在决算点动态结算，**只触发唯一的胜出事件（单选项确立统治）**，不可再手动逆转胜败；
+* **TLB 级长篇小说叙事**：每篇事件描述扩充至 300~500 字，多段落构建官僚、校园与做题家的现实讽刺巨作。
 
 ```mermaid
 sequenceDiagram
-    participant C as 陈专员 (大院特权)
-    participant H as 怀总工 (赛博算力)
-    participant Z as 周总导 (铁血迎检)
-    participant W as 王总管 (后勤黑金)
-    participant D as 东三省 (关外考霸)
+    participant C as 大院特权派
+    participant H as 赛博算力派
+    participant Z as 铁血迎检派
+    participant W as 后勤黑金派
+    participant D as 关外考霸派
 
-    Note over C,W: 阶段 0: 密件失窃案 (ebs_crisis.1)
-    C->>H: 互相怀疑黑料外泄，各自启动内部侦查
-    Note over C,W: 阶段 1: 预制菜与本溪87名二级运动员爆雷 (ebs_crisis.2)
-    W-->>C: 送茅台拉拢高层
-    Z->>W: 查封食堂抓违规
-    D->>C: 关外电报抗议加分黑幕
-    Note over C,W: 阶段 2: 绿漆操场与迎检苯中毒惨案 (ebs_crisis.3)
-    Z->>Z: 严令戴防毒面具继续刷
-    H->>Z: AR数字全息草坪嘲笑
-    D->>Z: 发表讨绿漆檄文
-    Note over C,W: 阶段 3: 西藏高考专列与高原空降兵曝光 (ebs_crisis.4)
-    C->>C: 怒斥这是对口援疆边疆奉献
-    H->>C: 云端数据库修改为赛博少数民族
-    D->>C: 怒火中烧：十年冰雪不如一张软卧票！
-    Note over C,D: 阶段 4: 关外进京联名信与西单大楼被围 (ebs_crisis.5)
-    D->>C: 蒸汽列车冲破山海关包围教委
-    C->>Z: 大院警卫 vs 迎检防空警报 vs 运钞车
-    Note over C,D: 阶段 5: 西单大楼绝杀夜 (ebs_crisis.6)
-    Note over C,D: 动态结算势力变量，决出最终中枢统治者！
+    Note over C,W: 西单保密室的撬痕 (ebs_crisis.1)
+    C->>H: 大院保卫封锁 vs 算力通信天网 (二选一)
+    Note over C,W: 餐盒里的料理包与虚构的运动员 (ebs_crisis.2)
+    W->>D: 总务专项金库封口 vs 关外联名抗议电报 (二选一)
+    Note over C,W: 绿漆操场上的刺鼻晨雾 (ebs_crisis.3)
+    Z->>C: 戴防毒面具限期达标 vs 大院追加名额和稀泥 (二选一)
+    Note over C,W: 开往雪域的绝密软卧专列 (ebs_crisis.4)
+    C->>D: 通报边疆援建不容非议 vs 各地学子联合起草檄文 (二选一)
+    Note over C,D: 山海关外的长鸣汽笛与西单绝境 (ebs_crisis.5)
+    C->>D: 构筑最后行政防线 vs 算力广播呼应外部 (二选一)
+    Note over C,D: 自动数理结算：仅触发唯一终局事件 (单选确认定局)
+    alt 大院特权分最高
+        Note over C: 大院深处的红头调令 (ebs_ending.1)
+    else 赛博算力分最高
+        Note over H: 机房里的最后一行代码 (ebs_ending.2)
+    else 铁血迎检分最高
+        Note over Z: 迎检风暴下的绝对样板 (ebs_ending.3)
+    else 后勤黑金分最高
+        Note over W: 西单金库的清脆回响 (ebs_ending.4)
+    else 关外考霸分最高
+        Note over D: 黑土地的军列开进教育部 (ebs_ending.5)
+    end
 ```
 
-### 6.1 势力变量数理追踪
-在危机期间，系统实时追踪 5 大派系的动态声望变量：
-* `EBS_power_chen`：陈专员官僚大院特权派
-* `EBS_power_huai`：怀总工赛博算力技术派
-* `EBS_power_zhou`：周总导铁血大迎检极权派
-* `EBS_power_wang`：王司长与王总管校园后勤黑金商会
-* `EBS_power_dongbei`：东三省名校联合公社
+### 6.1 动态声望数理追踪
+* `EBS_power_chen`：官僚大院特权派
+* `EBS_power_huai`：赛博算力技术派
+* `EBS_power_zhou`：铁血大迎检极权派
+* `EBS_power_wang`：校园后勤黑金商会
+* `EBS_power_dongbei`：关外东三省联合公社
 
-### 6.2 五大终局结局
-在终局大决战事件【西单大楼绝杀夜】（`ebs_crisis.6`）中，系统会根据声望最高者给予强力加成推荐，玩家亦可做出最终政治决断，解锁对应的专属国策分支：
-1. **陈专员集权** (`paternal_autocrat`)：大院秩序万世不易，红头文件号令天下！
-2. **怀总工政变** (`authoritarian_democrat`)：服务器接管教育局，算法决定学生命运！
-3. **周总导极权** (`totalist`)：以评促建到底，全国万校操场永刷绿漆！
-4. **王总管商会** (`market_liberal`)：后勤托拉斯登基，预制菜与特长生统领天下！
-5. **奉系考霸入关** (`radical_socialist`)：东三省破关反客为主，全国统一重工卷！
+### 6.2 唯一终局大结局 (Single Inevitable Victor)
+危机在决算点根据五大势力积分，直接调出唯一胜者终局长文（带有唯一确认按钮）：
+1. **《大院深处的红头调令》** (`ebs_ending.1`) ➜ 陈专员大权独揽 (`paternal_autocrat`)；
+2. **《机房里的最后一行代码》** (`ebs_ending.2`) ➜ 怀总工赛博算力专政 (`authoritarian_democrat`)；
+3. **《迎检风暴下的绝对样板》** (`ebs_ending.3`) ➜ 周总导铁血大迎检极权 (`totalist`)；
+4. **《西单金库的清脆回响》** (`ebs_ending.4`) ➜ 王总管后勤财阀执政 (`market_liberal`)；
+5. **《黑土地的军列开进教育部》** (`ebs_ending.5`) ➜ 奉系考霸入关政变 (`radical_socialist`)。
 
 ---
 

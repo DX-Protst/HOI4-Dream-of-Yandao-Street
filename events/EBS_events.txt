@@ -4,6 +4,7 @@
 add_namespace = ebs_event
 add_namespace = ebs_dongbei
 add_namespace = ebs_crisis
+add_namespace = ebs_ending
 add_namespace = ebs_focus_event
 
 # ==========================================
@@ -179,10 +180,11 @@ country_event = {
 }
 
 # ==========================================
-# INTERWOVEN CRISIS EVENT CHAIN (CRISIS 1-6)
+# INTERWOVEN CRISIS EVENT CHAIN (CRISIS 1-5)
+# Every event strictly has 2 options
 # ==========================================
 
-# Crisis Event 1: The Classified Memo Theft at Xidan
+# Crisis Event 1: The Pry Marks in the Xidan Confidential Archive
 country_event = {
 	id = ebs_crisis.1
 	title = ebs_crisis.1.t
@@ -201,7 +203,7 @@ country_event = {
 		set_variable = { EBS_power_dongbei = 0 }
 	}
 
-	# Option A: Chen mobilizes compound old guard
+	# Option A: Old Guard Compound Lockdown
 	option = {
 		name = ebs_crisis.1.a
 		add_political_power = -20
@@ -209,44 +211,22 @@ country_event = {
 			add_to_variable = { EBS_power_chen = 2 }
 			country_event = { id = ebs_crisis.2 days = 3 }
 		}
-		ai_chance = { base = 35 }
+		ai_chance = { base = 50 }
 	}
 
-	# Option B: Huai engages server room surveillance
+	# Option B: Technocrat Server Room Surveillance
 	option = {
 		name = ebs_crisis.1.b
 		add_stability = -0.03
 		hidden_effect = {
 			add_to_variable = { EBS_power_huai = 2 }
-			country_event = { id = ebs_crisis.2 days = 3 }
+			country_event = { id = ebs_crisis.3 days = 3 }
 		}
-		ai_chance = { base = 25 }
-	}
-
-	# Option C: Zhou initiates emergency inspection mobilization
-	option = {
-		name = ebs_crisis.1.c
-		add_war_support = 0.03
-		hidden_effect = {
-			add_to_variable = { EBS_power_zhou = 2 }
-			country_event = { id = ebs_crisis.2 days = 3 }
-		}
-		ai_chance = { base = 20 }
-	}
-
-	# Option D: Wang uses logistics slush funds to buy back leak
-	option = {
-		name = ebs_crisis.1.d
-		add_political_power = -30
-		hidden_effect = {
-			add_to_variable = { EBS_power_wang = 2 }
-			country_event = { id = ebs_crisis.2 days = 3 }
-		}
-		ai_chance = { base = 20 }
+		ai_chance = { base = 50 }
 	}
 }
 
-# Crisis Event 2: Canteen Pre-cooked Food & 87 Athletes Scandal
+# Crisis Event 2: The 365-Day Ration Pack and the Fictional Athletes
 country_event = {
 	id = ebs_crisis.2
 	title = ebs_crisis.2.t
@@ -256,7 +236,7 @@ country_event = {
 	is_triggered_only = yes
 	fire_only_once = yes
 
-	# Option A: Wang shifts blame and offers VIP banquet to compound
+	# Option A: Settle quietly with canteen slush fund
 	option = {
 		name = ebs_crisis.2.a
 		add_political_power = 20
@@ -264,48 +244,25 @@ country_event = {
 		hidden_effect = {
 			add_to_variable = { EBS_power_wang = 2 }
 			add_to_variable = { EBS_power_chen = 1 }
-			country_event = { id = ebs_crisis.3 days = 3 }
+			country_event = { id = ebs_crisis.4 days = 3 }
 		}
-		ai_chance = { base = 30 }
+		ai_chance = { base = 55 }
 	}
 
-	# Option B: Huai proposes automated AI nutrient dispensers
+	# Option B: Dongbei schools launch joint protest
 	option = {
 		name = ebs_crisis.2.b
-		add_political_power = -15
-		hidden_effect = {
-			add_to_variable = { EBS_power_huai = 2 }
-			add_to_variable = { EBS_power_zhou = 1 }
-			country_event = { id = ebs_crisis.3 days = 3 }
-		}
-		ai_chance = { base = 25 }
-	}
-
-	# Option C: Zhou personally storms school canteens with inspectors
-	option = {
-		name = ebs_crisis.2.c
-		add_war_support = 0.05
-		add_stability = -0.05
-		hidden_effect = {
-			add_to_variable = { EBS_power_zhou = 2 }
-			country_event = { id = ebs_crisis.3 days = 3 }
-		}
-		ai_chance = { base = 25 }
-	}
-
-	# Option D: Dongbei principals protest corruption and quota theft
-	option = {
-		name = ebs_crisis.2.d
 		add_stability = -0.04
 		hidden_effect = {
 			add_to_variable = { EBS_power_dongbei = 2 }
-			country_event = { id = ebs_crisis.3 days = 3 }
+			add_to_variable = { EBS_power_huai = 1 }
+			country_event = { id = ebs_crisis.4 days = 3 }
 		}
-		ai_chance = { base = 20 }
+		ai_chance = { base = 45 }
 	}
 }
 
-# Crisis Event 3: Green Painted Lawns & Poisoning Crisis
+# Crisis Event 3: Pungent Morning Fog Over the Green-Painted Turf
 country_event = {
 	id = ebs_crisis.3
 	title = ebs_crisis.3.t
@@ -315,19 +272,20 @@ country_event = {
 	is_triggered_only = yes
 	fire_only_once = yes
 
-	# Option A: Zhou orders teachers to paint lawns with gas masks
+	# Option A: Double down on inspection orders with gas masks
 	option = {
 		name = ebs_crisis.3.a
 		add_stability = -0.06
 		add_war_support = 0.05
 		hidden_effect = {
 			add_to_variable = { EBS_power_zhou = 2 }
+			add_to_variable = { EBS_power_huai = 1 }
 			country_event = { id = ebs_crisis.4 days = 3 }
 		}
-		ai_chance = { base = 25 }
+		ai_chance = { base = 50 }
 	}
 
-	# Option B: Chen hushes scandal with Haidian sanatorium quotas
+	# Option B: Pacify victims with secret admission quotas
 	option = {
 		name = ebs_crisis.3.b
 		add_political_power = -25
@@ -336,34 +294,11 @@ country_event = {
 			add_to_variable = { EBS_power_wang = 1 }
 			country_event = { id = ebs_crisis.4 days = 3 }
 		}
-		ai_chance = { base = 35 }
-	}
-
-	# Option C: Huai demonstrates AR holographic synthetic grass
-	option = {
-		name = ebs_crisis.3.c
-		add_political_power = -15
-		hidden_effect = {
-			add_to_variable = { EBS_power_huai = 2 }
-			country_event = { id = ebs_crisis.4 days = 3 }
-		}
-		ai_chance = { base = 25 }
-	}
-
-	# Option D: Dongbei schools openly publish anti-inspection manifesto
-	option = {
-		name = ebs_crisis.3.d
-		add_stability = -0.05
-		hidden_effect = {
-			add_to_variable = { EBS_power_dongbei = 2 }
-			add_to_variable = { EBS_power_chen = 1 }
-			country_event = { id = ebs_crisis.4 days = 3 }
-		}
-		ai_chance = { base = 15 }
+		ai_chance = { base = 50 }
 	}
 }
 
-# Crisis Event 4: Tibetan Airdrop Train Leak
+# Crisis Event 4: The Classified Soft-Sleeper Train Bound for the Plateau
 country_event = {
 	id = ebs_crisis.4
 	title = ebs_crisis.4.t
@@ -373,52 +308,32 @@ country_event = {
 	is_triggered_only = yes
 	fire_only_once = yes
 
-	# Option A: Chen roars that cadre children deserve border aid quotas
+	# Option A: Enforce administrative gag and defend border program
 	option = {
 		name = ebs_crisis.4.a
 		add_stability = -0.05
 		hidden_effect = {
-			add_to_variable = { EBS_power_chen = 3 }
+			add_to_variable = { EBS_power_chen = 2 }
+			add_to_variable = { EBS_power_zhou = 1 }
 			country_event = { id = ebs_crisis.5 days = 3 }
 		}
-		ai_chance = { base = 35 }
+		ai_chance = { base = 50 }
 	}
 
-	# Option B: Huai hacks the central database into cyber Tibetan slots
+	# Option B: Northeast students draft revolutionary manifesto
 	option = {
 		name = ebs_crisis.4.b
-		add_political_power = -20
-		hidden_effect = {
-			add_to_variable = { EBS_power_huai = 2 }
-			country_event = { id = ebs_crisis.5 days = 3 }
-		}
-		ai_chance = { base = 25 }
-	}
-
-	# Option C: Wang lists train sleeper berths on commercial black market
-	option = {
-		name = ebs_crisis.4.c
-		add_political_power = 30
-		hidden_effect = {
-			add_to_variable = { EBS_power_wang = 2 }
-			country_event = { id = ebs_crisis.5 days = 3 }
-		}
-		ai_chance = { base = 20 }
-	}
-
-	# Option D: Dongbei students erupt in rage over unfair quotas
-	option = {
-		name = ebs_crisis.4.d
 		add_war_support = 0.05
 		hidden_effect = {
-			add_to_variable = { EBS_power_dongbei = 3 }
+			add_to_variable = { EBS_power_dongbei = 2 }
+			add_to_variable = { EBS_power_wang = 1 }
 			country_event = { id = ebs_crisis.5 days = 3 }
 		}
-		ai_chance = { base = 20 }
+		ai_chance = { base = 50 }
 	}
 }
 
-# Crisis Event 5: Dongbei Petition March & MOE Blockade
+# Crisis Event 5: The Screaming Whistle Beyond Shanhai Pass & the Siege of Xidan
 country_event = {
 	id = ebs_crisis.5
 	title = ebs_crisis.5.t
@@ -428,67 +343,107 @@ country_event = {
 	is_triggered_only = yes
 	fire_only_once = yes
 
-	# Option A: Chen mobilizes compound picket squads to blockade Xidan
+	# Option A: Barricade Xidan Street with security pickets
 	option = {
 		name = ebs_crisis.5.a
 		add_stability = -0.03
 		hidden_effect = {
-			add_to_variable = { EBS_power_chen = 2 }
-			country_event = { id = ebs_crisis.6 days = 2 }
+			add_to_variable = { EBS_power_chen = 1 }
+			add_to_variable = { EBS_power_zhou = 1 }
+			# Evaluate decisive winner
+			if = {
+				limit = {
+					check_variable = { EBS_power_chen >= EBS_power_huai }
+					check_variable = { EBS_power_chen >= EBS_power_zhou }
+					check_variable = { EBS_power_chen >= EBS_power_wang }
+					check_variable = { EBS_power_chen >= EBS_power_dongbei }
+				}
+				country_event = { id = ebs_ending.1 days = 2 }
+			}
+			else_if = {
+				limit = {
+					check_variable = { EBS_power_huai >= EBS_power_zhou }
+					check_variable = { EBS_power_huai >= EBS_power_wang }
+					check_variable = { EBS_power_huai >= EBS_power_dongbei }
+				}
+				country_event = { id = ebs_ending.2 days = 2 }
+			}
+			else_if = {
+				limit = {
+					check_variable = { EBS_power_zhou >= EBS_power_wang }
+					check_variable = { EBS_power_zhou >= EBS_power_dongbei }
+				}
+				country_event = { id = ebs_ending.3 days = 2 }
+			}
+			else_if = {
+				limit = {
+					check_variable = { EBS_power_wang >= EBS_power_dongbei }
+				}
+				country_event = { id = ebs_ending.4 days = 2 }
+			}
+			else = {
+				country_event = { id = ebs_ending.5 days = 2 }
+			}
 		}
-		ai_chance = { base = 30 }
+		ai_chance = { base = 50 }
 	}
 
-	# Option B: Huai locks elevators and isolates server network
+	# Option B: Seize communication center and link with arriving trains
 	option = {
 		name = ebs_crisis.5.b
-		add_political_power = -15
-		hidden_effect = {
-			add_to_variable = { EBS_power_huai = 2 }
-			country_event = { id = ebs_crisis.6 days = 2 }
-		}
-		ai_chance = { base = 25 }
-	}
-
-	# Option C: Zhou declares total inspection martial law
-	option = {
-		name = ebs_crisis.5.c
-		add_war_support = 0.05
-		hidden_effect = {
-			add_to_variable = { EBS_power_zhou = 2 }
-			country_event = { id = ebs_crisis.6 days = 2 }
-		}
-		ai_chance = { base = 20 }
-	}
-
-	# Option D: Wang barricades doors with cash armored trucks
-	option = {
-		name = ebs_crisis.5.d
 		add_political_power = -20
 		hidden_effect = {
-			add_to_variable = { EBS_power_wang = 2 }
-			country_event = { id = ebs_crisis.6 days = 2 }
+			add_to_variable = { EBS_power_huai = 1 }
+			add_to_variable = { EBS_power_dongbei = 1 }
+			# Evaluate decisive winner
+			if = {
+				limit = {
+					check_variable = { EBS_power_dongbei >= EBS_power_chen }
+					check_variable = { EBS_power_dongbei >= EBS_power_huai }
+					check_variable = { EBS_power_dongbei >= EBS_power_zhou }
+					check_variable = { EBS_power_dongbei >= EBS_power_wang }
+				}
+				country_event = { id = ebs_ending.5 days = 2 }
+			}
+			else_if = {
+				limit = {
+					check_variable = { EBS_power_huai >= EBS_power_chen }
+					check_variable = { EBS_power_huai >= EBS_power_zhou }
+					check_variable = { EBS_power_huai >= EBS_power_wang }
+				}
+				country_event = { id = ebs_ending.2 days = 2 }
+			}
+			else_if = {
+				limit = {
+					check_variable = { EBS_power_chen >= EBS_power_zhou }
+					check_variable = { EBS_power_chen >= EBS_power_wang }
+				}
+				country_event = { id = ebs_ending.1 days = 2 }
+			}
+			else_if = {
+				limit = {
+					check_variable = { EBS_power_zhou >= EBS_power_wang }
+				}
+				country_event = { id = ebs_ending.3 days = 2 }
+			}
+			else = {
+				country_event = { id = ebs_ending.4 days = 2 }
+			}
 		}
-		ai_chance = { base = 15 }
-	}
-
-	# Option E: Dongbei delegation penetrates Shanhai Pass toward Beijing
-	option = {
-		name = ebs_crisis.5.e
-		add_stability = -0.05
-		hidden_effect = {
-			add_to_variable = { EBS_power_dongbei = 3 }
-			country_event = { id = ebs_crisis.6 days = 2 }
-		}
-		ai_chance = { base = 10 }
+		ai_chance = { base = 50 }
 	}
 }
 
-# Crisis Event 6: The Climax Showdown: Grand Resolution
+# ==========================================
+# CRISIS CLIMAX RESOLUTIONS (ENDING 1-5)
+# Every ending strictly has 1 option
+# ==========================================
+
+# Ending 1: Chen Commissioner Absolutism
 country_event = {
-	id = ebs_crisis.6
-	title = ebs_crisis.6.t
-	desc = ebs_crisis.6.d
+	id = ebs_ending.1
+	title = ebs_ending.1.t
+	desc = ebs_ending.1.d
 	picture = GFX_report_event_chinese_officers
 
 	is_triggered_only = yes
@@ -499,9 +454,8 @@ country_event = {
 		clr_country_flag = EBS_crisis_active
 	}
 
-	# Option A: Back Commissioner Chen (Paternal Autocrat)
 	option = {
-		name = ebs_crisis.6.a
+		name = ebs_ending.1.a
 		set_country_flag = EBS_faction_chen_victorious
 		set_country_flag = EBS_path_chen
 		set_politics = {
@@ -511,21 +465,26 @@ country_event = {
 		add_ideas = EBS_chen_absolutism_spirit
 		add_political_power = 100
 		add_stability = 0.10
-		ai_chance = {
-			base = 30
-			modifier = {
-				factor = 3
-				check_variable = { EBS_power_chen > EBS_power_huai }
-				check_variable = { EBS_power_chen > EBS_power_zhou }
-				check_variable = { EBS_power_chen > EBS_power_wang }
-				check_variable = { EBS_power_chen > EBS_power_dongbei }
-			}
-		}
+	}
+}
+
+# Ending 2: Chief Engineer Huai Cybernetics Coup
+country_event = {
+	id = ebs_ending.2
+	title = ebs_ending.2.t
+	desc = ebs_ending.2.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = {
+		set_country_flag = EBS_crisis_resolved
+		clr_country_flag = EBS_crisis_active
 	}
 
-	# Option B: Back Chief Engineer Huai (Authoritarian Democrat)
 	option = {
-		name = ebs_crisis.6.b
+		name = ebs_ending.2.a
 		set_country_flag = EBS_faction_huai_victorious
 		set_country_flag = EBS_path_huai
 		set_politics = {
@@ -535,21 +494,26 @@ country_event = {
 		add_ideas = EBS_cybernetic_dictatorship_spirit
 		add_political_power = 100
 		add_stability = 0.05
-		ai_chance = {
-			base = 25
-			modifier = {
-				factor = 3
-				check_variable = { EBS_power_huai > EBS_power_chen }
-				check_variable = { EBS_power_huai > EBS_power_zhou }
-				check_variable = { EBS_power_huai > EBS_power_wang }
-				check_variable = { EBS_power_huai > EBS_power_dongbei }
-			}
-		}
+	}
+}
+
+# Ending 3: Director Zhou Inspection Totalism
+country_event = {
+	id = ebs_ending.3
+	title = ebs_ending.3.t
+	desc = ebs_ending.3.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = {
+		set_country_flag = EBS_crisis_resolved
+		clr_country_flag = EBS_crisis_active
 	}
 
-	# Option C: Back Director Zhou (Totalist)
 	option = {
-		name = ebs_crisis.6.c
+		name = ebs_ending.3.a
 		set_country_flag = EBS_faction_zhou_victorious
 		set_country_flag = EBS_path_zhou
 		set_politics = {
@@ -559,21 +523,26 @@ country_event = {
 		add_ideas = EBS_lawn_greening_totalism_spirit
 		add_political_power = 100
 		add_war_support = 0.10
-		ai_chance = {
-			base = 20
-			modifier = {
-				factor = 3
-				check_variable = { EBS_power_zhou > EBS_power_chen }
-				check_variable = { EBS_power_zhou > EBS_power_huai }
-				check_variable = { EBS_power_zhou > EBS_power_wang }
-				check_variable = { EBS_power_zhou > EBS_power_dongbei }
-			}
-		}
+	}
+}
+
+# Ending 4: Wang Canteen Consortium Plutocracy
+country_event = {
+	id = ebs_ending.4
+	title = ebs_ending.4.t
+	desc = ebs_ending.4.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = {
+		set_country_flag = EBS_crisis_resolved
+		clr_country_flag = EBS_crisis_active
 	}
 
-	# Option D: Back Wang & Wang (Market Liberal)
 	option = {
-		name = ebs_crisis.6.d
+		name = ebs_ending.4.a
 		set_country_flag = EBS_faction_wang_victorious
 		set_country_flag = EBS_path_wang
 		set_politics = {
@@ -582,21 +551,26 @@ country_event = {
 		}
 		add_ideas = EBS_canteen_black_gold_spirit
 		add_political_power = 150
-		ai_chance = {
-			base = 15
-			modifier = {
-				factor = 3
-				check_variable = { EBS_power_wang > EBS_power_chen }
-				check_variable = { EBS_power_wang > EBS_power_huai }
-				check_variable = { EBS_power_wang > EBS_power_zhou }
-				check_variable = { EBS_power_wang > EBS_power_dongbei }
-			}
-		}
+	}
+}
+
+# Ending 5: Dongbei Schools Mukden Coup
+country_event = {
+	id = ebs_ending.5
+	title = ebs_ending.5.t
+	desc = ebs_ending.5.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = {
+		set_country_flag = EBS_crisis_resolved
+		clr_country_flag = EBS_crisis_active
 	}
 
-	# Option E: Dongbei Schools Takeover (Radical Socialist)
 	option = {
-		name = ebs_crisis.6.e
+		name = ebs_ending.5.a
 		set_country_flag = EBS_faction_dongbei_victorious
 		set_country_flag = EBS_path_dongbei
 		set_politics = {
@@ -609,19 +583,12 @@ country_event = {
 		}
 		add_political_power = 100
 		add_stability = 0.15
-		ai_chance = {
-			base = 10
-			modifier = {
-				factor = 5
-				check_variable = { EBS_power_dongbei > EBS_power_chen }
-				check_variable = { EBS_power_dongbei > EBS_power_huai }
-			}
-		}
 	}
 }
 
 # ==========================================
 # FOCUS COMPLETION NARRATIVE EVENTS (1-34)
+# Every focus event strictly has 1 option
 # ==========================================
 
 # Focus Event 1: The Council Schism Finalized (EBS_the_council_schism)
