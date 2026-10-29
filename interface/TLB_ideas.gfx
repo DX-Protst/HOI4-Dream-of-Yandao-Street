@@ -1,0 +1,18 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_idea_tlb_class_6_discord"
+		texturefile = "gfx/interface/ideas/TLB/tlb_class_6_discord.png"
+	}
+	spriteType = {
+		name = "GFX_idea_tlb_tongba_movement"
+		texturefile = "gfx/interface/ideas/TLB/tlb_tongba_movement.png"
+	}
+	spriteType = {
+		name = "GFX_idea_tlb_hegemon_of_sichuan"
+		texturefile = "gfx/interface/ideas/TLB/tlb_hegemon_of_sichuan.png"
+	}
+	spriteType = {
+		name = "GFX_idea_tlb_chongqing_autonomous_zone"
+		texturefile = "gfx/interface/ideas/TLB/tlb_chongqing_autonomous_zone.png"
+	}
+}
