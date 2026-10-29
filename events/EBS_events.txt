@@ -353,31 +353,31 @@ country_event = {
 			# Evaluate decisive winner
 			if = {
 				limit = {
-					check_variable = { EBS_power_chen >= EBS_power_huai }
-					check_variable = { EBS_power_chen >= EBS_power_zhou }
-					check_variable = { EBS_power_chen >= EBS_power_wang }
-					check_variable = { EBS_power_chen >= EBS_power_dongbei }
+					check_variable = { EBS_power_chen > EBS_power_huai }
+					check_variable = { EBS_power_chen > EBS_power_zhou }
+					check_variable = { EBS_power_chen > EBS_power_wang }
+					check_variable = { EBS_power_chen > EBS_power_dongbei }
 				}
 				country_event = { id = ebs_ending.1 days = 2 }
 			}
 			else_if = {
 				limit = {
-					check_variable = { EBS_power_huai >= EBS_power_zhou }
-					check_variable = { EBS_power_huai >= EBS_power_wang }
-					check_variable = { EBS_power_huai >= EBS_power_dongbei }
+					check_variable = { EBS_power_huai > EBS_power_zhou }
+					check_variable = { EBS_power_huai > EBS_power_wang }
+					check_variable = { EBS_power_huai > EBS_power_dongbei }
 				}
 				country_event = { id = ebs_ending.2 days = 2 }
 			}
 			else_if = {
 				limit = {
-					check_variable = { EBS_power_zhou >= EBS_power_wang }
-					check_variable = { EBS_power_zhou >= EBS_power_dongbei }
+					check_variable = { EBS_power_zhou > EBS_power_wang }
+					check_variable = { EBS_power_zhou > EBS_power_dongbei }
 				}
 				country_event = { id = ebs_ending.3 days = 2 }
 			}
 			else_if = {
 				limit = {
-					check_variable = { EBS_power_wang >= EBS_power_dongbei }
+					check_variable = { EBS_power_wang > EBS_power_dongbei }
 				}
 				country_event = { id = ebs_ending.4 days = 2 }
 			}
@@ -398,31 +398,31 @@ country_event = {
 			# Evaluate decisive winner
 			if = {
 				limit = {
-					check_variable = { EBS_power_dongbei >= EBS_power_chen }
-					check_variable = { EBS_power_dongbei >= EBS_power_huai }
-					check_variable = { EBS_power_dongbei >= EBS_power_zhou }
-					check_variable = { EBS_power_dongbei >= EBS_power_wang }
+					check_variable = { EBS_power_dongbei > EBS_power_chen }
+					check_variable = { EBS_power_dongbei > EBS_power_huai }
+					check_variable = { EBS_power_dongbei > EBS_power_zhou }
+					check_variable = { EBS_power_dongbei > EBS_power_wang }
 				}
 				country_event = { id = ebs_ending.5 days = 2 }
 			}
 			else_if = {
 				limit = {
-					check_variable = { EBS_power_huai >= EBS_power_chen }
-					check_variable = { EBS_power_huai >= EBS_power_zhou }
-					check_variable = { EBS_power_huai >= EBS_power_wang }
+					check_variable = { EBS_power_huai > EBS_power_chen }
+					check_variable = { EBS_power_huai > EBS_power_zhou }
+					check_variable = { EBS_power_huai > EBS_power_wang }
 				}
 				country_event = { id = ebs_ending.2 days = 2 }
 			}
 			else_if = {
 				limit = {
-					check_variable = { EBS_power_chen >= EBS_power_zhou }
-					check_variable = { EBS_power_chen >= EBS_power_wang }
+					check_variable = { EBS_power_chen > EBS_power_zhou }
+					check_variable = { EBS_power_chen > EBS_power_wang }
 				}
 				country_event = { id = ebs_ending.1 days = 2 }
 			}
 			else_if = {
 				limit = {
-					check_variable = { EBS_power_zhou >= EBS_power_wang }
+					check_variable = { EBS_power_zhou > EBS_power_wang }
 				}
 				country_event = { id = ebs_ending.3 days = 2 }
 			}

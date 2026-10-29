@@ -125,7 +125,7 @@ EBS_manchurian_crisis_category = {
 			factor = 1
 		}
 		complete_effect = {
-			add_research_slot_temporary = 1
+			add_research_slot = 1
 			custom_effect_tooltip = EBS_bribe_dongbei_principals_tt
 		}
 	}
