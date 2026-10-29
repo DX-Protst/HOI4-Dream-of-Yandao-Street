@@ -1,0 +1,112 @@
+# EBS Supreme Education Inspection Decisions
+
+EBS_inspection_category = {
+
+	# Launch surprise inspection tour
+	EBS_launch_surprise_inspection = {
+		icon = generic_civil_support
+		cost = 30
+		days_re_enable = 60
+		available = {
+			tag = EBS
+		}
+		visible = {
+			tag = EBS
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		complete_effect = {
+			add_stability = 0.03
+			add_war_support = 0.02
+			custom_effect_tooltip = EBS_launch_surprise_inspection_tt
+		}
+	}
+
+	# Audit student nutrition and catering funds
+	EBS_audit_canteen_nutrition = {
+		icon = generic_propaganda
+		cost = 25
+		days_re_enable = 90
+		available = {
+			tag = EBS
+		}
+		visible = {
+			tag = EBS
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		complete_effect = {
+			add_political_power = 50
+			add_stability = -0.02
+			custom_effect_tooltip = EBS_audit_canteen_nutrition_tt
+		}
+	}
+
+}
+
+EBS_manchurian_crisis_category = {
+
+	# Allocate bonus Olympiad quota to Dongbei
+	EBS_allocate_bonus_quota_to_dongbei = {
+		icon = generic_research
+		cost = 40
+		days_re_enable = 90
+		available = {
+			tag = EBS
+		}
+		visible = {
+			tag = EBS
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		complete_effect = {
+			add_stability = 0.05
+			custom_effect_tooltip = EBS_allocate_bonus_quota_to_dongbei_tt
+		}
+	}
+
+	# Crackdown on underground independent exam alliance in Mukden and Changchun
+	EBS_crackdown_on_underground_test_groups = {
+		icon = generic_prepare_civil_war
+		cost = 50
+		days_re_enable = 120
+		available = {
+			tag = EBS
+		}
+		visible = {
+			tag = EBS
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		complete_effect = {
+			add_war_support = 0.05
+			add_stability = -0.05
+			custom_effect_tooltip = EBS_crackdown_underground_groups_tt
+		}
+	}
+
+	# Bribe and recruit Dongbei veteran teachers to Beijing
+	EBS_bribe_dongbei_principals = {
+		icon = generic_intelligence_bonus
+		cost = 35
+		days_re_enable = 90
+		available = {
+			tag = EBS
+		}
+		visible = {
+			tag = EBS
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		complete_effect = {
+			add_research_slot_temporary = 1
+			custom_effect_tooltip = EBS_bribe_dongbei_principals_tt
+		}
+	}
+
+}

@@ -1,0 +1,148 @@
+characters = {
+	EBS_leader_chen_zhuanyuan = {
+		name = EBS_leader_chen_zhuanyuan
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_chi_dai_li"
+			}
+		}
+		country_leader = {
+			ideology = bureaucratic_despotism
+			traits = { EBS_the_grand_commissioner }
+			id = -1
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = EBS_leader_chen_zhuanyuan_advisor
+			allowed = {
+				original_tag = EBS
+			}
+			traits = { EBS_the_grand_commissioner }
+			cost = 100
+		}
+	}
+
+	EBS_huai_zonggong = {
+		name = EBS_huai_zonggong
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_chi_gu_zhuotong"
+			}
+		}
+		country_leader = {
+			ideology = technocratic_reformism
+			traits = { EBS_cybernetic_technocrat }
+			id = -1
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = EBS_huai_zonggong_advisor
+			allowed = {
+				original_tag = EBS
+			}
+			traits = { EBS_cybernetic_technocrat }
+			cost = 100
+		}
+	}
+
+	EBS_zhou_zongdao = {
+		name = EBS_zhou_zongdao
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_chi_wang_jingwei"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = EBS_zhou_zongdao_advisor
+			allowed = {
+				original_tag = EBS
+			}
+			traits = { EBS_evaluation_maniac }
+			cost = 100
+		}
+	}
+
+	EBS_wang_sichang = {
+		name = EBS_wang_sichang
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_chi_chen_jitang"
+			}
+			army = {
+				large = "GFX_portrait_chi_chen_jitang"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = EBS_wang_sichang_advisor
+			allowed = {
+				original_tag = EBS
+			}
+			traits = { EBS_football_czar }
+			cost = 100
+		}
+		corps_commander = {
+			traits = { infantry_officer organizer }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+
+	EBS_xi_teshi = {
+		name = EBS_xi_teshi
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_chi_song_zheyuan"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = EBS_xi_teshi_advisor
+			allowed = {
+				original_tag = EBS
+			}
+			traits = { EBS_plateau_skygate }
+			cost = 100
+		}
+	}
+
+	EBS_wang_zongguan = {
+		name = EBS_wang_zongguan
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_chi_long_yun"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = EBS_wang_zongguan_advisor
+			allowed = {
+				original_tag = EBS
+			}
+			traits = { EBS_banquet_mastermind }
+			cost = 100
+		}
+	}
+
+	EBS_haidian_council = {
+		name = EBS_haidian_council
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_chi_chiang_kai_shek"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = EBS_haidian_council_advisor
+			allowed = {
+				original_tag = EBS
+			}
+			traits = { EBS_haidian_aristocrat }
+			cost = 100
+		}
+	}
+}

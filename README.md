@@ -31,6 +31,7 @@
   - [4.1 主线国策树 (`YDS_focus.txt`)](#41-主线国策树-yds_focustxt)
   - [4.2 极权国策树：刘彦极端均等与高压托管 (`YDS_liu_yan_focus.txt`)](#42-极权国策树刘彦极端均等与高压托管-yds_liu_yan_focustxt)
   - [4.3 崩溃国策树：无政府白卷主义 (`YDS_anarchy_focus.txt`)](#43-崩溃国策树无政府白卷主义-yds_anarchy_focustxt)
+  - [4.4 最高教育局巡视督导组国策树与东三省“取而代之”企划预留 (`EBS_focus.txt`)](#44-最高教育局巡视督导组国策树与东三省取而代之企划预留-ebs_focustxt) ➜ [专属文档: README_EBS.md](README_EBS.md)
 - [5. 决议与事件系统全景 (Decisions & Events)](#5-决议与事件系统全景-decisions--events)
 - [6. 地图、省份划分与编制资产 (Map, States & OOB)](#6-地图省份划分与编制资产-map-states--oob)
 - [7. 美术、UI与原声音乐系统 (GFX, Interface & Soundtrack)](#7-美术ui与原声音乐系统-gfx-interface--soundtrack)
@@ -63,6 +64,7 @@
 | **胡朝强** | 技术官僚教育改良 / 幽默启发式升学<br>(Authoritarian Democrat / Social Liberal) | 铜梁巴川中学<br>(TLB - 教师温和改良派) | 年长资深数学名师，曾为高考状元。主张以幽默化解焦虑，以思维深度替代无效机械刷题。执政效果：**科研速度 +20%、消费品工厂需求 -10%**（详见 [README_TLB.md](README_TLB.md)）。 |
 | **六班自治委员会** | 学生联合公社 / 班级多元自治<br>(Radical Socialist / Syndicalist) | 铜梁巴川中学<br>(TLB - 学生自治派) | 高一·六班56名学生组成的集体权力机关（“56名学生，56只花”）。对外反抗教育高压，内部小团体众多、派系竞争激烈。执政/民族精神效果【各怀鬼胎】：**稳定度 -10%、消费品工厂需求 +5%**（详见 [README_TLB.md](README_TLB.md)）。 |
 | **张瀚予** | 学生自由意志主义 / 跨学科骨干<br>(Social Liberal) | 铜梁巴川中学<br>(TLB - 六班核心操盘手) | 六班核心领袖学生之一，身兼数职、多才多艺，兼任强力政治顾问与陆军指挥官，提供全方位的行政效率与战术组织加成（详见 [README_TLB.md](README_TLB.md)）。 |
+| **陈专员** | 极端官僚集权 / 巡视威权统筹<br>(Paternal Autocrat) | 最高教育局巡视督导专署<br>(EBS - 中枢督导组) | 最高教育督导专署总专员。表面大讲“四个回归与挤干水分”，实则是掌控全国考卷命题权与京津名额特权的官僚太上皇。下辖怀总工（赛博考务）、周总导（评估风暴）、王司长（足球洗钱）、郗特使（西藏高考移民）与王总管（营养餐包干）等庞大内阁（详见 [README_EBS.md](README_EBS.md)）。 |
 
 ### 1.3 全国应试割据版图 (各大教育集团)
 本模组重绘了全国版图，将全国划分为七大代表性应试教育超级实体与周边边缘学区：
@@ -74,7 +76,7 @@
 5.  **`SHS` 山河四省教育联盟 (华北高考修罗场 - 王老师)**：晋冀鲁豫超级做题家军团，坐拥全国最狂暴的生源与极其残酷的高考军备竞赛。
 6.  **`SNE` 华南考试同盟 (两广名校 - 陈老师)**：主打新高考自选模块、全英语沉浸教学与国际部升学渠道。
 7.  **`ECE` 华东学校组织 (江浙沪皖 - 张老师)**：吴越学派联盟，奥赛集训队与名校自主招生金字塔尖的掌控者。
-8.  **`EBS` 最高教育局巡视督导组 (中枢 Boss - 陈专员)**：坐镇平津冀与东北关外，掌握全国教育统筹与巡视问责最高权威的庞然大物。
+8.  **`EBS` 最高教育局巡视督导组 (中枢 Boss - 陈专员)**：坐镇平津冀与东北关外，掌握全国教育统筹与巡视问责最高权威的庞然大物。其势力遍布北方并深度管控东三省，贪婪与特权引发了关外诸校“为何我们不能取而代之”的强烈野心（详见 [专属文档: README_EBS.md](README_EBS.md)）。
 9.  **`ZBX` 周边学校**：覆盖边疆与偏远学区的中立边缘地带。
 
 ---
@@ -89,6 +91,7 @@ c:\Users\10431\Desktop\HOI4\
 ├── thumbnail.png                                       # 创意工坊封面图 (325KB)
 ├── README.md                                           # 全局技术与机制核心文档
 ├── README_TLB.md                                       # 铜梁巴川中学 (TLB) 隐藏路线专属独立解析文档
+├── README_EBS.md                                       # 最高教育局巡视督导组 (EBS) 路线与东三省企划解析文档
 ├── commit.bat                                          # Windows 双击或命令行一键 Git 提交/推送批处理
 ├── commit.ps1                                          # PowerShell 一键 Git 提交/推送脚本
 ├── commit.py                                           # 跨平台一键提交核心脚本 (支持参数传入或交互式输入简介)
@@ -107,6 +110,7 @@ c:\Users\10431\Desktop\HOI4\
 │   ├── characters/
 │   │   ├── YDS_characters.txt                          # 盐中全剧情领袖定义 (蒋/李/唐/邓/刘/无政府)
 │   │   ├── TLB_characters.txt                          # 铜梁巴中领袖定义 (汤启梅/胡朝强/六班自治委员会/张瀚予)
+│   │   ├── EBS_characters.txt                          # 最高教育督导组领袖与内阁定义 (陈专员/怀总工/周总导/王司长/郗特使/王总管/海淀委员会)
 │   │   └── YDS_enemy_characters.txt                    # 全国七大考霸势力领袖定义 (陈专员/周鹏/王老师等)
 │   ├── countries/                                      # 26个国家的图形文化、地图颜色绑定文件
 │   │   ├── colors.txt                                  # 原版颜色表追加自定义 Tag 专属色
@@ -116,13 +120,16 @@ c:\Users\10431\Desktop\HOI4\
 │   ├── country_leader/
 │   │   ├── YDS_traits.txt                              # 领袖基础特质数值属性
 │   │   ├── YDS_custom_traits.txt                       # 拓展领袖特质属性与限制
-│   │   └── TLB_traits.txt                              # 铜梁巴中专属特质 (严格的管理者/幽默的教育家/各怀鬼胎/全能干事)
+│   │   ├── TLB_traits.txt                              # 铜梁巴中专属特质 (严格的管理者/幽默的教育家/各怀鬼胎/全能干事)
+│   │   └── EBS_traits.txt                              # 督导组高官专属特质 (挤水分/赛博考务/大迎检/足球特许状/高原直通车/醒酒总调度)
 │   ├── country_tags/yds_tags.txt                       # 注册模组所有新增静态国家 Tag (含 TLB 铜梁巴中)
 │   ├── decisions/                                      # 决议机制逻辑
 │   │   ├── categories/YDS_decision_categories.txt      # 集中注册全部12个决议大类
 │   │   ├── categories/TLB_decision_categories.txt      # 铜梁巴中与四川内战决议大类
+│   │   ├── categories/EBS_decision_categories.txt      # 督导迎检与关外羁縻决议大类
 │   │   ├── YDS_decisions.txt                           # 内政/战时/学风博弈/缓减学生学业压力决议
 │   │   ├── TLB_decisions.txt                           # 铜巴起义与分治停战协定决议 (半成功路线)
+│   │   ├── EBS_decisions.txt                           # 跨省突击督查/营养餐审计/关外配额调配/查禁自招地下联考决议
 │   │   ├── YDS_bop_decisions.txt                       # 一班权力平衡操控决议
 │   │   ├── YDS_olympiad_decisions.txt                  # 奥赛国家队 5 选 3 招募与调整决议
 │   │   ├── YDS_school_district_decisions.txt           # 成都学区开放日/挖名师/文斗武斗决议
@@ -134,6 +141,7 @@ c:\Users\10431\Desktop\HOI4\
 │   ├── ideas/                                          # 国家精神与学区增益
 │   │   ├── YDS_ideas.txt                               # 基础学风/绩点/自治度/奥赛奖牌/后勤基建/象牙塔偏科Debuff Idea
 │   │   ├── TLB_ideas.txt                               # 铜梁巴中民族精神 (各怀鬼胎/铜巴运动怒潮/全川教育新主/重庆特区)
+│   │   ├── EBS_ideas.txt                               # 督导组民族精神 (关外暗流/大迎检假教案/赛博天网/素质特权/关外躁动)
 │   │   └── YDS_school_district_ideas.txt               # 学区渗透1-3阶段Buff与“四七九/外语”臣服综合体
 │   ├── ideologies/00_ideologies.txt                    # 意识形态底层重写 (细化至KR十大意识形态体系+白卷无政府崩溃模式)
 │   ├── modifier_definitions/                           # 拓展修饰符定义
@@ -142,7 +150,8 @@ c:\Users\10431\Desktop\HOI4\
 │   ├── national_focus/                                 # 国策树脚本
 │   │   ├── YDS_focus.txt                               # 盐中宏大主线国策树 (公共危机/主线分歧/基建/学区/奥赛/全国大战)
 │   │   ├── YDS_liu_yan_focus.txt                       # 刘彦暴政专属独立国策树 (7节点)
-│   │   └── YDS_anarchy_focus.txt                       # 无政府白卷主义专属独立国策树 (7节点)
+│   │   ├── YDS_anarchy_focus.txt                       # 无政府白卷主义专属独立国策树 (7节点)
+│   │   └── EBS_focus.txt                               # 最高教育局巡视督导组 20 节点国策树 (京津特权/大迎检/关外羁縻/全国征讨/东三省企划预留)
 │   ├── on_actions/                                     # 游戏事件触发器与生命周期钩子
 │   │   ├── YDS_on_actions.txt                          # 考霸集团投降触发全国战争推进事件
 │   │   ├── YDS_on_actions_imported.txt                 # 每日学区渗透进度计算、每周 BOP 变量动态漂移、铜梁巴中隐藏线触发
@@ -167,6 +176,7 @@ c:\Users\10431\Desktop\HOI4\
 ├── events/                                             # 叙事事件系统
 │   ├── YDS_events.txt                                  # 核心剧情长链 (开局危机/分歧路线/内战爆发/两页式翻页叙事/崩溃结局)
 │   ├── TLB_events.txt                                  # 铜梁巴中起义长链 (跳楼惨剧/铜巴运动/密报起义/讲台夺权/三大结局)
+│   ├── EBS_events.txt                                  # 督导总署黑色幽默历史事件与东三省“取而代之”预留事件链
 │   ├── YDS_national_war_events.txt                     # 全国教育大战全套事件 (三阶段爆发/突袭警报/投降结算/180天整合宣称)
 │   ├── YDS_olympiad_events.txt                         # 学科奥赛事件长链 (联考决战/10个考生独立故事/金牌闭幕/作弊丑闻)
 │   ├── YDS_school_district_events.txt                  # 成都名校交互反馈事件与完全收编庆典
@@ -665,6 +675,19 @@ graph TD
 当自治度过高或绩点过低崩溃时切换。两大对立子分支：
 *   **社团封建割据**：动漫社宣传部 (`YDS_anime_propaganda`)、体训队纠察军 (`YDS_sports_league_militia`)、操场工团公社 (`YDS_syndicalist_playground`)。
 *   **虚无白卷涅槃**：全校总罢考 (`YDS_general_strike`)、操场篝火焚书 (`YDS_playground_bonfire`)、虚无主义涅槃 (`YDS_nihilistic_nirvana`) —— 拆除全校工厂，回归纯粹精神解脱。
+
+### 4.4 最高教育局巡视督导组国策树与东三省“取而代之”企划预留 (`EBS_focus.txt`)
+国家代码 `EBS`。坐拥北京大院中枢与北方广袤版图，共有 20 个全定制国策节点（均严格满足 `x >= 9` 引擎排版防遮挡规范），分为四大分支：
+1.  **京津特权与学阀自招分支 (x: 10-12)**：
+    *   `EBS_strengthen_beijing_admissions` (巩固京津录取特权) ➜ `EBS_haidian_early_talent_program` (海淀早培垄断) 与 `EBS_shunyi_ivy_corridor` (顺义大藤免考走廊) ➜ `EBS_plateau_quota_airdrop` (郗特使高原三年空挂直通车) ➜ `EBS_canteen_skimming_monopoly` (王总管全国营养餐大包干)。
+2.  **巡视天下与大迎检风暴分支 (x: 15-17)**：
+    *   `EBS_nationwide_evaluation_wave` (五年教学大评估) ➜ `EBS_paint_lawns_green` (周总导操场刷绿漆与荒地插麦苗) 与 `EBS_fake_paperwork_industry` (通宵手抄十年假教案) ➜ `EBS_squeeze_water_out` (陈专员狠挤水分淘汰水课) 与 `EBS_cybernetic_exam_net` (怀总工赛博考务天网) ➜ `EBS_football_special_fund` (王司长校园足球亿元专项)。
+3.  **关外羁縻与东三省火药桶分支 (x: 21-23，⭐️ 核心企划预留接口)**：
+    *   `EBS_manchurian_pacification` (关外三省考区统抚) ➜ `EBS_placate_dongbei_normal` (拉拢长春东北师大附中) 与 `EBS_inspect_benxi_athletes` (突击严查本溪高中87名体优生) ➜ `EBS_harbin_heavy_exam_industry` (收编哈三中极寒重工试题库) ➜ `EBS_suppress_dongbei_ambition` (压制关外“取而代之”的狂傲) ➜ **`EBS_the_manchurian_storm` (【企划预留】关外暗雷：东三省取而代之风暴，触发事件 `ebs_dongbei.1`)**。
+4.  **全国应试征伐与接管川渝分支 (x: 14-18, y: 5-7)**：
+    *   `EBS_prepare_national_crackdown` (发布最高督导动员令) ➜ 兵分三路踏平山河四省 (`EBS_pacify_shanhe_coalition`)、查抄华中楚天题库 (`EBS_confiscate_huazhong_test_bank`)、摧垮华东华南自主命题 (`EBS_crush_east_and_south`) ➜ **终决战：兵临蓉城彻底接管盐道街 (`EBS_final_march_on_yandao`)**。
+
+> 详尽的领袖黑历史现实原型剖析、特质参数精算与东三省考霸入关政变三大路线推演，请参阅专属说明文档：[README_EBS.md](README_EBS.md)。
 
 ---
 

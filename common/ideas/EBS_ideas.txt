@@ -1,0 +1,66 @@
+ideas = {
+	country = {
+		# EBS: Manchurian Discontent & Ambition
+		EBS_northeast_undercurrent = {
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				stability_weekly = -0.001
+				weekly_manpower = 200
+				production_speed_arms_factory_factor = 0.10
+			}
+		}
+
+		# EBS: Inspection Frenzy & Faked Paperwork
+		EBS_inspection_frenzy = {
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				production_speed_buildings_factor = 0.15
+				industrial_capacity_factory = -0.10
+				drift_defence_factor = 0.20
+			}
+		}
+
+		# EBS: Cybernetic Proctoring Grid
+		EBS_cybernetic_exam_grid = {
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				research_speed_factor = 0.15
+				stability_factor = -0.05
+			}
+		}
+
+		# EBS: Haidian Elite Quotas
+		EBS_haidian_privilege = {
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_gain = 0.25
+				army_org_factor = 0.05
+			}
+		}
+
+		# EBS: Manchurian High Unrest: Why Not Us?
+		EBS_dongbei_unrest_high = {
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.15
+				war_support_factor = -0.10
+				army_defence_factor = -0.10
+			}
+		}
+	}
+}

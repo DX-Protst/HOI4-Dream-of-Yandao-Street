@@ -1,0 +1,109 @@
+# EBS Supreme Education Bureau Events
+# Pure ASCII comments only
+
+add_namespace = ebs_event
+add_namespace = ebs_dongbei
+
+# EBS Event 1: Supreme Inspection Bureau Established
+country_event = {
+	id = ebs_event.1
+	title = ebs_event.1.t
+	desc = ebs_event.1.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = ebs_event.1.a
+		add_political_power = 50
+		add_stability = 0.05
+		ai_chance = { base = 100 }
+	}
+}
+
+# EBS Event 2: The Evaluation Storm and Green Painted Lawns
+country_event = {
+	id = ebs_event.2
+	title = ebs_event.2.t
+	desc = ebs_event.2.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = ebs_event.2.a
+		add_ideas = EBS_inspection_frenzy
+		add_political_power = 25
+		ai_chance = { base = 70 }
+	}
+
+	option = {
+		name = ebs_event.2.b
+		add_stability = 0.03
+		add_political_power = -20
+		ai_chance = { base = 30 }
+	}
+}
+
+# EBS Event 3: The 87 Athletes Scandal of Benxi
+country_event = {
+	id = ebs_event.3
+	title = ebs_event.3.t
+	desc = ebs_event.3.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = ebs_event.3.a
+		add_stability = -0.05
+		add_war_support = 0.05
+		custom_effect_tooltip = EBS_benxi_crackdown_tt
+		ai_chance = { base = 80 }
+	}
+
+	option = {
+		name = ebs_event.3.b
+		add_political_power = -30
+		custom_effect_tooltip = EBS_benxi_appease_tt
+		ai_chance = { base = 20 }
+	}
+}
+
+# EBS Event 4: Plateau Skygate Controversy
+country_event = {
+	id = ebs_event.4
+	title = ebs_event.4.t
+	desc = ebs_event.4.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = ebs_event.4.a
+		add_political_power = -25
+		add_stability = -0.02
+		ai_chance = { base = 100 }
+	}
+}
+
+# EBS Dongbei Event 1: The Soul-Searching Question of the Northeast Schools
+country_event = {
+	id = ebs_dongbei.1
+	title = ebs_dongbei.1.t
+	desc = ebs_dongbei.1.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = ebs_dongbei.1.a
+		set_country_flag = EBS_dongbei_conspiracy_awakened
+		swap_ideas = {
+			remove_idea = EBS_northeast_undercurrent
+			add_idea = EBS_dongbei_unrest_high
+		}
+		custom_effect_tooltip = EBS_dongbei_future_expansion_tt
+		ai_chance = { base = 100 }
+	}
+}

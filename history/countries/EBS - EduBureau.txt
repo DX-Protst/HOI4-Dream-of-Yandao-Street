@@ -16,8 +16,15 @@ set_popularities = {
 }
 
 recruit_character = EBS_leader_chen_zhuanyuan
+recruit_character = EBS_huai_zonggong
+recruit_character = EBS_zhou_zongdao
+recruit_character = EBS_wang_sichang
+recruit_character = EBS_xi_teshi
+recruit_character = EBS_wang_zongguan
+recruit_character = EBS_haidian_council
 
 add_ideas = EBS_privilege_iron_fist
+add_ideas = EBS_northeast_undercurrent
 
 set_technology = {
 	infantry_weapons = 1

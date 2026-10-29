@@ -1,17 +1,4 @@
 characters = {
-	EBS_leader_chen_zhuanyuan = {
-		name = EBS_leader_chen_zhuanyuan
-		portraits = {
-			civilian = {
-				large = "GFX_portrait_chi_dai_li"
-			}
-		}
-		country_leader = {
-			ideology = bureaucratic_despotism
-			id = -1
-		}
-	}
-
 	ECE_leader_zhang_laoshi = {
 		name = ECE_leader_zhang_laoshi
 		portraits = {

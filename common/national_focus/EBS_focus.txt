@@ -1,0 +1,363 @@
+focus_tree = {
+	id = EBS_focus_tree
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = EBS
+		}
+	}
+	default = no
+
+	# Root: Central Inspection Authority
+	focus = {
+		id = EBS_supreme_inspection_bureau
+		icon = GFX_focus_YDS_bureau_inspectors
+		x = 16
+		y = 0
+		cost = 5
+		completion_reward = {
+			add_political_power = 75
+			add_stability = 0.05
+			country_event = { id = ebs_event.1 }
+		}
+	}
+
+	# Branch 1: Beijing Admissions & Haidian Privilege (x: 10 - 12)
+	focus = {
+		id = EBS_strengthen_beijing_admissions
+		icon = GFX_focus_YDS_bureaucractic_integration
+		x = 10
+		y = 1
+		cost = 5
+		prerequisite = { focus = EBS_supreme_inspection_bureau }
+		completion_reward = {
+			add_political_power = 50
+			add_ideas = EBS_haidian_privilege
+		}
+	}
+
+	focus = {
+		id = EBS_haidian_early_talent_program
+		icon = GFX_focus_YDS_technocratic_meritocracy
+		x = 10
+		y = 2
+		cost = 5
+		prerequisite = { focus = EBS_strengthen_beijing_admissions }
+		completion_reward = {
+			add_research_slot = 1
+			add_stability = -0.05
+		}
+	}
+
+	focus = {
+		id = EBS_shunyi_ivy_corridor
+		icon = GFX_focus_YDS_republic_of_letters
+		x = 12
+		y = 2
+		cost = 5
+		prerequisite = { focus = EBS_strengthen_beijing_admissions }
+		completion_reward = {
+			add_offsite_building = { type = arms_factory level = 1 }
+			add_political_power = 40
+		}
+	}
+
+	focus = {
+		id = EBS_plateau_quota_airdrop
+		icon = GFX_focus_YDS_alumni_network
+		x = 11
+		y = 3
+		cost = 5
+		prerequisite = { focus = EBS_haidian_early_talent_program }
+		prerequisite = { focus = EBS_shunyi_ivy_corridor }
+		completion_reward = {
+			country_event = { id = ebs_event.4 }
+			add_manpower = 5000
+		}
+	}
+
+	focus = {
+		id = EBS_canteen_skimming_monopoly
+		icon = GFX_focus_YDS_school_canteen_monopoly
+		x = 11
+		y = 4
+		cost = 5
+		prerequisite = { focus = EBS_plateau_quota_airdrop }
+		completion_reward = {
+			add_political_power = 60
+			add_stability = -0.05
+			random_owned_controlled_state = {
+				prioritize = { 608 }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	# Branch 2: Nationwide Evaluations & Inspection Storm (x: 15 - 17)
+	focus = {
+		id = EBS_nationwide_evaluation_wave
+		icon = GFX_focus_YDS_standardized_syllabi
+		x = 16
+		y = 1
+		cost = 5
+		prerequisite = { focus = EBS_supreme_inspection_bureau }
+		completion_reward = {
+			add_war_support = 0.05
+			country_event = { id = ebs_event.2 }
+		}
+	}
+
+	focus = {
+		id = EBS_paint_lawns_green
+		icon = GFX_focus_YDS_ly_absolute_control
+		x = 15
+		y = 2
+		cost = 5
+		prerequisite = { focus = EBS_nationwide_evaluation_wave }
+		completion_reward = {
+			add_stability = 0.05
+			random_owned_controlled_state = {
+				prioritize = { 608 }
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = EBS_fake_paperwork_industry
+		icon = GFX_focus_YDS_print_shop_overdrive
+		x = 17
+		y = 2
+		cost = 5
+		prerequisite = { focus = EBS_nationwide_evaluation_wave }
+		completion_reward = {
+			add_political_power = 50
+			add_ideas = EBS_inspection_frenzy
+		}
+	}
+
+	focus = {
+		id = EBS_squeeze_water_out
+		icon = GFX_focus_YDS_ly_thought_policing
+		x = 15
+		y = 3
+		cost = 5
+		prerequisite = { focus = EBS_paint_lawns_green }
+		prerequisite = { focus = EBS_fake_paperwork_industry }
+		completion_reward = {
+			add_stability = 0.05
+			add_war_support = 0.05
+		}
+	}
+
+	focus = {
+		id = EBS_cybernetic_exam_net
+		icon = GFX_focus_YDS_technocratic_meritocracy
+		x = 17
+		y = 3
+		cost = 5
+		prerequisite = { focus = EBS_paint_lawns_green }
+		prerequisite = { focus = EBS_fake_paperwork_industry }
+		completion_reward = {
+			add_ideas = EBS_cybernetic_exam_grid
+		}
+	}
+
+	focus = {
+		id = EBS_football_special_fund
+		icon = GFX_focus_YDS_martial_competition
+		x = 16
+		y = 4
+		cost = 5
+		prerequisite = { focus = EBS_squeeze_water_out }
+		prerequisite = { focus = EBS_cybernetic_exam_net }
+		completion_reward = {
+			army_experience = 25
+			add_political_power = 30
+		}
+	}
+
+	# Branch 3: Manchurian Pacification & Northeast Schools (x: 21 - 23)
+	focus = {
+		id = EBS_manchurian_pacification
+		icon = GFX_focus_YDS_militarized_study_rooms
+		x = 22
+		y = 1
+		cost = 5
+		prerequisite = { focus = EBS_supreme_inspection_bureau }
+		completion_reward = {
+			add_stability = 0.05
+			custom_effect_tooltip = EBS_manchurian_pacification_tt
+		}
+	}
+
+	focus = {
+		id = EBS_placate_dongbei_normal
+		icon = GFX_focus_YDS_equalized_education
+		x = 21
+		y = 2
+		cost = 5
+		prerequisite = { focus = EBS_manchurian_pacification }
+		completion_reward = {
+			add_political_power = 40
+			328 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = EBS_inspect_benxi_athletes
+		icon = GFX_focus_YDS_martial_competition
+		x = 23
+		y = 2
+		cost = 5
+		prerequisite = { focus = EBS_manchurian_pacification }
+		completion_reward = {
+			country_event = { id = ebs_event.3 }
+		}
+	}
+
+	focus = {
+		id = EBS_harbin_heavy_exam_industry
+		icon = GFX_focus_YDS_print_shop_overdrive
+		x = 22
+		y = 3
+		cost = 5
+		prerequisite = { focus = EBS_placate_dongbei_normal }
+		prerequisite = { focus = EBS_inspect_benxi_athletes }
+		completion_reward = {
+			714 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = EBS_suppress_dongbei_ambition
+		icon = GFX_focus_YDS_ly_absolute_control
+		x = 22
+		y = 4
+		cost = 5
+		prerequisite = { focus = EBS_harbin_heavy_exam_industry }
+		completion_reward = {
+			add_stability = 0.05
+			add_war_support = 0.05
+		}
+	}
+
+	# RESERVED SLOT: Northeast Usurpation Expansion Interface
+	focus = {
+		id = EBS_the_manchurian_storm
+		icon = GFX_focus_YDS_all_front_counterattack
+		x = 22
+		y = 5
+		cost = 5
+		prerequisite = { focus = EBS_suppress_dongbei_ambition }
+		completion_reward = {
+			country_event = { id = ebs_dongbei.1 }
+		}
+	}
+
+	# Branch 4: Nationwide Educational Campaign & Subjugation (x: 14 - 18, y: 5 - 7)
+	focus = {
+		id = EBS_prepare_national_crackdown
+		icon = GFX_focus_YDS_gaokao_war_mobilization
+		x = 16
+		y = 5
+		cost = 5
+		prerequisite = { focus = EBS_canteen_skimming_monopoly }
+		prerequisite = { focus = EBS_football_special_fund }
+		completion_reward = {
+			add_war_support = 0.10
+			add_manpower = 20000
+		}
+	}
+
+	focus = {
+		id = EBS_pacify_shanhe_coalition
+		icon = GFX_focus_YDS_militarized_study_rooms
+		x = 14
+		y = 6
+		cost = 5
+		prerequisite = { focus = EBS_prepare_national_crackdown }
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = SHS
+			}
+		}
+	}
+
+	focus = {
+		id = EBS_confiscate_huazhong_test_bank
+		icon = GFX_focus_YDS_print_shop_overdrive
+		x = 16
+		y = 6
+		cost = 5
+		prerequisite = { focus = EBS_prepare_national_crackdown }
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = HBE
+			}
+		}
+	}
+
+	focus = {
+		id = EBS_crush_east_and_south
+		icon = GFX_focus_YDS_martial_competition
+		x = 18
+		y = 6
+		cost = 5
+		prerequisite = { focus = EBS_prepare_national_crackdown }
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = ECE
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = SNE
+			}
+		}
+	}
+
+	focus = {
+		id = EBS_final_march_on_yandao
+		icon = GFX_focus_YDS_all_china_educational_hegemony
+		x = 16
+		y = 7
+		cost = 5
+		prerequisite = { focus = EBS_pacify_shanhe_coalition }
+		prerequisite = { focus = EBS_confiscate_huazhong_test_bank }
+		prerequisite = { focus = EBS_crush_east_and_south }
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = YDS
+			}
+		}
+	}
+
+}

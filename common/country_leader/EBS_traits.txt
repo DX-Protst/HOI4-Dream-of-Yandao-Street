@@ -1,0 +1,64 @@
+leader_traits = {
+
+	# Chen Commissioner: Squeeze Water Out Grand Commissioner
+	EBS_the_grand_commissioner = {
+		random = no
+		political_power_gain = 1.0
+		stability_factor = 0.15
+		mobilization_speed = 0.10
+		research_speed_factor = -0.10
+		consumer_goods_factor = 0.05
+	}
+
+	# Chief Engineer Huai: Cybernetic Technocrat
+	EBS_cybernetic_technocrat = {
+		random = no
+		research_speed_factor = 0.25
+		production_factory_max_efficiency_factor = 0.10
+		industrial_capacity_factory = 0.10
+		stability_factor = -0.10
+	}
+
+	# Director Zhou: Inspection & Evaluation Maniac
+	EBS_evaluation_maniac = {
+		random = no
+		production_speed_buildings_factor = 0.25
+		production_speed_infrastructure_factor = 0.20
+		war_support_factor = 0.10
+		industrial_capacity_factory = -0.15
+	}
+
+	# Director Wang: School Football Czar
+	EBS_football_czar = {
+		random = no
+		army_org_factor = 0.10
+		army_speed_factor = 0.05
+		political_power_cost = 0.10
+		consumer_goods_factor = 0.08
+	}
+
+	# Special Envoy Xi: High Plateau Skygate Express
+	EBS_plateau_skygate = {
+		random = no
+		conscription_factor = 0.10
+		command_power_gain_mult = 0.20
+		stability_factor = -0.10
+	}
+
+	# Manager Wang: Banquet & Catering Mastermind
+	EBS_banquet_mastermind = {
+		random = no
+		political_power_gain = 0.25
+		stability_factor = -0.05
+		supply_consumption_factor = 0.10
+	}
+
+	# Haidian Academic Oligarchs
+	EBS_haidian_aristocrat = {
+		random = no
+		research_speed_factor = 0.10
+		drift_defence_factor = 0.25
+		political_power_gain = 0.15
+	}
+
+}
