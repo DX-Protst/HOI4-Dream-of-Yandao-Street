@@ -10,7 +10,18 @@ scripted_gui = {
 
         effects = {
             YDS_route_guide_button_click = {
-                country_event = yds_route_guide.1
+                if = {
+                    limit = {
+                        OR = {
+                            tag = EBS
+                            original_tag = EBS
+                        }
+                    }
+                    country_event = ebs_route_guide.1
+                }
+                else = {
+                    country_event = yds_route_guide.1
+                }
             }
         }
     }

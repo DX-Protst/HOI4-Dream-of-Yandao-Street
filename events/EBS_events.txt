@@ -6,6 +6,7 @@ add_namespace = ebs_dongbei
 add_namespace = ebs_crisis
 add_namespace = ebs_ending
 add_namespace = ebs_focus_event
+add_namespace = ebs_route_guide
 
 # ==========================================
 # OPENING & CLASSIC NARRATIVE EVENTS
@@ -40,9 +41,6 @@ country_event = {
 		name = ebs_event.101.a
 		add_political_power = 50
 		add_stability = 0.05
-		hidden_effect = {
-			country_event = { id = ebs_crisis.1 days = 3 }
-		}
 		ai_chance = { base = 100 }
 	}
 }
@@ -260,11 +258,14 @@ country_event = {
 
 	immediate = {
 		set_country_flag = EBS_crisis_active
-		set_variable = { EBS_power_chen = 0 }
-		set_variable = { EBS_power_huai = 0 }
-		set_variable = { EBS_power_zhou = 0 }
-		set_variable = { EBS_power_wang = 0 }
-		set_variable = { EBS_power_dongbei = 0 }
+		if = {
+			limit = { NOT = { has_variable = EBS_power_chen } }
+			set_variable = { EBS_power_chen = 0 }
+			set_variable = { EBS_power_huai = 0 }
+			set_variable = { EBS_power_zhou = 0 }
+			set_variable = { EBS_power_wang = 0 }
+			set_variable = { EBS_power_dongbei = 0 }
+		}
 	}
 
 	option = {
@@ -290,7 +291,6 @@ country_event = {
 		add_political_power = -20
 		hidden_effect = {
 			add_to_variable = { EBS_power_chen = 2 }
-			country_event = { id = ebs_crisis.2 days = 3 }
 		}
 		ai_chance = { base = 50 }
 	}
@@ -301,7 +301,6 @@ country_event = {
 		add_stability = -0.03
 		hidden_effect = {
 			add_to_variable = { EBS_power_huai = 2 }
-			country_event = { id = ebs_crisis.3 days = 3 }
 		}
 		ai_chance = { base = 50 }
 	}
@@ -342,7 +341,6 @@ country_event = {
 		hidden_effect = {
 			add_to_variable = { EBS_power_wang = 2 }
 			add_to_variable = { EBS_power_chen = 1 }
-			country_event = { id = ebs_crisis.4 days = 3 }
 		}
 		ai_chance = { base = 55 }
 	}
@@ -354,7 +352,6 @@ country_event = {
 		hidden_effect = {
 			add_to_variable = { EBS_power_dongbei = 2 }
 			add_to_variable = { EBS_power_huai = 1 }
-			country_event = { id = ebs_crisis.4 days = 3 }
 		}
 		ai_chance = { base = 45 }
 	}
@@ -395,7 +392,6 @@ country_event = {
 		hidden_effect = {
 			add_to_variable = { EBS_power_zhou = 2 }
 			add_to_variable = { EBS_power_huai = 1 }
-			country_event = { id = ebs_crisis.4 days = 3 }
 		}
 		ai_chance = { base = 50 }
 	}
@@ -407,7 +403,6 @@ country_event = {
 		hidden_effect = {
 			add_to_variable = { EBS_power_chen = 2 }
 			add_to_variable = { EBS_power_wang = 1 }
-			country_event = { id = ebs_crisis.4 days = 3 }
 		}
 		ai_chance = { base = 50 }
 	}
@@ -447,7 +442,6 @@ country_event = {
 		hidden_effect = {
 			add_to_variable = { EBS_power_chen = 2 }
 			add_to_variable = { EBS_power_zhou = 1 }
-			country_event = { id = ebs_crisis.5 days = 3 }
 		}
 		ai_chance = { base = 50 }
 	}
@@ -459,7 +453,6 @@ country_event = {
 		hidden_effect = {
 			add_to_variable = { EBS_power_dongbei = 2 }
 			add_to_variable = { EBS_power_wang = 1 }
-			country_event = { id = ebs_crisis.5 days = 3 }
 		}
 		ai_chance = { base = 50 }
 	}
@@ -1694,5 +1687,24 @@ country_event = {
 	option = {
 		name = ebs_focus_event.60.a
 		add_political_power = 30
+	}
+}
+
+# ==========================================
+# EBS ROUTE GUIDE EVENT
+# ==========================================
+
+# Route Selection Guide for EBS
+country_event = {
+	id = ebs_route_guide.1
+	title = ebs_route_guide.1.t
+	desc = ebs_route_guide.1.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = ebs_route_guide.1.a
+		ai_chance = { base = 100 }
 	}
 }

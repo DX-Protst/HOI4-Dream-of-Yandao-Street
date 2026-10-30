@@ -2,6 +2,31 @@
 
 EBS_inspection_category = {
 
+	# Route selection guide (viewable anytime)
+	EBS_view_route_guide = {
+		icon = generic_research
+		cost = 0
+		days_re_enable = 1
+		available = {
+			OR = {
+				tag = EBS
+				original_tag = EBS
+			}
+		}
+		visible = {
+			OR = {
+				tag = EBS
+				original_tag = EBS
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		complete_effect = {
+			country_event = ebs_route_guide.1
+		}
+	}
+
 	# Launch surprise inspection tour
 	EBS_launch_surprise_inspection = {
 		icon = generic_civil_support
