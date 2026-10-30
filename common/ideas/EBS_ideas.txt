@@ -108,5 +108,144 @@ ideas = {
 				army_defence_factor = -0.10
 			}
 		}
+
+		# EBS: Haidian Admissions Privilege
+		EBS_haidian_privilege = {
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.10
+				research_speed_factor = 0.05
+				political_power_gain = 0.20
+			}
+		}
+
+		# EBS: Cybernetic Exam Proctoring Grid
+		EBS_cybernetic_exam_grid = {
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				decryption_power = 15
+				encryption_bonus = 2
+				stability_factor = -0.05
+				subversive_activites_upkeep = -0.25
+			}
+		}
+
+		# EBS: Inspection Frenzy & Fake Paperwork
+		EBS_inspection_frenzy = {
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				production_speed_buildings_factor = 0.20
+				war_support_factor = 0.10
+				industrial_capacity_factory = -0.10
+			}
+		}
+
+		# EBS: Wartime Total Administrative Control
+		EBS_bureau_total_control = {
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				army_core_defence_factor = 0.15
+				industrial_capacity_factory = 0.10
+				production_speed_arms_factory_factor = 0.10
+				conscription = 0.02
+				stability_factor = 0.10
+			}
+		}
+
+		# EBS: Imperial Examination Throne Law (Chen Capstone)
+		EBS_imperial_examination_throne_spirit = {
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_gain = 0.50
+				stability_factor = 0.15
+				army_core_defence_factor = 0.15
+				command_power_gain_mult = 0.25
+			}
+		}
+
+		# EBS: Silicon Curriculum Singularity (Huai Capstone)
+		EBS_silicon_curriculum_singularity_spirit = {
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				research_speed_factor = 0.35
+				industrial_capacity_factory = 0.20
+				production_factory_max_efficiency_factor = 0.15
+				stability_factor = -0.15
+			}
+		}
+
+		# EBS: Perpetual Inspection Mobilization Commune (Zhou Capstone)
+		EBS_perpetual_inspection_mobilization_spirit = {
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				production_speed_buildings_factor = 0.40
+				production_speed_infrastructure_factor = 0.35
+				war_support_factor = 0.20
+				industrial_capacity_factory = -0.10
+			}
+		}
+
+		# EBS: The Unrestricted Exam Market (Wang Capstone)
+		EBS_unrestricted_exam_market_spirit = {
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = -0.08
+				industrial_capacity_factory = 0.15
+				political_power_gain = 0.40
+				supply_consumption_factor = 0.15
+			}
+		}
+
+		# EBS: Absolute Meritocracy Republic (Dongbei Capstone)
+		EBS_absolute_meritocracy_republic_spirit = {
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				army_attack_factor = 0.20
+				army_defence_factor = 0.20
+				recruitable_population_factor = 0.20
+				stability_factor = 0.20
+			}
+		}
+
+		# EBS: Invincible Exam Industrial Complex (Industrial Capstone)
+		EBS_the_invincible_exam_industrial_complex_spirit = {
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				industrial_capacity_factory = 0.10
+				production_factory_max_efficiency_factor = 0.10
+				production_speed_buildings_factor = 0.10
+				line_change_production_efficiency_factor = 0.10
+			}
+		}
 	}
 }

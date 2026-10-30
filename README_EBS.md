@@ -17,9 +17,11 @@
 - [2. 意识形态与全套领袖内阁体系 (Ideologies & Cabinet)](#2-意识形态与全套领袖内阁体系-ideologies--cabinet)
 - [3. 领袖生平与专属特质全景 (Cabinet & Traits)](#3-领袖生平与专属特质全景-cabinet--traits)
 - [4. 国家精神与机制数理精算 (National Spirits)](#4-国家精神与机制数理精算-national-spirits)
-- [5. 42 节点国策树架构全景：五大路线博弈与大战动员 (National Focus Blueprint)](#5-42-节点国策树架构全景五大路线博弈与大战动员-national-focus-blueprint)
+- [5. 82 节点国策树架构全景：五大差异化路线与关东工业复合体 (National Focus Blueprint)](#5-82-节点国策树架构全景五大差异化路线与关东工业复合体-national-focus-blueprint)
   - [5.1 宽间距防重叠排版规范 (Delta X >= 2 & Branch Distance >= 4)](#51-宽间距防重叠排版规范-delta-x--2--branch-distance--4)
-  - [5.2 全节点事件覆盖规范 (Every Focus Has an Event)](#52-全节点事件覆盖规范-every-focus-has-an-event)
+  - [5.2 五大政治路线差异化拓扑 (Differentiated Political Pathways)](#52-五大政治路线差异化拓扑-differentiated-political-pathways)
+  - [5.3 独立工业与关东重工科技线 (Industrial & Rust Belt Complex)](#53-独立工业与关东重工科技线-industrial--rust-belt-complex)
+  - [5.4 全节点高质事件覆盖规范 (Every Political Focus Has an Event)](#54-全节点高质事件覆盖规范-every-political-focus-has-an-event)
 - [6. 中枢路线多阶段交织危机事件链 (Interwoven Crisis Event Chain)](#6-中枢路线多阶段交织危机事件链-interwoven-crisis-event-chain)
 - [7. 全国高考试卷院与八校排位天梯联动机制 (Exam Board Integration)](#7-全国高考试卷院与八校排位天梯联动机制-exam-board-integration)
 - [8. 决策系统与跨省督导博弈 (Decisions System)](#8-决策系统与跨省督导博弈-decisions-system)
@@ -131,97 +133,126 @@ graph TD
 
 ---
 
-## 5. 42 节点国策树架构全景：五大路线博弈与大战动员 (National Focus Blueprint)
+## 5. 82 节点国策树架构全景：五大差异化路线与关东工业复合体 (National Focus Blueprint)
 
 ### 5.1 宽间距防重叠排版规范 (Delta X >= 2 & Branch Distance >= 4)
 为了彻底解决国策树图标与文字框重叠拥挤的问题，本模组执行了最严格的 Clausewitz 树形布局规范：
-* **分支中心轴对齐**：Branch A (x=12)、Branch B (x=20)、Branch C (x=28)、Branch D (x=36)、Branch E (x=44)、全国考办 (x=52)。各分支根节点横向间隔达 **8 个单位**！
-* **同分支子节点间距**：左右子节点间距 `delta_x >= 4`（如 x=10 与 x=14），相邻分支边缘间隔 `delta_x >= 4`，**零碰撞、零遮挡**！
-* **垂直间距充裕**：政治路线在 y=7~8 结束，1938 统一大战统一在 `y = 10 ~ 13` 展开，预留了整整 2 个垂直单位的缓冲带。
-* **规避连续国策保留区**：所有国策节点严格保持 `x >= 10`（远超 `x >= 9` 限制）。
+* **分支中心轴对齐**：Phase 1 (x=31)、Branch A (x=13)、Branch B (x=22)、Branch C (x=31)、Branch D (x=40)、Branch E (x=49)、全国考办 (x=57)、关东与中枢工业重工科技线 (x=67)。各主要分支中心横向间隔达 **8~9 个单位**！
+* **同分支子节点间距**：左右子节点间距 `delta_x >= 2`（如 x=11 与 x=15，x=66 与 x=68），相邻分支边缘间隔 `delta_x >= 3~4`，**零碰撞、零遮挡**！
+* **互斥节点专项对齐规范**：所有互斥节点（`mutually_exclusive`）严格安排在**相同 Y 行且水平直接相邻**（中间无任何第三节点阻挡），确保红线横条与互斥图标清晰呈现，绝不发生红线横穿中间国策的视觉重叠！
+* **垂直间距充裕**：政治路线在 y=8~10 结束，战前通牒主线设在 `y=11~12`，1938 统一大战统一在 `y=13~16` 展开，预留充裕缓冲带。
+* **规避连续国策保留区**：所有国策节点严格保持 `x >= 10`（远超 `x >= 9` 限制，工业线位于 x=64~70）。
 
 ```mermaid
 flowchart TD
-    subgraph Phase1 ["开局：督导总署会议与危机策动 (Center x: 28, y: 0-3)"]
-        Root["EBS_supreme_inspection_bureau<br>最高教育局巡视督导专署 (x=28, y=0)"]
-        F1["EBS_inspectors_general_assembly<br>督导总署全体常务例会 (x=28, y=1)"]
-        F2A["EBS_balance_bureaucratic_interests<br>安抚各派既得利益 (x=24, y=2)"]
-        F2B["EBS_uncover_internal_corruption<br>暗中收集各派黑料 (x=32, y=2)"]
-        Schism["EBS_the_council_schism<br>中枢路线总博弈 (x=28, y=3)"]
-        Root --> F1 --> F2A & F2B --> Schism
+    subgraph Main_Industrial ["独立工业与重工基建线 (x: 64-70, y: 0-5) - 无事件文本干扰"]
+        IndRoot["EBS_industrial_backbone<br>中枢督导统辖与关东重工产业带 (x=67, y=0)"]
+        Ind1["中央印钞厂(64) / 京津冀铁路(66) / 关东重工(68) / 渤海盐化(70) (y=1)"]
+        Ind2["热察采掘(64) / 鞍钢重机(66) ❌ 沈阳兵工(68) / 哈尔滨底盘(70) (y=2)"]
+        Ind3["大连造船厂(65) / 长春精密仪器(67) / 战备物资储备(69) (y=3)"]
+        Ind4["国防工学院联合实验室(+1科研格) (x=67, y=4)"]
+        IndEnd["EBS_the_invincible_exam_industrial_complex<br>无坚不摧的应试工业复合体 (x=67, y=5)"]
+        IndRoot --> Ind1 --> Ind2 --> Ind3 --> Ind4 --> IndEnd
     end
 
-    subgraph Branch_Chen ["路线 A：陈专员官僚大院特权集权 (x: 10-14, y: 4-7)"]
-        Schism --> A1["EBS_chen_absolutism<br>陈专员太上皇集权 (x=12, y=4)"]
-        A1 --> A2["EBS_strengthen_beijing_admissions<br>巩固京津录取特权 (x=10, y=5)"]
-        A1 --> A3["EBS_fortify_haidian_bastion<br>海淀早培垄断深化 (x=14, y=5)"]
-        A2 & A3 --> A4["EBS_tibet_airdrop_express<br>西藏三年挂职产业化 (x=12, y=6)"]
-        A4 --> A5["EBS_the_untouchable_nobility<br>京津不可动摇之特权 (x=12, y=7)"]
+    subgraph Phase1 ["开局：督导总署会议与危机摊牌 (x: 29-33, y: 0-3)"]
+        Root["EBS_supreme_inspection_bureau (x=31, y=0)"] --> F1["EBS_inspectors_general_assembly (x=31, y=1)"]
+        F1 --> F2A["EBS_balance_bureaucratic_interests (x=29, y=2)"] & F2B["EBS_uncover_internal_corruption (x=33, y=2)"]
+        F2A & F2B -. 虚线OR .-> Schism["EBS_the_council_schism<br>中枢路线总博弈 (x=31, y=3)"]
     end
 
-    subgraph Branch_Huai ["路线 B：怀总工赛博算力专政 (x: 18-22, y: 4-7)"]
-        Schism --> B1["EBS_huai_technocratic_coup<br>怀总工赛博算力政变 (x=20, y=4)"]
-        B1 --> B2["EBS_tsinghua_supercomputer_grid<br>清华附中超算算力天网 (x=18, y=5)"]
-        B1 --> B3["EBS_ai_proctoring_neurolink<br>脑电波微表情防作弊 (x=22, y=5)"]
-        B2 & B3 --> B4["EBS_algorithmic_credit_system<br>做题家信用算法 (x=20, y=6)"]
-        B4 --> B5["EBS_algorithm_determines_destiny<br>算法即命题：算力决定大专 (x=20, y=7)"]
+    subgraph Five_Paths ["五大差异化政治路线 (x: 10-52, y: 4-10) - 均配高水准长篇事件叙事"]
+        Schism --> BranchA["路线 A：陈专员<br>官僚大院双轨晋升阶梯<br>(10 节点, x: 10-16, y: 4-9)"]
+        Schism --> BranchB["路线 B：怀总工<br>清华附中赛博算力矩阵<br>(9 节点, x: 19-25, y: 4-8)"]
+        Schism --> BranchC["路线 C：周总导<br>铁血大迎检梯次突击战<br>(9 节点, x: 28-34, y: 4-8)"]
+        Schism --> BranchD["路线 D：双王黑金<br>体卫艺与后勤双寡头并购<br>(10 节点, x: 38-42, y: 4-8)"]
+        Schism --> BranchE["路线 E：东三省名校<br>关外做题家三部曲革命史诗<br>(11 节点, x: 47-51, y: 4-10)"]
     end
 
-    subgraph Branch_Zhou ["路线 C：周总导铁血迎检大极权 (x: 26-30, y: 4-7)"]
-        Schism --> C1["EBS_zhou_evaluation_frenzy<br>周总导铁血迎检大极权 (x=28, y=4)"]
-        C1 --> C2["EBS_nationwide_lawn_greening<br>全国万校操场狂刷绿漆 (x=26, y=5)"]
-        C1 --> C3["EBS_midnight_paperwork_mobilization<br>百万师生通宵抄假教案 (x=30, y=5)"]
-        C2 & C3 --> C4["EBS_evaluation_or_shutdown<br>不迎检便关停：以评促肃反 (x=28, y=6)"]
-        C4 --> C5["EBS_total_inspection_state<br>极权示范帝国：造假的艺术 (x=28, y=7)"]
+    subgraph ExamBoard ["全国高考试卷院与排位天梯操盘 (x: 55-59, y: 1-4)"]
+        Root --> EX1["绝密印厂"] --> EX2["信息学命题"] & EX3["打击南方奥赛"] --> EX4["操纵排位"] --> EX5["象牙塔霸权"]
     end
 
-    subgraph Branch_Wang ["路线 D：王司长与王总管黑金帝国 (x: 34-38, y: 4-7)"]
-        Schism --> D1["EBS_wang_commercial_consortium<br>体卫艺与后勤黑金联合执政 (x=36, y=4)"]
-        D1 --> D2["EBS_sports_quota_black_market<br>二级运动员加分明码标价 (x=34, y=5)"]
-        D1 --> D3["EBS_school_canteen_cartel<br>全国中小学预制菜垄断包干 (x=38, y=5)"]
-        D2 & D3 --> D4["EBS_educational_slush_funds<br>黑金小金库全球布局 (x=36, y=6)"]
-        D4 --> D5["EBS_educational_plutocracy<br>金钱万能：黑金教育财阀 (x=36, y=7)"]
+    subgraph Transition ["战前统战与中枢通牒主线 (x: 29-33, y: 11-12)"]
+        BranchA & BranchB & BranchC & BranchD & BranchE -. 虚线多选 .-> U1["EBS_dispatch_final_syllabus_ultimatum<br>密发《全国考纲统一最后通牒》 (x=31, y=11)"]
+        U1 --> U2A["EBS_curb_southern_resistance<br>铁腕肃清南方异见试卷 (x=29, y=12)"]
+        U1 --> U2B["EBS_coopt_provincial_collaborators<br>收买拉拢地方驻京学阀 (x=33, y=12)"]
+        U2A <-. 干净互斥 .-> U2B
     end
 
-    subgraph Branch_Dongbei ["⭐️ 路线 E：东三省名校“奉系入关”政变 (x: 42-46, y: 4-8)"]
-        Schism --> E1["EBS_dongbei_conspiracy_active<br>关外风暴：校长摔碎茶缸 (x=44, y=4)"]
-        E1 --> E2["EBS_placate_dongbei_normal<br>联络东北师大附中 (x=42, y=5)"]
-        E1 --> E3["EBS_secret_alliance_of_three_provinces<br>长春哈尔滨沈阳铁血结盟 (x=46, y=5)"]
-        E2 & E3 --> E4["EBS_mukden_express_to_beijing<br>奉系考霸誓师：专列大举入关！ (x=44, y=6)"]
-        E4 --> E5["EBS_dongbei_takes_over_moe<br>攻占教育部：这龙椅咱也能坐！ (x=44, y=7)"]
-        E5 --> E6["EBS_heavy_industry_exam_equality<br>全国重工卷：彻底打破京津特权！ (x=44, y=8)"]
-    end
-
-    subgraph ExamBoard ["全国高考试卷院与试题垄断支线 (x: 50-54, y: 1-4)"]
-        Root --> EX1["EBS_seize_central_printing_press<br>掌控全国统考绝密印厂 (x=52, y=1)"]
-        EX1 --> EX2["EBS_rig_informatics_syllabus<br>垄断全国信息学命题 (x=50, y=2)"]
-        EX1 --> EX3["EBS_suppress_southern_olympiad<br>定点打击华东/楚天奥赛题库 (x=54, y=2)"]
-        EX2 & EX3 --> EX4["EBS_manipulate_national_exam_board<br>全面操纵试卷院排位大盘 (x=52, y=3)"]
-        EX4 --> EX5["EBS_lock_ivory_tower_top3<br>锁定全国前三甲象牙塔霸权 (x=52, y=4)"]
-    end
-
-    subgraph WarSystem ["1938 盛夏全国教育大战总动员 (Center x: 28, y: 10-13)"]
-        A5 & B5 & C5 & D5 & E6 --> W1["EBS_war_mobilization_1938<br>督导组战时全境管制动员 (x=28, y=10)"]
-        W1 --> W2A["EBS_pacify_shanhe_coalition<br>踏平山河四省修罗场 (x=24, y=11)"]
-        W1 --> W2B["EBS_subjugate_huazhong_hbe<br>抄没黄冈华师一楚天题库 (x=28, y=11)"]
-        W1 --> W2C["EBS_strike_east_and_south<br>摧垮华东华南自主命题联盟 (x=32, y=11)"]
-        W2A & W2B & W2C --> W3["EBS_final_siege_of_yandao<br>兵临蓉城：彻底接管盐道街！ (x=28, y=12)"]
-        W3 --> W4["EBS_nationwide_educational_dominion<br>全国一统：颁发中央统考圣典 (x=28, y=13)"]
+    subgraph WarSystem ["1938 盛夏全国教育大战总决战 (x: 27-35, y: 13-16)"]
+        U2A & U2B -. 虚线OR .-> W1["战时全境管制动员 (x=31, y=13)"]
+        W1 --> W2A["山河四省 (x=27, y=14)"] & W2B["楚天黄冈 (x=31, y=14)"] & W2C["华东华南 (x=35, y=14)"]
+        W2A & W2B & W2C --> W3["合围盐道街 (x=31, y=15)"]
+        W3 --> W4["颁发中央统考万世圣典 (x=31, y=16)"]
     end
 ```
 
-### 5.2 全节点事件覆盖规范 (Every Focus Has an Event)
-在《盐道街之梦》的本次升级中，**EBS 国策树的每一个国策在完成时均无一例外会触发一个专属的叙事事件**（共 34 个国策完成事件 `ebs_focus_event.1` ~ `ebs_focus_event.34`，加上主线历史事件与危机链，总计 70 个事件），全景式展现各校师生、官僚督学与校长的黑色幽默微观剧情。
+### 5.2 五大政治路线与工业线非对称动态拓扑 (Dynamic Layout, 3/4-Wide Rows & Mutual Exclusions)
+响应更丰富、更拟真与更具策略深度的钢铁雄心4排版规范，本模组彻底打破了过于规整单一的漏斗结构，全面引入 **一排三节点、一排四节点、虚线软前置 (OR)、实线硬前置 (AND) 与干净红线互斥抉择 (Mutually Exclusive)**：
 
----
+1. **路线 A：陈专员（官僚家长制与京津特权）(x: 10-16, y: 4-9)**
+   - **中枢收权 (y=5)**：【狠狠挤干课堂水分】(x=13) 纵深下扎；
+   - **两极干净互斥 (y=6)**：左翼【巩固京津录取特权】(x=11) 与 右翼【海淀早培垄断深化】(x=15) 构成**清晰直观的水平红线互斥抉择**（普惠京津普通大院 vs 极化海淀权贵自招），中间无任何节点阻挡；
+   - **一排四节点多路展开 (y=7)**：西藏三年空挂直通车 (x=10)、中央巡视组常态化 (x=12)、特长降分管道垄断 (x=14)、红头钢印一票否决 (x=16) 全面铺开，虚线软前置与实线硬前置穿插；
+   - **汇聚与登基 (y=8~9)**：不可动摇特权 (x=13, y=8) ➜ 登顶【新应试帝国太上皇法典】(x=13, y=9)。
+
+2. **路线 B：怀总工（赛博考务与算力专政）(x: 19-25, y: 4-8)**
+   - **核心技术干净互斥 (y=5)**：物理光纤硬基建网络 (x=20) 与 生物微表情神经追踪 (x=24) **左右对称红线互斥抉择**（纯物理光纤基建流 vs 生物天网神经监控流），平直清晰；
+   - **一排四节点算力矩阵 (y=6)**：清华附中超算天网 (x=19)、地下量子阅卷中心 (x=21)、做题家信用算法 (x=23)、前置辍学大模型 (x=25) 横向并列；
+   - **算法专政与奇点 (y=7~8)**：【算法即命运：算力决定大专】(x=22, y=7) ➜ 汇聚于终极技术封顶【硅基大纲奇点：人类考官全员下岗】(x=22, y=8)。
+
+3. **路线 C：周总导（铁血大迎检极权）(x: 28-34, y: 4-8)**
+   - **突击开局 (y=5)**：【五天极限无预警大突击】(x=31) 居中突破；
+   - **荒诞流派干净互斥 (y=6)**：【全国万校操场狂刷绿漆】(x=29) 与 【百万师生通宵抄假教案】(x=33) 构成**水火不容的“绿漆表面流 vs 假教案形式流”清晰红线互斥抉择**，水平通畅无阻；
+   - **一排四节点迎检整肃 (y=7)**：示范校展台 (x=28)、以评促关停 (x=30)、特别惩治法庭 (x=32)、极权示范帝国 (x=34) 四路并进；
+   - **终局汇聚 (y=8)**：解锁【永恒迎检全域战备大公社】(x=31, y=8)。
+
+4. **路线 D：双王黑金（体卫艺与后勤双寡头）(x: 38-42, y: 4-8)**
+   - **黑金渗透 (y=5)**：二级运动员加分黑市 (x=38) 与 预制菜垄断包干中央厨房 (x=42)；
+   - **寡头专营干净互斥 (y=6)**：【高尔夫特招大学特许加盟】(x=38) 与 【全国校服教辅强制统配专营】(x=42) **横向清晰红线互斥**（王司长高端加分敛财 vs 王总管大众消费品垄断）；
+   - **一排三节点中间层 (y=7)**：体育达尔文加分 (x=38)、千桌政商答谢宴饮网 (x=40)、海外小金库 (x=42) 经由虚线交织；
+   - **双极终局 (y=8)**：王司长路线登顶【官僚垄断教育财阀】(x=39) 与 王总管路线登顶【高考试卷期货不设限黑市】(x=41)。
+
+5. **路线 E：东三省名校联合公社（“奉系入关”平权革命）(x: 47-51, y: 4-10)**
+   - **关外秘密誓师 (y=5)**：关外三省考霸秘密誓师 (x=49)；
+   - **路线抉择干净互斥 (y=6)**：师大附中教研正统派 (x=47) 与 鞍钢本钢高炉铁水夜读营 (x=51) **清晰红线互斥抉择**（学院派名师理论路线 vs 钢厂工读武装突击营）；
+   - **一排三节点军运行军 (y=7)**：铁甲军列改装 (x=47)、专列大举入关 (x=49)、工学一体联合苏维埃 (x=51)；
+   - **破立与登顶 (y=8~10)**：攻陷教育部大楼 (x=49, y=8) ➜ 焚毁京津贵族档案 (x=47, y=9) 与 全国统一重工卷 (x=51, y=9) ➜ 终极登顶【铁血唯才平权共和国】(x=49, y=10)。
+
+6. **独立工业科技线 (x: 64-70, y: 0-5)**
+   - **一排四节点 (y=1)**：中央绝密印钞厂 (x=64)、京津冀铁路干线 (x=66)、关东重工生产带 (x=68)、渤海盐化合成精炼厂 (x=70)；
+   - **一排四节点与核心互斥 (y=2)**：热察铁煤采掘 (x=64)、鞍山钢铁重机 (x=66) ❌ 沈阳兵工扩产 (x=68) **相邻紧凑红线互斥**（民用基建工业槽 vs 军械枪炮产能加速）、哈尔滨重装底盘 (x=70)；
+   - **一排三节点 (y=3)**：大连船坞要塞 (x=65)、长春精密光学 (x=67)、战备储备基地 (x=69) 虚线多选输入；
+   - **科研与工业封顶 (y=4~5)**：解锁国防工学院联合实验室（**第 5 科研槽**，x=67, y=4）与应试工业复合体（x=67, y=5）。
+
+7. **战前中枢统战通牒与 1938 大战动员**
+   - **战略清晰互斥通牒 (y=12)**：【铁腕肃清南方异见试卷】(x=29) 与 【收买拉拢各省督学军阀】(x=33) **水平无障碍红线互斥**（武力粉碎地方题库 vs 利益割让分化招抚）；
+   - **虚线动员与一排三攻势 (y=13~16)**：动员令由任意通牒路线虚线解锁 (x=31, y=13)，向山河四省 (x=27)、楚天黄冈 (x=31)、华东华南 (x=35) 展开**一排三路集团军大攻势**，最终汇聚围攻盐道街 (y=15) 并颁发万世圣典 (y=16)！
+
+### 5.3 独立工业与关东重工科技线 (Industrial & Rust Belt Complex)
+独立于政治路线（位于 `x: 64~70, y: 0~5`），共 14 个节点。**本分支完全无事件弹窗干扰**，为 EBS 坐拥的 11 省版图提供坚实重工与国防支撑：
+* **直隶与渤海核心**：升级中央试卷绝密特种印钞厂、京津冀双轨铁路与物流网、天津渤海盐化合成精炼厂、热河察哈尔铁煤综合采掘。
+* **关东重工走廊**：鞍山钢铁铸造基地、沈阳兵工厂军械扩产、哈尔滨机车车辆装甲底盘、长春精密光学仪器厂、大连造船厂与渤海海防重炮要塞。
+* **战备深水区**：战备战略原材料储备、国防教育工学院联合实验室（**解锁第 5 科研槽**）、以及终局国家精神【无坚不摧的应试工业复合体】。
+
+### 5.4 全节点高质事件覆盖与 YDJ 级文学叙事规范 (YDJ-Tier Literary & Pagination Standards)
+除工业线专注数值建设不设弹窗外，**所有政治路线、开局主线与战前通牒国策均实现 100% 专属高水准叙事事件覆盖**：
+* **文学质感与 YDJ 全面对齐**：大幅加强文本厚度与场景临场感，融入水磨石走廊、红木门、紫砂保温杯、苯类油漆挥发浓雾、液氮超算机柜蜂鸣与试卷油墨香等极其细腻的微观细节与荒诞现实主义讽刺；
+* **融入多地域特色方言**：
+  * **京味大院与燕京官场切口**：西单官僚的“得嘞”、“门儿清”、“局气”、“大院规矩是老祖宗立下的”、“底儿掉”、“没褶儿了”、“外省叫驴”；
+  * **山河四省老农做题家悲叹**：华北平原与冀鲁豫校长的“弄啥嘞”、“作孽啊”、“手冻得跟胡萝卜似的”、“庄稼地的娃”；
+  * **川蜀蓉城方言尖锐对峙**：在兵临锦江合围盐道街（`ebs_focus_event.33`）时，老盐中广播高呼“北京来的督学懂个铲铲”、“骑在老盐中脑壳上搞大一统”、“问问九眼桥下头滔滔江水答不答应”；
+* **全面引入 YDJ 式长篇翻页机制 (Pagination Form)**：对于文本量宏大、矛盾复杂的关键转折（开局专署成立 `ebs_event.1`、四大经典危机事件、交织危机链 1~5 全流程、四大政治路线终局大结局、中枢决裂 `ebs_focus_event.1`、合围盐道街 `ebs_focus_event.33` 与太和殿万世圣典 `ebs_focus_event.34`），全面采用 YDJ 专属的“第一页铺陈场景 ➜ `下一页 →` 按钮 ➜ 第二页迎来戏剧高潮与政策抉择”的翻页架构，杜绝弹窗文字溢出，带来小说级别的连贯阅读享受；
+* **神圣红线约束**：东三省名校路线（路线 E：奉系入关、长沈哈铁血同盟、高炉夜读营等）全套代码与文案**严格保持原版不变**！
 
 ## 6. 中枢路线多阶段交织危机事件链 (Interwoven Crisis Event Chain)
 
-中枢政治路线的决战**彻底摒弃单次弹窗与生硬标签**，深度复刻 TLB（铜梁巴川）高质量多阶段政治叙事规范：
-* **严控选项防重叠**：危机事件严格限制为 **每个事件恰好 2 个选项**，彻底消除原版弹窗选项挤压重叠的 UI 缺陷；
+中枢政治路线的决战**彻底摒弃单次弹窗与生硬标签**，深度复刻 TLB/YDJ 高质量多阶段政治叙事与翻页规范：
+* **严控选项防重叠**：危机事件严格限制为 **每个事件翻页后恰好 2 个选项**，彻底消除原版弹窗选项挤压重叠的 UI 缺陷；
 * **去除人名与阶段编号**：选项中绝不生硬出现领导人名（以行政、机构与政策动作替代），标题全面采用长篇沉浸式叙事标题（如《西单保密室的撬痕》、《绿漆操场上的刺鼻晨雾》）；
 * **数理决算单一定局**：危机积累的变量最终在决算点动态结算，**只触发唯一的胜出事件（单选项确立统治）**，不可再手动逆转胜败；
-* **TLB 级长篇小说叙事**：每篇事件描述扩充至 300~500 字，多段落构建官僚、校园与做题家的现实讽刺巨作。
+* **TLB/YDJ 级超长篇双页叙事**：每篇事件扩充至 500~800 字双页，多段落构建官僚、校园与做题家的现实讽刺巨作。
 
 ```mermaid
 sequenceDiagram

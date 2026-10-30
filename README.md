@@ -682,22 +682,24 @@ graph TD
 *   **虚无白卷涅槃**：全校总罢考 (`YDS_general_strike`)、操场篝火焚书 (`YDS_playground_bonfire`)、虚无主义涅槃 (`YDS_nihilistic_nirvana`) —— 拆除全校工厂，回归纯粹精神解脱。
 
 ### 4.4 最高教育局巡视督导组国策树与东三省“取而代之”企划 (`EBS_focus.txt`)
-国家代码 `EBS`。坐拥北京大院中枢与北方广袤版图，已升级为 **42 核心与分支节点的大型防重叠博弈国策树**（严格遵循 `x >= 10` 与宽间距排版规范，每个国策完成均触发独立叙事事件，共 70 个专属剧情事件），完整呈现督导中枢的五阶段交织危机与全国统战：
+国家代码 `EBS`。坐拥北京大院中枢与北方广袤版图，已升级为 **82 核心与分支节点的宏大非对称动态国策树**（全面融入一排三节点、一排四节点交错排版，深度搭载虚线软前置 (OR)、实线硬前置 (AND) 与红线互斥抉择 (Mutually Exclusive)，除工业线外每个国策完成均触发高水准专属叙事事件，共 78 个专属剧情事件），完整呈现督导中枢的五阶段交织危机、工业重工科技与全国统战：
 1.  **阶段一：督导总署中枢整风与危机发端 (Center x: 28, y: 0-3)**：
     *   `EBS_supreme_inspection_bureau` (最高教育局巡视督导专署) ➜ `EBS_inspectors_general_assembly` (常务例会) ➜ `EBS_balance_bureaucratic_interests` (安抚利益) 与 `EBS_uncover_internal_corruption` (暗查黑料) ➜ **`EBS_the_council_schism` (中枢决裂，联动危机数理大决算)**。
-2.  **阶段二：中枢多阶段交织危机事件链与五大路线夺权 (x: 10-46, y: 4-8)**：
-    *   严格遵循 TLB 级深度小说叙事规范，构建 5 阶段交织危机链（`ebs_crisis.1` ~ `ebs_crisis.5`，严格每事件 2 选项、无领导人名、300~500字长篇长文），实时追踪 5 大派系声望变量（`EBS_power_chen/huai/zhou/wang/dongbei`），在决算点动态触发唯一终局事件（`ebs_ending.1` ~ `ebs_ending.5`，单选项确立统治不可逆转）：
-    *   **路线 A：陈专员官僚大院特权集权 (x: 10-14, y: 4-7)**：陈专员集权 (`EBS_chen_absolutism`) ➜ 巩固京津特权 (`EBS_strengthen_beijing_admissions`) ➜ 海淀早培垄断 (`EBS_fortify_haidian_bastion`) ➜ 西藏三年空挂直通车 (`EBS_tibet_airdrop_express`) ➜ 京津不可动摇之特权 (`EBS_the_untouchable_nobility`)。
-    *   **路线 B：怀总工赛博算力专政 (x: 18-22, y: 4-7)**：技术官僚政变 (`EBS_huai_technocratic_coup`) ➜ 清华附中超算天网 (`EBS_tsinghua_supercomputer_grid`) ➜ 脑电波微表情防作弊 (`EBS_ai_proctoring_neurolink`) ➜ 做题家信用算法 (`EBS_algorithmic_credit_system`) ➜ 算法即命运 (`EBS_algorithm_determines_destiny`)。
-    *   **路线 C：周总导铁血迎检大极权 (x: 26-30, y: 4-7)**：全面极权接管 (`EBS_zhou_evaluation_frenzy`) ➜ 万校操场狂刷绿漆 (`EBS_nationwide_lawn_greening`) ➜ 百万师生通宵抄假教案 (`EBS_midnight_paperwork_mobilization`) ➜ 以评促肃反 (`EBS_evaluation_or_shutdown`) ➜ 极权示范帝国 (`EBS_total_inspection_state`)。
-    *   **路线 D：王司长与王总管黑金帝国 (x: 34-38, y: 4-7)**：后勤体育联合执政 (`EBS_wang_commercial_consortium`) ➜ 二级运动员加分倒卖 (`EBS_sports_quota_black_market`) ➜ 全国预制菜垄断包干 (`EBS_school_canteen_cartel`) ➜ 黑金小金库 (`EBS_educational_slush_funds`) ➜ 黑金教育财阀 (`EBS_educational_plutocracy`)。
-    *   **⭐️ 路线 E：东三省名校“奉系入关”政变 (x: 42-46, y: 4-8)**：关外风暴摔碎茶缸 (`EBS_dongbei_conspiracy_active`) ➜ 联络长春东北师大附中 (`EBS_placate_dongbei_normal`) ➜ 哈尔滨沈阳铁血结盟 (`EBS_secret_alliance_of_three_provinces`) ➜ 奉系考霸专列誓师入关 (`EBS_mukden_express_to_beijing`) ➜ **攻占教育部大楼 (`EBS_dongbei_takes_over_moe`，触发政变大捷事件 `ebs_dongbei.2`)** ➜ 全国重工平权统考试卷 (`EBS_heavy_industry_exam_equality`)！
+2.  **阶段二：中枢多阶段交织危机事件链与五大差异化政治路线 (x: 10-46, y: 4-11)**：
+    *   严格遵循 TLB 级深度小说叙事规范，构建 5 阶段交织危机链（`ebs_crisis.1` ~ `ebs_crisis.5`，严格每事件 2 选项、无领导人名、300~500字长篇长文），实时追踪 5 大派系声望变量，在决算点动态触发唯一终局事件（`ebs_ending.1` ~ `ebs_ending.5`，单选项确立统治不可逆转）：
+    *   **路线 A：陈专员官僚大院规训双轨梯架 (10 节点, x: 10-14, y: 4-9)**：陈专员集权 (`EBS_chen_absolutism`) ➜ 左轨大院自招与强基封闭 (`EBS_strengthen_beijing_admissions`, `EBS_fortify_haidian_bastion`, `EBS_tibet_airdrop_express`, `EBS_monopolize_special_pathways`) 与 右轨课堂去水分与一票否决 (`EBS_squeeze_classroom_moisture`, `EBS_central_inspectorate_permanent`, `EBS_bureaucratic_iron_stamp`) ➜ 汇聚登基【新应试帝国太上皇法典】(`EBS_imperial_examination_throne`)！
+    *   **路线 B：怀总工清华附中算力矩阵 (9 节点, x: 18-22, y: 4-9)**：技术官僚政变 (`EBS_huai_technocratic_coup`) ➜ 超算中心与光纤骨干网 (`EBS_tsinghua_supercomputer_grid`, `EBS_fiber_optic_exam_backbone`, `EBS_quantum_grading_datacenter`) 交叉 脑电波微表情、信用算法与前置辍学大模型 (`EBS_ai_proctoring_neurolink`, `EBS_algorithmic_credit_system`, `EBS_predictive_drop_out_model`) ➜ 算法即命运 ➜ **【硅基大纲奇点：人类考官全员下岗】(`EBS_silicon_curriculum_singularity`)**！
+    *   **路线 C：周总导铁血大迎检梯次突击战 (9 节点, x: 26-30, y: 4-9)**：全面极权接管 (`EBS_zhou_evaluation_frenzy`) ➜ 第一波刷绿漆抄假教案 (`EBS_nationwide_lawn_greening`, `EBS_midnight_paperwork_mobilization`) ➜ 第二波五天极限突袭与麦田插麦苗工程 (`EBS_five_day_shock_inspection`, `EBS_model_school_showcase`) ➜ 督导特别法庭整肃 (`EBS_punitive_disciplinary_tribunal`) ➜ **【永恒迎检全域战备大公社】(`EBS_perpetual_inspection_mobilization`)**！
+    *   **路线 D：王司长与王总管黑金托拉斯 (10 节点, x: 34-38, y: 4-9)**：后勤体育联合执政 (`EBS_wang_commercial_consortium`) ➜ 体育特招黑市与体育达尔文 (`EBS_sports_quota_black_market`, `EBS_privatized_varsity_franchise`, `EBS_athletic_darwinism`) 并立 预制菜垄断、高价校服与千桌宴饮网 (`EBS_school_canteen_cartel`, `EBS_exclusive_uniform_procurement`, `EBS_banquet_diplomacy_network`) ➜ 海外小金库 ➜ **【全国高考试卷期货交易所】(`EBS_the_unrestricted_exam_market`)**！
+    *   **⭐️ 路线 E：东三省名校“奉系入关”平权革命史诗 (11 节点, x: 42-46, y: 4-11)**：关外风暴摔碎茶缸 (`EBS_dongbei_conspiracy_active`) ➜ 长春沈阳哈尔滨血盟 ➜ 高炉铁水夜读营与铁甲做题军列改装 (`EBS_furnace_night_study_battalions`, `EBS_armored_exam_trains`) ➜ 奉系考霸专列誓师入关 ➜ 攻占教育部大楼 (`EBS_dongbei_takes_over_moe`) ➜ **西单天井焚毁特权保送卷宗 (`EBS_incinerate_aristocratic_archives`) 与工读苏维埃 (`EBS_worker_student_syndicate_councils`) ➜ 全国重工试卷 ➜ 【铁血唯才平权共和国】(`EBS_absolute_meritocracy_republic`)**！
 3.  **阶段三：全国高考试卷院与试题垄断支线 (x: 50-54, y: 1-4)**：
     *   掌控中央绝密印厂 (`EBS_seize_central_printing_press`) ➜ 垄断全国信息学命题 (`EBS_rig_informatics_syllabus`，压制全境信息学赛道阻力) 与 打击华东楚天奥赛题库 (`EBS_suppress_southern_olympiad`) ➜ 操纵试卷院排位大盘 (`EBS_manipulate_national_exam_board`) ➜ **提前锁定全国前三甲象牙塔霸权 (`EBS_lock_ivory_tower_top3`)**。
-4.  **阶段四：1938 盛夏全国教育大战总动员 (Center x: 28, y: 10-13，受控于 `yds_national_war_active`)**：
-    *   战时全境管制动员 (`EBS_war_mobilization_1938`) ➜ 踏平山河四省 (`EBS_pacify_shanhe_coalition`)、抄没楚天题库 (`EBS_subjugate_huazhong_hbe`)、摧垮华东华南 (`EBS_strike_east_and_south`) ➜ 决战兵临蓉城接管盐道街 (`EBS_final_siege_of_yandao`) ➜ **全国一统：颁发中央统考圣典与180天全境核心化 (`EBS_nationwide_educational_dominion`)**。
+4.  **阶段四：独立工业重工与基建科研科技线 (14 节点, x: 61-69, y: 0-5，无事件弹窗干扰)**：
+    *   中枢督导统辖关东重工产业带 (`EBS_industrial_backbone`) ➜ 中央试卷印钞厂扩产、京津冀双轨铁路动脉、渤海盐化燃料厂、热河察哈尔铁煤采掘、鞍山钢铁重机、沈阳兵工军械、哈尔滨重装底盘、长春精密光学、大连船坞海防要塞、战备储备 ➜ **国防教育工学院联合实验室（解锁第5科研槽）** ➜ **【无坚不摧的应试工业复合体】(`EBS_the_invincible_exam_industrial_complex`)**！
+5.  **阶段五：战前统战通牒与 1938 盛夏全国教育大战总动员 (x: 24-32, y: 10-15)**：
+    *   密发《全国考纲统一最后通牒》(`EBS_dispatch_final_syllabus_ultimatum`) ➜ 铁腕镇压南方异见 (`EBS_curb_southern_resistance`) 与 分化拉拢驻京学阀 (`EBS_coopt_provincial_collaborators`) ➜ 战时全境管制动员 (`EBS_war_mobilization_1938`) ➜ 踏平山河四省、抄没楚天题库、摧垮华东华南 ➜ 决战合围盐道街 (`EBS_final_siege_of_yandao`) ➜ **全国一统：颁发中央统考圣典与180天全境核心化 (`EBS_nationwide_educational_dominion`)**。
 
-> 详尽的领袖黑历史现实原型剖析、特质参数精算、五阶段危机事件链数理与东三省考霸入关政变三大路线推演，请参阅专属说明文档：[README_EBS.md](README_EBS.md)。
+> 详尽的领袖黑历史现实原型剖析、特质参数精算、五阶段危机事件链数理、82 节点国策树架构与东三省考霸入关政变三大路线推演，请参阅专属说明文档：[README_EBS.md](README_EBS.md)。
 
 ---
 

@@ -1,0 +1,1715 @@
+# -*- coding: utf-8 -*-
+"""
+Build updated events/EBS_events.txt with pagination nodes.
+ASCII comments only, balanced braces, correct namespaces.
+Dongbei events are strictly preserved!
+"""
+
+import sys
+from pathlib import Path
+
+content = '''# EBS Supreme Education Bureau Events
+# Pure ASCII comments only
+
+add_namespace = ebs_event
+add_namespace = ebs_dongbei
+add_namespace = ebs_crisis
+add_namespace = ebs_ending
+add_namespace = ebs_focus_event
+
+# ==========================================
+# OPENING & CLASSIC NARRATIVE EVENTS
+# ==========================================
+
+# EBS Event 1: Supreme Inspection Bureau Established (Page 1)
+country_event = {
+	id = ebs_event.1
+	title = ebs_event.1.t
+	desc = ebs_event.1.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = ebs_event.1.next
+		country_event = { id = ebs_event.101 }
+		ai_chance = { base = 100 }
+	}
+}
+
+# EBS Event 101: Supreme Inspection Bureau Established (Page 2)
+country_event = {
+	id = ebs_event.101
+	title = ebs_event.101.t
+	desc = ebs_event.101.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = ebs_event.101.a
+		add_political_power = 50
+		add_stability = 0.05
+		hidden_effect = {
+			country_event = { id = ebs_crisis.1 days = 3 }
+		}
+		ai_chance = { base = 100 }
+	}
+}
+
+# EBS Event 2: The Evaluation Storm and Green Painted Lawns (Page 1)
+country_event = {
+	id = ebs_event.2
+	title = ebs_event.2.t
+	desc = ebs_event.2.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = ebs_event.2.next
+		country_event = { id = ebs_event.102 }
+		ai_chance = { base = 100 }
+	}
+}
+
+# EBS Event 102: The Evaluation Storm and Green Painted Lawns (Page 2)
+country_event = {
+	id = ebs_event.102
+	title = ebs_event.102.t
+	desc = ebs_event.102.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = ebs_event.2.a
+		add_ideas = EBS_lawn_greening_totalism_spirit
+		add_political_power = 25
+		ai_chance = { base = 70 }
+	}
+
+	option = {
+		name = ebs_event.2.b
+		add_stability = 0.03
+		add_political_power = -20
+		ai_chance = { base = 30 }
+	}
+}
+
+# EBS Event 3: The 87 Athletes Scandal of Benxi (Page 1)
+country_event = {
+	id = ebs_event.3
+	title = ebs_event.3.t
+	desc = ebs_event.3.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = ebs_event.3.next
+		country_event = { id = ebs_event.103 }
+		ai_chance = { base = 100 }
+	}
+}
+
+# EBS Event 103: The 87 Athletes Scandal of Benxi (Page 2)
+country_event = {
+	id = ebs_event.103
+	title = ebs_event.103.t
+	desc = ebs_event.103.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = ebs_event.3.a
+		add_stability = -0.05
+		add_war_support = 0.05
+		custom_effect_tooltip = EBS_benxi_crackdown_tt
+		ai_chance = { base = 80 }
+	}
+
+	option = {
+		name = ebs_event.3.b
+		add_political_power = -30
+		custom_effect_tooltip = EBS_benxi_appease_tt
+		ai_chance = { base = 20 }
+	}
+}
+
+# EBS Event 4: Plateau Skygate Controversy (Page 1)
+country_event = {
+	id = ebs_event.4
+	title = ebs_event.4.t
+	desc = ebs_event.4.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = ebs_event.4.next
+		country_event = { id = ebs_event.104 }
+		ai_chance = { base = 100 }
+	}
+}
+
+# EBS Event 104: Plateau Skygate Controversy (Page 2)
+country_event = {
+	id = ebs_event.104
+	title = ebs_event.104.t
+	desc = ebs_event.104.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = ebs_event.4.a
+		add_political_power = -25
+		add_stability = -0.02
+		ai_chance = { base = 100 }
+	}
+}
+
+# EBS Dongbei Event 1: The Soul-Searching Question of the Northeast Schools (DO NOT MODIFY)
+country_event = {
+	id = ebs_dongbei.1
+	title = ebs_dongbei.1.t
+	desc = ebs_dongbei.1.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = ebs_dongbei.1.a
+		set_country_flag = EBS_dongbei_conspiracy_awakened
+		swap_ideas = {
+			remove_idea = EBS_northeast_undercurrent
+			add_idea = EBS_dongbei_unrest_high
+		}
+		custom_effect_tooltip = EBS_dongbei_future_expansion_tt
+		ai_chance = { base = 100 }
+	}
+}
+
+# EBS Dongbei Event 2: The Mukden Coup - Northeast Takes Over the MOE! (DO NOT MODIFY)
+country_event = {
+	id = ebs_dongbei.2
+	title = ebs_dongbei.2.t
+	desc = ebs_dongbei.2.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = ebs_dongbei.2.a
+		set_country_flag = EBS_path_dongbei
+		set_politics = {
+			ruling_party = radical_socialist
+			elections_allowed = no
+		}
+		swap_ideas = {
+			remove_idea = EBS_dongbei_unrest_high
+			add_idea = EBS_dongbei_liberation_spirit
+		}
+		add_political_power = 100
+		add_stability = 0.20
+		ai_chance = { base = 100 }
+	}
+}
+
+# EBS Event 20: Informatics Track Hegemony
+country_event = {
+	id = ebs_event.20
+	title = ebs_event.20.t
+	desc = ebs_event.20.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = ebs_event.20.a
+		add_ideas = EBS_information_monopoly_spirit
+		add_political_power = 50
+		ai_chance = { base = 100 }
+	}
+}
+
+# EBS Event 21: Wartime Total Control Mobilization
+country_event = {
+	id = ebs_event.21
+	title = ebs_event.21.t
+	desc = ebs_event.21.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	option = {
+		name = ebs_event.21.a
+		add_ideas = EBS_bureau_total_control
+		add_war_support = 0.20
+		add_manpower = 50000
+		ai_chance = { base = 100 }
+	}
+}
+
+# ==========================================
+# INTERWOVEN CRISIS EVENT CHAIN (CRISIS 1-5)
+# Every event strictly has 2 options on final page
+# ==========================================
+
+# Crisis Event 1: The Pry Marks in the Xidan Confidential Archive (Page 1)
+country_event = {
+	id = ebs_crisis.1
+	title = ebs_crisis.1.t
+	desc = ebs_crisis.1.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = {
+		set_country_flag = EBS_crisis_active
+		set_variable = { EBS_power_chen = 0 }
+		set_variable = { EBS_power_huai = 0 }
+		set_variable = { EBS_power_zhou = 0 }
+		set_variable = { EBS_power_wang = 0 }
+		set_variable = { EBS_power_dongbei = 0 }
+	}
+
+	option = {
+		name = ebs_crisis.1.next
+		country_event = { id = ebs_crisis.101 }
+		ai_chance = { base = 100 }
+	}
+}
+
+# Crisis Event 101: The Pry Marks in the Xidan Confidential Archive (Page 2)
+country_event = {
+	id = ebs_crisis.101
+	title = ebs_crisis.101.t
+	desc = ebs_crisis.101.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	# Option A: Old Guard Compound Lockdown
+	option = {
+		name = ebs_crisis.1.a
+		add_political_power = -20
+		hidden_effect = {
+			add_to_variable = { EBS_power_chen = 2 }
+			country_event = { id = ebs_crisis.2 days = 3 }
+		}
+		ai_chance = { base = 50 }
+	}
+
+	# Option B: Technocrat Server Room Surveillance
+	option = {
+		name = ebs_crisis.1.b
+		add_stability = -0.03
+		hidden_effect = {
+			add_to_variable = { EBS_power_huai = 2 }
+			country_event = { id = ebs_crisis.3 days = 3 }
+		}
+		ai_chance = { base = 50 }
+	}
+}
+
+# Crisis Event 2: The 365-Day Ration Pack and the Fictional Athletes (Page 1)
+country_event = {
+	id = ebs_crisis.2
+	title = ebs_crisis.2.t
+	desc = ebs_crisis.2.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = ebs_crisis.2.next
+		country_event = { id = ebs_crisis.102 }
+		ai_chance = { base = 100 }
+	}
+}
+
+# Crisis Event 102: The 365-Day Ration Pack and the Fictional Athletes (Page 2)
+country_event = {
+	id = ebs_crisis.102
+	title = ebs_crisis.102.t
+	desc = ebs_crisis.102.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	# Option A: Settle quietly with canteen slush fund
+	option = {
+		name = ebs_crisis.2.a
+		add_political_power = 20
+		add_stability = -0.03
+		hidden_effect = {
+			add_to_variable = { EBS_power_wang = 2 }
+			add_to_variable = { EBS_power_chen = 1 }
+			country_event = { id = ebs_crisis.4 days = 3 }
+		}
+		ai_chance = { base = 55 }
+	}
+
+	# Option B: Dongbei schools launch joint protest
+	option = {
+		name = ebs_crisis.2.b
+		add_stability = -0.04
+		hidden_effect = {
+			add_to_variable = { EBS_power_dongbei = 2 }
+			add_to_variable = { EBS_power_huai = 1 }
+			country_event = { id = ebs_crisis.4 days = 3 }
+		}
+		ai_chance = { base = 45 }
+	}
+}
+
+# Crisis Event 3: Pungent Morning Fog Over the Green-Painted Turf (Page 1)
+country_event = {
+	id = ebs_crisis.3
+	title = ebs_crisis.3.t
+	desc = ebs_crisis.3.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = ebs_crisis.3.next
+		country_event = { id = ebs_crisis.103 }
+		ai_chance = { base = 100 }
+	}
+}
+
+# Crisis Event 103: Pungent Morning Fog Over the Green-Painted Turf (Page 2)
+country_event = {
+	id = ebs_crisis.103
+	title = ebs_crisis.103.t
+	desc = ebs_crisis.103.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	# Option A: Double down on inspection orders with gas masks
+	option = {
+		name = ebs_crisis.3.a
+		add_stability = -0.06
+		add_war_support = 0.05
+		hidden_effect = {
+			add_to_variable = { EBS_power_zhou = 2 }
+			add_to_variable = { EBS_power_huai = 1 }
+			country_event = { id = ebs_crisis.4 days = 3 }
+		}
+		ai_chance = { base = 50 }
+	}
+
+	# Option B: Pacify victims with secret admission quotas
+	option = {
+		name = ebs_crisis.3.b
+		add_political_power = -25
+		hidden_effect = {
+			add_to_variable = { EBS_power_chen = 2 }
+			add_to_variable = { EBS_power_wang = 1 }
+			country_event = { id = ebs_crisis.4 days = 3 }
+		}
+		ai_chance = { base = 50 }
+	}
+}
+
+# Crisis Event 4: The Classified Soft-Sleeper Train Bound for the Plateau (Page 1)
+country_event = {
+	id = ebs_crisis.4
+	title = ebs_crisis.4.t
+	desc = ebs_crisis.4.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = ebs_crisis.4.next
+		country_event = { id = ebs_crisis.104 }
+		ai_chance = { base = 100 }
+	}
+}
+
+# Crisis Event 104: The Classified Soft-Sleeper Train Bound for the Plateau (Page 2)
+country_event = {
+	id = ebs_crisis.104
+	title = ebs_crisis.104.t
+	desc = ebs_crisis.104.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	# Option A: Enforce administrative gag and defend border program
+	option = {
+		name = ebs_crisis.4.a
+		add_stability = -0.05
+		hidden_effect = {
+			add_to_variable = { EBS_power_chen = 2 }
+			add_to_variable = { EBS_power_zhou = 1 }
+			country_event = { id = ebs_crisis.5 days = 3 }
+		}
+		ai_chance = { base = 50 }
+	}
+
+	# Option B: Northeast students draft revolutionary manifesto
+	option = {
+		name = ebs_crisis.4.b
+		add_war_support = 0.05
+		hidden_effect = {
+			add_to_variable = { EBS_power_dongbei = 2 }
+			add_to_variable = { EBS_power_wang = 1 }
+			country_event = { id = ebs_crisis.5 days = 3 }
+		}
+		ai_chance = { base = 50 }
+	}
+}
+
+# Crisis Event 5: The Screaming Whistle Beyond Shanhai Pass & the Siege of Xidan (Page 1)
+country_event = {
+	id = ebs_crisis.5
+	title = ebs_crisis.5.t
+	desc = ebs_crisis.5.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = ebs_crisis.5.next
+		country_event = { id = ebs_crisis.105 }
+		ai_chance = { base = 100 }
+	}
+}
+
+# Crisis Event 105: The Screaming Whistle Beyond Shanhai Pass & the Siege of Xidan (Page 2)
+country_event = {
+	id = ebs_crisis.105
+	title = ebs_crisis.105.t
+	desc = ebs_crisis.105.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	# Option A: Rely on old guard pickets and inspection gendarmerie
+	option = {
+		name = ebs_crisis.5.a
+		add_political_power = 20
+		hidden_effect = {
+			add_to_variable = { EBS_power_chen = 1 }
+			add_to_variable = { EBS_power_zhou = 1 }
+			# Evaluate decisive winner
+			if = {
+				limit = {
+					check_variable = { EBS_power_dongbei > EBS_power_chen }
+					check_variable = { EBS_power_dongbei > EBS_power_huai }
+					check_variable = { EBS_power_dongbei > EBS_power_zhou }
+					check_variable = { EBS_power_dongbei > EBS_power_wang }
+				}
+				country_event = { id = ebs_ending.5 days = 2 }
+			}
+			else_if = {
+				limit = {
+					check_variable = { EBS_power_huai > EBS_power_chen }
+					check_variable = { EBS_power_huai > EBS_power_zhou }
+					check_variable = { EBS_power_huai > EBS_power_wang }
+				}
+				country_event = { id = ebs_ending.2 days = 2 }
+			}
+			else_if = {
+				limit = {
+					check_variable = { EBS_power_chen > EBS_power_zhou }
+					check_variable = { EBS_power_chen > EBS_power_wang }
+				}
+				country_event = { id = ebs_ending.1 days = 2 }
+			}
+			else_if = {
+				limit = {
+					check_variable = { EBS_power_zhou > EBS_power_wang }
+				}
+				country_event = { id = ebs_ending.3 days = 2 }
+			}
+			else = {
+				country_event = { id = ebs_ending.4 days = 2 }
+			}
+		}
+		ai_chance = { base = 50 }
+	}
+
+	# Option B: Seize communication center and link with arriving trains
+	option = {
+		name = ebs_crisis.5.b
+		add_political_power = -20
+		hidden_effect = {
+			add_to_variable = { EBS_power_huai = 1 }
+			add_to_variable = { EBS_power_dongbei = 1 }
+			# Evaluate decisive winner
+			if = {
+				limit = {
+					check_variable = { EBS_power_dongbei > EBS_power_chen }
+					check_variable = { EBS_power_dongbei > EBS_power_huai }
+					check_variable = { EBS_power_dongbei > EBS_power_zhou }
+					check_variable = { EBS_power_dongbei > EBS_power_wang }
+				}
+				country_event = { id = ebs_ending.5 days = 2 }
+			}
+			else_if = {
+				limit = {
+					check_variable = { EBS_power_huai > EBS_power_chen }
+					check_variable = { EBS_power_huai > EBS_power_zhou }
+					check_variable = { EBS_power_huai > EBS_power_wang }
+				}
+				country_event = { id = ebs_ending.2 days = 2 }
+			}
+			else_if = {
+				limit = {
+					check_variable = { EBS_power_chen > EBS_power_zhou }
+					check_variable = { EBS_power_chen > EBS_power_wang }
+				}
+				country_event = { id = ebs_ending.1 days = 2 }
+			}
+			else_if = {
+				limit = {
+					check_variable = { EBS_power_zhou > EBS_power_wang }
+				}
+				country_event = { id = ebs_ending.3 days = 2 }
+			}
+			else = {
+				country_event = { id = ebs_ending.4 days = 2 }
+			}
+		}
+		ai_chance = { base = 50 }
+	}
+}
+
+# ==========================================
+# CRISIS CLIMAX RESOLUTIONS (ENDING 1-5)
+# Every ending strictly has 1 option on final page
+# ==========================================
+
+# Ending 1: Chen Commissioner Absolutism (Page 1)
+country_event = {
+	id = ebs_ending.1
+	title = ebs_ending.1.t
+	desc = ebs_ending.1.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = {
+		set_country_flag = EBS_crisis_resolved
+		clr_country_flag = EBS_crisis_active
+	}
+
+	option = {
+		name = ebs_ending.1.next
+		country_event = { id = ebs_ending.101 }
+		ai_chance = { base = 100 }
+	}
+}
+
+# Ending 101: Chen Commissioner Absolutism (Page 2)
+country_event = {
+	id = ebs_ending.101
+	title = ebs_ending.101.t
+	desc = ebs_ending.101.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = ebs_ending.1.a
+		set_country_flag = EBS_faction_chen_victorious
+		set_country_flag = EBS_path_chen
+		set_politics = {
+			ruling_party = paternal_autocrat
+			elections_allowed = no
+		}
+		add_ideas = EBS_chen_absolutism_spirit
+		add_political_power = 100
+		add_stability = 0.10
+	}
+}
+
+# Ending 2: Chief Engineer Huai Cybernetics Coup (Page 1)
+country_event = {
+	id = ebs_ending.2
+	title = ebs_ending.2.t
+	desc = ebs_ending.2.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = {
+		set_country_flag = EBS_crisis_resolved
+		clr_country_flag = EBS_crisis_active
+	}
+
+	option = {
+		name = ebs_ending.2.next
+		country_event = { id = ebs_ending.102 }
+		ai_chance = { base = 100 }
+	}
+}
+
+# Ending 102: Chief Engineer Huai Cybernetics Coup (Page 2)
+country_event = {
+	id = ebs_ending.102
+	title = ebs_ending.102.t
+	desc = ebs_ending.102.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = ebs_ending.2.a
+		set_country_flag = EBS_faction_huai_victorious
+		set_country_flag = EBS_path_huai
+		set_politics = {
+			ruling_party = authoritarian_democrat
+			elections_allowed = no
+		}
+		add_ideas = EBS_cybernetic_dictatorship_spirit
+		add_political_power = 100
+		add_stability = 0.05
+	}
+}
+
+# Ending 3: Director Zhou Inspection Totalism (Page 1)
+country_event = {
+	id = ebs_ending.3
+	title = ebs_ending.3.t
+	desc = ebs_ending.3.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = {
+		set_country_flag = EBS_crisis_resolved
+		clr_country_flag = EBS_crisis_active
+	}
+
+	option = {
+		name = ebs_ending.3.next
+		country_event = { id = ebs_ending.103 }
+		ai_chance = { base = 100 }
+	}
+}
+
+# Ending 103: Director Zhou Inspection Totalism (Page 2)
+country_event = {
+	id = ebs_ending.103
+	title = ebs_ending.103.t
+	desc = ebs_ending.103.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = ebs_ending.3.a
+		set_country_flag = EBS_faction_zhou_victorious
+		set_country_flag = EBS_path_zhou
+		set_politics = {
+			ruling_party = totalist
+			elections_allowed = no
+		}
+		add_ideas = EBS_lawn_greening_totalism_spirit
+		add_political_power = 100
+		add_war_support = 0.10
+	}
+}
+
+# Ending 4: Wang Canteen Consortium Plutocracy (Page 1)
+country_event = {
+	id = ebs_ending.4
+	title = ebs_ending.4.t
+	desc = ebs_ending.4.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = {
+		set_country_flag = EBS_crisis_resolved
+		clr_country_flag = EBS_crisis_active
+	}
+
+	option = {
+		name = ebs_ending.4.next
+		country_event = { id = ebs_ending.104 }
+		ai_chance = { base = 100 }
+	}
+}
+
+# Ending 104: Wang Canteen Consortium Plutocracy (Page 2)
+country_event = {
+	id = ebs_ending.104
+	title = ebs_ending.104.t
+	desc = ebs_ending.104.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = ebs_ending.4.a
+		set_country_flag = EBS_faction_wang_victorious
+		set_country_flag = EBS_path_wang
+		set_politics = {
+			ruling_party = market_liberal
+			elections_allowed = no
+		}
+		add_ideas = EBS_canteen_black_gold_spirit
+		add_political_power = 150
+	}
+}
+
+# Ending 5: Dongbei Schools Mukden Coup (DO NOT MODIFY)
+country_event = {
+	id = ebs_ending.5
+	title = ebs_ending.5.t
+	desc = ebs_ending.5.d
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = {
+		set_country_flag = EBS_crisis_resolved
+		clr_country_flag = EBS_crisis_active
+	}
+
+	option = {
+		name = ebs_ending.5.a
+		set_country_flag = EBS_faction_dongbei_victorious
+		set_country_flag = EBS_path_dongbei
+		set_politics = {
+			ruling_party = radical_socialist
+			elections_allowed = no
+		}
+		swap_ideas = {
+			remove_idea = EBS_northeast_undercurrent
+			add_idea = EBS_dongbei_liberation_spirit
+		}
+		add_political_power = 100
+		add_stability = 0.15
+	}
+}
+
+# ==========================================
+# FOCUS COMPLETION NARRATIVE EVENTS (1-60)
+# Every focus event strictly has 1 option
+# ==========================================
+
+# Focus Event 1: The Council Schism Finalized (Page 1)
+country_event = {
+	id = ebs_focus_event.1
+	title = ebs_focus_event.1.t
+	desc = ebs_focus_event.1.d
+	picture = GFX_report_event_chinese_officers
+	is_triggered_only = yes
+
+	option = {
+		name = ebs_focus_event.1.next
+		country_event = { id = ebs_focus_event.101 }
+		ai_chance = { base = 100 }
+	}
+}
+
+# Focus Event 101: The Council Schism Finalized (Page 2)
+country_event = {
+	id = ebs_focus_event.101
+	title = ebs_focus_event.101.t
+	desc = ebs_focus_event.101.d
+	picture = GFX_report_event_chinese_officers
+	is_triggered_only = yes
+
+	option = {
+		name = ebs_focus_event.101.a
+		add_political_power = 25
+	}
+}
+
+# Focus Event 2: Inspectors General Assembly (EBS_inspectors_general_assembly)
+country_event = {
+	id = ebs_focus_event.2
+	title = ebs_focus_event.2.t
+	desc = ebs_focus_event.2.d
+	picture = GFX_report_event_chinese_officers
+	is_triggered_only = yes
+
+	option = {
+		name = ebs_focus_event.2.a
+		add_political_power = 30
+	}
+}
+
+# Focus Event 3: Bureaucratic Balance (EBS_balance_bureaucratic_interests)
+country_event = {
+	id = ebs_focus_event.3
+	title = ebs_focus_event.3.t
+	desc = ebs_focus_event.3.d
+	picture = GFX_report_event_chinese_officers
+	is_triggered_only = yes
+
+	option = {
+		name = ebs_focus_event.3.a
+		add_political_power = 20
+		add_stability = 0.05
+	}
+}
+
+# Focus Event 4: Uncover Corruption Dossiers (EBS_uncover_internal_corruption)
+country_event = {
+	id = ebs_focus_event.4
+	title = ebs_focus_event.4.t
+	desc = ebs_focus_event.4.d
+	picture = GFX_report_event_chinese_officers
+	is_triggered_only = yes
+
+	option = {
+		name = ebs_focus_event.4.a
+		add_political_power = 30
+	}
+}
+
+# Focus Event 5: Chen Absolutism (EBS_chen_absolutism)
+country_event = {
+	id = ebs_focus_event.5
+	title = ebs_focus_event.5.t
+	desc = ebs_focus_event.5.d
+	picture = GFX_report_event_chinese_officers
+	is_triggered_only = yes
+
+	option = {
+		name = ebs_focus_event.5.a
+		add_political_power = 50
+	}
+}
+
+# Focus Event 6: Beijing Admission Bastion (EBS_strengthen_beijing_admissions)
+country_event = {
+	id = ebs_focus_event.6
+	title = ebs_focus_event.6.t
+	desc = ebs_focus_event.6.d
+	picture = GFX_report_event_chinese_officers
+	is_triggered_only = yes
+
+	option = {
+		name = ebs_focus_event.6.a
+		add_stability = 0.05
+	}
+}
+
+# Focus Event 7: Haidian Early Training Monopoly (EBS_fortify_haidian_bastion)
+country_event = {
+	id = ebs_focus_event.7
+	title = ebs_focus_event.7.t
+	desc = ebs_focus_event.7.d
+	picture = GFX_report_event_chinese_officers
+	is_triggered_only = yes
+
+	option = {
+		name = ebs_focus_event.7.a
+		add_political_power = 25
+	}
+}
+
+# Focus Event 8: Untouchable Aristocracy (EBS_the_untouchable_nobility)
+country_event = {
+	id = ebs_focus_event.8
+	title = ebs_focus_event.8.t
+	desc = ebs_focus_event.8.d
+	picture = GFX_report_event_chinese_officers
+	is_triggered_only = yes
+
+	option = {
+		name = ebs_focus_event.8.a
+		add_stability = 0.05
+	}
+}
+
+# Focus Event 9: Huai Technocratic Coup (EBS_huai_technocratic_coup)
+country_event = {
+	id = ebs_focus_event.9
+	title = ebs_focus_event.9.t
+	desc = ebs_focus_event.9.d
+	picture = GFX_report_event_chinese_officers
+	is_triggered_only = yes
+
+	option = {
+		name = ebs_focus_event.9.a
+		add_political_power = 50
+	}
+}
+
+# Focus Event 10: Tsinghua Supercomputer Grid (EBS_tsinghua_supercomputer_grid)
+country_event = {
+	id = ebs_focus_event.10
+	title = ebs_focus_event.10.t
+	desc = ebs_focus_event.10.d
+	picture = GFX_report_event_chinese_officers
+	is_triggered_only = yes
+
+	option = {
+		name = ebs_focus_event.10.a
+		add_political_power = 30
+	}
+}
+
+# Focus Event 11: AI Microexpression Proctoring (EBS_ai_proctoring_neurolink)
+country_event = {
+	id = ebs_focus_event.11
+	title = ebs_focus_event.11.t
+	desc = ebs_focus_event.11.d
+	picture = GFX_report_event_chinese_officers
+	is_triggered_only = yes
+
+	option = {
+		name = ebs_focus_event.11.a
+		add_stability = 0.05
+	}
+}
+
+# Focus Event 12: Algorithmic Credit System (EBS_algorithmic_credit_system)
+country_event = {
+	id = ebs_focus_event.12
+	title = ebs_focus_event.12.t
+	desc = ebs_focus_event.12.d
+	picture = GFX_report_event_chinese_officers
+	is_triggered_only = yes
+
+	option = {
+		name = ebs_focus_event.12.a
+		add_political_power = 25
+	}
+}
+
+# Focus Event 13: Algorithm Determines Destiny (EBS_algorithm_determines_destiny)
+country_event = {
+	id = ebs_focus_event.13
+	title = ebs_focus_event.13.t
+	desc = ebs_focus_event.13.d
+	picture = GFX_report_event_chinese_officers
+	is_triggered_only = yes
+
+	option = {
+		name = ebs_focus_event.13.a
+		add_stability = 0.05
+	}
+}
+
+# Focus Event 14: Zhou Evaluation Mobilization (EBS_zhou_evaluation_frenzy)
+country_event = {
+	id = ebs_focus_event.14
+	title = ebs_focus_event.14.t
+	desc = ebs_focus_event.14.d
+	picture = GFX_report_event_chinese_officers
+	is_triggered_only = yes
+
+	option = {
+		name = ebs_focus_event.14.a
+		add_war_support = 0.05
+	}
+}
+
+# Focus Event 15: Green Paint Mobilization (EBS_nationwide_lawn_greening)
+country_event = {
+	id = ebs_focus_event.15
+	title = ebs_focus_event.15.t
+	desc = ebs_focus_event.15.d
+	picture = GFX_report_event_chinese_officers
+	is_triggered_only = yes
+
+	option = {
+		name = ebs_focus_event.15.a
+		add_political_power = 30
+	}
+}
+
+# Focus Event 16: Comply or Shutdown (EBS_evaluation_or_shutdown)
+country_event = {
+	id = ebs_focus_event.16
+	title = ebs_focus_event.16.t
+	desc = ebs_focus_event.16.d
+	picture = GFX_report_event_chinese_officers
+	is_triggered_only = yes
+
+	option = {
+		name = ebs_focus_event.16.a
+		add_stability = 0.05
+	}
+}
+
+# Focus Event 17: Total Inspection Model State (EBS_total_inspection_state)
+country_event = {
+	id = ebs_focus_event.17
+	title = ebs_focus_event.17.t
+	desc = ebs_focus_event.17.d
+	picture = GFX_report_event_chinese_officers
+	is_triggered_only = yes
+
+	option = {
+		name = ebs_focus_event.17.a
+		add_war_support = 0.05
+	}
+}
+
+# Focus Event 18: Wang Commercial Syndicate (EBS_wang_commercial_consortium)
+country_event = {
+	id = ebs_focus_event.18
+	title = ebs_focus_event.18.t
+	desc = ebs_focus_event.18.d
+	picture = GFX_report_event_chinese_officers
+	is_triggered_only = yes
+
+	option = {
+		name = ebs_focus_event.18.a
+		add_political_power = 50
+	}
+}
+
+# Focus Event 19: Athletic Quota Market (EBS_sports_quota_black_market)
+country_event = {
+	id = ebs_focus_event.19
+	title = ebs_focus_event.19.t
+	desc = ebs_focus_event.19.d
+	picture = GFX_report_event_chinese_officers
+	is_triggered_only = yes
+
+	option = {
+		name = ebs_focus_event.19.a
+		add_political_power = 40
+	}
+}
+
+# Focus Event 20: Slush Funds Global Network (EBS_educational_slush_funds)
+country_event = {
+	id = ebs_focus_event.20
+	title = ebs_focus_event.20.t
+	desc = ebs_focus_event.20.d
+	picture = GFX_report_event_chinese_officers
+	is_triggered_only = yes
+
+	option = {
+		name = ebs_focus_event.20.a
+		add_political_power = 30
+	}
+}
+
+# Focus Event 21: Money Conquers All (EBS_educational_plutocracy)
+country_event = {
+	id = ebs_focus_event.21
+	title = ebs_focus_event.21.t
+	desc = ebs_focus_event.21.d
+	picture = GFX_report_event_chinese_officers
+	is_triggered_only = yes
+
+	option = {
+		name = ebs_focus_event.21.a
+		add_political_power = 60
+	}
+}
+
+# Focus Event 22: Dongbei Normal Mother Engine (DO NOT MODIFY)
+country_event = {
+	id = ebs_focus_event.22
+	title = ebs_focus_event.22.t
+	desc = ebs_focus_event.22.d
+	picture = GFX_report_event_chinese_officers
+	is_triggered_only = yes
+
+	option = {
+		name = ebs_focus_event.22.a
+		add_political_power = 30
+	}
+}
+
+# Focus Event 23: Secret Alliance of Three Provinces (DO NOT MODIFY)
+country_event = {
+	id = ebs_focus_event.23
+	title = ebs_focus_event.23.t
+	desc = ebs_focus_event.23.d
+	picture = GFX_report_event_chinese_officers
+	is_triggered_only = yes
+
+	option = {
+		name = ebs_focus_event.23.a
+		add_war_support = 0.05
+	}
+}
+
+# Focus Event 24: Armored Trains Breach the Pass (DO NOT MODIFY)
+country_event = {
+	id = ebs_focus_event.24
+	title = ebs_focus_event.24.t
+	desc = ebs_focus_event.24.d
+	picture = GFX_report_event_chinese_officers
+	is_triggered_only = yes
+
+	option = {
+		name = ebs_focus_event.24.a
+		add_war_support = 0.05
+	}
+}
+
+# Focus Event 25: Nationwide Heavy Industry Exam (DO NOT MODIFY)
+country_event = {
+	id = ebs_focus_event.25
+	title = ebs_focus_event.25.t
+	desc = ebs_focus_event.25.d
+	picture = GFX_report_event_chinese_officers
+	is_triggered_only = yes
+
+	option = {
+		name = ebs_focus_event.25.a
+		add_stability = 0.10
+	}
+}
+
+# Focus Event 26: Central Printing Plant Fortress (EBS_seize_central_printing_press)
+country_event = {
+	id = ebs_focus_event.26
+	title = ebs_focus_event.26.t
+	desc = ebs_focus_event.26.d
+	picture = GFX_report_event_chinese_officers
+	is_triggered_only = yes
+
+	option = {
+		name = ebs_focus_event.26.a
+		add_political_power = 25
+	}
+}
+
+# Focus Event 27: Suppress Southern Olympiad Databases (EBS_rig_informatics_syllabus)
+country_event = {
+	id = ebs_focus_event.27
+	title = ebs_focus_event.27.t
+	desc = ebs_focus_event.27.d
+	picture = GFX_report_event_chinese_officers
+	is_triggered_only = yes
+
+	option = {
+		name = ebs_focus_event.27.a
+		add_political_power = 30
+	}
+}
+
+# Focus Event 28: Manipulate National Exam Board (EBS_manipulate_national_exam_board)
+country_event = {
+	id = ebs_focus_event.28
+	title = ebs_focus_event.28.t
+	desc = ebs_focus_event.28.d
+	picture = GFX_report_event_chinese_officers
+	is_triggered_only = yes
+
+	option = {
+		name = ebs_focus_event.28.a
+		add_political_power = 25
+	}
+}
+
+# Focus Event 29: Lock Ivory Tower Top 3 (EBS_lock_ivory_tower_top3)
+country_event = {
+	id = ebs_focus_event.29
+	title = ebs_focus_event.29.t
+	desc = ebs_focus_event.29.d
+	picture = GFX_report_event_chinese_officers
+	is_triggered_only = yes
+
+	option = {
+		name = ebs_focus_event.29.a
+		add_stability = 0.05
+	}
+}
+
+# Focus Event 30: Takeover Shanhe Crucible (EBS_war_mobilization_1938)
+country_event = {
+	id = ebs_focus_event.30
+	title = ebs_focus_event.30.t
+	desc = ebs_focus_event.30.d
+	picture = GFX_report_event_chinese_officers
+	is_triggered_only = yes
+
+	option = {
+		name = ebs_focus_event.30.a
+		add_war_support = 0.05
+	}
+}
+
+# Focus Event 31: Subjugate Huazhong Huanggang (EBS_subjugate_huazhong_hbe)
+country_event = {
+	id = ebs_focus_event.31
+	title = ebs_focus_event.31.t
+	desc = ebs_focus_event.31.d
+	picture = GFX_report_event_chinese_officers
+	is_triggered_only = yes
+
+	option = {
+		name = ebs_focus_event.31.a
+		add_political_power = 30
+	}
+}
+
+# Focus Event 32: Strike East and South (EBS_strike_east_and_south)
+country_event = {
+	id = ebs_focus_event.32
+	title = ebs_focus_event.32.t
+	desc = ebs_focus_event.32.d
+	picture = GFX_report_event_chinese_officers
+	is_triggered_only = yes
+
+	option = {
+		name = ebs_focus_event.32.a
+		add_stability = 0.05
+	}
+}
+
+# Focus Event 33: Siege of Yandao Street (Page 1)
+country_event = {
+	id = ebs_focus_event.33
+	title = ebs_focus_event.33.t
+	desc = ebs_focus_event.33.d
+	picture = GFX_report_event_chinese_officers
+	is_triggered_only = yes
+
+	option = {
+		name = ebs_focus_event.33.next
+		country_event = { id = ebs_focus_event.133 }
+		ai_chance = { base = 100 }
+	}
+}
+
+# Focus Event 133: Siege of Yandao Street (Page 2)
+country_event = {
+	id = ebs_focus_event.133
+	title = ebs_focus_event.133.t
+	desc = ebs_focus_event.133.d
+	picture = GFX_report_event_chinese_officers
+	is_triggered_only = yes
+
+	option = {
+		name = ebs_focus_event.133.a
+		add_war_support = 0.05
+	}
+}
+
+# Focus Event 34: Grand Unified Exam Canon Promulgation (Page 1)
+country_event = {
+	id = ebs_focus_event.34
+	title = ebs_focus_event.34.t
+	desc = ebs_focus_event.34.d
+	picture = GFX_report_event_chinese_officers
+	is_triggered_only = yes
+
+	option = {
+		name = ebs_focus_event.34.next
+		country_event = { id = ebs_focus_event.134 }
+		ai_chance = { base = 100 }
+	}
+}
+
+# Focus Event 134: Grand Unified Exam Canon Promulgation (Page 2)
+country_event = {
+	id = ebs_focus_event.134
+	title = ebs_focus_event.134.t
+	desc = ebs_focus_event.134.d
+	picture = GFX_report_event_chinese_officers
+	is_triggered_only = yes
+
+	option = {
+		name = ebs_focus_event.134.a
+		add_political_power = 100
+		add_stability = 0.10
+	}
+}
+
+# Focus Event 35: Monopolize Special Pathways (EBS_monopolize_special_pathways)
+country_event = {
+	id = ebs_focus_event.35
+	title = ebs_focus_event.35.t
+	desc = ebs_focus_event.35.d
+	picture = GFX_report_event_chinese_officers
+	is_triggered_only = yes
+
+	option = {
+		name = ebs_focus_event.35.a
+		add_political_power = 25
+	}
+}
+
+# Focus Event 36: Squeeze Classroom Moisture (EBS_squeeze_classroom_moisture)
+country_event = {
+	id = ebs_focus_event.36
+	title = ebs_focus_event.36.t
+	desc = ebs_focus_event.36.d
+	picture = GFX_report_event_chinese_officers
+	is_triggered_only = yes
+
+	option = {
+		name = ebs_focus_event.36.a
+		add_stability = 0.05
+	}
+}
+
+# Focus Event 37: Tibet Airdrop Express (EBS_tibet_airdrop_express)
+country_event = {
+	id = ebs_focus_event.37
+	title = ebs_focus_event.37.t
+	desc = ebs_focus_event.37.d
+	picture = GFX_report_event_chinese_officers
+	is_triggered_only = yes
+
+	option = {
+		name = ebs_focus_event.37.a
+		add_political_power = 30
+	}
+}
+
+# Focus Event 38: Bureaucratic Iron Stamp (EBS_bureaucratic_iron_stamp)
+country_event = {
+	id = ebs_focus_event.38
+	title = ebs_focus_event.38.t
+	desc = ebs_focus_event.38.d
+	picture = GFX_report_event_chinese_officers
+	is_triggered_only = yes
+
+	option = {
+		name = ebs_focus_event.38.a
+		add_political_power = 25
+	}
+}
+
+# Focus Event 39: Imperial Examination Throne (EBS_imperial_examination_throne)
+country_event = {
+	id = ebs_focus_event.39
+	title = ebs_focus_event.39.t
+	desc = ebs_focus_event.39.d
+	picture = GFX_report_event_chinese_officers
+	is_triggered_only = yes
+
+	option = {
+		name = ebs_focus_event.39.a
+		add_stability = 0.08
+	}
+}
+
+# Focus Event 40: Fiber Optic Backbone (EBS_fiber_optic_exam_backbone)
+country_event = {
+	id = ebs_focus_event.40
+	title = ebs_focus_event.40.t
+	desc = ebs_focus_event.40.d
+	picture = GFX_report_event_chinese_officers
+	is_triggered_only = yes
+
+	option = {
+		name = ebs_focus_event.40.a
+		add_political_power = 30
+	}
+}
+
+# Focus Event 41: Quantum Grading Datacenter (EBS_quantum_grading_datacenter)
+country_event = {
+	id = ebs_focus_event.41
+	title = ebs_focus_event.41.t
+	desc = ebs_focus_event.41.d
+	picture = GFX_report_event_chinese_officers
+	is_triggered_only = yes
+
+	option = {
+		name = ebs_focus_event.41.a
+		add_stability = 0.05
+	}
+}
+
+# Focus Event 42: Predictive Dropout Model (EBS_predictive_drop_out_model)
+country_event = {
+	id = ebs_focus_event.42
+	title = ebs_focus_event.42.t
+	desc = ebs_focus_event.42.d
+	picture = GFX_report_event_chinese_officers
+	is_triggered_only = yes
+
+	option = {
+		name = ebs_focus_event.42.a
+		add_political_power = 25
+	}
+}
+
+# Focus Event 43: Silicon Curriculum Singularity (EBS_silicon_curriculum_singularity)
+country_event = {
+	id = ebs_focus_event.43
+	title = ebs_focus_event.43.t
+	desc = ebs_focus_event.43.d
+	picture = GFX_report_event_chinese_officers
+	is_triggered_only = yes
+
+	option = {
+		name = ebs_focus_event.43.a
+		add_stability = 0.08
+	}
+}
+
+# Focus Event 44: Five Day Shock Inspection (EBS_five_day_shock_inspection)
+country_event = {
+	id = ebs_focus_event.44
+	title = ebs_focus_event.44.t
+	desc = ebs_focus_event.44.d
+	picture = GFX_report_event_chinese_officers
+	is_triggered_only = yes
+
+	option = {
+		name = ebs_focus_event.44.a
+		add_war_support = 0.05
+	}
+}
+
+# Focus Event 45: Model School Showcase (EBS_model_school_showcase)
+country_event = {
+	id = ebs_focus_event.45
+	title = ebs_focus_event.45.t
+	desc = ebs_focus_event.45.d
+	picture = GFX_report_event_chinese_officers
+	is_triggered_only = yes
+
+	option = {
+		name = ebs_focus_event.45.a
+		add_political_power = 25
+	}
+}
+
+# Focus Event 46: Punitive Disciplinary Tribunal (EBS_punitive_disciplinary_tribunal)
+country_event = {
+	id = ebs_focus_event.46
+	title = ebs_focus_event.46.t
+	desc = ebs_focus_event.46.d
+	picture = GFX_report_event_chinese_officers
+	is_triggered_only = yes
+
+	option = {
+		name = ebs_focus_event.46.a
+		add_stability = 0.05
+	}
+}
+
+# Focus Event 47: Perpetual Inspection Mobilization (EBS_perpetual_inspection_mobilization)
+country_event = {
+	id = ebs_focus_event.47
+	title = ebs_focus_event.47.t
+	desc = ebs_focus_event.47.d
+	picture = GFX_report_event_chinese_officers
+	is_triggered_only = yes
+
+	option = {
+		name = ebs_focus_event.47.a
+		add_war_support = 0.08
+	}
+}
+
+# Focus Event 48: Privatized Varsity Franchise (EBS_privatized_varsity_franchise)
+country_event = {
+	id = ebs_focus_event.48
+	title = ebs_focus_event.48.t
+	desc = ebs_focus_event.48.d
+	picture = GFX_report_event_chinese_officers
+	is_triggered_only = yes
+
+	option = {
+		name = ebs_focus_event.48.a
+		add_political_power = 35
+	}
+}
+
+# Focus Event 49: Athletic Darwinism (EBS_athletic_darwinism)
+country_event = {
+	id = ebs_focus_event.49
+	title = ebs_focus_event.49.t
+	desc = ebs_focus_event.49.d
+	picture = GFX_report_event_chinese_officers
+	is_triggered_only = yes
+
+	option = {
+		name = ebs_focus_event.49.a
+		add_war_support = 0.05
+	}
+}
+
+# Focus Event 50: Exclusive Uniform Procurement (EBS_exclusive_uniform_procurement)
+country_event = {
+	id = ebs_focus_event.50
+	title = ebs_focus_event.50.t
+	desc = ebs_focus_event.50.d
+	picture = GFX_report_event_chinese_officers
+	is_triggered_only = yes
+
+	option = {
+		name = ebs_focus_event.50.a
+		add_political_power = 30
+	}
+}
+
+# Focus Event 51: Banquet Diplomacy Network (EBS_banquet_diplomacy_network)
+country_event = {
+	id = ebs_focus_event.51
+	title = ebs_focus_event.51.t
+	desc = ebs_focus_event.51.d
+	picture = GFX_report_event_chinese_officers
+	is_triggered_only = yes
+
+	option = {
+		name = ebs_focus_event.51.a
+		add_political_power = 25
+	}
+}
+
+# Focus Event 52: Unrestricted Exam Market (EBS_the_unrestricted_exam_market)
+country_event = {
+	id = ebs_focus_event.52
+	title = ebs_focus_event.52.t
+	desc = ebs_focus_event.52.d
+	picture = GFX_report_event_chinese_officers
+	is_triggered_only = yes
+
+	option = {
+		name = ebs_focus_event.52.a
+		add_political_power = 60
+	}
+}
+
+# Focus Event 53: Furnace Night Study Battalions (DO NOT MODIFY)
+country_event = {
+	id = ebs_focus_event.53
+	title = ebs_focus_event.53.t
+	desc = ebs_focus_event.53.d
+	picture = GFX_report_event_chinese_officers
+	is_triggered_only = yes
+
+	option = {
+		name = ebs_focus_event.53.a
+		add_war_support = 0.05
+	}
+}
+
+# Focus Event 54: Armored Exam Trains (DO NOT MODIFY)
+country_event = {
+	id = ebs_focus_event.54
+	title = ebs_focus_event.54.t
+	desc = ebs_focus_event.54.d
+	picture = GFX_report_event_chinese_officers
+	is_triggered_only = yes
+
+	option = {
+		name = ebs_focus_event.54.a
+		add_war_support = 0.05
+	}
+}
+
+# Focus Event 55: Mukden Takes Over MOE (DO NOT MODIFY)
+country_event = {
+	id = ebs_focus_event.55
+	title = ebs_focus_event.55.t
+	desc = ebs_focus_event.55.d
+	picture = GFX_report_event_chinese_officers
+	is_triggered_only = yes
+
+	option = {
+		name = ebs_focus_event.55.a
+		add_stability = 0.10
+		add_war_support = 0.10
+	}
+}
+
+# Focus Event 56: Worker Student Syndicate Councils (DO NOT MODIFY)
+country_event = {
+	id = ebs_focus_event.56
+	title = ebs_focus_event.56.t
+	desc = ebs_focus_event.56.d
+	picture = GFX_report_event_chinese_officers
+	is_triggered_only = yes
+
+	option = {
+		name = ebs_focus_event.56.a
+		add_stability = 0.05
+	}
+}
+
+# Focus Event 57: Absolute Meritocracy Republic (DO NOT MODIFY)
+country_event = {
+	id = ebs_focus_event.57
+	title = ebs_focus_event.57.t
+	desc = ebs_focus_event.57.d
+	picture = GFX_report_event_chinese_officers
+	is_triggered_only = yes
+
+	option = {
+		name = ebs_focus_event.57.a
+		add_stability = 0.15
+		add_political_power = 100
+	}
+}
+
+# Focus Event 58: Industrial Backbone (EBS_industrial_backbone)
+country_event = {
+	id = ebs_focus_event.58
+	title = ebs_focus_event.58.t
+	desc = ebs_focus_event.58.d
+	picture = GFX_report_event_chinese_officers
+	is_triggered_only = yes
+
+	option = {
+		name = ebs_focus_event.58.a
+		add_political_power = 25
+	}
+}
+
+# Focus Event 59: Curb Southern Resistance (EBS_curb_southern_resistance)
+country_event = {
+	id = ebs_focus_event.59
+	title = ebs_focus_event.59.t
+	desc = ebs_focus_event.59.d
+	picture = GFX_report_event_chinese_officers
+	is_triggered_only = yes
+
+	option = {
+		name = ebs_focus_event.59.a
+		add_war_support = 0.05
+	}
+}
+
+# Focus Event 60: Coopt Provincial Collaborators (EBS_coopt_provincial_collaborators)
+country_event = {
+	id = ebs_focus_event.60
+	title = ebs_focus_event.60.t
+	desc = ebs_focus_event.60.d
+	picture = GFX_report_event_chinese_officers
+	is_triggered_only = yes
+
+	option = {
+		name = ebs_focus_event.60.a
+		add_political_power = 30
+	}
+}
+'''
+
+target_path = Path("events/EBS_events.txt")
+with open(target_path, "w", encoding="utf-8") as f:
+    f.write(content.strip() + "\n")
+
+print(f"[OK] Written {len(content.splitlines())} lines to {target_path}")

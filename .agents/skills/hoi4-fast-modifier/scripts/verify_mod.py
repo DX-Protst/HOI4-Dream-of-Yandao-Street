@@ -4,11 +4,12 @@
 HOI4 Fast Integrity & Anti-Hallucination Guard
 Verifies:
 1. UTF-8 BOM encoding for all .yml localization files.
-2. Pure ASCII in comments (#) for all .txt scripts (prevents Clausewitz brace matching crash).
-3. Symmetrical brace matching '{' vs '}' across all .txt scripts.
-4. No illegal outer wrappers in BOP and decision scripts (bop = {}, decisions = {}).
-5. National focus X-coordinates avoiding continuous focus UI panel (x >= 9).
-6. Event namespaces properly registered with add_namespace.
+2. YAML syntax compliance (no multiline raw string splits, valid key:0 "value" format).
+3. Pure ASCII in comments (#) for all .txt scripts (prevents Clausewitz brace matching crash).
+4. Symmetrical brace matching '{' vs '}' across all .txt scripts.
+5. No illegal outer wrappers in BOP and decision scripts (bop = {}, decisions = {}).
+6. National focus X-coordinates avoiding continuous focus UI panel (x >= 9).
+7. Event namespaces properly registered with add_namespace.
 """
 
 import os
@@ -23,26 +24,48 @@ if sys.platform == "win32":
     except Exception:
         pass
 
-def check_bom(mod_root: Path) -> list:
+def check_bom_and_yml(mod_root: Path) -> list:
     errors = []
     loc_dir = mod_root / "localisation"
     if not loc_dir.exists():
         return errors
     
     for yml_path in loc_dir.rglob("*.yml"):
+        rel_path = yml_path.relative_to(mod_root)
         try:
             with open(yml_path, "rb") as f:
-                raw = f.read(20)
+                raw = f.read()
             if not raw.startswith(b"\xef\xbb\xbf"):
-                errors.append(f"[MISSING BOM] {yml_path.relative_to(mod_root)}: Missing UTF-8 BOM header (\\xef\\xbb\\xbf). Game will fail to load localization!")
+                errors.append(f"[MISSING BOM] {rel_path}: Missing UTF-8 BOM header (\\xef\\xbb\\xbf). Game will fail to load localization!")
+                continue
             elif raw[3:].startswith(b"\xef\xbb\xbf"):
-                errors.append(f"[DOUBLE BOM] {yml_path.relative_to(mod_root)}: Detected double/multiple UTF-8 BOM headers! Causes 'Invalid key name at line 1 and column 1'.")
-            else:
-                first_line = raw[3:].split(b"\n")[0].strip()
-                if not (first_line.startswith(b"l_simp_chinese:") or first_line.startswith(b"l_english:")):
-                    errors.append(f"[INVALID FIRST LINE] {yml_path.relative_to(mod_root)}: First line must start with l_language: (got '{first_line.decode('utf-8', errors='ignore')}')")
+                errors.append(f"[DOUBLE BOM] {rel_path}: Detected double/multiple UTF-8 BOM headers! Causes 'Invalid key name at line 1 and column 1'.")
+                continue
+
+            text = raw.decode("utf-8-sig", errors="replace")
+            lines = text.splitlines()
+            if not lines:
+                continue
+
+            first_line = lines[0].strip()
+            if not (first_line.startswith("l_simp_chinese:") or first_line.startswith("l_english:")):
+                errors.append(f"[INVALID FIRST LINE] {rel_path}: First line must start with l_language: (got '{first_line}')")
+
+            for line_idx, line in enumerate(lines[1:], start=2):
+                stripped = line.strip()
+                if not stripped or stripped.startswith("#"):
+                    continue
+                # Line must start with whitespace
+                if not line.startswith(" ") and not line.startswith("\t"):
+                    errors.append(f"[BROKEN YML LINE] {rel_path}:{line_idx}: Line does not start with whitespace (likely raw newline in multiline string): '{stripped[:40]}'")
+                # Line must have a colon
+                elif ":" not in stripped:
+                    errors.append(f"[NO COLON IN YML] {rel_path}:{line_idx}: Missing colon: '{stripped[:40]}'")
+                # Line must end with double quote
+                elif not stripped.endswith('"'):
+                    errors.append(f"[UNCLOSED QUOTE] {rel_path}:{line_idx}: String does not end with double quote: '{stripped[-30:]}'")
         except Exception as e:
-            errors.append(f"[READ ERROR] {yml_path.relative_to(mod_root)}: {e}")
+            errors.append(f"[READ ERROR] {rel_path}: {e}")
     return errors
 
 def check_txt_scripts(mod_root: Path) -> list:
@@ -110,17 +133,17 @@ def main():
 
     print(f"=== Running HOI4 Fast Anti-Hallucination Guard on: {mod_root} ===")
     
-    bom_errors = check_bom(mod_root)
+    yml_errors = check_bom_and_yml(mod_root)
     txt_errors = check_txt_scripts(mod_root)
     
-    all_errors = bom_errors + txt_errors
+    all_errors = yml_errors + txt_errors
     if all_errors:
         print(f"\n[FAIL] Found {len(all_errors)} potential engine-breaking issues:")
         for err in all_errors:
             print(f"  ❌ {err}")
         sys.exit(1)
     else:
-        print("\n[PASS] All BOM headers, brace balance, ASCII comments, and namespace checks passed with zero issues!")
+        print("\n[PASS] All BOM headers, YAML syntax, brace balance, ASCII comments, and namespace checks passed with zero issues!")
         sys.exit(0)
 
 if __name__ == "__main__":
