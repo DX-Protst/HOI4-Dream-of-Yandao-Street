@@ -1,6 +1,7 @@
 import os
 import cv2
-from PIL import Image
+from PIL import Image, ImageDraw, ImageFilter
+import numpy as np
 
 BRAIN_DIR = r"C:\Users\10431\.gemini\antigravity\brain\bcf94466-2063-40f3-abf4-5a33f63af215"
 OUT_DIR = "gfx/leaders/EBS"
@@ -54,71 +55,120 @@ MAPPINGS = [
     }
 ]
 
+# Extract clean paper note template from vanilla
+fadden = Image.open('tools/recent_portrait_AST_arthur_fadden_small.png')
+f_arr = np.array(fadden)
+note_poly = np.array([[30, 36], [56, 37], [54, 65], [28, 64]], dtype=np.int32)
+note_only = np.zeros_like(f_arr)
+cv2.fillPoly(note_only, [note_poly], (1, 1, 1, 1))
+note_mask_dilated = cv2.dilate(note_only[:, :, 0], cv2.getStructuringElement(cv2.MORPH_RECT, (5, 5)))
+clean_note_arr = np.zeros_like(f_arr)
+clean_note_arr[note_mask_dilated > 0] = f_arr[note_mask_dilated > 0]
+note_img = Image.fromarray(clean_note_arr)
+
 cascade_path = cv2.data.haarcascades + 'haarcascade_frontalface_default.xml'
 face_cascade = cv2.CascadeClassifier(cascade_path)
 
-def smart_zoom_head_crop(img_path):
-    cv_img = cv2.imread(img_path)
+def smart_zoom_head_crop_large(src_path):
+    cv_img = cv2.imread(src_path)
     h_img, w_img = cv_img.shape[:2]
     gray = cv2.cvtColor(cv_img, cv2.COLOR_BGR2GRAY)
     faces = face_cascade.detectMultiScale(gray, scaleFactor=1.1, minNeighbors=5, minSize=(100, 100))
     
     if len(faces) == 0:
-        # Fallback to standard top-focused crop
         fx, fy, fw, fh = w_img // 4, int(h_img * 0.15), w_img // 2, int(h_img * 0.35)
     else:
-        # Pick largest face
         faces = sorted(faces, key=lambda f: f[2]*f[3], reverse=True)
         fx, fy, fw, fh = faces[0]
         
     cx = fx + fw / 2.0
     cy = fy + fh / 2.0
     
-    # Target crop height: roughly 1.95 * fh (so head/face occupies ~50-55% of portrait)
     crop_h = min(h_img, int(fh * 1.95))
     crop_h = max(660, min(820, crop_h))
     crop_w = int(crop_h * (156.0 / 210.0))
     
-    # Place face center at ~38% from top of crop frame
     top = int(cy - crop_h * 0.38)
     left = int(cx - crop_w / 2.0)
     
-    # Clamp to boundaries
-    if top < 0:
-        top = 0
-    if top + crop_h > h_img:
-        top = h_img - crop_h
-    if left < 0:
-        left = 0
-    if left + crop_w > w_img:
-        left = w_img - crop_w
+    top = max(0, min(h_img - crop_h, top))
+    left = max(0, min(w_img - crop_w, left))
         
     bottom = top + crop_h
     right = left + crop_w
     
-    pil_img = Image.open(img_path).convert("RGBA")
-    cropped = pil_img.crop((left, top, right, bottom))
-    return cropped
+    pil_img = Image.open(src_path).convert("RGBA")
+    return pil_img.crop((left, top, right, bottom))
+
+def create_canonical_advisor_small(src_path):
+    cv_img = cv2.imread(src_path)
+    h_img, w_img = cv_img.shape[:2]
+    gray = cv2.cvtColor(cv_img, cv2.COLOR_BGR2GRAY)
+    faces = face_cascade.detectMultiScale(gray, scaleFactor=1.1, minNeighbors=5, minSize=(100, 100))
+    if len(faces) > 0:
+        faces = sorted(faces, key=lambda f: f[2]*f[3], reverse=True)
+        fx, fy, fw, fh = faces[0]
+    else:
+        fx, fy, fw, fh = w_img // 4, int(h_img * 0.15), w_img // 2, int(h_img * 0.35)
+
+    cx = fx + fw / 2.0
+    cy = fy + fh / 2.0
+
+    card_w = 34
+    card_h = 49
+    crop_h = int(fh * 1.85)
+    crop_w = int(crop_h * (card_w / card_h))
+    top = max(0, min(h_img - crop_h, int(cy - crop_h * 0.38)))
+    left = max(0, min(w_img - crop_w, int(cx - crop_w / 2.0)))
+
+    pil_src = Image.open(src_path).convert("RGBA")
+    crop = pil_src.crop((left, top, left + crop_w, top + crop_h))
+    photo = crop.resize((card_w, card_h), Image.Resampling.LANCZOS)
+
+    framed_photo = Image.new("RGBA", (card_w + 2, card_h + 2), (18, 18, 18, 255))
+    framed_photo.paste(photo, (1, 1))
+
+    # Rotate 3.5 degrees (canonical HOI4 advisor card tilt)
+    rotated_card = framed_photo.rotate(3.5, expand=True, resample=Image.Resampling.BICUBIC)
+
+    # Soft drop shadow
+    r_alpha = np.array(rotated_card.split()[-1])
+    s_arr = np.zeros((rotated_card.size[1], rotated_card.size[0], 4), dtype=np.uint8)
+    s_arr[:, :, 3] = (r_alpha * 0.70).astype(np.uint8)
+    shadow = Image.fromarray(s_arr).filter(ImageFilter.GaussianBlur(radius=2.5))
+
+    canvas = Image.new("RGBA", (65, 67), (0, 0, 0, 0))
+    pos_x = 6
+    pos_y = 4
+    canvas.paste(shadow, (pos_x + 2, pos_y + 3), shadow)
+    canvas.paste(rotated_card, (pos_x, pos_y), rotated_card)
+    canvas.paste(note_img, (0, 0), note_img)
+    return canvas
 
 def main():
     gfx_entries = []
 
-    print("[*] Performing smart face-zoomed crop on all 9 leader portraits...")
+    print("[*] Processing all 9 leader large portraits and canonical 65x67 advisor small portraits...")
     for item in MAPPINGS:
         src_path = os.path.join(BRAIN_DIR, item["file"])
-        cropped = smart_zoom_head_crop(src_path)
         
-        # 156x210 leader large
-        large_img = cropped.resize((156, 210), Image.Resampling.LANCZOS)
+        # 1. 156x210 Leader Large
+        large_crop = smart_zoom_head_crop_large(src_path)
+        large_img = large_crop.resize((156, 210), Image.Resampling.LANCZOS)
         large_path = os.path.join(OUT_DIR, f"{item['base_name']}_156x210.png")
         large_img.save(large_path, format="PNG")
         
-        # 78x105 advisor small
-        small_img = cropped.resize((78, 105), Image.Resampling.LANCZOS)
-        small_path = os.path.join(OUT_DIR, f"{item['base_name']}_small_78x105.png")
-        small_img.save(small_path, format="PNG")
+        # 2. Canonical 65x67 Advisor Small (HOI4 official idea/advisor format)
+        small_advisor = create_canonical_advisor_small(src_path)
         
-        print(f"[OK] Zoomed Head Cropped: {item['base_name']} (large: 156x210, small: 78x105)")
+        # Save as canonical _small_65x67.png and update legacy _small_78x105.png for safety
+        small_65_path = os.path.join(OUT_DIR, f"{item['base_name']}_small_65x67.png")
+        small_advisor.save(small_65_path, format="PNG")
+        
+        legacy_path = os.path.join(OUT_DIR, f"{item['base_name']}_small_78x105.png")
+        small_advisor.save(legacy_path, format="PNG")
+        
+        print(f"[OK] {item['base_name']}: Large (156x210) & Canonical Advisor (65x67)")
         
         gfx_entries.append(f"""\tspriteType = {{
 \t\tname = "GFX_{item['base_name']}"
@@ -126,14 +176,14 @@ def main():
 \t}}
 \tspriteType = {{
 \t\tname = "GFX_{item['base_name']}_small"
-\t\ttexturefile = "gfx/leaders/EBS/{item['base_name']}_small_78x105.png"
+\t\ttexturefile = "gfx/leaders/EBS/{item['base_name']}_small_65x67.png"
 \t}}""")
 
     # Write interface/EBS_characters.gfx
     gfx_content = "spriteTypes = {\n" + "\n".join(gfx_entries) + "\n}\n"
     with open("interface/EBS_characters.gfx", "w", encoding="utf-8") as f:
         f.write(gfx_content)
-    print("[OK] Written interface/EBS_characters.gfx successfully with all 9 face-zoomed leaders!")
+    print("[OK] Written interface/EBS_characters.gfx successfully with 65x67 canonical advisor portraits!")
 
 if __name__ == '__main__':
     main()
