@@ -8,17 +8,20 @@ os.makedirs(OUT_DIR, exist_ok=True)
 MAPPINGS = [
     {
         "char_id": "EBS_leader_chen_zhuanyuan",
-        "file": "chen_baosheng_hoi4_portrait_1793517258775.jpg",
+        # Newly generated via Banana img2img from real photo (no borders, no text)
+        "file": "hoi4_portrait_chen_baosheng_clean_1793525564997.jpg",
         "base_name": "portrait_EBS_leader_chen_zhuanyuan"
     },
     {
         "char_id": "EBS_huai_zonggong",
-        "file": "huai_jinpeng_hoi4_portrait_1793517296704.jpg",
+        # Newly generated via Banana img2img from real photo (no borders, no text)
+        "file": "hoi4_portrait_huai_jinpeng_clean_1793525601514.jpg",
         "base_name": "portrait_EBS_huai_zonggong"
     },
     {
         "char_id": "EBS_zhou_zongdao",
-        "file": "zhou_ji_hoi4_portrait_1793517296234.jpg",
+        # Newly generated via Banana img2img from real photo (no borders, no text)
+        "file": "hoi4_portrait_zhou_ji_clean_1793525612025.jpg",
         "base_name": "portrait_EBS_zhou_zongdao"
     },
     {
@@ -59,12 +62,10 @@ def crop_and_resize(img, target_w, target_h):
     current_aspect = w / h
     
     if current_aspect > target_aspect:
-        # Image is wider than target aspect: crop width
         new_w = int(h * target_aspect)
         offset_x = (w - new_w) // 2
         cropped = img.crop((offset_x, 0, offset_x + new_w, h))
     else:
-        # Image is taller than target aspect: crop height
         new_h = int(w / target_aspect)
         offset_y = (h - new_h) // 2
         cropped = img.crop((0, offset_y, w, offset_y + new_h))
