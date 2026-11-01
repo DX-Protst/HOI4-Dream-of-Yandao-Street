@@ -1,4 +1,5 @@
 import os
+import cv2
 from PIL import Image
 
 BRAIN_DIR = r"C:\Users\10431\.gemini\antigravity\brain\bcf94466-2063-40f3-abf4-5a33f63af215"
@@ -53,42 +54,71 @@ MAPPINGS = [
     }
 ]
 
-def crop_and_resize(img, target_w, target_h):
-    w, h = img.size
-    target_aspect = target_w / target_h
-    current_aspect = w / h
+cascade_path = cv2.data.haarcascades + 'haarcascade_frontalface_default.xml'
+face_cascade = cv2.CascadeClassifier(cascade_path)
+
+def smart_zoom_head_crop(img_path):
+    cv_img = cv2.imread(img_path)
+    h_img, w_img = cv_img.shape[:2]
+    gray = cv2.cvtColor(cv_img, cv2.COLOR_BGR2GRAY)
+    faces = face_cascade.detectMultiScale(gray, scaleFactor=1.1, minNeighbors=5, minSize=(100, 100))
     
-    if current_aspect > target_aspect:
-        # Image is wider than target aspect: crop width
-        new_w = int(h * target_aspect)
-        offset_x = (w - new_w) // 2
-        cropped = img.crop((offset_x, 0, offset_x + new_w, h))
+    if len(faces) == 0:
+        # Fallback to standard top-focused crop
+        fx, fy, fw, fh = w_img // 4, int(h_img * 0.15), w_img // 2, int(h_img * 0.35)
     else:
-        # Image is taller than target aspect: crop height
-        new_h = int(w / target_aspect)
-        offset_y = (h - new_h) // 2
-        cropped = img.crop((0, offset_y, w, offset_y + new_h))
+        # Pick largest face
+        faces = sorted(faces, key=lambda f: f[2]*f[3], reverse=True)
+        fx, fy, fw, fh = faces[0]
         
-    return cropped.resize((target_w, target_h), Image.Resampling.LANCZOS)
+    cx = fx + fw / 2.0
+    cy = fy + fh / 2.0
+    
+    # Target crop height: roughly 1.95 * fh (so head/face occupies ~50-55% of portrait)
+    crop_h = min(h_img, int(fh * 1.95))
+    crop_h = max(660, min(820, crop_h))
+    crop_w = int(crop_h * (156.0 / 210.0))
+    
+    # Place face center at ~38% from top of crop frame
+    top = int(cy - crop_h * 0.38)
+    left = int(cx - crop_w / 2.0)
+    
+    # Clamp to boundaries
+    if top < 0:
+        top = 0
+    if top + crop_h > h_img:
+        top = h_img - crop_h
+    if left < 0:
+        left = 0
+    if left + crop_w > w_img:
+        left = w_img - crop_w
+        
+    bottom = top + crop_h
+    right = left + crop_w
+    
+    pil_img = Image.open(img_path).convert("RGBA")
+    cropped = pil_img.crop((left, top, right, bottom))
+    return cropped
 
 def main():
     gfx_entries = []
 
+    print("[*] Performing smart face-zoomed crop on all 9 leader portraits...")
     for item in MAPPINGS:
         src_path = os.path.join(BRAIN_DIR, item["file"])
-        img = Image.open(src_path).convert("RGBA")
+        cropped = smart_zoom_head_crop(src_path)
         
         # 156x210 leader large
-        large_img = crop_and_resize(img, 156, 210)
+        large_img = cropped.resize((156, 210), Image.Resampling.LANCZOS)
         large_path = os.path.join(OUT_DIR, f"{item['base_name']}_156x210.png")
         large_img.save(large_path, format="PNG")
         
         # 78x105 advisor small
-        small_img = crop_and_resize(img, 78, 105)
+        small_img = cropped.resize((78, 105), Image.Resampling.LANCZOS)
         small_path = os.path.join(OUT_DIR, f"{item['base_name']}_small_78x105.png")
         small_img.save(small_path, format="PNG")
         
-        print(f"[OK] Processed: {item['base_name']} (large: 156x210, small: 78x105)")
+        print(f"[OK] Zoomed Head Cropped: {item['base_name']} (large: 156x210, small: 78x105)")
         
         gfx_entries.append(f"""\tspriteType = {{
 \t\tname = "GFX_{item['base_name']}"
@@ -103,7 +133,7 @@ def main():
     gfx_content = "spriteTypes = {\n" + "\n".join(gfx_entries) + "\n}\n"
     with open("interface/EBS_characters.gfx", "w", encoding="utf-8") as f:
         f.write(gfx_content)
-    print("[OK] Written interface/EBS_characters.gfx successfully with all 9 leaders!")
+    print("[OK] Written interface/EBS_characters.gfx successfully with all 9 face-zoomed leaders!")
 
 if __name__ == '__main__':
     main()
