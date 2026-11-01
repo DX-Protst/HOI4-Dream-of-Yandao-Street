@@ -406,7 +406,7 @@ flowchart TD
 | **国家精神定义** | `common/ideas/EBS_ideas.txt` | 17 个专属国家精神与派系政治/工业 Buff/Debuff 定义 |
 | **精神图标资产** | `gfx/interface/ideas/EBS/` | **17 个专属精神图标**（64×64 RGBA PNG，精准契合 Clausewitz 格式） |
 | **精神图形定义** | `interface/EBS_ideas.gfx` | 17 个国家精神 SpriteType 图形绑定注册 |
-| **领袖与内阁定义** | `common/characters/EBS_characters.txt` | 9 大领袖与派系内阁定义（陈专员、怀总工、周总导、王司长、王总管、郗特使、东三省公社、开明教师会、海淀贵胄委员会） |
+| **领袖与内阁定义** | `common/characters/EBS_characters.txt` | 9 大领袖与派系内阁定义（陈专员、怀总工、周总导、王司长、王总管、郗特使、东三省公社、开明教师会、海淀贵胄委员会），全套 `country_leader` 路线均已完整挂载 `desc` 人物生平介绍钩子 |
 | **领袖头像资产** | `gfx/leaders/EBS/` | **9 位真实原型领袖头像**（156×210 大头像与 78×105 小头像，共 18 张精细手绘生图资产） |
 | **领袖图形定义** | `interface/EBS_characters.gfx` | 9 位领袖大头像与内阁小头像图形注册定义 |
 | **专属人物特质** | `common/country_leader/EBS_traits.txt` | 9 大领袖与顾问专属特质（纯英文注释） |
@@ -415,7 +415,7 @@ flowchart TD
 | **专属历史事件** | `events/EBS_events.txt` | **71 个专属剧情事件**（含中枢全景路线指南 `ebs_route_guide.1`、6 阶段中枢决裂交织危机链、全量国策完成叙事、奉系入关政变、1938大战动员） |
 | **国家历史初始** | `history/countries/EBS - EduBureau.txt` | 招募全套人物、装备初始国家精神与首都北京定义 |
 | **开局书签定义** | `common/bookmarks/the_gathering_storm.txt` | 将 EBS 注册为主选大国之一，配置推荐国策与开局理念 |
-| **本地化文本** | `localisation/simp_chinese/EBS_l_simp_chinese.yml` | 带 UTF-8 BOM 头的全套国策、特质、决议、70 个事件、党派与书签历史中文包 |
+| **本地化文本** | `localisation/simp_chinese/EBS_l_simp_chinese.yml`<br>`localisation/simp_chinese/EBS_characters_l_simp_chinese.yml`<br>`localisation/english/EBS_characters_l_english.yml` | 带 UTF-8 BOM 头的全套国策、特质、决议、70 个事件、党派与 9 大领袖内阁专属深度现实黑色幽默人物生平介绍（中英双语包） |
 | **独立设计白皮书** | `README_EBS.md` | 本文档，最高教育局督导组与东北企划系统设定 |
 | **全局说明文档** | `README.md` | 同步登记 EBS 势力、国策与扩展接口 |
 

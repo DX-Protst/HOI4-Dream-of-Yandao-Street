@@ -11,11 +11,13 @@ characters = {
 		country_leader = {
 			ideology = bureaucratic_despotism
 			traits = { EBS_the_grand_commissioner }
+			desc = EBS_leader_chen_zhuanyuan_desc
 			id = -1
 		}
 		country_leader = {
 			ideology = regional_protectionism
 			traits = { EBS_the_grand_commissioner EBS_haidian_aristocrat }
+			desc = EBS_leader_chen_zhuanyuan_desc
 			id = -1
 		}
 		advisor = {
@@ -41,11 +43,13 @@ characters = {
 		country_leader = {
 			ideology = technocratic_reformism
 			traits = { EBS_cybernetic_technocrat }
+			desc = EBS_huai_zonggong_desc
 			id = -1
 		}
 		country_leader = {
 			ideology = civic_liberalism
 			traits = { EBS_cybernetic_technocrat }
+			desc = EBS_huai_zonggong_desc
 			id = -1
 		}
 		advisor = {
@@ -71,6 +75,7 @@ characters = {
 		country_leader = {
 			ideology = bureau_totalitarianism
 			traits = { EBS_evaluation_maniac }
+			desc = EBS_zhou_zongdao_desc
 			id = -1
 		}
 		advisor = {
@@ -100,6 +105,7 @@ characters = {
 		country_leader = {
 			ideology = exam_hell_fanaticism
 			traits = { EBS_football_czar }
+			desc = EBS_wang_sichang_desc
 			id = -1
 		}
 		advisor = {
@@ -133,6 +139,7 @@ characters = {
 		country_leader = {
 			ideology = alumni_capitalism
 			traits = { EBS_banquet_mastermind }
+			desc = EBS_wang_zongguan_desc
 			id = -1
 		}
 		advisor = {
@@ -162,11 +169,13 @@ characters = {
 		country_leader = {
 			ideology = educational_egalitarianism
 			traits = { EBS_dongbei_equality }
+			desc = EBS_dongbei_council_desc
 			id = -1
 		}
 		country_leader = {
 			ideology = academic_syndicalism
 			traits = { EBS_dongbei_equality }
+			desc = EBS_dongbei_council_desc
 			id = -1
 		}
 		advisor = {
@@ -200,6 +209,7 @@ characters = {
 		country_leader = {
 			ideology = progressive_pedagogy
 			traits = { EBS_enlightened_reform }
+			desc = EBS_enlightened_teachers_desc
 			id = -1
 		}
 		advisor = {
