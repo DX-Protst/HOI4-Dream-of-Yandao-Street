@@ -4,7 +4,8 @@ characters = {
 		name = EBS_leader_chen_zhuanyuan
 		portraits = {
 			civilian = {
-				large = "GFX_portrait_chi_dai_li"
+				large = "GFX_portrait_EBS_leader_chen_zhuanyuan"
+				small = "GFX_portrait_EBS_leader_chen_zhuanyuan_small"
 			}
 		}
 		country_leader = {
@@ -33,7 +34,8 @@ characters = {
 		name = EBS_huai_zonggong
 		portraits = {
 			civilian = {
-				large = "GFX_portrait_chi_gu_zhuotong"
+				large = "GFX_portrait_EBS_huai_zonggong"
+				small = "GFX_portrait_EBS_huai_zonggong_small"
 			}
 		}
 		country_leader = {
@@ -62,7 +64,8 @@ characters = {
 		name = EBS_zhou_zongdao
 		portraits = {
 			civilian = {
-				large = "GFX_portrait_chi_wang_jingwei"
+				large = "GFX_portrait_EBS_zhou_zongdao"
+				small = "GFX_portrait_EBS_zhou_zongdao_small"
 			}
 		}
 		country_leader = {
@@ -86,10 +89,12 @@ characters = {
 		name = EBS_wang_sichang
 		portraits = {
 			civilian = {
-				large = "GFX_portrait_chi_chen_jitang"
+				large = "GFX_portrait_EBS_wang_sichang"
+				small = "GFX_portrait_EBS_wang_sichang_small"
 			}
 			army = {
-				large = "GFX_portrait_chi_chen_jitang"
+				large = "GFX_portrait_EBS_wang_sichang"
+				small = "GFX_portrait_EBS_wang_sichang_small"
 			}
 		}
 		country_leader = {
@@ -121,7 +126,8 @@ characters = {
 		name = EBS_wang_zongguan
 		portraits = {
 			civilian = {
-				large = "GFX_portrait_chi_long_yun"
+				large = "GFX_portrait_EBS_wang_zongguan"
+				small = "GFX_portrait_EBS_wang_zongguan_small"
 			}
 		}
 		country_leader = {
@@ -145,10 +151,12 @@ characters = {
 		name = EBS_dongbei_council
 		portraits = {
 			civilian = {
-				large = "GFX_portrait_chi_zhang_xueliang"
+				large = "GFX_portrait_EBS_dongbei_council"
+				small = "GFX_portrait_EBS_dongbei_council_small"
 			}
 			army = {
-				large = "GFX_portrait_chi_zhang_xueliang"
+				large = "GFX_portrait_EBS_dongbei_council"
+				small = "GFX_portrait_EBS_dongbei_council_small"
 			}
 		}
 		country_leader = {
@@ -185,7 +193,8 @@ characters = {
 		name = EBS_enlightened_teachers
 		portraits = {
 			civilian = {
-				large = "GFX_portrait_chi_song_zheyuan"
+				large = "GFX_portrait_EBS_enlightened_teachers"
+				small = "GFX_portrait_EBS_enlightened_teachers_small"
 			}
 		}
 		country_leader = {
@@ -209,7 +218,8 @@ characters = {
 		name = EBS_xi_teshi
 		portraits = {
 			civilian = {
-				large = "GFX_portrait_chi_song_zheyuan"
+				large = "GFX_portrait_EBS_xi_teshi"
+				small = "GFX_portrait_EBS_xi_teshi_small"
 			}
 		}
 		advisor = {
@@ -228,7 +238,8 @@ characters = {
 		name = EBS_haidian_council
 		portraits = {
 			civilian = {
-				large = "GFX_portrait_chi_chiang_kai_shek"
+				large = "GFX_portrait_EBS_haidian_council"
+				small = "GFX_portrait_EBS_haidian_council_small"
 			}
 		}
 		advisor = {

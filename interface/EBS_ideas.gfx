@@ -1,0 +1,78 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_idea_EBS_northeast_undercurrent"
+		texturefile = "gfx/interface/ideas/EBS/EBS_northeast_undercurrent.png"
+	}
+	spriteType = {
+		name = "GFX_idea_EBS_chen_absolutism_spirit"
+		texturefile = "gfx/interface/ideas/EBS/EBS_chen_absolutism_spirit.png"
+	}
+	spriteType = {
+		name = "GFX_idea_EBS_cybernetic_dictatorship_spirit"
+		texturefile = "gfx/interface/ideas/EBS/EBS_cybernetic_dictatorship_spirit.png"
+	}
+	spriteType = {
+		name = "GFX_idea_EBS_lawn_greening_totalism_spirit"
+		texturefile = "gfx/interface/ideas/EBS/EBS_lawn_greening_totalism_spirit.png"
+	}
+	spriteType = {
+		name = "GFX_idea_EBS_canteen_black_gold_spirit"
+		texturefile = "gfx/interface/ideas/EBS/EBS_canteen_black_gold_spirit.png"
+	}
+	spriteType = {
+		name = "GFX_idea_EBS_dongbei_liberation_spirit"
+		texturefile = "gfx/interface/ideas/EBS/EBS_dongbei_liberation_spirit.png"
+	}
+	spriteType = {
+		name = "GFX_idea_EBS_information_monopoly_spirit"
+		texturefile = "gfx/interface/ideas/EBS/EBS_information_monopoly_spirit.png"
+	}
+	spriteType = {
+		name = "GFX_idea_EBS_dongbei_unrest_high"
+		texturefile = "gfx/interface/ideas/EBS/EBS_dongbei_unrest_high.png"
+	}
+	spriteType = {
+		name = "GFX_idea_EBS_haidian_privilege"
+		texturefile = "gfx/interface/ideas/EBS/EBS_haidian_privilege.png"
+	}
+	spriteType = {
+		name = "GFX_idea_EBS_cybernetic_exam_grid"
+		texturefile = "gfx/interface/ideas/EBS/EBS_cybernetic_exam_grid.png"
+	}
+	spriteType = {
+		name = "GFX_idea_EBS_inspection_frenzy"
+		texturefile = "gfx/interface/ideas/EBS/EBS_inspection_frenzy.png"
+	}
+	spriteType = {
+		name = "GFX_idea_EBS_imperial_examination_throne_spirit"
+		texturefile = "gfx/interface/ideas/EBS/EBS_imperial_examination_throne_spirit.png"
+	}
+	spriteType = {
+		name = "GFX_idea_EBS_silicon_curriculum_singularity_spirit"
+		texturefile = "gfx/interface/ideas/EBS/EBS_silicon_curriculum_singularity_spirit.png"
+	}
+	spriteType = {
+		name = "GFX_idea_EBS_perpetual_inspection_mobilization_spirit"
+		texturefile = "gfx/interface/ideas/EBS/EBS_perpetual_inspection_mobilization_spirit.png"
+	}
+	spriteType = {
+		name = "GFX_idea_EBS_unrestricted_exam_market_spirit"
+		texturefile = "gfx/interface/ideas/EBS/EBS_unrestricted_exam_market_spirit.png"
+	}
+	spriteType = {
+		name = "GFX_idea_EBS_absolute_meritocracy_republic_spirit"
+		texturefile = "gfx/interface/ideas/EBS/EBS_absolute_meritocracy_republic_spirit.png"
+	}
+	spriteType = {
+		name = "GFX_idea_EBS_the_invincible_exam_industrial_complex_spirit"
+		texturefile = "gfx/interface/ideas/EBS/EBS_the_invincible_exam_industrial_complex_spirit.png"
+	}
+	spriteType = {
+		name = "GFX_idea_EBS_privilege_iron_fist"
+		texturefile = "gfx/interface/ideas/EBS/ebs_privilege_iron_fist.png"
+	}
+	spriteType = {
+		name = "GFX_idea_EBS_bureau_total_control"
+		texturefile = "gfx/interface/ideas/EBS/ebs_bureau_total_control.png"
+	}
+}

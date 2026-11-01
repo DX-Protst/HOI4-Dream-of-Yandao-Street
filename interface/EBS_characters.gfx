@@ -1,2 +1,74 @@
 spriteTypes = {
+	spriteType = {
+		name = "GFX_portrait_EBS_leader_chen_zhuanyuan"
+		texturefile = "gfx/leaders/EBS/portrait_EBS_leader_chen_zhuanyuan_156x210.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_EBS_leader_chen_zhuanyuan_small"
+		texturefile = "gfx/leaders/EBS/portrait_EBS_leader_chen_zhuanyuan_small_78x105.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_EBS_huai_zonggong"
+		texturefile = "gfx/leaders/EBS/portrait_EBS_huai_zonggong_156x210.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_EBS_huai_zonggong_small"
+		texturefile = "gfx/leaders/EBS/portrait_EBS_huai_zonggong_small_78x105.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_EBS_zhou_zongdao"
+		texturefile = "gfx/leaders/EBS/portrait_EBS_zhou_zongdao_156x210.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_EBS_zhou_zongdao_small"
+		texturefile = "gfx/leaders/EBS/portrait_EBS_zhou_zongdao_small_78x105.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_EBS_wang_sichang"
+		texturefile = "gfx/leaders/EBS/portrait_EBS_wang_sichang_156x210.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_EBS_wang_sichang_small"
+		texturefile = "gfx/leaders/EBS/portrait_EBS_wang_sichang_small_78x105.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_EBS_wang_zongguan"
+		texturefile = "gfx/leaders/EBS/portrait_EBS_wang_zongguan_156x210.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_EBS_wang_zongguan_small"
+		texturefile = "gfx/leaders/EBS/portrait_EBS_wang_zongguan_small_78x105.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_EBS_xi_teshi"
+		texturefile = "gfx/leaders/EBS/portrait_EBS_xi_teshi_156x210.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_EBS_xi_teshi_small"
+		texturefile = "gfx/leaders/EBS/portrait_EBS_xi_teshi_small_78x105.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_EBS_dongbei_council"
+		texturefile = "gfx/leaders/EBS/portrait_EBS_dongbei_council_156x210.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_EBS_dongbei_council_small"
+		texturefile = "gfx/leaders/EBS/portrait_EBS_dongbei_council_small_78x105.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_EBS_enlightened_teachers"
+		texturefile = "gfx/leaders/EBS/portrait_EBS_enlightened_teachers_156x210.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_EBS_enlightened_teachers_small"
+		texturefile = "gfx/leaders/EBS/portrait_EBS_enlightened_teachers_small_78x105.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_EBS_haidian_council"
+		texturefile = "gfx/leaders/EBS/portrait_EBS_haidian_council_156x210.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_EBS_haidian_council_small"
+		texturefile = "gfx/leaders/EBS/portrait_EBS_haidian_council_small_78x105.png"
+	}
 }
