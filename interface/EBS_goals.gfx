@@ -46,6 +46,52 @@ spriteTypes = {
 	}
 
 	SpriteType = {
+		name = "GFX_focus_EBS_balance_bureaucratic_interests"
+		texturefile = "gfx/interface/goals/EBS/GFX_focus_EBS_balance_bureaucratic_interests.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_EBS_balance_bureaucratic_interests_shine"
+		texturefile = "gfx/interface/goals/EBS/GFX_focus_EBS_balance_bureaucratic_interests.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/EBS/GFX_focus_EBS_balance_bureaucratic_interests.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_focus_EBS_uncover_internal_corruption"
+		texturefile = "gfx/interface/goals/EBS/GFX_focus_EBS_uncover_internal_corruption.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_EBS_uncover_internal_corruption_shine"
+		texturefile = "gfx/interface/goals/EBS/GFX_focus_EBS_uncover_internal_corruption.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/EBS/GFX_focus_EBS_uncover_internal_corruption.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
 		name = "GFX_focus_EBS_the_council_schism"
 		texturefile = "gfx/interface/goals/EBS/GFX_focus_EBS_the_council_schism.png"
 	}
@@ -184,6 +230,52 @@ spriteTypes = {
 	}
 
 	SpriteType = {
+		name = "GFX_focus_EBS_central_inspectorate_permanent"
+		texturefile = "gfx/interface/goals/EBS/GFX_focus_EBS_central_inspectorate_permanent.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_EBS_central_inspectorate_permanent_shine"
+		texturefile = "gfx/interface/goals/EBS/GFX_focus_EBS_central_inspectorate_permanent.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/EBS/GFX_focus_EBS_central_inspectorate_permanent.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_focus_EBS_monopolize_special_pathways"
+		texturefile = "gfx/interface/goals/EBS/GFX_focus_EBS_monopolize_special_pathways.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_EBS_monopolize_special_pathways_shine"
+		texturefile = "gfx/interface/goals/EBS/GFX_focus_EBS_monopolize_special_pathways.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/EBS/GFX_focus_EBS_monopolize_special_pathways.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
 		name = "GFX_focus_EBS_bureaucratic_iron_stamp"
 		texturefile = "gfx/interface/goals/EBS/GFX_focus_EBS_bureaucratic_iron_stamp.png"
 	}
@@ -193,6 +285,29 @@ spriteTypes = {
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
 			animationmaskfile = "gfx/interface/goals/EBS/GFX_focus_EBS_bureaucratic_iron_stamp.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_focus_EBS_the_untouchable_nobility"
+		texturefile = "gfx/interface/goals/EBS/GFX_focus_EBS_the_untouchable_nobility.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_EBS_the_untouchable_nobility_shine"
+		texturefile = "gfx/interface/goals/EBS/GFX_focus_EBS_the_untouchable_nobility.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/EBS/GFX_focus_EBS_the_untouchable_nobility.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -253,15 +368,15 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_focus_EBS_tsinghua_supercomputer_grid"
-		texturefile = "gfx/interface/goals/EBS/GFX_focus_EBS_tsinghua_supercomputer_grid.png"
+		name = "GFX_focus_EBS_fiber_optic_exam_backbone"
+		texturefile = "gfx/interface/goals/EBS/GFX_focus_EBS_fiber_optic_exam_backbone.png"
 	}
 	SpriteType = {
-		name = "GFX_focus_EBS_tsinghua_supercomputer_grid_shine"
-		texturefile = "gfx/interface/goals/EBS/GFX_focus_EBS_tsinghua_supercomputer_grid.png"
+		name = "GFX_focus_EBS_fiber_optic_exam_backbone_shine"
+		texturefile = "gfx/interface/goals/EBS/GFX_focus_EBS_fiber_optic_exam_backbone.png"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EBS/GFX_focus_EBS_tsinghua_supercomputer_grid.png"
+			animationmaskfile = "gfx/interface/goals/EBS/GFX_focus_EBS_fiber_optic_exam_backbone.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -299,6 +414,52 @@ spriteTypes = {
 	}
 
 	SpriteType = {
+		name = "GFX_focus_EBS_tsinghua_supercomputer_grid"
+		texturefile = "gfx/interface/goals/EBS/GFX_focus_EBS_tsinghua_supercomputer_grid.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_EBS_tsinghua_supercomputer_grid_shine"
+		texturefile = "gfx/interface/goals/EBS/GFX_focus_EBS_tsinghua_supercomputer_grid.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/EBS/GFX_focus_EBS_tsinghua_supercomputer_grid.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_focus_EBS_quantum_grading_datacenter"
+		texturefile = "gfx/interface/goals/EBS/GFX_focus_EBS_quantum_grading_datacenter.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_EBS_quantum_grading_datacenter_shine"
+		texturefile = "gfx/interface/goals/EBS/GFX_focus_EBS_quantum_grading_datacenter.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/EBS/GFX_focus_EBS_quantum_grading_datacenter.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
 		name = "GFX_focus_EBS_algorithmic_credit_system"
 		texturefile = "gfx/interface/goals/EBS/GFX_focus_EBS_algorithmic_credit_system.png"
 	}
@@ -308,6 +469,52 @@ spriteTypes = {
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
 			animationmaskfile = "gfx/interface/goals/EBS/GFX_focus_EBS_algorithmic_credit_system.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_focus_EBS_predictive_drop_out_model"
+		texturefile = "gfx/interface/goals/EBS/GFX_focus_EBS_predictive_drop_out_model.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_EBS_predictive_drop_out_model_shine"
+		texturefile = "gfx/interface/goals/EBS/GFX_focus_EBS_predictive_drop_out_model.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/EBS/GFX_focus_EBS_predictive_drop_out_model.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_focus_EBS_algorithm_determines_destiny"
+		texturefile = "gfx/interface/goals/EBS/GFX_focus_EBS_algorithm_determines_destiny.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_EBS_algorithm_determines_destiny_shine"
+		texturefile = "gfx/interface/goals/EBS/GFX_focus_EBS_algorithm_determines_destiny.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/EBS/GFX_focus_EBS_algorithm_determines_destiny.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -354,6 +561,29 @@ spriteTypes = {
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
 			animationmaskfile = "gfx/interface/goals/EBS/GFX_focus_EBS_zhou_evaluation_frenzy.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_focus_EBS_five_day_shock_inspection"
+		texturefile = "gfx/interface/goals/EBS/GFX_focus_EBS_five_day_shock_inspection.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_EBS_five_day_shock_inspection_shine"
+		texturefile = "gfx/interface/goals/EBS/GFX_focus_EBS_five_day_shock_inspection.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/EBS/GFX_focus_EBS_five_day_shock_inspection.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -423,6 +653,75 @@ spriteTypes = {
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
 			animationmaskfile = "gfx/interface/goals/EBS/GFX_focus_EBS_model_school_showcase.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_focus_EBS_evaluation_or_shutdown"
+		texturefile = "gfx/interface/goals/EBS/GFX_focus_EBS_evaluation_or_shutdown.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_EBS_evaluation_or_shutdown_shine"
+		texturefile = "gfx/interface/goals/EBS/GFX_focus_EBS_evaluation_or_shutdown.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/EBS/GFX_focus_EBS_evaluation_or_shutdown.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_focus_EBS_punitive_disciplinary_tribunal"
+		texturefile = "gfx/interface/goals/EBS/GFX_focus_EBS_punitive_disciplinary_tribunal.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_EBS_punitive_disciplinary_tribunal_shine"
+		texturefile = "gfx/interface/goals/EBS/GFX_focus_EBS_punitive_disciplinary_tribunal.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/EBS/GFX_focus_EBS_punitive_disciplinary_tribunal.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_focus_EBS_total_inspection_state"
+		texturefile = "gfx/interface/goals/EBS/GFX_focus_EBS_total_inspection_state.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_EBS_total_inspection_state_shine"
+		texturefile = "gfx/interface/goals/EBS/GFX_focus_EBS_total_inspection_state.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/EBS/GFX_focus_EBS_total_inspection_state.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -529,6 +828,144 @@ spriteTypes = {
 	}
 
 	SpriteType = {
+		name = "GFX_focus_EBS_privatized_varsity_franchise"
+		texturefile = "gfx/interface/goals/EBS/GFX_focus_EBS_privatized_varsity_franchise.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_EBS_privatized_varsity_franchise_shine"
+		texturefile = "gfx/interface/goals/EBS/GFX_focus_EBS_privatized_varsity_franchise.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/EBS/GFX_focus_EBS_privatized_varsity_franchise.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_focus_EBS_exclusive_uniform_procurement"
+		texturefile = "gfx/interface/goals/EBS/GFX_focus_EBS_exclusive_uniform_procurement.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_EBS_exclusive_uniform_procurement_shine"
+		texturefile = "gfx/interface/goals/EBS/GFX_focus_EBS_exclusive_uniform_procurement.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/EBS/GFX_focus_EBS_exclusive_uniform_procurement.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_focus_EBS_athletic_darwinism"
+		texturefile = "gfx/interface/goals/EBS/GFX_focus_EBS_athletic_darwinism.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_EBS_athletic_darwinism_shine"
+		texturefile = "gfx/interface/goals/EBS/GFX_focus_EBS_athletic_darwinism.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/EBS/GFX_focus_EBS_athletic_darwinism.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_focus_EBS_banquet_diplomacy_network"
+		texturefile = "gfx/interface/goals/EBS/GFX_focus_EBS_banquet_diplomacy_network.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_EBS_banquet_diplomacy_network_shine"
+		texturefile = "gfx/interface/goals/EBS/GFX_focus_EBS_banquet_diplomacy_network.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/EBS/GFX_focus_EBS_banquet_diplomacy_network.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_focus_EBS_educational_slush_funds"
+		texturefile = "gfx/interface/goals/EBS/GFX_focus_EBS_educational_slush_funds.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_EBS_educational_slush_funds_shine"
+		texturefile = "gfx/interface/goals/EBS/GFX_focus_EBS_educational_slush_funds.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/EBS/GFX_focus_EBS_educational_slush_funds.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_focus_EBS_educational_plutocracy"
+		texturefile = "gfx/interface/goals/EBS/GFX_focus_EBS_educational_plutocracy.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_EBS_educational_plutocracy_shine"
+		texturefile = "gfx/interface/goals/EBS/GFX_focus_EBS_educational_plutocracy.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/EBS/GFX_focus_EBS_educational_plutocracy.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
 		name = "GFX_focus_EBS_the_unrestricted_exam_market"
 		texturefile = "gfx/interface/goals/EBS/GFX_focus_EBS_the_unrestricted_exam_market.png"
 	}
@@ -552,15 +989,61 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_focus_EBS_dongbei_conspiracy"
-		texturefile = "gfx/interface/goals/EBS/GFX_focus_EBS_dongbei_conspiracy.png"
+		name = "GFX_focus_EBS_dongbei_conspiracy_active"
+		texturefile = "gfx/interface/goals/EBS/GFX_focus_EBS_dongbei_conspiracy_active.png"
 	}
 	SpriteType = {
-		name = "GFX_focus_EBS_dongbei_conspiracy_shine"
-		texturefile = "gfx/interface/goals/EBS/GFX_focus_EBS_dongbei_conspiracy.png"
+		name = "GFX_focus_EBS_dongbei_conspiracy_active_shine"
+		texturefile = "gfx/interface/goals/EBS/GFX_focus_EBS_dongbei_conspiracy_active.png"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EBS/GFX_focus_EBS_dongbei_conspiracy.png"
+			animationmaskfile = "gfx/interface/goals/EBS/GFX_focus_EBS_dongbei_conspiracy_active.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_focus_EBS_secret_alliance_of_three_provinces"
+		texturefile = "gfx/interface/goals/EBS/GFX_focus_EBS_secret_alliance_of_three_provinces.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_EBS_secret_alliance_of_three_provinces_shine"
+		texturefile = "gfx/interface/goals/EBS/GFX_focus_EBS_secret_alliance_of_three_provinces.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/EBS/GFX_focus_EBS_secret_alliance_of_three_provinces.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_focus_EBS_placate_dongbei_normal"
+		texturefile = "gfx/interface/goals/EBS/GFX_focus_EBS_placate_dongbei_normal.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_EBS_placate_dongbei_normal_shine"
+		texturefile = "gfx/interface/goals/EBS/GFX_focus_EBS_placate_dongbei_normal.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/EBS/GFX_focus_EBS_placate_dongbei_normal.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -644,6 +1127,52 @@ spriteTypes = {
 	}
 
 	SpriteType = {
+		name = "GFX_focus_EBS_worker_student_syndicate_councils"
+		texturefile = "gfx/interface/goals/EBS/GFX_focus_EBS_worker_student_syndicate_councils.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_EBS_worker_student_syndicate_councils_shine"
+		texturefile = "gfx/interface/goals/EBS/GFX_focus_EBS_worker_student_syndicate_councils.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/EBS/GFX_focus_EBS_worker_student_syndicate_councils.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_focus_EBS_dongbei_takes_over_moe"
+		texturefile = "gfx/interface/goals/EBS/GFX_focus_EBS_dongbei_takes_over_moe.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_EBS_dongbei_takes_over_moe_shine"
+		texturefile = "gfx/interface/goals/EBS/GFX_focus_EBS_dongbei_takes_over_moe.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/EBS/GFX_focus_EBS_dongbei_takes_over_moe.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
 		name = "GFX_focus_EBS_incinerate_aristocratic_archives"
 		texturefile = "gfx/interface/goals/EBS/GFX_focus_EBS_incinerate_aristocratic_archives.png"
 	}
@@ -667,15 +1196,38 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_focus_EBS_meritocracy_republic"
-		texturefile = "gfx/interface/goals/EBS/GFX_focus_EBS_meritocracy_republic.png"
+		name = "GFX_focus_EBS_heavy_industry_exam_equality"
+		texturefile = "gfx/interface/goals/EBS/GFX_focus_EBS_heavy_industry_exam_equality.png"
 	}
 	SpriteType = {
-		name = "GFX_focus_EBS_meritocracy_republic_shine"
-		texturefile = "gfx/interface/goals/EBS/GFX_focus_EBS_meritocracy_republic.png"
+		name = "GFX_focus_EBS_heavy_industry_exam_equality_shine"
+		texturefile = "gfx/interface/goals/EBS/GFX_focus_EBS_heavy_industry_exam_equality.png"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EBS/GFX_focus_EBS_meritocracy_republic.png"
+			animationmaskfile = "gfx/interface/goals/EBS/GFX_focus_EBS_heavy_industry_exam_equality.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_focus_EBS_absolute_meritocracy_republic"
+		texturefile = "gfx/interface/goals/EBS/GFX_focus_EBS_absolute_meritocracy_republic.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_EBS_absolute_meritocracy_republic_shine"
+		texturefile = "gfx/interface/goals/EBS/GFX_focus_EBS_absolute_meritocracy_republic.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/EBS/GFX_focus_EBS_absolute_meritocracy_republic.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -713,6 +1265,52 @@ spriteTypes = {
 	}
 
 	SpriteType = {
+		name = "GFX_focus_EBS_rig_informatics_syllabus"
+		texturefile = "gfx/interface/goals/EBS/GFX_focus_EBS_rig_informatics_syllabus.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_EBS_rig_informatics_syllabus_shine"
+		texturefile = "gfx/interface/goals/EBS/GFX_focus_EBS_rig_informatics_syllabus.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/EBS/GFX_focus_EBS_rig_informatics_syllabus.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_focus_EBS_suppress_southern_olympiad"
+		texturefile = "gfx/interface/goals/EBS/GFX_focus_EBS_suppress_southern_olympiad.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_EBS_suppress_southern_olympiad_shine"
+		texturefile = "gfx/interface/goals/EBS/GFX_focus_EBS_suppress_southern_olympiad.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/EBS/GFX_focus_EBS_suppress_southern_olympiad.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
 		name = "GFX_focus_EBS_manipulate_national_exam_board"
 		texturefile = "gfx/interface/goals/EBS/GFX_focus_EBS_manipulate_national_exam_board.png"
 	}
@@ -722,6 +1320,29 @@ spriteTypes = {
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
 			animationmaskfile = "gfx/interface/goals/EBS/GFX_focus_EBS_manipulate_national_exam_board.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_focus_EBS_lock_ivory_tower_top3"
+		texturefile = "gfx/interface/goals/EBS/GFX_focus_EBS_lock_ivory_tower_top3.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_EBS_lock_ivory_tower_top3_shine"
+		texturefile = "gfx/interface/goals/EBS/GFX_focus_EBS_lock_ivory_tower_top3.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/EBS/GFX_focus_EBS_lock_ivory_tower_top3.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -759,6 +1380,144 @@ spriteTypes = {
 	}
 
 	SpriteType = {
+		name = "GFX_focus_EBS_central_printing_industrialization"
+		texturefile = "gfx/interface/goals/EBS/GFX_focus_EBS_central_printing_industrialization.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_EBS_central_printing_industrialization_shine"
+		texturefile = "gfx/interface/goals/EBS/GFX_focus_EBS_central_printing_industrialization.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/EBS/GFX_focus_EBS_central_printing_industrialization.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_focus_EBS_beijing_tianjin_railway_artery"
+		texturefile = "gfx/interface/goals/EBS/GFX_focus_EBS_beijing_tianjin_railway_artery.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_EBS_beijing_tianjin_railway_artery_shine"
+		texturefile = "gfx/interface/goals/EBS/GFX_focus_EBS_beijing_tianjin_railway_artery.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/EBS/GFX_focus_EBS_beijing_tianjin_railway_artery.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_focus_EBS_northeast_rust_belt_integration"
+		texturefile = "gfx/interface/goals/EBS/GFX_focus_EBS_northeast_rust_belt_integration.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_EBS_northeast_rust_belt_integration_shine"
+		texturefile = "gfx/interface/goals/EBS/GFX_focus_EBS_northeast_rust_belt_integration.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/EBS/GFX_focus_EBS_northeast_rust_belt_integration.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_focus_EBS_tianjin_bohai_chemical_refinery"
+		texturefile = "gfx/interface/goals/EBS/GFX_focus_EBS_tianjin_bohai_chemical_refinery.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_EBS_tianjin_bohai_chemical_refinery_shine"
+		texturefile = "gfx/interface/goals/EBS/GFX_focus_EBS_tianjin_bohai_chemical_refinery.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/EBS/GFX_focus_EBS_tianjin_bohai_chemical_refinery.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_focus_EBS_rehe_chahar_mineral_prospecting"
+		texturefile = "gfx/interface/goals/EBS/GFX_focus_EBS_rehe_chahar_mineral_prospecting.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_EBS_rehe_chahar_mineral_prospecting_shine"
+		texturefile = "gfx/interface/goals/EBS/GFX_focus_EBS_rehe_chahar_mineral_prospecting.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/EBS/GFX_focus_EBS_rehe_chahar_mineral_prospecting.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_focus_EBS_anshan_heavy_steel_foundry"
+		texturefile = "gfx/interface/goals/EBS/GFX_focus_EBS_anshan_heavy_steel_foundry.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_EBS_anshan_heavy_steel_foundry_shine"
+		texturefile = "gfx/interface/goals/EBS/GFX_focus_EBS_anshan_heavy_steel_foundry.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/EBS/GFX_focus_EBS_anshan_heavy_steel_foundry.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
 		name = "GFX_focus_EBS_shenyang_arsenal_mobilization"
 		texturefile = "gfx/interface/goals/EBS/GFX_focus_EBS_shenyang_arsenal_mobilization.png"
 	}
@@ -782,15 +1541,15 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_focus_EBS_invincible_complex"
-		texturefile = "gfx/interface/goals/EBS/GFX_focus_EBS_invincible_complex.png"
+		name = "GFX_focus_EBS_harbin_locomotive_heavy_chassis"
+		texturefile = "gfx/interface/goals/EBS/GFX_focus_EBS_harbin_locomotive_heavy_chassis.png"
 	}
 	SpriteType = {
-		name = "GFX_focus_EBS_invincible_complex_shine"
-		texturefile = "gfx/interface/goals/EBS/GFX_focus_EBS_invincible_complex.png"
+		name = "GFX_focus_EBS_harbin_locomotive_heavy_chassis_shine"
+		texturefile = "gfx/interface/goals/EBS/GFX_focus_EBS_harbin_locomotive_heavy_chassis.png"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EBS/GFX_focus_EBS_invincible_complex.png"
+			animationmaskfile = "gfx/interface/goals/EBS/GFX_focus_EBS_harbin_locomotive_heavy_chassis.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -805,15 +1564,15 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_focus_EBS_final_ultimatum"
-		texturefile = "gfx/interface/goals/EBS/GFX_focus_EBS_final_ultimatum.png"
+		name = "GFX_focus_EBS_dalian_naval_dockyard_expansion"
+		texturefile = "gfx/interface/goals/EBS/GFX_focus_EBS_dalian_naval_dockyard_expansion.png"
 	}
 	SpriteType = {
-		name = "GFX_focus_EBS_final_ultimatum_shine"
-		texturefile = "gfx/interface/goals/EBS/GFX_focus_EBS_final_ultimatum.png"
+		name = "GFX_focus_EBS_dalian_naval_dockyard_expansion_shine"
+		texturefile = "gfx/interface/goals/EBS/GFX_focus_EBS_dalian_naval_dockyard_expansion.png"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EBS/GFX_focus_EBS_final_ultimatum.png"
+			animationmaskfile = "gfx/interface/goals/EBS/GFX_focus_EBS_dalian_naval_dockyard_expansion.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -828,15 +1587,15 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_focus_EBS_war_mobilization"
-		texturefile = "gfx/interface/goals/EBS/GFX_focus_EBS_war_mobilization.png"
+		name = "GFX_focus_EBS_changchun_precision_instrument_works"
+		texturefile = "gfx/interface/goals/EBS/GFX_focus_EBS_changchun_precision_instrument_works.png"
 	}
 	SpriteType = {
-		name = "GFX_focus_EBS_war_mobilization_shine"
-		texturefile = "gfx/interface/goals/EBS/GFX_focus_EBS_war_mobilization.png"
+		name = "GFX_focus_EBS_changchun_precision_instrument_works_shine"
+		texturefile = "gfx/interface/goals/EBS/GFX_focus_EBS_changchun_precision_instrument_works.png"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EBS/GFX_focus_EBS_war_mobilization.png"
+			animationmaskfile = "gfx/interface/goals/EBS/GFX_focus_EBS_changchun_precision_instrument_works.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -851,15 +1610,15 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_focus_EBS_final_siege_yandao"
-		texturefile = "gfx/interface/goals/EBS/GFX_focus_EBS_final_siege_yandao.png"
+		name = "GFX_focus_EBS_wartime_industrial_stockpile"
+		texturefile = "gfx/interface/goals/EBS/GFX_focus_EBS_wartime_industrial_stockpile.png"
 	}
 	SpriteType = {
-		name = "GFX_focus_EBS_final_siege_yandao_shine"
-		texturefile = "gfx/interface/goals/EBS/GFX_focus_EBS_final_siege_yandao.png"
+		name = "GFX_focus_EBS_wartime_industrial_stockpile_shine"
+		texturefile = "gfx/interface/goals/EBS/GFX_focus_EBS_wartime_industrial_stockpile.png"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EBS/GFX_focus_EBS_final_siege_yandao.png"
+			animationmaskfile = "gfx/interface/goals/EBS/GFX_focus_EBS_wartime_industrial_stockpile.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -874,15 +1633,245 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_focus_EBS_nationwide_dominion"
-		texturefile = "gfx/interface/goals/EBS/GFX_focus_EBS_nationwide_dominion.png"
+		name = "GFX_focus_EBS_national_defense_technical_polytechnic"
+		texturefile = "gfx/interface/goals/EBS/GFX_focus_EBS_national_defense_technical_polytechnic.png"
 	}
 	SpriteType = {
-		name = "GFX_focus_EBS_nationwide_dominion_shine"
-		texturefile = "gfx/interface/goals/EBS/GFX_focus_EBS_nationwide_dominion.png"
+		name = "GFX_focus_EBS_national_defense_technical_polytechnic_shine"
+		texturefile = "gfx/interface/goals/EBS/GFX_focus_EBS_national_defense_technical_polytechnic.png"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/EBS/GFX_focus_EBS_nationwide_dominion.png"
+			animationmaskfile = "gfx/interface/goals/EBS/GFX_focus_EBS_national_defense_technical_polytechnic.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_focus_EBS_the_invincible_exam_industrial_complex"
+		texturefile = "gfx/interface/goals/EBS/GFX_focus_EBS_the_invincible_exam_industrial_complex.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_EBS_the_invincible_exam_industrial_complex_shine"
+		texturefile = "gfx/interface/goals/EBS/GFX_focus_EBS_the_invincible_exam_industrial_complex.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/EBS/GFX_focus_EBS_the_invincible_exam_industrial_complex.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_focus_EBS_dispatch_final_syllabus_ultimatum"
+		texturefile = "gfx/interface/goals/EBS/GFX_focus_EBS_dispatch_final_syllabus_ultimatum.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_EBS_dispatch_final_syllabus_ultimatum_shine"
+		texturefile = "gfx/interface/goals/EBS/GFX_focus_EBS_dispatch_final_syllabus_ultimatum.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/EBS/GFX_focus_EBS_dispatch_final_syllabus_ultimatum.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_focus_EBS_curb_southern_resistance"
+		texturefile = "gfx/interface/goals/EBS/GFX_focus_EBS_curb_southern_resistance.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_EBS_curb_southern_resistance_shine"
+		texturefile = "gfx/interface/goals/EBS/GFX_focus_EBS_curb_southern_resistance.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/EBS/GFX_focus_EBS_curb_southern_resistance.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_focus_EBS_coopt_provincial_collaborators"
+		texturefile = "gfx/interface/goals/EBS/GFX_focus_EBS_coopt_provincial_collaborators.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_EBS_coopt_provincial_collaborators_shine"
+		texturefile = "gfx/interface/goals/EBS/GFX_focus_EBS_coopt_provincial_collaborators.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/EBS/GFX_focus_EBS_coopt_provincial_collaborators.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_focus_EBS_war_mobilization_1938"
+		texturefile = "gfx/interface/goals/EBS/GFX_focus_EBS_war_mobilization_1938.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_EBS_war_mobilization_1938_shine"
+		texturefile = "gfx/interface/goals/EBS/GFX_focus_EBS_war_mobilization_1938.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/EBS/GFX_focus_EBS_war_mobilization_1938.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_focus_EBS_pacify_shanhe_coalition"
+		texturefile = "gfx/interface/goals/EBS/GFX_focus_EBS_pacify_shanhe_coalition.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_EBS_pacify_shanhe_coalition_shine"
+		texturefile = "gfx/interface/goals/EBS/GFX_focus_EBS_pacify_shanhe_coalition.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/EBS/GFX_focus_EBS_pacify_shanhe_coalition.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_focus_EBS_subjugate_huazhong_hbe"
+		texturefile = "gfx/interface/goals/EBS/GFX_focus_EBS_subjugate_huazhong_hbe.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_EBS_subjugate_huazhong_hbe_shine"
+		texturefile = "gfx/interface/goals/EBS/GFX_focus_EBS_subjugate_huazhong_hbe.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/EBS/GFX_focus_EBS_subjugate_huazhong_hbe.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_focus_EBS_strike_east_and_south"
+		texturefile = "gfx/interface/goals/EBS/GFX_focus_EBS_strike_east_and_south.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_EBS_strike_east_and_south_shine"
+		texturefile = "gfx/interface/goals/EBS/GFX_focus_EBS_strike_east_and_south.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/EBS/GFX_focus_EBS_strike_east_and_south.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_focus_EBS_final_siege_of_yandao"
+		texturefile = "gfx/interface/goals/EBS/GFX_focus_EBS_final_siege_of_yandao.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_EBS_final_siege_of_yandao_shine"
+		texturefile = "gfx/interface/goals/EBS/GFX_focus_EBS_final_siege_of_yandao.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/EBS/GFX_focus_EBS_final_siege_of_yandao.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_focus_EBS_nationwide_educational_dominion"
+		texturefile = "gfx/interface/goals/EBS/GFX_focus_EBS_nationwide_educational_dominion.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_EBS_nationwide_educational_dominion_shine"
+		texturefile = "gfx/interface/goals/EBS/GFX_focus_EBS_nationwide_educational_dominion.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/EBS/GFX_focus_EBS_nationwide_educational_dominion.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no

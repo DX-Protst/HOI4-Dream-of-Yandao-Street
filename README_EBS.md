@@ -396,16 +396,22 @@ flowchart TD
 
 ---
 
-## 10. 专属文件与代码资产映射 (Assets Mapping)
+## 10. 专属文件与美术资产映射 (Assets & Art Mapping)
 
 | 文件类别 | 物理文件路径 | 关键内容说明 |
 |---|---|---|
-| **国策树定义** | `common/national_focus/EBS_focus.txt` | 包含完整 42 节点博弈国策树（全节点事件覆盖，宽间距布局防重叠，纯英文注释） |
-| **领袖与内阁定义** | `common/characters/EBS_characters.txt` | 十大意识形态全覆盖领袖定义（陈专员、怀总工、周总导、王司长、王总管、东三省公社、开明教师会） |
-| **专属人物特质** | `common/country_leader/EBS_traits.txt` | 9大领袖与顾问专属特质（纯英文注释） |
-| **国家精神定义** | `common/ideas/EBS_ideas.txt` | 9大专属民族精神（关外暗流、太上皇威权、赛博天网、大迎检、黑金帝国、东三省平权公社等） |
+| **国策树定义** | `common/national_focus/EBS_focus.txt` | 包含完整 82 节点非对称拓扑国策树（五大路线、试卷院、关东重工科技线与1938大战主线，每个国策 1:1 绑定独有 icon） |
+| **国策图标资产** | `gfx/interface/goals/EBS/` | **82 个专属国策图标**（全部独立 1:1 手绘生图 + 绿幕抠图，零共用，100×100 RGBA PNG） |
+| **国策图形定义** | `interface/EBS_goals.gfx` | **82 套专属国策图标与高光 shine 动画定义**（164 个 SpriteType 注册） |
+| **国家精神定义** | `common/ideas/EBS_ideas.txt` | 17 个专属国家精神与派系政治/工业 Buff/Debuff 定义 |
+| **精神图标资产** | `gfx/interface/ideas/EBS/` | **17 个专属精神图标**（64×64 RGBA PNG，精准契合 Clausewitz 格式） |
+| **精神图形定义** | `interface/EBS_ideas.gfx` | 17 个国家精神 SpriteType 图形绑定注册 |
+| **领袖与内阁定义** | `common/characters/EBS_characters.txt` | 9 大领袖与派系内阁定义（陈专员、怀总工、周总导、王司长、王总管、郗特使、东三省公社、开明教师会、海淀贵胄委员会） |
+| **领袖头像资产** | `gfx/leaders/EBS/` | **9 位真实原型领袖头像**（156×210 大头像与 78×105 小头像，共 18 张精细手绘生图资产） |
+| **领袖图形定义** | `interface/EBS_characters.gfx` | 9 位领袖大头像与内阁小头像图形注册定义 |
+| **专属人物特质** | `common/country_leader/EBS_traits.txt` | 9 大领袖与顾问专属特质（纯英文注释） |
 | **决议分类** | `common/decisions/categories/EBS_decision_categories.txt` | 注册四大决议分类（迎检、关外、试卷院、战后核心化） |
-| **决议列表** | `common/decisions/EBS_decisions.txt` | 9大专属决议（含中枢路线常驻指南、试卷院干预、天梯打压、关外羁縻、180天核心化） |
+| **决议列表** | `common/decisions/EBS_decisions.txt` | 9 大专属决议（含中枢路线常驻指南、试卷院干预、天梯打压、关外羁縻、180天核心化） |
 | **专属历史事件** | `events/EBS_events.txt` | **71 个专属剧情事件**（含中枢全景路线指南 `ebs_route_guide.1`、6 阶段中枢决裂交织危机链、全量国策完成叙事、奉系入关政变、1938大战动员） |
 | **国家历史初始** | `history/countries/EBS - EduBureau.txt` | 招募全套人物、装备初始国家精神与首都北京定义 |
 | **开局书签定义** | `common/bookmarks/the_gathering_storm.txt` | 将 EBS 注册为主选大国之一，配置推荐国策与开局理念 |
