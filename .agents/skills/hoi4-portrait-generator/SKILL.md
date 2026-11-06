@@ -1,19 +1,12 @@
 ---
 name: hoi4-portrait-generator
-description: Automated HOI4 leader & advisor portrait generation skill supporting both local ComfyUI text-to-image workflow (tools/workflows/钢铁雄心.json with Chroma Key & Despill) and real-world reference image post-processing (--from-image). Outputs Clausewitz-standard 156x210 leader large portraits and canonical 65x67 political advisor small icons. Includes mandatory auto-kill cleanup to immediately free all GPU VRAM upon task completion.
+description: Automated HOI4 leader & advisor portrait generation skill using local ComfyUI workflow (钢铁雄心.json) and algorithmic chroma-keying (green screen removal with despill). Use whenever creating new character portraits, leaders, advisors, or replacing existing leader graphics in Hearts of Iron IV mods. Supports configurable aspect ratio presets (1:1, 2:3, 3:2, 3:4, 4:3, 9:16, 16:9, 21:9), pure base-model generation (no rigid LoRA locking), Qwen-MOSS thinking-chain expansion, and mandatory auto-kill cleanup to immediately free all GPU VRAM upon task completion.
 ---
 
-# HOI4 Portrait Generator (ComfyUI Workflow & Canonical Advisor Pipeline)
+# HOI4 Portrait Generator via ComfyUI & Chroma-Key Despill
 
-自动化《钢铁雄心4》（Hearts of Iron IV）国家领袖、将领与内阁政治顾问立绘生成技能。  
-支持**双轨制生成管线**：
-1. **ComfyUI 纯色绿幕文生图管线**：调用项目内置工作流 `tools/workflows/钢铁雄心.json`，支持 8 种画幅预设，结合**影视级色差键控（Chroma Keying）与溢色抑制算法（Despill）**自动消除绿幕与边缘反光。
-2. **现实原型 / 图生图后处理管线**：通过 `--from-image` 传入现实参考照片或 AI 图生图母版，经由**人脸特征检测与重心智能变焦**自动裁切构图。
-
-统一规范化输出严格符合 Clausewitz 引擎与 GUI 标准的：
-- **国家领袖常驻大立绘**：`156 × 210` RGBA（半身像）
-- **内阁政治顾问小头像**：严格为 **`65 × 67`** RGBA（经典官方卷宗相框倾斜 -3.5°、柔和投影、右下角官方内阁备忘便签，完全杜绝 78×105 引致的文字遮挡与跨行溢出）
-- **原比例高清透明底母版**：`transparent_<W>x<H>.png`
+自动化《钢铁雄心4》（Hearts of Iron IV）领袖、顾问与游戏画面生成技能。  
+通过调用本地部署的 ComfyUI 工作流（`钢铁雄心.json`），生成**预设比例纯色绿幕底图（#00FF00）**，并经由**影视级色差键控（Chroma Keying）与溢色抑制算法（Despill）**自动消除绿幕与边缘反光，直接输出符合 Clausewitz 引擎规格的标准领袖大头像（156×210）、顾问小头像（78×105）及对应比例的高清透明底母版。
 
 > [!CAUTION]
 > **显存清理铁律 (Mandatory VRAM Cleanup & Process Kill Gate)**：
@@ -26,20 +19,31 @@ description: Automated HOI4 leader & advisor portrait generation skill supportin
 
 | 项 | 绝对路径 / 配置 | 说明 |
 | :--- | :--- | :--- |
-| **模组内置工作流** | `tools/workflows/钢铁雄心.json` | 模组版本受控的 ComfyUI 工作流源文件 |
-| **技能内置工作流备份** | `.agents/skills/hoi4-portrait-generator/resources/钢铁雄心.json` | 技能随附自包含资源备份 |
-| **官方顾问备忘便签资产** | `tools/assets/vanilla_advisor_note.png` | 官方内阁顾问卷宗便签素材（65×67） |
-| **ComfyUI 整合包根目录** | `C:\Program Files\Comfyui-WF-2026.8.8\Comfyui-WF-2026.8.8` | 秋叶整合包运行根目录 |
-| **ComfyUI 内置 Python** | `C:\Program Files\Comfyui-WF-2026.8.8\Comfyui-WF-2026.8.8\python\python.exe` | 包含 Torch 2.10 (CUDA 13.0)、Pillow、NumPy、OpenCV |
+| **ComfyUI 根目录** | `C:\Program Files\Comfyui-WF-2026.8.8\Comfyui-WF-2026.8.8` | 秋叶整合包运行根目录 |
+| **工作流源文件** | `C:\Program Files\Comfyui-WF-2026.8.8\Comfyui-WF-2026.8.8\ComfyUI\user\default\workflows\钢铁雄心.json` | MOSS-Image 原生底模 + Qwen3.8-9B-distill 思维链推演工作流 |
+| **ComfyUI 内置 Python** | `C:\Program Files\Comfyui-WF-2026.8.8\Comfyui-WF-2026.8.8\python\python.exe` | 包含 Torch 2.10 (CUDA 13.0)、Pillow、NumPy、Llama-cpp、psutil |
 | **服务端口** | `http://127.0.0.1:8188` | ComfyUI REST/WebSocket 服务端口 |
-| **项目便捷入口脚本** | `tools/generate_portrait.py` | 根目录下等价调用的全功能流水线脚本 |
-| **技能流水线脚本** | `.agents/skills/hoi4-portrait-generator/scripts/generate_portrait.py` | 技能随附脚本，具备双轨生成、自动抠图与进程查杀功能 |
+| **技能流水线脚本** | `.agents/skills/hoi4-portrait-generator/scripts/generate_portrait.py` | 具备服务自启、工作流驱动、色键抠图与**进程查杀释放显存**的全功能脚本 |
+| **项目便捷入口** | `tools/generate_portrait.py` | 根目录下等价调用的便捷脚本 |
+
+---
+
+## 工作流最新节点拓扑与改进 (Workflow Topology Updates)
+
+当前工作流已升级为**纯净高保真直连架构**：
+1. **移除固定 LoRA（去除了 Node 41 观澜 LoRA）**：
+   - 扩散模型 `UNETLoader`（`moss_image_sft_nvfp4.safetensors`）直接与 `SkipLayerGuidanceDiTSimple` 直连。
+   - **优势**：消除了特定动漫脸型与画风束缚，角色形象更加真实多元，不仅适合学生自治会成员，也能完美呈现军官、教务长、长者领袖等不同年龄段角色。
+2. **升级 Qwen-MOSS 提示词深度思维链（Node 90）**：
+   - 采用显存占用更低的 `Qwen3.8-9B-distill-heretic_nvfp4_q8_0.gguf` 模型。
+   - 启用了 `enable_thinking: True` 与 `thinking_effort: 深度推演 (MOSS六步法/严苛自检 - 推荐)`。
+   - 模型先在思维链中推演焦段、空间、纯色绿幕边界与平光照明约束，随后输出高精度画面提示词，扩写完成后毫秒级释放显存。
 
 ---
 
 ## 画面比例预设一览 (Supported Aspect Ratios)
 
-在 ComfyUI 文生图模式下，脚本提供了 `--ratio` / `-r` 接口，支持工作流预设的所有标准比例：
+脚本提供了 `--ratio` / `-r` 接口，支持工作流预设的所有标准比例（同时支持简写与标准全名）：
 
 | 比例参数 (`--ratio`) | 映射预设名称 | 推荐用途 (HOI4 游戏场景) |
 | :--- | :--- | :--- |
@@ -48,77 +52,88 @@ description: Automated HOI4 leader & advisor portrait generation skill supportin
 | **`2:3`** | `2:3 (Portrait Photo)` | **标准竖构图肖像**，适合含胸部至腰部的完整军装立绘 |
 | **`4:3`** | `4:3 (Standard)` | **标准横画幅**，适合小型事件新闻配图（Event Pictures） |
 | **`16:9`** | `16:9 (Widescreen)` | **宽屏横幅**，适合大型超级事件（Super Events）、剧场宣传或加载图 |
-| **`9:16`** | `9:16 (Portrait Widescreen)`| **全身大立绘**，适合展示全身服饰或全幅角色 |
+| **`9:16`** | `9:16 (Portrait Widescreen)`| **全身大立绘**，适合展示全身服饰或二次元全幅角色 |
 | **`21:9`** | `21:9 (Ultrawide)` | **超宽带景长卷**，适合全景战役加载背景图 |
 | **`3:2`** | `3:2 (Photo)` | **经典胶片横画幅**，适合历史战役场景配图 |
 
 ---
 
-## 执行流水线架构 (Dual Pipeline Architecture)
+## 执行流水线 (Pipeline Flowchart)
 
 ```mermaid
 flowchart TD
-    subgraph Input["双轨输入源"]
-        A1["模式 1: 文本描述生图<br/>(--prompt '角色服饰神态...')"]
-        A2["模式 2: 现实照片/图生图母版<br/>(--from-image 'path/to/img.jpg')"]
-    end
+    A["用户提出图像生成需求<br/>(例如: 1:1 领袖像 或 3:4 竖立像)"] --> B["AI 运行 generate_portrait.py<br/>(支持 --ratio 与 --prompt)"]
+    B --> C["检查 ComfyUI 状态 (未启动则自动拉起)"]
+    C --> D["调度工作流: 钢铁雄心.json<br/>(Qwen-MOSS 深度思维链扩写 + 纯色绿幕 #00FF00)"]
+    D --> E["原生 MOSS-Image (NVFP4) 采样生成对应比例绿幕原图"]
+    E --> F["色键抠图 (Delta Keying) + 去绿边 (Despill)"]
+    F --> G["保存资产至 gfx/leaders/<TAG>/...<br/>• 156x210 领袖大像 (RGBA)<br/>• 78x105 顾问小像 (RGBA)<br/>• 原比例高清透明母版"]
+    G --> H["强制触发显存清理 (finally block)<br/>彻底 Kill 掉 ComfyUI 进程"]
+    H --> I["GPU 显存 100% 归零释放<br/>输出 Clausewitz .gfx 注册代码"]
+```
 
-    subgraph Mode1["ComfyUI 纯色绿幕渲染轨"]
-        B1["拉起并检测 ComfyUI (8188)"]
-        B2["加载 tools/workflows/钢铁雄心.json"]
-        B3["KSampler 采样生成纯色绿幕原图"]
-        B4["Delta Keying 色键抠图 + Despill 抑制绿边"]
-    end
+---
 
-    subgraph Mode2["现实原型智能构图轨"]
-        C1["OpenCV Haar Cascade 人脸检测"]
-        C2["人像中心定位与动态景深裁切"]
-    end
+## 显存释放与进程查杀机制 (VRAM Cleanup Contracts)
 
-    subgraph Output["标准资产生成与集成"]
-        D1["国家领袖大立绘 (156x210 RGBA)"]
-        D2["官方内阁顾问小头像 (65x67 RGBA)<br/>倾斜-3.5° 相框 + 柔和投影 + 官方备忘便签"]
-        D3["保存至 gfx/leaders/<TAG>/..."]
-        D4["生成 interface/<TAG>_characters.gfx 注册代码"]
-        D5["强制触发 finally 彻底杀死 ComfyUI 释放显存"]
-    end
+为杜绝生图后持续霸占显存，本技能建立了三重防护：
 
-    A1 --> B1 --> B2 --> B3 --> B4 --> D1 & D2
-    A2 --> C1 --> C2 --> D1 & D2
-    D1 & D2 --> D3 --> D4 --> D5
+### 1. 默认自动查杀 (Auto-Kill by Default)
+每次运行 `generate_portrait.py`，无论生成成功还是发生异常（`try...finally` 块），脚本**默认会在结束时立即杀掉由其拉起或正在监听 8188 端口的 ComfyUI 进程**。
+> 只有当显式传入 `--keep-alive` 参数时，才会保持后台常驻（用于批量连续高频生图）。
+
+### 2. 独立一键释放显存命令
+在任何时候，AI 或用户只需执行带有 `--kill` 参数的命令，无需传入其他参数，即可瞬间清理所有 ComfyUI 残留进程并释放显存：
+```powershell
+& "C:\Program Files\Comfyui-WF-2026.8.8\Comfyui-WF-2026.8.8\python\python.exe" tools/generate_portrait.py --kill
+```
+
+### 3. PowerShell 原生查杀兜底
+若 Python 进程被意外锁定，AI 可直接执行以下 PowerShell 单行命令进行兜底查杀：
+```powershell
+Get-NetTCPConnection -LocalPort 8188 -State Listen -ErrorAction SilentlyContinue | ForEach-Object { Stop-Process -Id $_.OwningProcess -Force }
 ```
 
 ---
 
 ## AI Agent 调用规范与命令 (Agent Execution Guide)
 
-### 管线 1：通过 ComfyUI 工作流进行文生图（生图后自动释放显存）
+任何 AI 助手在需要生成或替换《钢铁雄心4》立绘肖像时，**接口保持完全一致向前兼容，只需在 PowerShell 中运行以下标准命令**：
+
+### 1. 标准调用命令（生图 + 自动 Kill 进程释放显存）
 
 ```powershell
 & "C:\Program Files\Comfyui-WF-2026.8.8\Comfyui-WF-2026.8.8\python\python.exe" tools/generate_portrait.py `
   --name "portrait_<TAG>_<character_name>" `
   --ratio "1:1" `
-  --prompt "<角色外貌、年龄与服饰特征描述>" `
+  --prompt "<角色外貌与服饰特征描述>" `
   --outdir "gfx/leaders/<TAG>"
 ```
-*(执行完毕后控制台将输出 `[OK] Successfully terminated ComfyUI process(es). GPU VRAM 100% freed!`)*
+*(执行完毕后控制台将输出 `[✓] Successfully terminated ComfyUI process(es). GPU VRAM 100% freed!`)*
 
-### 管线 2：基于已有照片 / 现实原型图进行 HOI4 规格处理
+### 2. 参数说明
 
-当人物有现实原型（需先检索真实照片并用图像模型处理后），使用 `--from-image` 直接裁剪生成规范资产，**完全无需占用 GPU 显存**：
+*   `--prompt`（必填）：角色的核心外貌特征、服饰、年龄与神态。脚本会**自动补全并强化**纯色绿幕（#00FF00）、棚拍平光与清晰轮廓指令。
+*   `--ratio` / `-r`（可选，默认 `1:1`）：画面比例预设。支持 `1:1`, `2:3`, `3:2`, `3:4`, `4:3`, `9:16`, `16:9`, `21:9`。
+*   `--megapixels` / `-m`（可选，默认 `1.0`）：生成画面的目标百万像素（1.0 MP 约等于 1024×1024）。
+*   `--name`（可选）：输出文件名前缀。建议遵守 HOI4 命名规范：`portrait_<TAG>_<pinyin_or_english_name>`（如 `portrait_YDS_chen_lin`）。
+*   `--outdir`（可选）：存放目录，默认为 `gfx/leaders/custom`，模组正式开发请指定对应国家路径，如 `gfx/leaders/YDS`。
+*   `--seed`（可选）：指定随机种子，用于复现固定画面。
+*   `--kill`（独立开关）：立即强杀所有 ComfyUI 进程并释放显存，不执行生图。
+*   `--keep-alive`（可选）：阻止生图后自动杀掉进程（仅建议在连续批量生成多张立绘的循环中使用；**批量生成完毕后必须补跑一次 `--kill`**）。
+
+---
+
+## 批量生成时的显存管理范例 (Batch Generation Pattern)
+
+当 AI 需要连续批量生成多张立绘（例如一次性生成 5 个内阁成员肖像）时，推荐采用“**批量保持常驻 $\to$ 终末强制查杀**”的高性能范式：
 
 ```powershell
-& "C:\Program Files\Comfyui-WF-2026.8.8\Comfyui-WF-2026.8.8\python\python.exe" tools/generate_portrait.py `
-  --from-image "tools/reference_photos/<character_photo>.jpg" `
-  --name "portrait_<TAG>_<character_name>" `
-  --outdir "gfx/leaders/<TAG>"
-```
+# 1. 批量生成期间保持服务常驻，避免反复冷启动
+& "C:\Program Files\Comfyui-WF-2026.8.8\Comfyui-WF-2026.8.8\python\python.exe" tools/generate_portrait.py --name "portrait_YDS_char1" --prompt "..." --keep-alive
+& "C:\Program Files\Comfyui-WF-2026.8.8\Comfyui-WF-2026.8.8\python\python.exe" tools/generate_portrait.py --name "portrait_YDS_char2" --prompt "..." --keep-alive
 
-### 管线 3：显式查杀释放显存命令
-
-无论何时，若需要立即终止后台常驻的 ComfyUI 进程释放显存，只需执行：
-
-```powershell
+# 2. 全部生成完毕后，强制执行终末清理，彻底释放显存！
 & "C:\Program Files\Comfyui-WF-2026.8.8\Comfyui-WF-2026.8.8\python\python.exe" tools/generate_portrait.py --kill
 ```
 
@@ -126,39 +141,37 @@ flowchart TD
 
 ## 自动生成的输出资产规范 (Asset Outputs)
 
-脚本执行完成后，将在目标文件夹输出对应尺寸的文件：
+脚本执行完成后，将在目标文件夹输出对应比例与规格的文件：
 
-| 文件命名规则 | 尺寸 (像素) | 通道与格式 | 引擎与界面用途 |
+| 文件规格 | 尺寸 (像素) | 通道与格式 | 用途 |
 | :--- | :--- | :--- | :--- |
-| `<name>_156x210.png` | **156 × 210** | **RGBA** (透明底/纯色底) | **游戏内国家领袖常驻大立绘** |
-| `<name>_small_65x67.png` | **65 × 67** | **RGBA** (透明底) | **政治顾问、内阁成员官方规范小头像**（契合 231×74 按钮与圆框，绝无文字遮挡与跨行越界） |
-| `<name>_small.png` | **65 × 67** | **RGBA** (透明底) | 官方内阁顾问标准别名 |
-| `<name>_transparent_<W>x<H>.png` | 自动计算 | **RGBA** (透明底) | 所选比例的**高清透明母版**（文生图抠图产物） |
-| `<name>_raw_<W>x<H>.png` | 自动计算 | **RGB** (绿幕) | ComfyUI 生成的纯色绿幕原始母版 |
-
-> [!NOTE]
-> 早期脚本生成的 `78 × 105` 属于未经 GUI 适配的等比缩放尺寸，在内阁槽位（`political_selectable_idea_entry_grid`）中会导致右侧文字遮挡与底部越界。当前管线已全面重构升级为官方 **`65 × 67`** 规范相框与便签格式。
+| `<name>_transparent_<W>x<H>.png` | **按比例自动计算** | **RGBA** (透明底) | 所选比例的**高清透明母版**（去绿幕+去绿边） |
+| `<name>_raw_<W>x<H>.png` | **按比例自动计算** | **RGB** (绿幕) | ComfyUI 生成的纯色绿幕原始母版 |
+| `<name>_156x210.png` | **156 × 210** | **RGBA** (透明底) | **游戏内国家领袖常驻大立绘**（自动智能人像裁切） |
+| `<name>_small_78x105.png` | **78 × 105** | **RGBA** (透明底) | **政治顾问、内阁成员、陆海军将领小头像** |
 
 ---
 
 ## 游戏内代码集成闭环 (Clausewitz Mod Integration)
 
+AI 生成完图片后，必须执行以下两步将肖像接入模组：
+
 ### 步骤 1：在 `interface/<TAG>_characters.gfx` 中注册材质
 
+在对应国家的 `.gfx` 文件（如 `interface/YDS_characters.gfx`）的 `spriteTypes = { ... }` 内部追加：
+
 ```pdx
-spriteTypes = {
 	spriteType = {
-		name = "GFX_portrait_<TAG>_<character_name>"
+		name = GFX_portrait_<TAG>_<character_name>
 		texturefile = "gfx/leaders/<TAG>/portrait_<TAG>_<character_name>_156x210.png"
 	}
 	spriteType = {
-		name = "GFX_portrait_<TAG>_<character_name>_small"
-		texturefile = "gfx/leaders/<TAG>/portrait_<TAG>_<character_name>_small_65x67.png"
+		name = GFX_portrait_<TAG>_<character_name>_small
+		texturefile = "gfx/leaders/<TAG>/portrait_<TAG>_<character_name>_small_78x105.png"
 	}
-}
 ```
 
-### 步骤 2：在 `common/characters/<TAG>_characters.txt` 中绑定角色
+### 步骤 2：在 `common/characters/<TAG>_characters.txt` 中绑定领袖/顾问
 
 ```pdx
 characters = {
@@ -166,22 +179,14 @@ characters = {
 		name = <TAG>_<character_name>
 		portraits = {
 			civilian = {
-				large = "GFX_portrait_<TAG>_<character_name>"
-				small = "GFX_portrait_<TAG>_<character_name>_small"
+				large = GFX_portrait_<TAG>_<character_name>
+				small = GFX_portrait_<TAG>_<character_name>_small
 			}
 		}
 		country_leader = {
 			ideology = <ideology_sub_type>
 			traits = { <trait_id> }
-		}
-		advisor = {
-			slot = political_advisor
-			idea_token = <TAG>_<character_name>_advisor
-			allowed = {
-				original_tag = <TAG>
-			}
-			traits = { <trait_id> }
-			cost = 100
+			expire = "1965.1.1.1"
 		}
 	}
 }
