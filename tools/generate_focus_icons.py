@@ -349,7 +349,7 @@ if __name__ == "__main__":
             found = next((item for item in prompts_data if item["id"] == args.focus_id), None)
             if found:
                 if not prompt:
-                    prompt = found["locked_prompt"]
+                    prompt = found.get("assembled_prompt") or found.get("locked_prompt")
                 if not icon_name:
                     icon_name = f"GFX_focus_{args.focus_id}"
                 print(f"[OK] Loaded standardized locked prompt for {args.focus_id} ({found['name']})")
